@@ -1,0 +1,584 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-05-22T21:11:38-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Logical Equivalence</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="binary-logic-and-more.html"><span class="title">Binary, Logic, and More:</span> <span class="subtitle">Applied Math for Computing</span></a></h1>
+<p class="byline"></p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="venn-diagrams.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="logic.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="venn-diagrams.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="logic.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="binary-octal-hex.html" data-scroll="binary-octal-hex"><span class="codenumber">1</span> <span class="title">Binary, Octal, and Hexadecimal</span></a><ul>
+<li><a href="decimal-octal.html" data-scroll="decimal-octal">Decimal and Octal</a></li>
+<li><a href="binary-hex.html" data-scroll="binary-hex">Binary and Hexadecimal</a></li>
+<li><a href="non-integer-to-decimal.html" data-scroll="non-integer-to-decimal">Converting Non-Integer Numbers to Decimal</a></li>
+<li><a href="converting-from-decimal.html" data-scroll="converting-from-decimal">Converting from Decimal</a></li>
+<li><a href="convert-bin-oct-hex.html" data-scroll="convert-bin-oct-hex">Converting between Binary, Octal, and Hexadecimal</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="logic.html" data-scroll="logic"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="intro-to-logic.html" data-scroll="intro-to-logic">Introduction to Logic</a></li>
+<li><a href="venn-diagrams.html" data-scroll="venn-diagrams">Venn Diagrams</a></li>
+<li><a href="sec-logical-equivalence.html" data-scroll="sec-logical-equivalence" class="active">Logical Equivalence</a></li>
+</ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="sec-logical-equivalence"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Logical Equivalence</span>
+</h2>
+<section class="subsection" id="truth-tables"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Truth Tables</span>
+</h3>
+<section class="subsubsection" id="truth-tables-2vars"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Truth Tables with Two Variables</span>
+</h4>
+<p id="p-163">Let us consider the propositions \(p\) and \(q\text{.}\)  Since they are propositions, \(p\) is either true or false and \(q\) is also either true or false.  This leads us to four possible combinations of \(p\) and \(q\text{:}\)</p>
+<ol class="decimal">
+<li id="li-206">\(p\) and \(q\) are both false.</li>
+<li id="li-207">\(p\) is false and \(q\) is true</li>
+<li id="li-208">\(p\) is true and \(q\) is false</li>
+<li id="li-209">\(p\) and \(q\) are both true</li>
+</ol>
+<p class="continuation">We can combine these possibilities into a table called a truth table.  We can add further columns to find out what the value of other compound propositions for each combination of \(p\) and \(q\) as well.  Suppose we wished to find out what the truth table was for \(p \wedge q\text{.}\)  Then the table would look like the following. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\wedge q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines">T</td>
+<td class="c m b3 r2 l0 t0 lines">T</td>
+<td class="c m b3 r2 l0 t0 lines">T</td>
+</tr>
+</table></div> For example, when \(p\) is false and \(q\) is true (the second row, where \(p\) = F and \(q\) = T), then \(p \wedge q\) is false because one of them is false (they are not both true).</p>
+<p id="p-164">Similarly, the truth table for \(p \vee q\) is <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\vee q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines">T</td>
+<td class="c m b3 r2 l0 t0 lines">T</td>
+<td class="c m b3 r2 l0 t0 lines">T</td>
+</tr>
+</table></div></p>
+<p id="p-165">If we like, we can combine the two tables above into a single table like so: <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\wedge q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\vee q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines">T</td>
+<td class="c m b3 r2 l0 t0 lines">T</td>
+<td class="c m b3 r2 l0 t0 lines">T</td>
+<td class="c m b3 r2 l0 t0 lines">T</td>
+</tr>
+</table></div></p>
+<p id="p-166">Another way to indicate F and T in a truth table is to use 0 and 1, respectively.  This mode of representation will be used later on, so it is a good idea to practise it now.  Here is the previous table re-written with this alternate notation. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\wedge q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\vee q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+</tr>
+</table></div></p></section><section class="subsubsection" id="truth-tables-one-var"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Truth Tables with One Variable</span>
+</h4>
+<p id="p-167">What if we were interested in the truth table for \(p \vee p\text{?}\)  Since this truth table contains only one variable \(p\) rather than two, it will only have two rows since \(p\) can either be true or false (and yes, you could omit the second column if you wish). <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\vee p\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+</tr>
+</table></div></p>
+<p id="p-168">Let's now look at how to write the truth table for \(p\wedge 1\text{,}\) where 1 means a statement that is always true.  (Be careful!  The number 1 is a constant, not a variable.  It never takes the value of zero.)  The table would look like: <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(1\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\wedge 1\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">\(0\)</td>
+<td class="c m b0 r2 l0 t0 lines">\(1\)</td>
+<td class="c m b0 r2 l0 t0 lines">\(0\)</td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines">\(1\)</td>
+<td class="c m b3 r2 l0 t0 lines">\(1\)</td>
+<td class="c m b3 r2 l0 t0 lines">\(1\)</td>
+</tr>
+</table></div> Notice that the last column looks like the first, so \(p\wedge 1\) has the same values as \(p\text{.}\)  We say, then, that \(p\wedge 1\) is <dfn class="terminology">logically equivalent</dfn> to \(p\text{.}\)  The topic of logical equivalence will be examined in more detail later on.</p></section><section class="subsubsection" id="negation-in-truth-tables"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Negations in Truth Tables</span>
+</h4>
+<p id="p-169">To negate a variable, we simply switch the value of each entry in that column from its previous value.  For example, consider the truth table for \(p\vee\,\sim\!p\text{.}\)  We start with a column for \(p\) and one for \(\sim\!p\text{.}\)  To populate the latter, we have to negate \(p\text{.}\)  To do this, we take every entry in the \(p\) column and switch all the zeros to ones and the ones to zeros.  We'll then form the inclusive disjunction of those two columns. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(\sim\!p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\,\vee\,\sim\!p\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">0</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+</tr>
+</table></div></p>
+<p id="p-170">Notice that \(p\vee\,\sim\!p\) is always true.  A concrete example will hopefully illustrate the reasonableness of this: "Jason's shirt is either plaid or not plaid."  This statement is true regardless of the pattern on Jason's shirt.</p>
+<p id="p-171">To negate an expession, we use the same idea and switch the value of each entry in the column for that expression, whether that expression is simple or compound.  For example, here is the truth table for \(\sim\!(p\wedge 1)\text{:}\) <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">1</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\wedge 1\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(\sim\!(p\wedge 1)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">0</td>
+</tr>
+</table></div> The fourth column is the negation of the third column: the values in the fourth column are obtained by applying the switches \(0\to 1\) and \(1\to 0\) to the values in the third column.</p></section><section class="subsubsection" id="truth-table-3-vars"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Truth Tables with Three Variables</span>
+</h4>
+<p id="p-172">A truth table with three variables will contain 8 rows in order to display all the possible truth values for the three statements \(p\text{,}\) \(q\text{,}\) and \(r\text{.}\)  For example, the truth table for \(\sim\!p\,\wedge(q\,\vee \sim\!r)\) is <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(r\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(\sim\!r\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(q\,\vee\sim\!r\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(\sim\!p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(\sim\!p\,\wedge(q\,\vee \sim\!r)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">0</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">0</td>
+<td class="c m b3 r2 l0 t0 lines">0</td>
+</tr>
+</table></div></p>
+<p id="p-173">It is important to note that the actual order of the rows doesn't matter for the truth table to be complete.  However, if you write out the table with the rows in a random order, it is very easy to duplicate one of the previous rows.  If you continue to fill the table until you have the correct <em class="alert">total</em> number of rows, then the duplication means that one of the combinations of variables is missing.</p>
+<p id="p-174">Therefore, it is a good idea to fill the table in a systematic way.  Look at the <em class="emphasis">column entries</em>, starting with the leftmost column.  Then look at the next column, then the next.  Note the pattern of the entries in each column.  If you mimic that pattern in your own work, you will minimize the chances of missing a combination variables.</p>
+<p id="p-175">Another common mistake is to take a shortcut and start the truth table with one of the columns being, for example, \(\sim\!p\text{.}\)  This is not correct.  Truth tables must always start with unnegated variables.</p></section></section><section class="subsection" id="subsec-logical-equivalence"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Logical Equivalence</span>
+</h3>
+<p id="p-176">Two logical expressions are said to be <dfn class="terminology">logically equivalent</dfn> if they have the same values in their columns in the truth table.  We saw in our examples above that \(p\,\vee\sim\!p\) was logically equivalent to 1\, and \(p\wedge 1\) was logically equivalent to \(p\text{.}\)  The symbol for <em class="emphasis">logically equivalent to</em> is \(\Leftrightarrow\text{,}\) so \(p\,\vee\sim\!p\Leftrightarrow 1\) and \(p\wedge 1\Leftrightarrow p\text{.}\)</p>
+<article class="example example-like" id="example-42"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-42"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-42"><article class="example example-like">Is \(p\wedge (q\vee r)\) logically equivalent to \((p\wedge q)\vee r\text{?}\)<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-215" id="solution-215"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-215"><div class="solution solution-like"><p id="p-177"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(t\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(q \vee r\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\wedge(q \vee r)\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\wedge q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\((p\wedge q)\vee r\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines">1</td>
+<td class="c m b2 r2 l0 t0 lines">1</td>
+<td class="c m b2 r2 l0 t0 lines">1</td>
+<td class="c m b2 r2 l0 t0 lines">1</td>
+<td class="c m b2 r2 l0 t0 lines">1</td>
+<td class="c m b2 r2 l0 t0 lines">1</td>
+<td class="c m b2 r2 l0 t0 lines">1</td>
+</tr>
+</table></div> These two expressions are <em class="emphasis">not</em> logically equivalent because their columns in the truth table, the 5th and 7th columns, are not identical.  This example shows once more that order of operations is important.</p></div></div>
+</div></article></div>
+<article class="example example-like" id="example-43"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-43"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-43"><article class="example example-like">Simplify \((p\wedge q)\vee(\sim\!p\,\wedge q)\text{.}\)<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-216" id="solution-216"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-216"><div class="solution solution-like"><p id="p-178"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(\sim\!p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\wedge q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(\sim\!p\,\wedge q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\((p\wedge q)\vee(\sim\!p\,\wedge q)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines">1</td>
+<td class="c m b2 r2 l0 t0 lines">1</td>
+<td class="c m b2 r2 l0 t0 lines">0</td>
+<td class="c m b2 r2 l0 t0 lines">1</td>
+<td class="c m b2 r2 l0 t0 lines">0</td>
+<td class="c m b2 r2 l0 t0 lines">1</td>
+</tr>
+</table></div> Notice that the last column is identical to the column for \(q\text{.}\)  Therefore, \((p\wedge q)\vee(\sim\!p\,\wedge q)\Leftrightarrow q\text{,}\) and so the simplified expression is \(q\)</p></div></div>
+</div></article></div>
+<article class="example example-like" id="example-44"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-44"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-44"><article class="example example-like">Is \(p \oplus q\) logically equivalent to \((p\wedge\sim\!q)\vee (\sim\!p\,\wedge q)\text{?}\)<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-217" id="solution-217"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-217"><div class="solution solution-like"><p id="p-179"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">\(p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p \oplus q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(\sim\!p\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(\sim\!q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(p\,\wedge\sim\!q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\(\sim\!p \wedge q\)</td>
+<td class="c m b2 r2 l0 t3 lines">\((p\wedge\sim\!q)\vee (\sim\!p\,\wedge q)\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines">1</td>
+<td class="c m b2 r2 l0 t0 lines">1</td>
+<td class="c m b2 r2 l0 t0 lines">0</td>
+<td class="c m b2 r2 l0 t0 lines">0</td>
+<td class="c m b2 r2 l0 t0 lines">0</td>
+<td class="c m b2 r2 l0 t0 lines">0</td>
+<td class="c m b2 r2 l0 t0 lines">0</td>
+<td class="c m b2 r2 l0 t0 lines">0</td>
+</tr>
+</table></div> Comparing the associated columns, we see that the two statements are logically equivalent.</p></div></div>
+</div></article></div></section></section></div></main>
+</div>
+</body>
+</html>
