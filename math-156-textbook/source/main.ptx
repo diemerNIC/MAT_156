@@ -5,6 +5,9 @@
       \usepackage{tikz}
       \usepackage{venndiagram}
     </latex-image-preamble>
+    <macros>
+      \newcommand{mynot}{\sim\!}
+    </macros>
   </docinfo>
   <book xml:id="binary-logic-and-more">
     <title>Binary, Logic, and More</title>
@@ -5572,7 +5575,7 @@
       <title>
         Logic
       </title>
-      <section xml:id="intro-to-logic">
+      <section xml:id="sec-intro-to-logic">
         <title>
           Introduction to Logic
         </title>
@@ -5633,7 +5636,7 @@
               Negation
             </title>
             <p>
-              The negation of any proposition <m>p</m> is called <em>not p</em> and is written using the tilde symbol, <m>\sim\!p</m>.  The tilde can be found on a standard keyboard as the shifted key to the left of the 1.  You may also see negations in logic written using this symbol, <m>\neg p</m>, or using a bar or overline, <m>\overline{p}</m>.  In computing, you will also see <m>!p</m> as the negation.  We will use the <m>\sim\!p</m> because it uses a character on a conventional keyboard, so it is easier to type.
+              The negation of any proposition <m>p</m> is called <em>not p</em> and is written using the tilde symbol, <m>\mynot p</m>.  The tilde can be found on a standard keyboard as the shifted key to the left of the 1.  You may also see negations in logic written using this symbol, <m>\neg p</m>, or using a bar or overline, <m>\overline{p}</m>.  In computing, you will also see <m>!p</m> as the negation.  We will use the <m>\mynot p</m> because it uses a character on a conventional keyboard, so it is easier to type.
             </p>
             <p>
               Note that you should be a little careful when negating sentences.  For example, the negation of "Pat is happy" is <em>not</em> "Pat is unhappy."  There are many other emotions that Pat could have (anger, fear, boredom, etc.).  If the first statement is false, then its negationv must be true, so between the two you need to cover all possible situations that could arise. It would be safe to say that the negation of "Pat is happy" is "Pat is not happy", though.
@@ -5815,7 +5818,7 @@
               To evaluate the proposition <m>p\vee q\wedge r</m>, you would evaluate <m>q\wedge r</m> first, and then form the inclusive disjunction with <m>p</m> (informally "'or it' with <m>p</m>").  So <m>p\vee q\wedge r</m> is the same as <m>p\vee(q\wedge r)</m>.  The precedence of the connectives makes the brackets redundant, but when you are starting out it might be helpful to include them.
             </p>
             <p>
-              To evaluate the proposition <m>\sim\!q\wedge p</m>, you'd negate <m>q</m> first, and then form the conjunction with <m>p</m>.  You could write <m>(\sim\!q)\wedge p</m>, but the brackets are redundant.  If you want the conjunction to occur before the negation, then you must write <m>\sim\!(q\wedge p)</m>.  It is very important that you recognize that <m>\sim\!q\wedge p</m> is <alert>not</alert> equivalent to <m>\sim\!(q\wedge p)</m>.
+              To evaluate the proposition <m>\mynot q\wedge p</m>, you'd negate <m>q</m> first, and then form the conjunction with <m>p</m>.  You could write <m>(\mynot q)\wedge p</m>, but the brackets are redundant.  If you want the conjunction to occur before the negation, then you must write <m>\mynot(q\wedge p)</m>.  It is very important that you recognize that <m>\mynot q\wedge p</m> is <alert>not</alert> equivalent to <m>\mynot (q\wedge p)</m>.
             </p>
           </subsubsection>
         </subsection>
@@ -5890,7 +5893,7 @@
                 <m>\ </m>Either Rich is not seven feet tall or Susan does not have brown hair.
               </statement>
               <solution>
-                From the context, you could go with either <m>\sim\!p\,\vee \sim\!q</m> or <m>\sim\!p\,\oplus\sim\!q</m>
+                From the context, you could go with either <m>\mynot p\,\vee \mynot q</m> or <m>\mynot p\,\oplus\mynot q</m>
               </solution>
             </exercise>
             <exercise>
@@ -5899,10 +5902,10 @@
               </statement>
               <solution>
                 <p>
-                  The particular phrasing in this sentence indicates that care is being taken to <em>avoid</em> interpreting this as "Rich is not seven feet tall or Susan has brown hair."  That statement would be represented as <m>\sim\!p\vee q</m> (or, more redundantly, <m>(\sim\!p)\vee q</m>).
+                  The particular phrasing in this sentence indicates that care is being taken to <em>avoid</em> interpreting this as "Rich is not seven feet tall or Susan has brown hair."  That statement would be represented as <m>\mynot p\vee q</m> (or, more redundantly, <m>(\mynot p)\vee q</m>).
                 </p>
                 <p>
-                  Given the way the sentence is written, we should interpret it as <m>\sim\!(p\vee q)</m>.  Later, when you study De Morgan's rules, you will learn a way to write <m>\sim\!(p\vee q)</m> in English that avoids any chance of misinterpretation.
+                  Given the way the sentence is written, we should interpret it as <m>\mynot (p\vee q)</m>.  Later, when you study De Morgan's rules, you will learn a way to write <m>\mynot(p\vee q)</m> in English that avoids any chance of misinterpretation.
                 </p>
               </solution>
             </exercise>
@@ -5919,7 +5922,7 @@
                 <m>\ </m>Either Rich is seven feet tall or Susan does not have brown hair, but not both.
               </statement>
               <solution>
-                <m>p\oplus \sim\!q</m>
+                <m>p\oplus \mynot q</m>
               </solution>
             </exercise>
           </exercisegroup>
@@ -5993,7 +5996,7 @@
                 <m>\ </m>Either the earth is made of green cheese while the moon is not, or the moon is made of green cheese.
               </statement>
               <solution>
-                The word <em>while</em> can be replaced with <em>and</em> without changing the meaning of the statement. The translation is <m>(q\wedge \sim\!p)\vee p</m>.  The exclusive disjunction is also acceptable, since the two "disjunctives" cannot both be true, but the answer given above is consistent with the statement given earlier that the inclusive disjunction is the assumption when there is ambiguity.
+                The word <em>while</em> can be replaced with <em>and</em> without changing the meaning of the statement. The translation is <m>(q\wedge \mynot p)\vee p</m>.  The exclusive disjunction is also acceptable, since the two "disjunctives" cannot both be true, but the answer given above is consistent with the statement given earlier that the inclusive disjunction is the assumption when there is ambiguity.
               </solution>
             </exercise>
             <exercise>
@@ -6001,7 +6004,7 @@
                 <m>\ </m>The earth is made of green cheese and either the moon is made of green cheese or the earth is not.
               </statement>
               <solution>
-                <m>q\wedge (p\vee\sim\!q)</m>
+                <m>q\wedge (p\vee\mynot q)</m>
               </solution>
             </exercise>
           </exercisegroup>
@@ -6019,7 +6022,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \sim\!(p\wedge q)</m>
+                <m>\ \mynot(p\wedge q)</m>
               </statement>
               <solution>
                 It is not the case that Jane did their homework and went for a jog.
@@ -6027,7 +6030,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ q\,\wedge\sim\!p</m>
+                <m>\ q\,\wedge\mynot p</m>
               </statement>
               <solution>
                 Jane went for a jog but did not do their homework.
@@ -6035,7 +6038,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \sim\!q\,\vee \sim\!p</m>
+                <m>\ \mynot q\,\vee \mynot p</m>
               </statement>
               <solution>
                 Jane didn't go for a jog or they didn't do their homework.
@@ -6043,7 +6046,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \sim\!(\sim\!p)</m>
+                <m>\ \mynot(\mynot p)</m>
               </statement>
               <solution>
                 It is not the case that Jane didn't do their homework.
@@ -6051,7 +6054,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ q\,\oplus\sim\!q</m>
+                <m>\ q\,\oplus\mynot q</m>
               </statement>
               <solution>
                 Either Jane went for a jog, or didn't go for a jog, but not both.
@@ -6127,11 +6130,11 @@
         </exercises>
         <solutions divisional="solution">
           <title>
-            Solutions to <xref ref="intro-to-logic"/> Exercises
+            Solutions to <xref ref="sec-intro-to-logic"/> Exercises
           </title>
         </solutions>
       </section>
-      <section xml:id="venn-diagrams">
+      <section xml:id="sec-venn-diagrams">
         <title>
           Venn Diagrams
         </title>
@@ -6154,7 +6157,7 @@
             </image>
           </p>
           <p>
-            In this diagram, the rectangle stands for the universe, while the circle denotes the logical proposition <m>p</m>.  We then shade in regions of the diagram to indicate the regions of interest.  For example, when we want to indicate the proposition <m>p</m>, we shade the inside of the circle, as shown in the left diagram.  If instead we want to show the proposition <m>\sim\!p</m>, we shade outside of the circle, as in the diagram on the right.
+            In this diagram, the rectangle stands for the universe, while the circle denotes the logical proposition <m>p</m>.  We then shade in regions of the diagram to indicate the regions of interest.  For example, when we want to indicate the proposition <m>p</m>, we shade the inside of the circle, as shown in the left diagram.  If instead we want to show the proposition <m>\mynot p</m>, we shade outside of the circle, as in the diagram on the right.
           </p>
           <p>
             <sidebyside widths="40% 40%" margins="5%">
@@ -6177,7 +6180,7 @@
               </figure>
               <figure xml:id="shading-for-not-p">
                 <caption>
-                  Shading for <m>\sim\!p</m>
+                  Shading for <m>\mynot p</m>
                 </caption>
                 <image width="100%">
                   <description>
@@ -6200,7 +6203,7 @@
             Venn Diagrams with Two Propositions
           </title>
           <p>
-            Venn diagrams with only one proposition don't generally contain much information, as it's usually pretty easy to visualize what <m>p</m> and <m>\sim\!p</m> mean when you have only the one proposition.  It gets more interesting when you have propositions <m>p</m> and <m>q</m> in the same diagram, as you can see in the next figure.
+            Venn diagrams with only one proposition don't generally contain much information, as it's usually pretty easy to visualize what <m>p</m> and <m>\mynot p</m> mean when you have only the one proposition.  It gets more interesting when you have propositions <m>p</m> and <m>q</m> in the same diagram, as you can see in the next figure.
           </p>
           <p>
             <image width="40%" xml:id="venn2-example-1">
@@ -6316,14 +6319,14 @@
             More Complications
           </title>
           <p>
-            Suppose you wished to create a Venn diagram representing <m>\sim\!p\,\wedge q</m>.  One way to do this is by constructing the diagram for <m>\sim\!p</m> and the diagram for <m>q</m>, and then consider conjunction.  Let's call this the <em>visual step-by-step</em> method.
+            Suppose you wished to create a Venn diagram representing <m>\mynot p\,\wedge q</m>.  One way to do this is by constructing the diagram for <m>\mynot p</m> and the diagram for <m>q</m>, and then consider conjunction.  Let's call this the <em>visual step-by-step</em> method.
           </p>
           <p>
-            Here are the diagrams for <m>\sim\!p</m> and for <m>q</m>:
+            Here are the diagrams for <m>\mynot p</m> and for <m>q</m>:
             <sidebyside widths="40% 40%" margins="5%">
               <figure xml:id="not-p">
                 <caption>
-                  Venn diagram for <m>\sim\!p</m>
+                  Venn diagram for <m>\mynot p</m>
                 </caption>
                 <image width="100%">
                   <description>
@@ -6359,7 +6362,7 @@
           <p>
             <figure xml:id="not-p-and-q">
               <caption>
-                Venn diagram for <m>\sim\!p\wedge q</m>
+                Venn diagram for <m>\mynot p\wedge q</m>
               </caption>
               <image width="40%">
                 <description>
@@ -6377,7 +6380,7 @@
             Another way to do this is to list the basic regions associated with each of the statements appearing in the compound statement, and from them determine which basic regions are associated with the compound statement itself.  Referring to <xref ref="basic-regions" />, we see that
             <ul>
               <li>
-                <m>\sim\!p</m> is associated with regions 2 and 4
+                <m>\mynot p</m> is associated with regions 2 and 4
               </li>
               <li>
                 <m>q</m> is associated with regions 2 and 3
@@ -6386,12 +6389,12 @@
             The conjunction of these two statements involves the basic region(s) that are common to both of the statements.  In this case, only basic region 2 is common.  This leads to <xref ref="not-p-and-q" />.
           </p>
           <p>
-            To find <m>\sim\!p\vee q</m> using the visual step-by-step method, you'd take the diagrams in <xref ref="not-p" /> and <xref ref="shading-for-q2-again" /> and then shade the regions that are shaded in at least one of those two diagrams.  Alternatively, you can list the basic regions associated with each of the diagrams and then identify the basic regions that appear in at least one of the two lists.  Referring to the enumerations given earlier, we see that regions 2, 3, and 4 appear on those lists (either on one or the other or both).  So those are the regions that are shaded.  Either way, the result is as follows:
+            To find <m>\mynot p\vee q</m> using the visual step-by-step method, you'd take the diagrams in <xref ref="not-p" /> and <xref ref="shading-for-q2-again" /> and then shade the regions that are shaded in at least one of those two diagrams.  Alternatively, you can list the basic regions associated with each of the diagrams and then identify the basic regions that appear in at least one of the two lists.  Referring to the enumerations given earlier, we see that regions 2, 3, and 4 appear on those lists (either on one or the other or both).  So those are the regions that are shaded.  Either way, the result is as follows:
           </p>
           <p>
             <figure xml:id="not-p-or-q">
               <caption>
-                Venn diagram for the compound statement <m>\sim\!p\vee q</m>
+                Venn diagram for the compound statement <m>\mynot p\vee q</m>
               </caption>
               <image width="40%">
                 <description>
@@ -6408,16 +6411,16 @@
           </p>
           <example>
             <statement>
-              Shade a Venn diagram corresponding to <m>\sim\!p\,\vee\sim\!q</m>.
+              Shade a Venn diagram corresponding to <m>\mynot p\,\vee\mynot q</m>.
             </statement>
             <solution>
               <p>
-                Using the visual step-by-step method, first draw the diagrams for <m>\sim\!p</m> and for <m>\sim\!q</m>.  The diagram for <m>\sim\!p</m> is in <xref ref="not-p" />, and here is the diagram for <m>\sim\!q</m>:
+                Using the visual step-by-step method, first draw the diagrams for <m>\mynot p</m> and for <m>\mynot q</m>.  The diagram for <m>\mynot p</m> is in <xref ref="not-p" />, and here is the diagram for <m>\mynot q</m>:
               </p>
               <p>
                 <figure xml:id="not-q">
                   <caption>
-                    Venn diagram for <m>\sim\!q</m>
+                    Venn diagram for <m>\mynot q</m>
                   </caption>
                   <image width="40%">
                     <description>
@@ -6437,7 +6440,7 @@
               <p>
                 <figure xml:id="not-p-or-not-q">
                   <caption>
-                    Venn diagram for <m>\sim\!p\,\vee\sim\!q</m>
+                    Venn diagram for <m>\mynot p\,\vee\mynot q</m>
                   </caption>
                   <image width="40%">
                     <description>
@@ -6455,10 +6458,10 @@
                 Alternatively, we can look at the basic regions:
                 <ul>
                   <li>
-                    <m>\sim\!p</m>: regions 2 and 4
+                    <m>\mynot p</m>: regions 2 and 4
                   </li>
                   <li>
-                    <m>\sim\!q</m>: regions 1 and 4
+                    <m>\mynot q</m>: regions 1 and 4
                   </li>
                 </ul>
                 We are interested in the inclusive disjunction, so shade any region that appears at least once in those lists: regions 1, 2, and 4.  This gives the figure above.
@@ -6471,12 +6474,12 @@
             Negation and De Morgan's Laws
           </title>
           <p>
-            Consider the proposition <m>\sim\!(p \wedge q)</m>.  The brackets indicate that we must find <m>p \wedge q</m> first, and then form the negation.  The diagram for <m>p \wedge q</m> is shown in <xref ref="p-and-q" />.  The diagram for <m>\sim\!(p \wedge q)</m> is obtained by "reversing": shade all previously unshaded regions, and unshade the shaded region.  This yields the following:
+            Consider the proposition <m>\mynot(p \wedge q)</m>.  The brackets indicate that we must find <m>p \wedge q</m> first, and then form the negation.  The diagram for <m>p \wedge q</m> is shown in <xref ref="p-and-q" />.  The diagram for <m>\mynot(p \wedge q)</m> is obtained by "reversing": shade all previously unshaded regions, and unshade the shaded region.  This yields the following:
           </p>
           <p>
             <figure xml:id="neg-of-p-and-q">
               <caption>
-                Venn diagram for <m>\sim\!(p \wedge q)</m>
+                Venn diagram for <m>\mynot(p \wedge q)</m>
               </caption>
               <image width="40%">
                 <description>
@@ -6491,7 +6494,7 @@
             </figure>
           </p>
           <p>
-            This is identical to the Venn diagram for <m>\sim\!p\,\vee \sim\!q</m>, so we can conclude that the compound statement <m>\sim\!p\,\vee \sim\!q</m> is equivalent to the compound statement <m>\sim\!(p \wedge q)</m>.  Note that the particular nature of statements <m>p</m> and <m>q</m> do not affect this equivalence.  Similarly, it can be shown that <m>\sim\!p\,\wedge\sim\!q</m> is equivalent to <m>\sim\!(p\vee q)</m>.  Together, these two assertions of equivalence are known as <term>De Morgan's Laws</term>:
+            This is identical to the Venn diagram for <m>\mynot p\,\vee \mynot q</m>, so we can conclude that the compound statement <m>\mynot p\,\vee \mynot q</m> is equivalent to the compound statement <m>\mynot(p \wedge q)</m>.  Note that the particular nature of statements <m>p</m> and <m>q</m> do not affect this equivalence.  Similarly, it can be shown that <m>\mynot p\,\wedge\mynot q</m> is equivalent to <m>\mynot(p\vee q)</m>.  Together, these two assertions of equivalence are known as <term>De Morgan's Laws</term>:
             <theorem>
               <title>
                 De Morgan's Laws
@@ -6503,9 +6506,9 @@
                 <p>
                   <md>
                     <mrow>
-                      \sim\!(p\wedge q)\Leftrightarrow\,\sim\!p\,\vee\sim\!q</mrow>
+                      \mynot(p\wedge q)\Leftrightarrow\,\mynot p\,\vee\mynot q</mrow>
                     <mrow>
-                      \sim\!(p\vee q)\Leftrightarrow\,\sim\!p\,\wedge\sim\!q
+                      \mynot(p\vee q)\Leftrightarrow\,\mynot p\,\wedge\mynot q
                     </mrow>
                   </md>
                   where the symbol <m>\Leftrightarrow</m> is to be read as "is logically equivalent to".
@@ -6731,7 +6734,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ p\wedge \sim\!q</m>
+                <m>\ p\wedge \mynot q</m>
               </statement>
               <solution>
                 <image width="40%" xml:id="ex-p-and-notq">
@@ -6748,7 +6751,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \sim\!p\wedge \sim\!q</m>
+                <m>\ \mynot p\wedge \mynot q</m>
               </statement>
               <solution>
                 <image width="40%" xml:id="ex-notp-and-notq">
@@ -6765,7 +6768,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \sim\!(p\wedge \sim\!q)</m> (Compare with #2.)
+                <m>\ \mynot(p\wedge \mynot q)</m> (Compare with #2.)
               </statement>
               <solution>
                 <image width="40%" xml:id="ex-neg-of-p-and-notq">
@@ -6783,7 +6786,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \sim\!(p\vee q)</m>
+                <m>\ \mynot(p\vee q)</m>
               </statement>
               <solution>
                 <image width="40%" xml:id="ex-neg-of-p-or-q">
@@ -6800,7 +6803,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ p\wedge(\sim\!p\vee q)</m>
+                <m>\ p\wedge(\mynot p\vee q)</m>
               </statement>
               <solution>
                 <image width="40%" xml:id="ex-p-and-notporq">
@@ -6894,7 +6897,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ p\vee\sim\!q\vee r</m>
+                <m>\ p\vee\mynot q\vee r</m>
               </statement>
               <solution>
                 <image width="40%" xml:id="ex-p-or-notq-or-r">
@@ -6913,7 +6916,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \sim\!p\wedge q\wedge\sim\!r</m>
+                <m>\ \mynot p\wedge q\wedge\mynot r</m>
               </statement>
               <solution>
                 <image width="40%" xml:id="ex-notp-and-q-and-notr">
@@ -6930,7 +6933,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ (p\wedge q)\vee\sim\!r</m>
+                <m>\ (p\wedge q)\vee\mynot r</m>
               </statement>
               <solution>
                 <image width="40%" xml:id="ex-pandq-or-notr">
@@ -6948,7 +6951,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \sim\!q\wedge(\sim\!p\vee r)</m>
+                <m>\ \mynot q\wedge(\mynot p\vee r)</m>
               </statement>
               <solution>
                 <image width="40%" xml:id="ex-notq-and-notporr">
@@ -6968,7 +6971,7 @@
         </exercises>
         <solutions divisional="solution">
           <title>
-            Solutions to <xref ref="venn-diagrams"/> Exercises
+            Solutions to <xref ref="sec-venn-diagrams"/> Exercises
           </title>
         </solutions>
       </section>
@@ -7360,17 +7363,17 @@
               Negations in Truth Tables
             </title>
             <p>
-              To negate a variable, we simply switch the value of each entry in that column from its previous value.  For example, consider the truth table for <m>p\vee\,\sim\!p</m>.  We start with a column for <m>p</m> and one for <m>\sim\!p</m>.  To populate the latter, we have to negate <m>p</m>.  To do this, we take every entry in the <m>p</m> column and switch all the zeros to ones and the ones to zeros.  We'll then form the inclusive disjunction of those two columns.
+              To negate a variable, we simply switch the value of each entry in that column from its previous value.  For example, consider the truth table for <m>p\vee\,\mynot p</m>.  We start with a column for <m>p</m> and one for <m>\mynot p</m>.  To populate the latter, we have to negate <m>p</m>.  To do this, we take every entry in the <m>p</m> column and switch all the zeros to ones and the ones to zeros.  We'll then form the inclusive disjunction of those two columns.
               <tabular halign="center" top="major" left="medium">
                 <row bottom="medium">
                   <cell right="medium">
                     <m>p</m>
                   </cell>
                   <cell right="medium">
-                    <m>\sim\!p</m>
+                    <m>\mynot p</m>
                   </cell>
                   <cell right="medium">
-                    <m>p\,\vee\,\sim\!p</m>
+                    <m>p\,\vee\,\mynot p</m>
                   </cell>
                 </row>
                 <row>
@@ -7398,10 +7401,10 @@
               </tabular>
             </p>
             <p>
-              Notice that <m>p\vee\,\sim\!p</m> is always true.  A concrete example will hopefully illustrate the reasonableness of this: "Jason's shirt is either plaid or not plaid."  This statement is true regardless of the pattern on Jason's shirt.
+              Notice that <m>p\vee\,\mynot p</m> is always true.  A concrete example will hopefully illustrate the reasonableness of this: "Jason's shirt is either plaid or not plaid."  This statement is true regardless of the pattern on Jason's shirt.
             </p>
             <p>
-              To negate an expession, we use the same idea and switch the value of each entry in the column for that expression, whether that expression is simple or compound.  For example, here is the truth table for <m>\sim\!(p\wedge 1)</m>:
+              To negate an expession, we use the same idea and switch the value of each entry in the column for that expression, whether that expression is simple or compound.  For example, here is the truth table for <m>\mynot(p\wedge 1)</m>:
               <tabular halign="center" top="major" left="medium">
                 <row bottom="medium">
                   <cell right="medium">
@@ -7414,7 +7417,7 @@
                     <m>p\wedge 1</m>
                   </cell>
                   <cell right="medium">
-                    <m>\sim\!(p\wedge 1)</m>
+                    <m>\mynot(p\wedge 1)</m>
                   </cell>
                 </row>
                 <row>
@@ -7454,7 +7457,7 @@
               Truth Tables with Three Variables
             </title>
             <p>
-              A truth table with three variables will contain 8 rows in order to display all the possible truth values for the three statements <m>p</m>, <m>q</m>, and <m>r</m>.  For example, the truth table for <m>\sim\!p\,\wedge(q\,\vee \sim\!r)</m> is
+              A truth table with three variables will contain 8 rows in order to display all the possible truth values for the three statements <m>p</m>, <m>q</m>, and <m>r</m>.  For example, the truth table for <m>\mynot p\,\wedge(q\,\vee \mynot r)</m> is
               <tabular halign="center" top="major" left="medium">
                 <row bottom="medium">
                   <cell right="medium">
@@ -7467,16 +7470,16 @@
                     <m>r</m>
                   </cell>
                   <cell right="medium">
-                    <m>\sim\!r</m>
+                    <m>\mynot r</m>
                   </cell>
                   <cell right="medium">
-                    <m>q\,\vee\sim\!r</m>
+                    <m>q\,\vee\mynot r</m>
                   </cell>
                   <cell right="medium">
-                    <m>\sim\!p</m>
+                    <m>\mynot p</m>
                   </cell>
                   <cell right="medium">
-                    <m>\sim\!p\,\wedge(q\,\vee \sim\!r)</m>
+                    <m>\mynot p\,\wedge(q\,\vee \mynot r)</m>
                   </cell>
                 </row>
                 <row>
@@ -7672,7 +7675,7 @@
               Therefore, it is a good idea to fill the table in a systematic way.  Look at the <em>column entries</em>, starting with the leftmost column.  Then look at the next column, then the next.  Note the pattern of the entries in each column.  If you mimic that pattern in your own work, you will minimize the chances of missing a combination variables.
             </p>
             <p>
-              Another common mistake is to take a shortcut and start the truth table with one of the columns being, for example, <m>\sim\!p</m>.  This is not correct.  Truth tables must always start with unnegated variables.
+              Another common mistake is to take a shortcut and start the truth table with one of the columns being, for example, <m>\mynot p</m>.  This is not correct.  Truth tables must always start with unnegated variables.
             </p>
           </subsubsection>
         </subsection>
@@ -7681,7 +7684,7 @@
             Logical Equivalence
           </title>
           <p>
-            Two logical expressions are said to be <term>logically equivalent</term> if they have the same values in their columns in the truth table.  We saw in our examples above that <m>p\,\vee\sim\!p</m> was logically equivalent to 1\, and <m>p\wedge 1</m> was logically equivalent to <m>p</m>.  The symbol for <em>logically equivalent to</em> is <m>\Leftrightarrow</m>, so <m>p\,\vee\sim\!p\Leftrightarrow 1</m> and <m>p\wedge 1\Leftrightarrow p</m>.
+            Two logical expressions are said to be <term>logically equivalent</term> if they have the same values in their columns in the truth table.  We saw in our examples above that <m>p\,\vee\mynot p</m> was logically equivalent to 1\, and <m>p\wedge 1</m> was logically equivalent to <m>p</m>.  The symbol for <em>logically equivalent to</em> is <m>\Leftrightarrow</m>, so <m>p\,\vee\mynot p\Leftrightarrow 1</m> and <m>p\wedge 1\Leftrightarrow p</m>.
           </p>
           <example>
             <statement>
@@ -7904,7 +7907,7 @@
           </example>
           <example>
             <statement>
-              Simplify <m>(p\wedge q)\vee(\sim\!p\,\wedge q)</m>.
+              Simplify <m>(p\wedge q)\vee(\mynot p\,\wedge q)</m>.
             </statement>
             <solution>
               <p>
@@ -7917,16 +7920,16 @@
                       <m>q</m>
                     </cell>
                     <cell right="medium">
-                      <m>\sim\!p</m>
+                      <m>\mynot p</m>
                     </cell>
                     <cell right="medium">
                       <m>p\wedge q</m>
                     </cell>
                     <cell right="medium">
-                      <m>\sim\!p\,\wedge q</m>
+                      <m>\mynot p\,\wedge q</m>
                     </cell>
                     <cell right="medium">
-                      <m>(p\wedge q)\vee(\sim\!p\,\wedge q)</m>
+                      <m>(p\wedge q)\vee(\mynot p\,\wedge q)</m>
                     </cell>
                   </row>
                   <row>
@@ -8010,13 +8013,13 @@
                     </cell>
                   </row>
                 </tabular>
-                Notice that the last column is identical to the column for <m>q</m>.  Therefore, <m>(p\wedge q)\vee(\sim\!p\,\wedge q)\Leftrightarrow q</m>, and so the simplified expression is <m>q</m>
+                Notice that the last column is identical to the column for <m>q</m>.  Therefore, <m>(p\wedge q)\vee(\mynot p\,\wedge q)\Leftrightarrow q</m>, and so the simplified expression is <m>q</m>
               </p>
             </solution>
           </example>
           <example>
             <statement>
-              Is <m>p \oplus q</m> logically equivalent to <m>(p\wedge\sim\!q)\vee (\sim\!p\,\wedge q)</m>?
+              Is <m>p \oplus q</m> logically equivalent to <m>(p\wedge\mynot q)\vee (\mynot p\,\wedge q)</m>?
             </statement>
             <solution>
               <p>
@@ -8032,19 +8035,19 @@
                       <m>p \oplus q</m>
                     </cell>
                     <cell right="medium">
-                      <m>\sim\!p</m>
+                      <m>\mynot p</m>
                     </cell>
                     <cell right="medium">
-                      <m>\sim\!q</m>
+                      <m>\mynot q</m>
                     </cell>
                     <cell right="medium">
-                      <m>p\,\wedge\sim\!q</m>
+                      <m>p\,\wedge\mynot q</m>
                     </cell>
                     <cell right="medium">
-                      <m>\sim\!p \wedge q</m>
+                      <m>\mynot p \wedge q</m>
                     </cell>
                     <cell right="medium">
-                      <m>(p\wedge\sim\!q)\vee (\sim\!p\,\wedge q)</m>
+                      <m>(p\wedge\mynot q)\vee (\mynot p\,\wedge q)</m>
                     </cell>
                   </row>
                   <row>
@@ -8152,11 +8155,474 @@
                     </cell>
                   </row>
                 </tabular>
-                Comparing the associated columns, we see that the two statements are logically equivalent.
+                Comparing columns 3 and 8, we see that the two statements are logically equivalent.
               </p>
             </solution>
           </example>
         </subsection>
+        <exercises>
+          <exercisegroup>
+            <introduction>
+              Give the truth tables for the following logical expressions.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\ p\,\wedge\mynot p</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\,\wedge\mynot p</m>
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ p\vee 1</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>1</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p \vee 1</m>
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ p\,\wedge\mynot q</m>
+              </statement>
+              <solution>
+                <tabular top="major" left="medium" halign="center">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p \wedge \mynot q</m>
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\mynot(p\vee q)</m>
+              </statement>
+              <solution>
+                <tabular top="major" left="medium" halign="center">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\vee q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot(p\vee q)</m>
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ p\,\oplus\mynot q</m>
+              </statement>
+              <solution>
+                <tabular top="major" left="medium" halign="center">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\,\oplus\mynot q</m>
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>p\vee(\mynot p\,\wedge q)</m>
+              </statement>
+              <solution>
+                <tabular top="major" left="medium" halign="center">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p\,\wedge q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\vee(\mynot p\,\wedge q)</m>
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m></m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m></m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m></m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m></m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+            </introduction>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+            </introduction>
+          </exercisegroup>
+        </exercises>
+        <solutions divisional="solution">
+          <title>
+            Solutions to <xref ref="sec-logical-equivalence"/> Exercises
+          </title>
+        </solutions>
       </section>
     </chapter>
   </book>
