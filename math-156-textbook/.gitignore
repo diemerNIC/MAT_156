@@ -3,3 +3,4 @@ output/**
 **/source/*.tex
 *.tex
 *.pdf
+*.html
