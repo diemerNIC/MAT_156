@@ -9149,13 +9149,191 @@
                       0
                     </cell>
                   </row>
-                </tabular>                
+                </tabular>
               </solution>
             </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
+              Are the two expressions logically equivalent?
             </introduction>
+            <exercise>
+              <statement>
+                <m>\ \mynot(p\wedge q)</m> and <m>\mynot p\,\wedge\,\mynot q</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\wedge q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot(p\wedge q)</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p\,\wedge\,\mynot q</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+<!--                  <row>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell><m>\star</m></cell>
+                    <cell></cell>
+                    <cell></cell>
+                    <cell><m>\star</m></cell>
+                  </row>
+-->
+                </tabular>
+                No, because the 4th and the 7th columns are not the same.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m></m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m></m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m></m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m></m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m></m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m></m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
