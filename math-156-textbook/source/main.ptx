@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude">
   <docinfo>
+    <macros>
+      \newcommand{\mynot}{\sim\!}
+    </macros>
     <latex-image-preamble>
       \usepackage{tikz}
       \usepackage{venndiagram}
+      \usepackage{circuitikz}
+
     </latex-image-preamble>
-    <macros>
-      \newcommand{mynot}{\sim\!}
-    </macros>
   </docinfo>
   <book xml:id="binary-logic-and-more">
     <title>Binary, Logic, and More</title>
@@ -10730,7 +10732,9 @@
                       <m>\mynot p</m>
                     </cell>
                     <cell right="medium">
-                      <m>\mynot p\,\wedge\,q</m>
+                      <m>\mynot p
+
+                        \,\wedge\,q</m>
                     </cell>
                     <cell right="medium">
                       <m>p\vee(\mynot p\,\wedge\,q)</m>
@@ -10815,6 +10819,162 @@
             Solutions to <xref ref="sec-logical-equivalence"/> Exercises
           </title>
         </solutions>
+      </section>
+      <section xml:id="sec-boolean-algebra">
+        <title>Boolean Algebra</title>
+        <subsection xml:id="ssec-logic-circuits">
+          <title>Logic Circuits</title>
+          <introduction>
+            <p>
+              A logic circuit or digital circuit is an electrical circuit based on a discrete number of voltage levels, usually two.  Two-level circuits usually have one voltage set at zero volts, and the circuit then behaves like a switch, being either <em>on</em> or <em>off</em>.  A nice diagram for a switch looks like this:
+              <image width="30%" xml:id="fig-switch">
+                <latex-image>
+                  \begin{tikzpicture}
+                    \draw[thick] (0,0) to[nos=$A$]  (4,0);
+                  \end{tikzpicture}
+                </latex-image>
+              </image>
+              so that when the switch is open, as in the diagram, no current exists and the switch is <em>off</em>.  When the switch closes and there's a clear path from the left side to the right side, the switch is <em>on</em>.
+            </p>
+            <p>
+              A digital circuit then makes logical decisions, based on the input to the circuit.  The simplest logic circuits are called <term>gates</term>.  Physically, a gate is a transistor circuit which takes one or more voltage inputs and gives a single voltage output.
+            </p>
+            <p>
+              One way to represent the action of a gate is by using a truth table.  As is usual in a truth table, all possible combinations of the input voltages are given, as well as the output of the gate for each set of inputs.  Each input voltage is given a symbol, such as <m>A</m>.  When the input signal is off, the value of <m>A</m> is given as 0, and when it is on, the value of <m>A</m> is 1.  The associated truth table then looks exactly like those we studied with logical propositions.
+            </p>
+          </introduction>
+          <subsubsection xml:id="sssec-and-gate">
+            <title><em>and</em> gate</title>
+            <p>
+              The <term>switch representation</term> of an <em>and</em> gate looks like this:
+              <image width="30%" xml:id="fig-switch-and">
+                <latex-image>
+                  \begin{tikzpicture}
+                    \draw[thick] (0,0) to[nos=$A$]  (2,0) to[nos=$B$] (4,0);
+                  \end{tikzpicture}
+                </latex-image>
+              </image>
+              It is a series circuit, and both switches must be closed (switched <em>on</em>) for the circuit to carry current.  You can see, then, that this is the same as <m>A</m> <em>and</em> <m>B</m>, since <m>A</m> <em>and</em> <m>B</m> is true only when both <m>A</m> and <m>B</m> are true.
+            </p>
+            <p>
+              Another common representation is the <term>gate representation</term>, which looks like this:
+              <image width="30%" xml:id="fig-gate-and">
+                <latex-image>
+                  \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw (0,0) node[and port] (myand) {}
+                      (myand.in 1) node[anchor=east] {$A$}
+                      (myand.in 2) node[anchor=east] {$B$}
+                      (myand.out) node[anchor=west] {$AB$};
+                  \end{circuitikz}
+                </latex-image>
+              </image>
+              In symbols, we write <m>A</m> <em>and</em> <m>B</m> as <m>A\cdot B</m> or just <m>AB</m>.
+            </p>
+          </subsubsection>
+          <subsubsection xml:id="sssec-or-gate">
+            <title><em>or</em> gate</title>
+            <p>
+              The switch representation of an <em>or</em> gate looks like this:
+              <image width="30%" xml:id="fig-switch-or">
+                <latex-image>
+                  \begin{tikzpicture}
+                    \draw[thick] (0,0)--(1,0)--(1,1) to[nos=$A$]  (3,1)--(3,0)--(4,0);
+                    \draw[thick] (1,0)--(1,-1) to[nos=$B$] (3,-1)--(3,0);
+                  \end{tikzpicture}
+                </latex-image>
+              </image>
+              It is a parallel circuit, and at least one switch must be closed (on) for the circuit to carry current (say from left to right).  You can see, then, that this is the same as <m>A</m> <em>or</em> <m>B</m>, since <m>A</m> <em>or</em> <m>B</m> is true when either <m>A</m> is true or <m>B</m> is true, or both.
+            </p>
+            <p>
+              The gate representation looks like this:
+              <image width="30%" xml:id="fig-gate-or">
+                <latex-image>
+                  \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw (0,0) node[or port] (myor) {}
+                      (myor.in 1) node[anchor=east] {$A$}
+                      (myor.in 2) node[anchor=east] {$B$}
+                      (myor.out) node[anchor=west] {$A+B$};
+                  \end{circuitikz}
+                </latex-image>
+              </image>
+              In symbols we write <m>A</m> <em>or</em> <m>B</m> as <m>A+B</m>.
+            </p>
+          </subsubsection>
+          <subsubsection xml:id="sssec-not-gate">
+            <title><em>not</em> gate</title>
+            <p>
+              The <em>not</em> gate, or <term>inverter</term>, has the diagram
+              <image width="20%" xml:id="fig-gate-not">
+                <latex-image>
+                  \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw (0,0) node[not port] (not1) {}
+                     (not1.in) node[anchor=east] {$A$}
+                     (not1.out) node[anchor=west] {$\overline{A}$};
+                  \end{circuitikz}
+                </latex-image>
+              </image>
+              and we write <em>not</em> <m>A</m> as <m>\overline{A}</m>, just as in set notation.  If the negation happens in combination with another gate, we usually omit the triangle and just have a little circle to show the negation, as in the next subsection.
+            </p>
+          </subsubsection>
+        </subsection>
+        <subsection xml:id="ssec-gatereps-logicircs">
+          <title> Gate Representations of Logic Circuits</title>
+          <p>
+            The gate representation of the logic circuit for <m>A\overline{B}</m> is then
+            <image width="30%" xml:id="fig-AandnotB">
+              <latex-image>
+                \begin{circuitikz}
+                  \ctikzset{logic ports=ieee}
+                  \draw (0,0) node[and port] (myand) {}
+                   (myand.in 1) node[anchor=east] {$A$}
+                   (myand.in 2) node[anchor=east] {$B$}
+                   (myand.bin 2) node[notcirc,left] {}
+                   (myand.out) node[anchor=west] {$A\overline{B}$};
+                \end{circuitikz}
+              </latex-image>
+            </image>
+            with th eround circle on the input <m>B</m> negating it, so that the two inputs to the <em>and</em> gate are then <m>A</m> and <m>\overline{B}</m>.
+          </p>
+          <p>
+            The gate representation for <m>\overline{A+B}</m> is
+            <image width="30%" xml:id="fig-notAorB">
+              <latex-image>
+                \begin{circuitikz}
+                  \ctikzset{logic ports=ieee}
+                  \draw (0,0) node[or port] (myor) {}
+                   (myor.in 1) node[anchor=east] {$A$}
+                   (myor.in 2) node[anchor=east] {$B$}
+                   (myor.bout) node[notcirc,right] {}
+                   (myor.out) node[anchor=west] {$\overline{A+B}$};
+                \end{circuitikz}
+              </latex-image>
+            </image>
+            The <em>or</em> gate gives <m>A+B</m>, and the little round circle on the output indicates the negation.
+          </p>
+          <example xml:id="ex-not-notAandB">
+            <statement>
+              What is the logic circuit expression for the following gate diagram?
+              <image width="20%" xml:id="fig-not-notAandB">
+                <latex-image>
+                  \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw (0,0) node[and port] (myand) {}
+                     (myand.in 1) node[anchor=east] {$A$}
+                     (myand.bin 1) node[notcirc,left] {}
+                     (myand.in 2) node[anchor=east] {$B$}
+                     (myand.bout) node[notcirc,right] {};
+                  \end{circuitikz}
+                </latex-image>
+              </image>
+            </statement>
+            <answer>
+              <m>\overline{\overline{A}B}</m>
+            </answer>
+          </example>
+        </subsection>
       </section>
     </chapter>
   </book>
