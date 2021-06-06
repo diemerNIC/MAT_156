@@ -9278,66 +9278,1536 @@
                       0
                     </cell>
                   </row>
-<!--                  <row>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell><m>\star</m></cell>
-                    <cell></cell>
-                    <cell></cell>
-                    <cell><m>\star</m></cell>
-                  </row>
--->
                 </tabular>
                 No, because the 4th and the 7th columns are not the same.
               </solution>
             </exercise>
             <exercise>
               <statement>
-                <m></m>
+                <m>\ \mynot(p\vee q)</m> and <m>\mynot p\,\wedge\,\mynot q</m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\vee q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot(p\vee q)</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p\,\wedge\,\mynot q</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+                Yes, because the 4th and the 7th columns (the columns corresponding to the two statements of interest) are identical.
               </solution>
             </exercise>
             <exercise>
               <statement>
-                <m></m>
+                <m>\ p\oplus q</m> and <m>\mynot p\,\oplus\,\mynot q</m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\oplus q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p\,\oplus\,\mynot q</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+                Yes, because the columns corresponding to the statements of interest (the 3rd and the 6th) are identical.
               </solution>
             </exercise>
             <exercise>
               <statement>
-                <m></m>
+                <m>\ p\vee(q\wedge r)</m> and <m>(p\vee q)\wedge r</m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>r</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q\wedge r</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\vee(q\wedge r)</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\vee q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>(p\vee q)\wedge r</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                No, because the corresponding columns (columns 5 and 7) are not identical.
               </solution>
             </exercise>
             <exercise>
               <statement>
-                <m></m>
+                <m>\ p\vee(p\wedge q)</m> and <m>p</m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\wedge q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\vee(p\wedge q)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                Yes, because the corresponding columns (1 and 4) are identical.
               </solution>
             </exercise>
             <exercise>
               <statement>
-                <m></m>
+                <m>\ (p\vee q)\vee r</m> and <m>p\vee (q\vee r)</m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>r</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\vee q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>(p\vee q)\vee r</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q\vee r</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\vee (q\vee r)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                Yes, because the corresponding columns are identical (5th and 7th).
               </solution>
             </exercise>
             <exercise>
               <statement>
-                <m></m>
+                <m>\ p\oplus q</m> and <m>(p\wedge q)\vee (\mynot p\,\wedge\,\mynot q)</m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\oplus q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\wedge q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p\,\wedge\,\mynot q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>(p\wedge q)\vee (\mynot p\,\wedge\,\mynot q)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                No, because the corresponding columns (3 and 8) are not identical.  Can you see how the two statements are related?
               </solution>
             </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
+              Simplify each statement.
             </introduction>
+            <exercise>
+              <statement>
+                <m>\ p\wedge p</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\wedge p</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                So <m>p\wedge p\Leftrightarrow p</m>.  (You can omit the second column of this table, if you wish.)
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ p\,\vee\mynot p</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\,\vee\mynot p</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                This statement is always true.  It is logically equivalent to 1.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ p\wedge 0</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>0</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\wedge 0</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+                This statement is always false.  It is logically equivalent to 0.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\mynot p\,\oplus\,p</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p\,\oplus p</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                This expression is logically equivalent to 1.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ (p\oplus q)\wedge(p\,\oplus \mynot q)</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\oplus q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\,\oplus\mynot q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>(p\oplus q)\wedge(p\,\oplus\,\mynot q)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+                The expression simplifies to 0.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ p\vee(p\wedge q)</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\wedge q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\vee(p\wedge q)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                Comparing the first and last columns, we see that <m>p\vee(p\wedge q)\Leftrightarrow p</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ q\wedge(p\vee q)</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\vee q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q\wedge(p\vee q)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                Comparing columns 2 and 4, we see that <m>q\wedge(p\vee q)\Leftrightarrow q</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ p\wedge(\mynot p\,\vee\,q)</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p\,\vee\,q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\wedge(\mynot p\,\vee\,q)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                This statement is true only if both <m>p</m> and <m>q</m> are true.  That is, it is equivalent to <m>p\wedge q</m>.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ p\vee(\mynot p\,\wedge\,q)</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mynot p\,\wedge\,q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\vee(\mynot p\,\wedge\,q)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                This statement is false only if both <m>p</m> and <m>q</m> are false.  It is equivalent to <m>p\vee q</m>.
+              </solution>
+            </exercise>
           </exercisegroup>
         </exercises>
         <solutions divisional="solution">
