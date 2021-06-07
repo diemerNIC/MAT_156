@@ -10936,7 +10936,8 @@
                 \end{circuitikz}
               </latex-image>
             </image>
-            with the round circle on the input <m>B</m> negating it, so that the two inputs to the <em>and</em> gate are then <m>A</m> and <m>\overline{B}</m>.
+            with the round circle on the input <m>B</m> negating it, so that the two inputs to the <em>and</em> gate are then
+            <m>A</m> and <m>\overline{B}</m>.
           </p>
           <p>
             The gate representation for <m>\overline{A+B}</m> is
@@ -11535,7 +11536,7 @@
                 </image>
               </statement>
               <solution>
-                <p><m>\overline{A}\,\overline{B}</m></p>
+                <m>\overline{A}\,\overline{B}</m>
               </solution>
             </exercise>
             <exercise>
