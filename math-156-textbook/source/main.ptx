@@ -10936,7 +10936,7 @@
                 \end{circuitikz}
               </latex-image>
             </image>
-            with th eround circle on the input <m>B</m> negating it, so that the two inputs to the <em>and</em> gate are then <m>A</m> and <m>\overline{B}</m>.
+            with the round circle on the input <m>B</m> negating it, so that the two inputs to the <em>and</em> gate are then <m>A</m> and <m>\overline{B}</m>.
           </p>
           <p>
             The gate representation for <m>\overline{A+B}</m> is
@@ -10975,6 +10975,735 @@
             </answer>
           </example>
         </subsection>
+        <subsection xml:id="ssec-boolean-algebra">
+          <title>Boolean Algebra</title>
+          <p>
+            The symbols used for circuits, <m>AB</m>, <m>A+B</m>, and <m>\overline{A}</m>, are the same symbols as used in Boolean algebra.  In this type of algebra, each variable (<m>A</m>, <m>B</m>, etc.) can take only the value 0 or 1.
+          </p>
+          <p>
+            Truth tables in Boolean algebra then look very similar to the truth tables that we've studied in logic.  FOr example, the truth table showing <m>AB</m> and <m>A+B</m> is:
+            <tabular halign="center" top="major" left="medium">
+              <row bottom="medium">
+                <cell right="medium">
+                  <m>A</m>
+                </cell>
+                <cell right="medium">
+                  <m>B</m>
+                </cell>
+                <cell right="medium">
+                  <m>AB</m>
+                </cell>
+                <cell right="medium">
+                  <m>A+B</m>
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row bottom="major">
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+            If you have more than one operation happening in a Boolean expression, the order of operations is very similar to the order of operations in arithmetic.  For example, if you have the locical expression <m>AB+C</m>, in arithmetic you multiply before you add.  In Boolean algebra, you perform the <em>and</em> before the <em>or</em>.  Negation applies to the entire variable or expression.
+          </p>
+          <p>
+            The order of Boolean operations is indicated in the following examples:
+            <ul>
+              <li>
+                <m>AB+C\qquad</m> First evaluate <m>AB</m>, then use the result as the first variable in the <em>or</em> operation with <m>C</m>
+              </li>
+              <li>
+                <m>A+BC\qquad</m> First evaluate <m>BC</m>, then use that result as the second variable in the <em>or</em> operation with <m>A</m>.
+              </li>
+              <li>
+                <m>\overline{A}B\qquad</m> First evaluate the negation of <m>A</m>, then use that result in the <em>and</em> operation with <m>B</m>.
+              </li>
+              <li>
+                <m>\overline{A+B}\qquad</m> First evaluate <m>A+B</m>, then negate the result.  Note the implied grouping of <m>A+B</m>.
+              </li>
+              <li>
+                <m>A(B+C)\qquad</m> First evaluate the grouped expression, then use the result in the <em>and</em> operation with <m>A</m>.
+              </li>
+            </ul>
+          </p>
+          <p>
+            Truth tables can be used to demonstrate logical equivalence between Boolean expressions.
+          </p>
+          <example>
+            <statement>
+              Is <m>AB+C</m> logically equivalent to <m>A(B+C)</m>?
+            </statement>
+            <answer>
+              <tabular halign="center" top="major" left="medium">
+                <row bottom="medium">
+                  <cell right="medium">
+                    <m>A</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>B</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>C</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>AB</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>AB+C</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>B+C</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>A(B+C)</m>
+                  </cell>
+                </row>
+                <row>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                </row>
+                <row>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                </row>
+                <row>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                </row>
+                <row>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                </row>
+                <row>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                </row>
+                <row>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                </row>
+                <row>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                </row>
+                <row bottom="major">
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                </row>
+              </tabular>
+              The 5th and the 7th columns correspond to the two expressions of interest.  They are not identical, so these two expressions are not logically equivalent. <em>Order of operations is important.</em>
+            </answer>
+          </example>
+        </subsection>
+        <subsection xml:id="ssec-boolean-syntax-python">
+          <title>Boolean Syntax in Python</title>
+          <p>
+            Python allows you to perform logical operations on Boolean variables in the way that you would expect, as you can see in the interactive window below. (The print() statements are needed to convince the underlying interpreter to display output.  In a typical python shell, they are not needed.)
+            <sage language="python">
+              <input>
+                print(True or False)
+                print(True and False)
+                print(not True)
+                print(not False)
+                print(1 and 0)
+                print(1 or 0)
+              </input>
+              <output>
+                True
+                False
+                False
+                True
+                0
+                1
+              </output>
+            </sage>
+          </p>
+        </subsection>
+        <exercises xml:id="exers-sec-boolean-algebra">
+          <exercisegroup>
+            <introduction>
+              Draw the gate representation for the following logical expressions.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\ A+\overline{B}</m>
+              </statement>
+              <solution>
+                <image width="30%" xml:id="fig-exer-gate-AornotB">
+                  <latex-image>
+                    \begin{circuitikz}
+                      \ctikzset{logic ports=ieee}
+                      \draw (0,0) node[or port] (myor) {}
+                       (myor.in 1) node[anchor=east] {$A$}
+                       (myor.in 2) node[anchor=east] {$B$}
+                       (myor.bin 2) node[notcirc,left] {}
+                       (myor.out) node[anchor=west] {$A+\overline{B}$};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \overline{A+B}</m>
+              </statement>
+              <solution>
+                <image width="30%" xml:id="fig-exer-gate-not-AorB">
+                  <latex-image>
+                    \begin{circuitikz}
+                      \ctikzset{logic ports=ieee}
+                      \draw (0,0) node[or port] (myor) {}
+                       (myor.in 1) node[anchor=east] {$A$}
+                       (myor.in 2) node[anchor=east] {$B$}
+                       (myor.bout) node[notcirc,right] {}
+                       (myor.out) node[anchor=west] {$\overline{A+B}$};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \overline{A}B</m>
+              </statement>
+              <solution>
+                <image width="30%" xml:id="fig-exer-gate-notA-and-B">
+                  <latex-image>
+                    \begin{circuitikz}
+                      \ctikzset{logic ports=ieee}
+                      \draw (0,0) node[and port] (mygate) {}
+                       (mygate.in 1) node[anchor=east] {$A$}
+                       (mygate.in 2) node[anchor=east] {$B$}
+                       (mygate.bin 1) node[notcirc,left] {}
+                       (mygate.out) node[anchor=west] {$\overline{A}B$};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \overline{A}\,\overline{B}</m>
+              </statement>
+              <solution>
+                <image width="30%" xml:id="fig-exer-gate-notA-and-notB">
+                  <latex-image>
+                    \begin{circuitikz}
+                      \ctikzset{logic ports=ieee}
+                      \draw (0,0) node[and port] (mygate) {}
+                       (mygate.in 1) node[anchor=east] {$A$}
+                       (mygate.in 2) node[anchor=east] {$B$}
+                       (mygate.bin 1) node[notcirc,left] {}
+                       (mygate.bin 2) node[notcirc,left] {}
+                       (mygate.out) node[anchor=west] {$\overline{A}\,\overline{B}$};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \overline{A\overline{B}}</m>
+              </statement>
+              <solution>
+                <image width="30%" xml:id="fig-exer-gate-not-AornotB">
+                  <latex-image>
+                    \begin{circuitikz}
+                      \ctikzset{logic ports=ieee}
+                      \draw (0,0) node[or port] (mygate) {}
+                       (mygate.in 1) node[anchor=east] {$A$}
+                       (mygate.in 2) node[anchor=east] {$B$}
+                       (mygate.bin 2) node[notcirc,left] {}
+                       (mygate.bout) node[notcirc,right] {}
+                       (mygate.out) node[anchor=west] {$\overline{A+\overline{B}}$};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A\overline{B}+C</m>
+              </statement>
+              <solution>
+                <image width="50%" xml:id="fig-exer-gate-AandnotB-or-C">
+                  <latex-image>
+                    \begin{circuitikz}
+                    	\ctikzset{logic ports=ieee}
+                    	\draw
+                      		(0,0) node[and port] (myand) {} (myand.out) node[or port, anchor=in 1] (myor) {}
+                         (myand.in 1) node[anchor=east] {$A$}
+                         (myand.in 2) node[anchor=east] {$B$}
+                         (myor.in 2) node[anchor=east] {$C$}
+                         (myand.bin 2) node[notcirc,left] {}
+                         (myor.out) node[anchor=west] {$A\overline{B}+C$};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A(B+\overline{C})</m>
+              </statement>
+              <solution>
+                <image width="50%" xml:id="fig-exer-gate-Aand-BornotC">
+                  <latex-image>
+                    \begin{circuitikz}
+                      \ctikzset{logic ports=ieee}
+                      \draw
+                          (0,0) node[or port] (myor) {} (myor.out) node[and port, anchor=in 2] (myand) {}
+                         (myor.in 1) node[anchor=east] {$B$}
+                         (myor.in 2) node[anchor=east] {$C$}
+                         (myand.in 1) node[anchor=east] {$A$}
+                         (myor.bin 2) node[notcirc,left] {}
+                         (myand.out) node[anchor=west] {$A\left(B+\overline{C}\right)$};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \overline{AB}C</m>
+              </statement>
+              <solution>
+                <image width="50%" xml:id="fig-exer-gate-not-AandB--and-C">
+                  <latex-image>
+                    \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw
+                    	(0,0) node[and port] (myand1) {} (myand1.out) node[and port, anchor=in 1] (myand2) {}
+                    	(myand1.bout) node[notcirc,right] {}
+                    	(myand1.in 1) node[anchor=east] {$A$}
+                    	(myand1.in 2) node[anchor=east] {$B$}
+                    	(myand2.in 2) node[anchor=east] {$C$}
+                    	(myand2.out) node[anchor=west] {$\overline{AB}C$};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \overline{\overline{\overline{A}\,\overline{B}}+\overline{C}}</m>
+              </statement>
+              <solution>
+                <image width="50%" xml:id="fig-exer-gate-not--not-notAandnotB-and-notC">
+                  <latex-image>
+                    \begin{circuitikz}
+                      \ctikzset{logic ports=ieee}
+                      \draw
+                      	(0,0) node[and port] (myand1) {} (myand1.out) node[or port, anchor=in 1] (myor) {}
+                      	(myand1.bout) node[notcirc,right] {}
+                      	(myand1.in 1) node[anchor=east] {$A$}
+                      	(myand1.in 2) node[anchor=east] {$B$}
+                      	(myand1.bin 1) node[notcirc,left] {}
+                      	(myand1.bin 2) node[notcirc,left] {}
+                      	(myor.in 2) node[anchor=east] {$C$}
+                      	(myor.bin 2) node[notcirc,left] {}
+                      	(myor.bout) node[notcirc,right] {}
+                      	(myor.out) node[anchor=west] {$\overline{\overline{\overline{A}\,\overline{B}}+\overline{C}}$};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Write the Boolean expression which corresponds to the following gates.
+            </introduction>
+            <exercise>
+              <statement>
+                <image width="20%" xml:id="fig-exer-gate-q-notA-and-notB">
+                  <latex-image>
+                    \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw
+                    	(0,0) node[and port] (myand1) {}
+                    	(myand1.in 1) node[anchor=east] {$A$}
+                    	(myand1.in 2) node[anchor=east] {$B$}
+                    	(myand1.bin 1) node[notcirc,left] {}
+                    	(myand1.bin 2) node[notcirc,left] {};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </statement>
+              <solution>
+                <p><m>\overline{A}\,\overline{B}</m></p>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <image width="20%" xml:id="fig-exer-gate-q-not-notAorB">
+                  <latex-image>
+                    \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw
+                    	(0,0) node[or port] (myor) {}
+                    	(myor.in 1) node[anchor=east] {$A$}
+                    	(myor.in 2) node[anchor=east] {$B$}
+                    	(myor.bin 1) node[notcirc,left] {}
+                    	(myor.bout) node[notcirc,right] {};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </statement>
+              <solution>
+                <m>\overline{\overline{A}+B}</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <image width="20%" xml:id="fig-exer-gate-q-not-notAornotB">
+                  <latex-image>
+                    \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw
+                    	(0,0) node[or port] (myor) {}
+                    	(myor.in 1) node[anchor=east] {$A$}
+                    	(myor.in 2) node[anchor=east] {$B$}
+                    	(myor.bin 1) node[notcirc,left] {}
+                    	(myor.bin 2) node[notcirc,left] {}
+                    	(myor.bout) node[notcirc,right] {};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </statement>
+              <solution>
+                <m>\overline{\overline{A}+\overline{B}}</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <image width="20%" xml:id="fig-exer-gate-q-not-AandB">
+                  <latex-image>
+                    \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw
+                    	(0,0) node[and port] (mygate) {}
+                    	(mygate.in 1) node[anchor=east] {$A$}
+                    	(mygate.in 2) node[anchor=east] {$B$}
+                    	(mygate.bout) node[notcirc,right] {};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </statement>
+              <solution>
+                <m>\overline{AB}</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <image width="40%" xml:id="fig-exer-gate-q-AorB-and-C">
+                  <latex-image>
+                    \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw
+                    	(0,0) node[or port] (mygate1) {} (mygate1.out) node[and port, anchor=in 1] (mygate2) {}
+                    	(mygate1.in 1) node[anchor=east] {$A$}
+                    	(mygate1.in 2) node[anchor=east] {$B$}
+                    	(mygate2.in 2) node[anchor=east] {$C$};
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </statement>
+              <solution>
+                <m>(A+B)C</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <image width="40%" xml:id="fig-exer-gate-q-Aor-not-notBandC">
+                  <latex-image>
+                    \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw
+                    	(0,0) node[and port] (mygate1) {} (mygate1.out) node[or port, anchor=in 2] (mygate2) {}
+                    	(mygate1.in 1) node[anchor=east] {$B$}
+                    	(mygate1.in 2) node[anchor=east] {$C$}
+                    	(mygate1.bin 1) node[notcirc,left] {}
+                    	(mygate1.bout) node[notcirc,right] {}
+                    	(mygate2.in 1) node[anchor=east] {$A$}
+                    ;
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </statement>
+              <solution>
+                <m>A+\overline{\overline{B}C}</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <image width="40%" xml:id="fig-exer-gate-q-not--Aor-not-BorC">
+                  <latex-image>
+                    \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw
+                    	(0,0) node[or port] (mygate1) {} (mygate1.out) node[or port, anchor=in 2] (mygate2) {}
+                    	(mygate1.bout) node[notcirc,right] {}
+                    	(mygate1.in 1) node[anchor=east] {$B$}
+                    	(mygate1.in 2) node[anchor=east] {$C$}
+                    	(mygate2.in 1) node[anchor=east] {$A$}
+                    	(mygate2.bout) node[notcirc,right] {};
+                    ;
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </statement>
+              <solution>
+                <m>\overline{A+\overline{B+C}}</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <image width="40%" xml:id="fig-exer-gate-q-not-notAandnotB--and-notC">
+                  <latex-image>
+                    \begin{circuitikz}
+                    \ctikzset{logic ports=ieee}
+                    \draw
+                    	(0,0) node[and port] (mygate1) {} (mygate1.out) node[and port, anchor=in 1] (mygate2) {}
+                    	(mygate1.bout) node[notcirc,right] {}
+                    	(mygate1.in 1) node[anchor=east] {$A$}
+                    	(mygate1.in 2) node[anchor=east] {$B$}
+                    	(mygate1.bin 1) node[notcirc,left] {}
+                    	(mygate1.bin 2) node[notcirc,left] {}
+                    	(mygate2.in 2) node[anchor=east] {$C$}
+                    	(mygate2.bin 2) node[notcirc,left] {}
+                    ;
+                    \end{circuitikz}
+                  </latex-image>
+                </image>
+              </statement>
+              <solution>
+                <m>\overline{\overline{A}\,\overline{B}}\,\overline{C}</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+            </introduction>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+            </introduction>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+            </introduction>
+          </exercisegroup>
+        </exercises>
+        <solutions divisional="solution">
+          <title>
+            Solutions to <xref ref="sec-boolean-algebra"/> Exercises
+          </title>
+        </solutions>
       </section>
     </chapter>
   </book>
