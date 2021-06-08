@@ -9816,7 +9816,7 @@
                 Yes, because the corresponding columns (1 and 4) are identical.
               </solution>
             </exercise>
-            <exercise>
+            <exercise xml:id="exer-logic-commutative">
               <statement>
                 <m>\ (p\vee q)\vee r</m> and <m>p\vee (q\vee r)</m>
               </statement>
@@ -13483,7 +13483,7 @@
         <title>Laws of Logic</title>
         <introduction>
           <p>
-            You may have noticed some common patgterns running through some of the exercises by now.  Let's examine those patterns in more detail.
+            You may have noticed some common patterns running through some of the exercises by now.  Let's examine those patterns in more detail.
           </p>
           <p>
             First, let us look at the connections between the two sets of symbols we've used so far.
@@ -13611,58 +13611,423 @@
             </tabular>
           </p>
           <p>
-            You can replace the logic symbols in this table with the corresponding Boolean algebra notation.  From this, we can deduce the following
+            You can replace the logic symbols in this table with the corresponding Boolean algebra notation.  From this, we can deduce the following <term>identity laws</term>:
             <assemblage xml:id="assemblage-identity-laws">
               <title>Identity Laws</title>
               <p>
-                <tabular halign="center" top="major">
-                  <row bottom="medium">
-                    <cell right="medium">
-                      Logic
-                    </cell>
-                    <cell>
-                      Boolean
-                    </cell>
-                  </row>
-                  <row>
-                    <cell right="medium">
-                      <m>p\wedge 0\Leftrightarrow 0</m>
-                    </cell>
-                    <cell>
-                      <m>A\cdot 0\Leftrightarrow 0</m>
-                    </cell>
-                  </row>
-                  <row>
-                    <cell right="medium">
-                      <m>p\vee 0\Leftrightarrow p</m>
-                    </cell>
-                    <cell>
-                      <m>A+0\Leftrightarrow A</m>
-                    </cell>
-                  </row>
-                  <row>
-                    <cell right="medium">
-                      <m>p\wedge 1\Leftrightarrow p</m>
-                    </cell>
-                    <cell>
-                      <m>A\cdot 1\Leftrightarrow A</m>
-                    </cell>
-                  </row>
-                  <row bottom="major">
-                    <cell right="medium">
-                      <m>p\vee 1\Leftrightarrow 1</m>
-                    </cell>
-                    <cell>
-                      <m>A+1\Leftrightarrow 1</m>
-                    </cell>
-                  </row>
-                </tabular>
+                <sidebyside width="20%" margins="20%">
+                  <tabular>
+                    <row bottom="medium">
+                      <cell>
+                        <term>Logic</term>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <md>
+                          <mrow>p\wedge 0 \amp\Leftrightarrow 0</mrow>
+                          <mrow>p\vee 0\amp\Leftrightarrow p</mrow>
+                          <mrow>p\wedge 1\amp\Leftrightarrow p</mrow>
+                          <mrow>p\vee 1\amp\Leftrightarrow 1</mrow>
+                        </md>
+                      </cell>
+                    </row>
+                  </tabular>
+
+                  <tabular>
+                    <row bottom="medium">
+                      <cell>
+                        <term>Boolean</term>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <md>
+                          <mrow>A\cdot 0\amp = 0</mrow>
+                          <mrow>A+0\amp = A</mrow>
+                          <mrow>A\cdot 1\amp = A</mrow>
+                          <mrow>A+1\amp = 1</mrow>
+                        </md>
+                      </cell>
+                    </row>
+                  </tabular>
+                </sidebyside>
+
+              </p>
+            </assemblage>
+            It is interesting to note that the first three Boolean identity laws look like laws of normal arithmetic with numbers.  The fourth law <em>does not</em> resemble any arithmetic law.  This is a clue that Boolean algebra is <em>not</em> equivalent to the algebra associated with the real numbers.
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-idempotent-laws">
+          <title>Idempotent Laws</title>
+          <p>
+            We deduce the <term>idempotent laws</term> in the same way.  Consider the following table, given using logic notation:
+            <tabular halign="center" top="major" left="medium">
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                  <m>p</m>
+                </cell>
+                <cell right="medium">
+                  <m>p\wedge p</m>
+                </cell>
+                <cell right="medium">
+                  <m>p\vee p</m>
+                </cell>
+              </row>
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+              </row>
+              <row bottom="major">
+                <cell left="medium" right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+            </tabular>
+            Boolean algebra notation could have been used in this table, instead.
+          </p>
+          <p>
+            From this we can deduce the following:
+            <assemblage xml:id="assemblage-idempotent-laws">
+              <title>Idempotent Laws</title>
+              <p>
+                <sidebyside width="20%" margins="20%">
+                  <tabular>
+                    <row bottom="medium">
+                      <cell>
+                        <term>Logic</term>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <md>
+                          <mrow>p\wedge p \amp\Leftrightarrow p</mrow>
+                          <mrow>p\vee p\amp\Leftrightarrow p</mrow>
+                        </md>
+                      </cell>
+                    </row>
+                  </tabular>
+
+                  <tabular>
+                    <row bottom="medium">
+                      <cell>
+                        <term>Boolean</term>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <md>
+                          <mrow>A\cdot A\amp = A</mrow>
+                          <mrow>A+A\amp = A</mrow>
+                        </md>
+                      </cell>
+                    </row>
+                  </tabular>
+                </sidebyside>
               </p>
             </assemblage>
           </p>
+        </subsection>
+        <subsection xml:id="ssec-complement-laws">
+          <title>Complement Laws</title>
+          <p>
+            Similarly, truth tables can be used to deduce the <term>complement laws</term>:
+            <assemblage xml:id="assemblage-complement-laws">
+              <title>Complement Laws</title>
+              <p>
+                <sidebyside width="20%" margins="20%">
+                  <tabular>
+                    <row bottom="medium">
+                      <cell>
+                        <term>Logic</term>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <md>
+                          <mrow>\mynot(\mynot p) \amp\Leftrightarrow p</mrow>
+                          <mrow>p\,\wedge\,\mynot p\amp\Leftrightarrow 0</mrow>
+                          <mrow>p\,\vee\,\mynot p\amp\Leftrightarrow 1</mrow>
+                        </md>
+                      </cell>
+                    </row>
+                  </tabular>
 
+                  <tabular>
+                    <row bottom="medium">
+                      <cell>
+                        <term>Boolean</term>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <md>
+                          <mrow>\overline{\overline{A}}\amp =A</mrow>
+                          <mrow>A\cdot\overline{A}\amp = 0</mrow>
+                          <mrow>A+\overline{A}\amp = 1</mrow>
+                        </md>
+                      </cell>
+                    </row>
+                  </tabular>
+                </sidebyside>
+              </p>
+            </assemblage>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-commutative-laws">
+          <title>Commutative Laws</title>
+          <p>
+            The <term>commutative laws</term> state that the ordering of symbols is not significant for the logic operations <em>and</em> and <em>or</em>, and also for the corresponding operations in Boolean algebra.  The commutative law does not apply to all operations.  More on that later.
+            <assemblage xml:id="assemblage-commutative-laws">
+              <title>Commutative Laws</title>
+              <p>
+                <sidebyside width="20%" margins="20%">
+                  <tabular>
+                    <row bottom="medium">
+                      <cell>
+                        <term>Logic</term>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <md>
+                          <mrow>p\wedge q \amp\Leftrightarrow q\wedge p</mrow>
+                          <mrow>p \vee q\amp\Leftrightarrow q\vee p</mrow>
+                        </md>
+                      </cell>
+                    </row>
+                  </tabular>
 
+                  <tabular>
+                    <row bottom="medium">
+                      <cell>
+                        <term>Boolean</term>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <md>
+                          <mrow>A\cdot B\amp =B\cdot A</mrow>
+                          <mrow>A+B\amp =B+A</mrow>
+                        </md>
+                      </cell>
+                    </row>
+                  </tabular>
+                </sidebyside>
+              </p>
+            </assemblage>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-associative-laws">
+          <title>Associative Laws</title>
+          <p>
+            <xref ref="exer-logic-commutative"/> illustrates the <term>associative law</term> for <em>or</em>.  You could construct a similar truth table for <em>and</em>.  The associative laws in Boolean algebra form look just like the associative laws of multiplication and addition of real numbers.  Remember, though, that Boolean algebra is not the same as the algebra of real numbers!
+            <assemblage xml:id="assemblage-associative-laws">
+              <title>Associative Laws</title>
+              <p>
+                <sidebyside width="30%" margins="auto">
+                  <tabular>
+                    <row bottom="medium">
+                      <cell>
+                        <term>Logic</term>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <md>
+                          <mrow>(p\wedge q)\wedge r \amp\Leftrightarrow p\wedge(q\wedge r)</mrow>
+                          <mrow>(p\vee q)\vee r\amp\Leftrightarrow p\vee(q\vee r)</mrow>
+                        </md>
+                      </cell>
+                    </row>
+                  </tabular>
 
+                  <tabular>
+                    <row bottom="medium">
+                      <cell>
+                        <term>Boolean</term>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell>
+                        <md>
+                          <mrow>(A\cdot B)\cdot C\amp = A\cdot(B\cdot C)</mrow>
+                          <mrow>(A+B)+C\amp =A+(B+C)</mrow>
+                        </md>
+                      </cell>
+                    </row>
+                  </tabular>
+                </sidebyside>
+              </p>
+            </assemblage>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-basic-logic-laws">
+          <title>Summary So Far</title>
+          <p>
+            Here are all the laws identified so far, collected into one table for easy reference.  In the next subsection, we will examine how these laws are used to simplify logical/Boolean expressions <em>without</em> having to resort to constructing truth tables.
+            <tabular halign="center" top="major" left="medium">
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                  Law
+                </cell>
+                <cell right="medium">
+                  Logic
+                </cell>
+                <cell right="medium">
+                  Boolean Algebra
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  Identity
+                </cell>
+                <cell right="medium">
+                  <m>p\wedge 1\Leftrightarrow p</m>
+                </cell>
+                <cell right="medium">
+                  <m>A\cdot 1=A</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                </cell>
+                <cell right="medium">
+                  <m>p\vee 1\Leftrightarrow 1</m>
+                </cell>
+                <cell right="medium">
+                  <m>A+1=1</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                </cell>
+                <cell right="medium">
+                  <m>p\wedge 0\Leftrightarrow 0</m>
+                </cell>
+                <cell right="medium">
+                  <m>A\cdot 0=0</m>
+                </cell>
+              </row>
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                </cell>
+                <cell right="medium">
+                  <m>p\vee 0\Leftrightarrow p</m>
+                </cell>
+                <cell right="medium">
+                  <m>A+0=A</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  Idempotent
+                </cell>
+                <cell right="medium">
+                  <m>p\wedge p\Leftrightarrow p</m>
+                </cell>
+                <cell right="medium">
+                  <m>A\cdot A=A</m>
+                </cell>
+              </row>
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                </cell>
+                <cell right="medium">
+                  <m>p\vee p\Leftrightarrow p</m>
+                </cell>
+                <cell right="medium">
+                  <m>A+A=A</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  Complement
+                </cell>
+                <cell right="medium">
+                  <m>\mynot(\mynot p)\Leftrightarrow p</m>
+                </cell>
+                <cell right="medium">
+                  <m>\overline{\overline{A}}=A</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                </cell>
+                <cell right="medium">
+                  <m>p\,\wedge\,\mynot p\Leftrightarrow 0 </m>
+                </cell>
+                <cell right="medium">
+                  <m>A\cdot\overline{A}=0</m>
+                </cell>
+              </row>
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                </cell>
+                <cell right="medium">
+                  <m>p\,\vee\,\mynot p\Leftrightarrow 1</m>
+                </cell>
+                <cell right="medium">
+                  <m>A+\overline{A}=1</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  Commutative
+                </cell>
+                <cell right="medium">
+                  <m>p\wedge q\Leftrightarrow q\wedge p</m>
+                </cell>
+                <cell right="medium">
+                  <m>A\cdot B=B\cdot A</m>
+                </cell>
+              </row>
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                </cell>
+                <cell right="medium">
+                  <m>p\vee q\Leftrightarrow q\vee p</m>
+                </cell>
+                <cell right="medium">
+                  <m>A+B=B+A</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  Associative
+                </cell>
+                <cell right="medium">
+                  <m>(p\wedge q)\wedge r\Leftrightarrow p\wedge(q\wedge r)</m>
+                </cell>
+                <cell right="medium">
+                  <m>(A\cdot B)\cdot C=A\cdot(B\cdot C)</m>
+                </cell>
+              </row>
+              <row bottom="major">
+                <cell left="medium" right="medium">
+                </cell>
+                <cell right="medium">
+                  <m>(p\vee q)\vee r\Leftrightarrow p\vee(q\vee r)</m>
+                </cell>
+                <cell right="medium">
+                  <m>(A+B)+C=A+(B+C)</m>
+                </cell>
+              </row>
+            </tabular>
+          </p>
         </subsection>
       </section>
     </chapter>
