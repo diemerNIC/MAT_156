@@ -11689,15 +11689,1788 @@
           </exercisegroup>
           <exercisegroup>
             <introduction>
+              Give the truth tables for the following expressions.
             </introduction>
+            <exercise>
+              <statement>
+                <m>\ A\overline{A}</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\overline{A}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A\overline{A}</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A+1</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>1</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A+1</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A\overline{B}</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\overline{B}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A\overline{B}</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \overline{A+B}</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A+B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\overline{A+B}</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A+\overline{A}B</m>
+              </statement>
+              <solution>
+                <tabular top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\overline{A}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\overline{A}B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A+\overline{A}B</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ (A+B)C</m>
+              </statement>
+              <solution>
+                <tabular top="major" halign="center" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>C</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A+B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>(A+B)C</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A+B+\overline{C}</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>C</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\overline{C}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A+B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A+B+\overline{C}</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
+              Are the two expressions logically equivalent?  Justify your answer by giving a truth table.
             </introduction>
+            <exercise>
+              <statement>
+                <m>\ \overline{AB}</m> and <m>\overline{A}\,\overline{B}</m>
+              </statement>
+              <solution>
+                <p>No:</p>
+                <p>
+                  <tabular halign="center" top="major" left="medium">
+                    <row bottom="medium">
+                      <cell right="medium">
+                        <m>A</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>B</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>AB</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>\overline{AB}</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>\overline{A}</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>\overline{B}</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>\overline{A}\,\overline{B}</m>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                    <row bottom="major">
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                  </tabular>
+                  The associated columns (4th and 7th) are not identical.
+                </p>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \overline{A+B}</m> and <m>\overline{A}\,\overline{B}</m>
+              </statement>
+              <solution>
+                <p>Yes:</p>
+                <p>
+                  <tabular halign="center" top="major" left="medium">
+                    <row bottom="medium">
+                      <cell right="medium">
+                        <m>A</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>B</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>A+B</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>\overline{A+B}</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>\overline{A}</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>\overline{B}</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>\overline{A}\,\overline{B}</m>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                    <row bottom="major">
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                  </tabular>
+                  The associated columns (4th and 7th) are identical.
+                </p>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A+BC</m> and <m>(A+B)C</m>
+              </statement>
+              <solution>
+                <p>No:</p>
+                <p>
+                  <tabular halign="center" top="major" left="medium">
+                    <row bottom="medium">
+                      <cell right="medium">
+                        <m>A</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>B</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>C</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>BC</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>A+BC</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>A+B</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>(A+B)C</m>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                    <row bottom="major">
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                  </tabular>
+                  The associated columns (5th and 7th) are not identical.
+                </p>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A+AB</m> and <m>A</m>
+              </statement>
+              <solution>
+                <p>Yes:</p>
+                <p>
+                  <tabular halign="center" top="major" left="medium">
+                    <row bottom="medium">
+                      <cell right="medium">
+                        <m>A</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>B</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>AB</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>A+AB</m>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                    <row bottom="major">
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                  </tabular>
+                  The first and last columns are identical.
+                </p>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ (A+B)+C</m> and <m>A+(B+C)</m>
+              </statement>
+              <solution>
+                <p>Yes: </p>
+                <p>
+                  <tabular halign="center" top="major" left="medium">
+                    <row bottom="medium">
+                      <cell right="medium">
+                        <m>A</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>B</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>C</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>A+B</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>(A+B)+C</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>(B+C)</m>
+                      </cell>
+                      <cell right="medium">
+                        <m>A+(B+C)</m>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                    <row>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        0
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                    <row bottom="major">
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                      <cell right="medium">
+                        1
+                      </cell>
+                    </row>
+                  </tabular>
+                  The 5th and 7th columns are identical.
+                </p>
+              </solution>
+            </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
+              Simplify the following logical expressions using truth tables.
             </introduction>
+            <exercise>
+              <statement>
+                <m>\ AA</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>AA</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                <m>AA</m> is equivalent to <m>A</m>.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A+A</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A+A</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                <m>A+A</m> is equivalent to <m>A</m>.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A+0</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>0</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A+0</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                <m>A+0</m> is equivalent to <m>A</m>.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A+AB</m>
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>AB</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A+AB</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                <m>A+AB</m> is equivalent to <m>A</m>.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A(\overline{A}+B)</m> - this one is a bit trickier.  If you are stuck, try writing the truth tables for combinations of <m>A</m> and <m>B</m>, like <m>(A+B)</m> for example, to find one that fits.
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\overline{A}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\overline{A}+B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A(\overline{A}+B)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                <m>A(\overline{A}+B)</m> is true only if both <m>A</m> and <m>B</m> are true, so the statement is equivalent to <m>AB</m>.
+              </solution>
+            </exercise>
           </exercisegroup>
         </exercises>
         <solutions divisional="solution">
@@ -11705,6 +13478,141 @@
             Solutions to <xref ref="sec-boolean-algebra"/> Exercises
           </title>
         </solutions>
+      </section>
+      <section xml:id="sec-logic-laws">
+        <title>Laws of Logic</title>
+        <introduction>
+          <p>
+            You may have noticed some common patgterns running through some of the exercises by now.  Let's examine those patterns in more detail.
+          </p>
+          <p>
+            First, let us look at the connections between the two sets of symbols we've used so far.
+            <tabular halign="center" top="medium" left="medium">
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                  Logic
+                </cell>
+                <cell right="medium">
+                  <m>p\wedge q</m>
+                </cell>
+                <cell right="medium">
+                  <m>p\vee q</m>
+                </cell>
+                <cell right="medium">
+                  <m>\mynot p</m>
+                </cell>
+                <cell right="medium">
+                  <m>F</m>
+                </cell>
+                <cell right="medium">
+                  <m>T</m>
+                </cell>
+              </row>
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                  Boolean Algebra
+                </cell>
+                <cell right="medium">
+                  <m>AB</m>
+                </cell>
+                <cell right="medium">
+                  <m>A+B</m>
+                </cell>
+                <cell right="medium">
+                  <m>\overline{A}</m>
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+            In each case, we have symbols for negation, <em>or</em>, and <em>and</em>.  There are also equivalences with False/True for logic and 0/1 (or off/on) for Boolean algebra and logic circuits.  Let's see what else they have in common.
+          </p>
+        </introduction>
+        <subsection xml:id="ssec-identity-laws">
+          <title>Identity Laws</title>
+          <p>
+            Consider the following truth table for the logical symbols.
+            <tabular halign="center" top="major" left="medium">
+              <row bottom="medium">
+                <cell right="medium">
+                  <m>p</m>
+                </cell>
+                <cell right="medium">
+                  <m>0</m>
+                </cell>
+                <cell right="medium">
+                  <m>1</m>
+                </cell>
+                <cell right="medium">
+                  <m>p\wedge 0</m>
+                </cell>
+                <cell right="medium">
+                  <m>p\vee 0</m>
+                </cell>
+                <cell right="medium">
+                  <m>p\wedge 1</m>
+                </cell>
+                <cell right="medium">
+                  <m>p\vee 1</m>
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row bottom="major">
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+                        
+        </subsection>
       </section>
     </chapter>
   </book>
