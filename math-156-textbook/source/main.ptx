@@ -14029,6 +14029,248 @@
             </tabular>
           </p>
         </subsection>
+        <subsection xml:id="ssec-simplifying-logical-expr">
+          <title>Simplifying Logical Expressions</title>
+          <p>
+            We use the laws of logic to simplify logical expressions or to prove logical equivalence without resorting to truth tables.
+          </p>
+          <p>
+            Suppose we wish to simplify <m>(p\wedge q)\vee(\mynot q\,\wedge\, 0)\vee(\mynot r\,\wedge\,r)</m>.  Note that this would require a truth table with 8 rows to show all combinations of <m>p</m>, <m>q</m>, and <m>r</m>.  Less work is required to simplify the expression using the laws of logic.  You can think of the laws of logic as summary statements of truth tables.
+          </p>
+          <p>
+            The procedure for simplifying an expression using the laws of logic is to simplify each piece of the expression using a single law, then write the name of the law you are using to one side. Writing the name of the law is <term>required</term>, and <term>not optional</term>!  If you are using more than one law, then use a separate line for each law/step.
+          </p>
+          <p>
+            Let's use the laws of logic to simplify the statement given earlier:
+            <tabular halign="center">
+              <row>
+                <cell>
+                  <m>(p\wedge 1)\vee(\mynot q\,\wedge\, 0)\vee(\mynot r\,\wedge r)</m>
+                </cell>
+                <cell halign="left">
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  <m>p\vee 0\vee(\mynot r\,\wedge\,r)</m>
+                </cell>
+                <cell halign="left">
+                  identity
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  <m>(p\vee 0)\vee(\mynot r\,\wedge\,r)</m>
+                </cell>
+                <cell halign="left">
+                  associative
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  <m>p\vee(\mynot r\,\wedge\,r)</m>
+                </cell>
+                <cell halign="left">
+                  identity
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  <m>p\vee(r\,\wedge\,\mynot r)</m>
+                </cell>
+                <cell halign="left">
+                  commutative
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  <m>p\vee 0</m>
+                </cell>
+                <cell halign="left">
+                  complement
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  <m>p</m>
+                </cell>
+                <cell halign="left">
+                  identity
+                </cell>
+              </row>
+            </tabular>
+            So we see that <m>(p\wedge q)\vee(\mynot q\,\wedge\, 0)\vee(\mynot r\,\wedge\,r)\Leftrightarrow p</m>.
+          </p>
+          <p>
+            The simplification can be done another way:
+            <tabular halign="center">
+              <row>
+                <cell>
+                  <m>(p\wedge 1)\vee(\mynot q\,\wedge \,0)\vee(\mynot r\,\wedge\,r)</m>
+                </cell>
+                <cell>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  <m>p\vee 0\vee(\mynot r\,\wedge\,r)</m>
+                </cell>
+                <cell halign="left">
+                  identity
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  <m>p\vee 0\vee 0</m>
+                </cell>
+                <cell halign="left">
+                  complement
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  <m>p\vee 0</m>
+                </cell>
+                <cell halign="left">
+                  definition of <em>or</em>
+                </cell>
+              </row>
+              <row>
+                <cell>
+                  <m>p</m>
+                </cell>
+                <cell halign="left">
+                  identity
+                </cell>
+              </row>
+            </tabular>
+            The conclusion is the same, as we should expect!
+          </p>
+          <example xml:id="examp-simpl-logic-laws">
+            <statement>
+              Simplify <m>(p\,\vee\,\mynot p)\wedge(\mynot p\,\vee\,\mynot p)</m>.
+            </statement>
+            <answer>
+              <tabular halign="center">
+                <row>
+                  <cell>
+                    <m>(p\,\vee\mynot p)\wedge(\mynot p\,\vee\mynotp)</m>
+                  </cell>
+                  <cell halign="left">
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>1\wedge(\mynot p\,\vee\,\mynot p)</m>
+                  </cell>
+                  <cell halign="left">
+                    complement
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>1\wedge(\mynot p)</m>
+                  </cell>
+                  <cell halign="left">
+                    idempotent
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>\mynot p</m>
+                  </cell>
+                  <cell halign="left">
+                    identity
+                  </cell>
+                </row>
+              </tabular>
+              (If you applied the laws correctly but in a different order or combination, you should still come to the same, correct conclusion.)
+            </answer>
+          </example>
+        </subsection>
+        <exercises xml:id="exers-sec-logic-laws">
+          <exercisegroup>
+            <introduction>
+              Which of the following statements is always true?
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\ </m>Darth Vader is both evil and not evil.
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Darth Vader is both evil and evil.
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Darth Vader is either evil or evil.
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Darth Vader is either evil or not evil.
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+
+            </introduction>
+
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+
+            </introduction>
+
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+
+            </introduction>
+
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+
+            </introduction>
+
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+
+            </introduction>
+
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+
+            </introduction>
+
+          </exercisegroup>
+        </exercises>
       </section>
     </chapter>
   </book>
