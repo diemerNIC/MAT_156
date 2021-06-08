@@ -13611,7 +13611,58 @@
             </tabular>
           </p>
           <p>
-                        
+            You can replace the logic symbols in this table with the corresponding Boolean algebra notation.  From this, we can deduce the following
+            <assemblage xml:id="assemblage-identity-laws">
+              <title>Identity Laws</title>
+              <p>
+                <tabular halign="center" top="major">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      Logic
+                    </cell>
+                    <cell>
+                      Boolean
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      <m>p\wedge 0\Leftrightarrow 0</m>
+                    </cell>
+                    <cell>
+                      <m>A\cdot 0\Leftrightarrow 0</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      <m>p\vee 0\Leftrightarrow p</m>
+                    </cell>
+                    <cell>
+                      <m>A+0\Leftrightarrow A</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      <m>p\wedge 1\Leftrightarrow p</m>
+                    </cell>
+                    <cell>
+                      <m>A\cdot 1\Leftrightarrow A</m>
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      <m>p\vee 1\Leftrightarrow 1</m>
+                    </cell>
+                    <cell>
+                      <m>A+1\Leftrightarrow 1</m>
+                    </cell>
+                  </row>
+                </tabular>
+              </p>
+            </assemblage>
+          </p>
+
+
+
         </subsection>
       </section>
     </chapter>
