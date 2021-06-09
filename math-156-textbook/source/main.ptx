@@ -14975,6 +14975,132 @@
           </title>
         </solutions>
       </section>
+      <section xml:id="sec-more-logic-laws">
+        <title>More Laws of Logic</title>
+        <subsection xml:id="ssec-demorgans-laws">
+          <title>De Morgan's Laws</title>
+          <p>
+            Consider the following truth table:
+            <tabular halign="center" top="major" left="medium">
+              <row bottom="medium">
+                <cell right="medium">
+                  <m>p</m>
+                </cell>
+                <cell right="medium">
+                  <m>q</m>
+                </cell>
+                <cell right="medium">
+                  <m>p\wedge q</m>
+                </cell>
+                <cell right="medium">
+                  <m>\mynot(p\wedge q)</m>
+                </cell>
+                <cell right="medium">
+                  <m>\mynot p</m>
+                </cell>
+                <cell right="medium">
+                  <m>\mynot q</m>
+                </cell>
+                <cell right="medium">
+                  <m>\mynot p\,\vee\,\mynot q</m>
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row bottom="major">
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </subsection>
+      </section>
     </chapter>
   </book>
 </pretext>
