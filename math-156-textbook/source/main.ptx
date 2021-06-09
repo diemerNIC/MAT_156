@@ -14189,51 +14189,121 @@
           </example>
         </subsection>
         <exercises xml:id="exers-sec-logic-laws">
-          <exercisegroup>
-            <introduction>
+          <exercise>
+            <statement>
               Which of the following statements is always true?
-            </introduction>
-            <exercise>
-              <statement>
-                <m>\ </m>Darth Vader is both evil and not evil.
-              </statement>
-              <solution>
-
-              </solution>
-            </exercise>
-            <exercise>
-              <statement>
-                <m>\ </m>Darth Vader is both evil and evil.
-              </statement>
-              <solution>
-
-              </solution>
-            </exercise>
-            <exercise>
-              <statement>
-                <m>\ </m>Darth Vader is either evil or evil.
-              </statement>
-              <solution>
-
-              </solution>
-            </exercise>
-            <exercise>
-              <statement>
-                <m>\ </m>Darth Vader is either evil or not evil.
-              </statement>
-              <solution>
-
-              </solution>
-            </exercise>
-            <exercise>
-              <statement>
-                <m>\ </m>
-              </statement>
-              <solution>
-
-              </solution>
-            </exercise>
-          </exercisegroup>
+              <ol>
+                <li><m>\ </m>Darth Vader is both evil and not evil.</li>
+                <li><m>\ </m>Darth Vader is both evil and evil.</li>
+                <li><m>\ </m>Darth Vader is either evil or evil.</li>
+                <li><m>\ </m>Darth Vader is either evil or not evil.</li>
+              </ol>
+            </statement>
+            <solution>
+              Statement (d) is true because <m>p\,\vee \mynot p\Leftrightarrow 1</m>.  Note that you must assess each statement based on its logical structure, and not on the truth value of the instance.
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Which of the following statements is always false?
+              <ol>
+                <li><m>\ </m>The roadrunner has escaped from the wily coyote and he has not escaped from the wily coyote.</li>
+                <li><m>\ </m>The roadrunner has escaped from the wily coyote and he has escaped from the wily coyote.</li>
+                <li><m>\ </m>The roadrunner has escaped from the wily coyote or he has not escaped from the wily coyote.</li>
+                <li><m>\ </m>The roadrunner has escaped from the wily coyote or he has escaped from the wily coyote.</li>
+              </ol>
+            </statement>
+            <solution>
+              Statement (a) is, symbolically, <m>p\,\wedge\,\mynot p</m>, which is logically equivalent to 0. So statement (a) is false regardless of whether roadrunner has or has not escaped from the wily coyote.
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Use a truth table to prove each of the two idempotent laws.
+            </statement>
+            <solution>
+             The proof amounts to comparing the first and last columns of each of these two tables:
+             <sidebyside width="20%" margins="auto">
+               <tabular halign="center" top="major" left="medium">
+                 <row bottom="medium">
+                   <cell left="medium" right="medium">
+                     <m>p</m>
+                   </cell>
+                   <cell right="medium">
+                     <m>p</m>
+                   </cell>
+                   <cell right="medium">
+                     <m>p\vee p</m>
+                   </cell>
+                 </row>
+                 <row>
+                   <cell right="medium">
+                     0
+                   </cell>
+                   <cell right="medium">
+                     0
+                   </cell>
+                   <cell right="medium">
+                     0
+                   </cell>
+                 </row>
+                 <row bottom="major">
+                   <cell right="medium">
+                     1
+                   </cell>
+                   <cell right="medium">
+                     1
+                   </cell>
+                   <cell right="medium">
+                     1
+                   </cell>
+                 </row>
+               </tabular>
+               <tabular halign="center" top="major" left="medium">
+                 <row bottom="medium">
+                   <cell left="medium" right="medium">
+                     <m>p</m>
+                   </cell>
+                   <cell right="medium">
+                     <m>p</m>
+                   </cell>
+                   <cell right="medium">
+                     <m>p\wedge p</m>
+                   </cell>
+                 </row>
+                 <row>
+                   <cell right="medium">
+                     0
+                   </cell>
+                   <cell right="medium">
+                     0
+                   </cell>
+                   <cell right="medium">
+                     0
+                   </cell>
+                 </row>
+                 <row bottom="major">
+                   <cell right="medium">
+                     1
+                   </cell>
+                   <cell right="medium">
+                     1
+                   </cell>
+                   <cell right="medium">
+                     1
+                   </cell>
+                 </row>
+               </tabular>
+             </sidebyside>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Use a truth table to prove the four identity laws.
+            </statement>
+            <solution>
+              The four identity laws
+            </solution>
           <exercisegroup>
             <introduction>
 
@@ -14271,6 +14341,11 @@
 
           </exercisegroup>
         </exercises>
+        <solutions divisional="solution">
+          <title>
+            Solutions to <xref ref="sec-logic-laws"/> Exercises.
+          </title>
+        </solutions>
       </section>
     </chapter>
   </book>
