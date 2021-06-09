@@ -14302,43 +14302,671 @@
               Use a truth table to prove the four identity laws.
             </statement>
             <solution>
-              The four identity laws
+              The four identity laws follow from the following observations:  The <m>p\wedge 0</m> column is the same as <m>0</m>, the <m>p\vee 0</m> and the <m>p\wedge 1</m> columns are the same as <m>p</m>, and the <m>p\vee 1</m> column is the same as <m>1</m>.
+              <tabular halign="center" top="major" left="medium">
+                <row bottom="medium">
+                  <cell right="medium">
+                    <m>p</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>0</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>1</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>p\wedge 0</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>p\vee 0</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>p\wedge 1</m>
+                  </cell>
+                  <cell right="medium">
+                    <m>p\vee 1</m>
+                  </cell>
+                </row>
+                <row>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                </row>
+                <row bottom="major">
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    0
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                  <cell right="medium">
+                    1
+                  </cell>
+                </row>
+              </tabular>
             </solution>
+          </exercise>
           <exercisegroup>
             <introduction>
-
+              Name the law of logic used in the following.  Note that the variable names have been changed, but that the law is still valid.
             </introduction>
-
+            <exercise>
+              <statement>
+                <m>\ \mynot q\vee 1\Leftrightarrow 1</m>
+              </statement>
+              <solution>
+                Identity
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \overline{\overline{B}}=B</m>
+              </statement>
+              <solution>
+                Complement
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \mynot r\wedge r\Leftrightarrow 0</m>
+              </statement>
+              <solution>
+                Complement
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \mynot q\vee 0\Leftrightarrow\mynot q</m>
+              </statement>
+              <solution>
+                Identity
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \overline{B}\cdot 1=\overline{B}</m>
+              </statement>
+              <solution>
+                Identity
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ q\vee q\Leftrightarrow q</m>
+              </statement>
+              <solution>
+                Idempotent
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ AB+\overline{AB}=1</m>
+              </statement>
+              <solution>
+                Complement
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ (\mynot p\wedge q)\wedge\,\mynot q\Leftrightarrow\mynot p\wedge(q\,\wedge\mynot q)</m>
+              </statement>
+              <solution>
+                Associative
+              </solution>
+            </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
-
+              Simplify the given expression, and state the name of the law you used.  You should be able to do these in one step.
             </introduction>
-
+            <exercise>
+              <statement>
+                <m>\ r\vee 0</m>
+              </statement>
+              <solution>
+                <m>\ r</m>, identity
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ C+\overline{C}</m>
+              </statement>
+              <solution>
+                <m>\ 1</m>, complement
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \mynot(\mynot r)</m>
+              </statement>
+              <solution>
+                <m>\ r</m>, complement
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \overline{A}+\overline{A}</m>
+              </statement>
+              <solution>
+                <m>\ \overline{A}</m>, idempotent
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \overline{B}\cdot 1</m>
+              </statement>
+              <solution>
+                <m>\ \overline{B}</m>, identity
+              </solution>
+            </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
-
+              <p>
+                A note about the solutions provided for the remaining problems: There may be several different ways to simplify.  Also, you might take steps in a different order.  If you are concerned about the solutions given in this textbook, contact your instructor.  (Also, the steps involving the commutative and associative laws are not explicitly written.)
+              </p>
+              <p>
+                Use the laws of logic to simplify the following logical expressions.  If you're completely stuck, try using a truth table instead.
+              </p>
             </introduction>
-
+            <exercise>
+              <statement>
+                <m>\ (p\wedge p)\vee(q\,\wedge\mynot q)</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="center">
+                      <m>(p\wedge p)\vee(q\,\wedge\mynot q)</m>
+                    </cell>
+                    <cell>
+                      <m>\Leftrightarrow p\vee(q\,\wedge\mynot q)</m>
+                    </cell>
+                    <cell>
+                      Idempotent
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                    </cell>
+                    <cell>
+                      <m>\Leftrightarrow p\vee 0</m>
+                    </cell>
+                    <cell>
+                      Complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                    </cell>
+                    <cell>
+                      <m>p</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ (p\vee p)\wedge (q\vee 0)</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="center">
+                      <m>(p\vee p)\wedge(q\vee 0)</m>
+                    </cell>
+                    <cell>
+                      <m>\Leftrightarrow p\wedge(q\vee 0)</m>
+                    </cell>
+                    <cell>
+                      Idempotent
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                    </cell>
+                    <cell>
+                      <m>\Leftrightarrow p\wedge q</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ p\vee(q\,\wedge\mynot q)</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="center">
+                      <m>p\vee(q\,\wedge\mynot q)</m>
+                    </cell>
+                    <cell>
+                      <m>\Leftrightarrow p\vee 0</m>
+                    </cell>
+                    <cell>
+                      Complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                    </cell>
+                    <cell>
+                      <m>\Leftrightarrow p</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
-
+              Use the laws of logic to simplify the following Boolean expressions.  If you're completely stuck, try using a truth table instead.
             </introduction>
-
+            <exercise>
+              <statement>
+                <m>\ (A+A)\cdot(B+\overline{B})</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="center">
+                      <m>(A+A)(B+\overline{B})</m>
+                    </cell>
+                    <cell>
+                      <m>= A(B+\overline{B})</m>
+                    </cell>
+                    <cell>
+                      Idempotent
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                    </cell>
+                    <cell>
+                      <m>= A\cdot 1</m>
+                    </cell>
+                    <cell>
+                      Complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                    </cell>
+                    <cell>
+                      <m>= A</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ B\cdot 0+A\cdot A</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="center">
+                      <m>B\cdot 0+AA</m>
+                    </cell>
+                    <cell>
+                      <m>= 0+AA</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                    </cell>
+                    <cell>
+                      <m>= 0+A</m>
+                    </cell>
+                    <cell>
+                      Idempotent
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                    </cell>
+                    <cell>
+                      <m>= A</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ (B+\overline{B})(A+1)</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="center">
+                      <m>(B+\overline{B})(A+1)</m>
+                    </cell>
+                    <cell>
+                      <m>= 1\cdot(A+1)</m>
+                    </cell>
+                    <cell>
+                      Complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                    </cell>
+                    <cell>
+                      <m>= 1\cdot 1</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                    </cell>
+                    <cell>
+                      <m>= 1</m>
+                    </cell>
+                    <cell>
+                      Definition of <em>and</em>.
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ AB\overline{B}</m> (Remember, <m>AB</m> and <m>A\cdot B</m> are two different ways to write the same expression.)
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="center">
+                      <m>AB\overline{B}</m>
+                    </cell>
+                    <cell>
+                      <m>=A\cdot 0</m>
+                    </cell>
+                    <cell>
+                      Complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                    </cell>
+                    <cell>
+                      <m>=0</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
-
+              Prove the following Boolean expressions are equivalent using the laws of logic. On each line of your proof, manipulate only one side of the statement unless you are performing the same manipulation on both sides. If you're completely stuck, try using a truth table.
             </introduction>
-
-          </exercisegroup>
-          <exercisegroup>
-            <introduction>
-
-            </introduction>
-
+            <exercise>
+              <statement>
+                <m>\ (A\overline{A})\overline{B}=A(B\overline{B})</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>(A\overline{A})\overline{B}</m>
+                    </cell>
+                    <cell>
+                      <m>=A(B\overline{B})</m>
+                    </cell>
+                    <cell>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>0\cdot\overline{B}</m>
+                    </cell>
+                    <cell>
+                      <m>=A(B\overline{B})</m>
+                    </cell>
+                    <cell>
+                      Complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>0\cdot\overline{B}</m>
+                    </cell>
+                    <cell>
+                      <m>=A\cdot 0</m>
+                    </cell>
+                    <cell>
+                      Complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>0</m>
+                    </cell>
+                    <cell>
+                      <m>=A\cdot 0</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>0</m>
+                    </cell>
+                    <cell>
+                      <m>=0</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ B\cdot 1+A\overline{A}=\overline{\overline{B}\cdot 1}</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>B\cdot 1+A\overline{A}</m>
+                    </cell>
+                    <cell>
+                      <m>=\overline{\overline{B}\cdot 1}</m>
+                    </cell>
+                    <cell>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>B+A\overline{A}</m>
+                    </cell>
+                    <cell>
+                      <m>=\overline{\overline{B}}</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>B+0</m>
+                    </cell>
+                    <cell>
+                      <m>=\overline{\overline{B}}</m>
+                    </cell>
+                    <cell>
+                      Complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>B</m>
+                    </cell>
+                    <cell>
+                      <m>=\overline{\overline{B}}</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>B</m>
+                    </cell>
+                    <cell>
+                      <m>=B</m>
+                    </cell>
+                    <cell>
+                      Complement
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ (A+0)(B+\overline{B})=A</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>(A+0)(B+\overline{B})</m>
+                    </cell>
+                    <cell>
+                      <m>=A</m>
+                    </cell>
+                    <cell>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>A(B+\overline{B})</m>
+                    </cell>
+                    <cell>
+                      <m>=A</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>A\cdot 1</m>
+                    </cell>
+                    <cell>
+                      <m>=A</m>
+                    </cell>
+                    <cell>
+                      Complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>A</m>
+                    </cell>
+                    <cell>
+                      <m>=A</m>
+                    </cell>
+                    <cell>
+                      Identity
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ AA+\overline{B}\,\overline{B}=A+\overline{B}</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>AA+B\overline{B}</m>
+                    </cell>
+                    <cell>
+                      <m>=A+\overline{B}</m>
+                    </cell>
+                    <cell>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>A+\overline{B}</m>
+                    </cell>
+                    <cell>
+                      <m>=A+\overline{B}</m>
+                    </cell>
+                    <cell>
+                      Idempotent
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
           </exercisegroup>
         </exercises>
         <solutions divisional="solution">
