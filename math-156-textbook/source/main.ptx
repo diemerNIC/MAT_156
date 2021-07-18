@@ -15647,6 +15647,176 @@
             This is a much shorter answer, but does require a flash of insight at the <m>(\nota + \notb)</m> pattern.
           </p>
         </subsection>
+        <subsection xml:id="ssec-proofs">
+          <title>
+            Proofs
+          </title>
+          <p>
+            When tasked to prove that two logic statements are equivalent, look to see if one of the statements is simpler than the other.  Try to simplify the more complicated statement until it is identical to the simpler statement.  Sometimes, you will have to simplify both statements into identical forms.
+          </p>
+          <example xml:id="exmpl-proof1">
+            <statement>
+              Show that <m>\overline{A+\overline{A}\,\overline{B}}=\overline{A}B</m>.
+            </statement>
+            <answer>
+              Let's examine the left-had side and simplify it.
+              <tabular>
+                <row>
+                  <cell>
+                    <m>\overline{A+\overline{A}\,\overline{B}}</m>
+                  </cell>
+                  <cell>
+                    <m>=</m>
+                  </cell>
+                  <cell>
+                    <m>\overline{A}B</m>
+                  </cell>
+                  <cell>
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>\overline{A+\overline{B}}</m>
+                  </cell>
+                  <cell>
+                    <m>=</m>
+                  </cell>
+                  <cell>
+                    <m>\overline{A}B</m>
+                  </cell>
+                  <cell>
+                    absorption
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>\overline{A}\,\overline{\overline{B}}</m>
+                  </cell>
+                  <cell>
+                    <m>=</m>
+                  </cell>
+                  <cell>
+                    <m>\overline{A}B</m>
+                  </cell>
+                  <cell>
+                    De Morgan's
+                  </cell>
+                </row>
+                <row>
+                  <cell>
+                    <m>\overline{A}B</m>
+                  </cell>
+                  <cell>
+                    <m>=</m>
+                  </cell>
+                  <cell>
+                    <m>\overline{A}B</m>
+                  </cell>
+                  <cell>
+                    complement
+                  </cell>
+                </row>
+              </tabular>
+              <p>
+                The left-hand side has been shown to be equivalent to the origintal right-hand side.  This completes the proof.
+              </p>
+            </answer>
+          </example>
+          <example xml:id="exmpl-proof2">
+            <statement>
+              Show that <m>(A+\overline{C})(\overline{C}+AB)=AB+\overline{C}</m>.
+            </statement>
+            <answer>
+              The left side is more complicated, so let's examine it to see what simplification is possible.
+              <tabular>
+                <row>
+                  <cell halign="right">
+                    <m>(A+\overline{C})(\overline{C}+AB)</m>
+                  </cell>
+                  <cell>
+                    <m>=</m>
+                  </cell>
+                  <cell>
+                    <m>AB+\overline{C}</m>
+                  </cell>
+                  <cell>
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right">
+                    <m>(\overline{C}+A)(\overline{C}+AB)</m>
+                  </cell>
+                  <cell>
+                    <m>=</m>
+                  </cell>
+                  <cell>
+                    <m>AB+\overline{C}</m>
+                  </cell>
+                  <cell>
+                    commutative
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right">
+                    <m>\overline{C}+A(AB)</m>
+                  </cell>
+                  <cell>
+                    <m>=</m>
+                  </cell>
+                  <cell>
+                    <m>AB=\overline{C}</m>
+                  </cell>
+                  <cell>
+                    distributive
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right">
+                    <m>\overline{C}+(AA)B</m>
+                  </cell>
+                  <cell>
+                  </cell>
+                  <cell>
+                    <m>AB=\overline{C}</m>
+                  </cell>
+                  <cell>
+                    associative
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right">
+                    <m>\overline{C}+AB</m>
+                  </cell>
+                  <cell>
+                  </cell>
+                  <cell>
+                    <m>AB+\overline{C}</m>
+                  </cell>
+                  <cell>
+                    idempotent
+                  </cell>
+                </row>
+                <row>
+                  <cell halign="right">
+                    <m>AB+\overline{C}</m>
+                  </cell>
+                  <cell>
+                  </cell>
+                  <cell>
+                    <m>AB+\overline{C}</m>
+                  </cell>
+                  <cell>
+                    commutative
+                  </cell>
+                </row>
+              </tabular>
+              QED.  (QED is short for the Latin phrase <em>quod erat demonstrandum</em>, which means <em>it has been demonstrated</em>.)
+            </answer>
+          </example>
+        </subsection>
+        <exercises xml:id="exers-sec-more-logic-laws">
+          
+        </exercises>
       </section>
     </chapter>
   </book>
