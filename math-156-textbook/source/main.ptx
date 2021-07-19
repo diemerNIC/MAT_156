@@ -6,8 +6,8 @@
       \newcommand{\myand}{{\wedge}}
       \newcommand{\myor}{{\vee}}
       \newcommand{\myxor}{{\oplus}}
-      \newcommand{\ttxor}{\begin{tt}XOR\end{tt}}
-      \newcommand{\mytt}[1]{\begin{tt}#1\end{tt}}
+      \newcommand{\ttxor}{\texttt{XOR}}
+      \newcommand{\mytt}[1]{\texttt{#1}}
 
       \newcommand{\myleq}{{\Leftrightarrow}}
       \newcommand{\myimplies}{{\rightarrow}}
@@ -3988,7 +3988,7 @@
                </row>
              </tabular>
              <p>
-               You'll notice that we have a bit of a problem:  if we put the fractional/decimal part 0.4 on the next line, then we'll have a repeat of the second line, and then the next three lines will also repeat, and so on.  What this means is that <m>0.3_{10}</m> is a repeating decimal in octal: <m>0.3_{10}=0.2\overline{3146}_8</m>.
+               You'll notice that we have a bit of a problem:  if we put the fractional/decimal part 0.4 on the next line, then we'll have a repeat of the second line, and then the next three lines will also repeat, and so on.  What this means is that <m>0.3_{10}</m> is a repeating decimal in octal: <m>0.3_{10}=0.2\mybnot{3146}_8</m>.
              </p>
            </solution>
           </example>
@@ -4456,7 +4456,7 @@
                 <m>\ 0.6</m> to octal
               </statement>
               <solution>
-                <m>\ 0.\overline{4631}_8</m>
+                <m>\ 0.\mybnot{4631}_8</m>
               </solution>
             </exercise>
             <exercise>
@@ -4464,7 +4464,7 @@
                 <m>\ 0.3</m> to binary
               </statement>
               <solution>
-                <m>\ 0.0\overline{1001}_2</m> is the simplest, but other equivalent expressions are <m>0.01\overline{0011}_2</m> and <m>0.010\overline{0110}_2</m>, etc.
+                <m>\ 0.0\mybnot{1001}_2</m> is the simplest, but other equivalent expressions are <m>0.01\mybnot{0011}_2</m> and <m>0.010\mybnot{0110}_2</m>, etc.
               </solution>
             </exercise>
             <exercise>
@@ -5676,7 +5676,7 @@
               Negation
             </title>
             <p>
-              The negation of any proposition <m>p</m> is called <em>not p</em> and is written using the tilde symbol, <m>\notp</m>.  The tilde can be found on a standard keyboard as the shifted key to the left of the 1.  You may also see negations in logic written using this symbol, <m>\neg p</m>, or using a bar or overline, <m>\overline{p}</m>.  In computing, you will also see <m>!p</m> as the negation.  We will use the <m>\notp</m> because it uses a character on a conventional keyboard, so it is easier to type.
+              The negation of any proposition <m>p</m> is called <em>not p</em> and is written using the tilde symbol, <m>\notp</m>.  The tilde can be found on a standard keyboard as the shifted key to the left of the 1.  You may also see negations in logic written using this symbol, <m>\neg p</m>, or using a bar or overline, <m>\mybnot{p}</m>.  In computing, you will also see <m>!p</m> as the negation.  We will use the <m>\notp</m> because it uses a character on a conventional keyboard, so it is easier to type.
             </p>
             <p>
               Note that you should be a little careful when negating sentences.  For example, the negation of "Pat is happy" is <em>not</em> "Pat is unhappy."  There are many other emotions that Pat could have (anger, fear, boredom, etc.).  If the first statement is false, then its negationv must be true, so between the two you need to cover all possible situations that could arise. It would be safe to say that the negation of "Pat is happy" is "Pat is not happy", though.
@@ -10978,7 +10978,7 @@
             <m>A</m> and <m>\notb</m>.
           </p>
           <p>
-            The gate representation for <m>\overline{A+B}</m> is
+            The gate representation for <m>\mybnot{A+B}</m> is
             <image width="30%" xml:id="fig-notAorB">
               <latex-image>
                 \begin{circuitikz}
@@ -10987,7 +10987,7 @@
                    (myor.in 1) node[anchor=east] {$A$}
                    (myor.in 2) node[anchor=east] {$B$}
                    (myor.bout) node[notcirc,right] {}
-                   (myor.out) node[anchor=west] {$\overline{A+B}$};
+                   (myor.out) node[anchor=west] {$\mybnot{A+B}$};
                 \end{circuitikz}
               </latex-image>
             </image>
@@ -11010,7 +11010,7 @@
               </image>
             </statement>
             <answer>
-              <m>\overline{\nota{}B}</m>
+              <m>\mybnot{\nota{}B}</m>
             </answer>
           </example>
         </subsection>
@@ -11110,7 +11110,7 @@
                 <m>\nota{}B\qquad</m> First evaluate the negation of <m>A</m>, then use that result in the <em>and</em> operation with <m>B</m>.
               </li>
               <li>
-                <m>\overline{A+B}\qquad</m> First evaluate <m>A+B</m>, then negate the result.  Note the implied grouping of <m>A+B</m>.
+                <m>\mybnot{A+B}\qquad</m> First evaluate <m>A+B</m>, then negate the result.  Note the implied grouping of <m>A+B</m>.
               </li>
               <li>
                 <m>A(B+C)\qquad</m> First evaluate the grouped expression, then use the result in the <em>and</em> operation with <m>A</m>.
@@ -11388,7 +11388,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \overline{A+B}</m>
+                <m>\ \mybnot{A+B}</m>
               </statement>
               <solution>
                 <image width="30%" xml:id="fig-exer-gate-not-AorB">
@@ -11399,7 +11399,7 @@
                        (myor.in 1) node[anchor=east] {$A$}
                        (myor.in 2) node[anchor=east] {$B$}
                        (myor.bout) node[notcirc,right] {}
-                       (myor.out) node[anchor=west] {$\overline{A+B}$};
+                       (myor.out) node[anchor=west] {$\mybnot{A+B}$};
                     \end{circuitikz}
                   </latex-image>
                 </image>
@@ -11446,7 +11446,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \overline{A\notb}</m>
+                <m>\ \mybnot{A\notb}</m>
               </statement>
               <solution>
                 <image width="30%" xml:id="fig-exer-gate-not-AornotB">
@@ -11458,7 +11458,7 @@
                        (mygate.in 2) node[anchor=east] {$B$}
                        (mygate.bin 2) node[notcirc,left] {}
                        (mygate.bout) node[notcirc,right] {}
-                       (mygate.out) node[anchor=west] {$\overline{A+\notb}$};
+                       (mygate.out) node[anchor=west] {$\mybnot{A+\notb}$};
                     \end{circuitikz}
                   </latex-image>
                 </image>
@@ -11508,7 +11508,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \overline{AB}C</m>
+                <m>\ \mybnot{AB}C</m>
               </statement>
               <solution>
                 <image width="50%" xml:id="fig-exer-gate-not-AandB--and-C">
@@ -11521,7 +11521,7 @@
                     	(myand1.in 1) node[anchor=east] {$A$}
                     	(myand1.in 2) node[anchor=east] {$B$}
                     	(myand2.in 2) node[anchor=east] {$C$}
-                    	(myand2.out) node[anchor=west] {$\overline{AB}C$};
+                    	(myand2.out) node[anchor=west] {$\mybnot{AB}C$};
                     \end{circuitikz}
                   </latex-image>
                 </image>
@@ -11529,7 +11529,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \overline{\overline{\nota\,\notb}+\notc}</m>
+                <m>\ \mybnot{\mybnot{\nota\,\notb}+\notc}</m>
               </statement>
               <solution>
                 <image width="50%" xml:id="fig-exer-gate-not--not-notAandnotB-and-notC">
@@ -11546,7 +11546,7 @@
                       	(myor.in 2) node[anchor=east] {$C$}
                       	(myor.bin 2) node[notcirc,left] {}
                       	(myor.bout) node[notcirc,right] {}
-                      	(myor.out) node[anchor=west] {$\overline{\overline{\nota\,\notb}+\notc}$};
+                      	(myor.out) node[anchor=west] {$\mybnot{\mybnot{\nota\,\notb}+\notc}$};
                     \end{circuitikz}
                   </latex-image>
                 </image>
@@ -11594,7 +11594,7 @@
                 </image>
               </statement>
               <solution>
-                <m>\overline{\nota+B}</m>
+                <m>\mybnot{\nota+B}</m>
               </solution>
             </exercise>
             <exercise>
@@ -11615,7 +11615,7 @@
                 </image>
               </statement>
               <solution>
-                <m>\overline{\nota+\notb}</m>
+                <m>\mybnot{\nota+\notb}</m>
               </solution>
             </exercise>
             <exercise>
@@ -11634,7 +11634,7 @@
                 </image>
               </statement>
               <solution>
-                <m>\overline{AB}</m>
+                <m>\mybnot{AB}</m>
               </solution>
             </exercise>
             <exercise>
@@ -11675,7 +11675,7 @@
                 </image>
               </statement>
               <solution>
-                <m>A+\overline{\notb{}C}</m>
+                <m>A+\mybnot{\notb{}C}</m>
               </solution>
             </exercise>
             <exercise>
@@ -11697,7 +11697,7 @@
                 </image>
               </statement>
               <solution>
-                <m>\overline{A+\overline{B+C}}</m>
+                <m>\mybnot{A+\mybnot{B+C}}</m>
               </solution>
             </exercise>
             <exercise>
@@ -11721,7 +11721,7 @@
                 </image>
               </statement>
               <solution>
-                <m>\overline{\nota\,\notb}\,\notc</m>
+                <m>\mybnot{\nota\,\notb}\,\notc</m>
               </solution>
             </exercise>
           </exercisegroup>
@@ -11894,7 +11894,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \overline{A+B}</m>
+                <m>\ \mybnot{A+B}</m>
               </statement>
               <solution>
                 <tabular halign="center" top="major" left="medium">
@@ -11909,7 +11909,7 @@
                       <m>A+B</m>
                     </cell>
                     <cell right="medium">
-                      <m>\overline{A+B}</m>
+                      <m>\mybnot{A+B}</m>
                     </cell>
                   </row>
                   <row>
@@ -12423,7 +12423,7 @@
             </introduction>
             <exercise>
               <statement>
-                <m>\ \overline{AB}</m> and <m>\nota\,\notb</m>
+                <m>\ \mybnot{AB}</m> and <m>\nota\,\notb</m>
               </statement>
               <solution>
                 <p>No:</p>
@@ -12440,7 +12440,7 @@
                         <m>AB</m>
                       </cell>
                       <cell right="medium">
-                        <m>\overline{AB}</m>
+                        <m>\mybnot{AB}</m>
                       </cell>
                       <cell right="medium">
                         <m>\nota</m>
@@ -12551,7 +12551,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \overline{A+B}</m> and <m>\nota\,\notb</m>
+                <m>\ \mybnot{A+B}</m> and <m>\nota\,\notb</m>
               </statement>
               <solution>
                 <p>Yes:</p>
@@ -12568,7 +12568,7 @@
                         <m>A+B</m>
                       </cell>
                       <cell right="medium">
-                        <m>\overline{A+B}</m>
+                        <m>\mybnot{A+B}</m>
                       </cell>
                       <cell right="medium">
                         <m>\nota</m>
@@ -13813,7 +13813,7 @@
                     <row>
                       <cell>
                         <md>
-                          <mrow>\overline{\nota}\amp =A</mrow>
+                          <mrow>\mybnot{\nota}\amp =A</mrow>
                           <mrow>A\cdot\nota\amp = 0</mrow>
                           <mrow>A+\nota\amp = 1</mrow>
                         </md>
@@ -13999,7 +13999,7 @@
                   <m>\mynot(\notp)\Leftrightarrow p</m>
                 </cell>
                 <cell right="medium">
-                  <m>\overline{\nota}=A</m>
+                  <m>\mybnot{\nota}=A</m>
                 </cell>
               </row>
               <row>
@@ -14428,7 +14428,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ \overline{\notb}=B</m>
+                <m>\ \mybnot{\notb}=B</m>
               </statement>
               <solution>
                 Complement
@@ -14468,7 +14468,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ AB+\overline{AB}=1</m>
+                <m>\ AB+\mybnot{AB}=1</m>
               </statement>
               <solution>
                 Complement
@@ -14862,7 +14862,7 @@
             </exercise>
             <exercise>
               <statement>
-                <m>\ B\cdot 1+A\nota=\overline{\notb\cdot 1}</m>
+                <m>\ B\cdot 1+A\nota=\mybnot{\notb\cdot 1}</m>
               </statement>
               <solution>
                 <tabular>
@@ -14871,7 +14871,7 @@
                       <m>B\cdot 1+A\nota</m>
                     </cell>
                     <cell>
-                      <m>=\overline{\notb\cdot 1}</m>
+                      <m>=\mybnot{\notb\cdot 1}</m>
                     </cell>
                     <cell>
                     </cell>
@@ -14881,7 +14881,7 @@
                       <m>B+A\nota</m>
                     </cell>
                     <cell>
-                      <m>=\overline{\notb}</m>
+                      <m>=\mybnot{\notb}</m>
                     </cell>
                     <cell>
                       Identity
@@ -14892,7 +14892,7 @@
                       <m>B+0</m>
                     </cell>
                     <cell>
-                      <m>=\overline{\notb}</m>
+                      <m>=\mybnot{\notb}</m>
                     </cell>
                     <cell>
                       Complement
@@ -14903,7 +14903,7 @@
                       <m>B</m>
                     </cell>
                     <cell>
-                      <m>=\overline{\notb}</m>
+                      <m>=\mybnot{\notb}</m>
                     </cell>
                     <cell>
                       Identity
@@ -15174,8 +15174,8 @@
                     <row>
                       <cell>
                         <md>
-                          <mrow>\overline{A\cdot B}\amp =\nota+\notb</mrow>
-                          <mrow>\overline{A+B}\amp =\nota\cdot\notb</mrow>
+                          <mrow>\mybnot{A\cdot B}\amp =\nota+\notb</mrow>
+                          <mrow>\mybnot{A+B}\amp =\nota\cdot\notb</mrow>
                         </md>
                       </cell>
                     </row>
@@ -15656,61 +15656,61 @@
           </p>
           <example xml:id="exmpl-proof1">
             <statement>
-              Show that <m>\overline{A+\overline{A}\,\overline{B}}=\overline{A}B</m>.
+              Show that <m>\mybnot{A+\mybnot{A}\,\mybnot{B}}=\mybnot{A}B</m>.
             </statement>
             <answer>
               Let's examine the left-had side and simplify it.
               <tabular>
                 <row>
-                  <cell>
-                    <m>\overline{A+\overline{A}\,\overline{B}}</m>
+                  <cell halign="right">
+                    <m>\mybnot{A+\mybnot{A}\,\mybnot{B}}</m>
                   </cell>
                   <cell>
                     <m>=</m>
                   </cell>
                   <cell>
-                    <m>\overline{A}B</m>
+                    <m>\mybnot{A}B</m>
                   </cell>
                   <cell>
                   </cell>
                 </row>
                 <row>
-                  <cell>
-                    <m>\overline{A+\overline{B}}</m>
+                  <cell halign="right">
+                    <m>\mybnot{A+\mybnot{B}}</m>
                   </cell>
                   <cell>
                     <m>=</m>
                   </cell>
                   <cell>
-                    <m>\overline{A}B</m>
+                    <m>\mybnot{A}B</m>
                   </cell>
                   <cell>
                     absorption
                   </cell>
                 </row>
                 <row>
-                  <cell>
-                    <m>\overline{A}\,\overline{\overline{B}}</m>
+                  <cell halign="right">
+                    <m>\mybnot{A}\,\mybnot{\mybnot{B}}</m>
                   </cell>
                   <cell>
                     <m>=</m>
                   </cell>
                   <cell>
-                    <m>\overline{A}B</m>
+                    <m>\mybnot{A}B</m>
                   </cell>
                   <cell>
                     De Morgan's
                   </cell>
                 </row>
                 <row>
-                  <cell>
-                    <m>\overline{A}B</m>
+                  <cell halign="right">
+                    <m>\mybnot{A}B</m>
                   </cell>
                   <cell>
                     <m>=</m>
                   </cell>
                   <cell>
-                    <m>\overline{A}B</m>
+                    <m>\mybnot{A}B</m>
                   </cell>
                   <cell>
                     complement
@@ -15724,33 +15724,33 @@
           </example>
           <example xml:id="exmpl-proof2">
             <statement>
-              Show that <m>(A+\overline{C})(\overline{C}+AB)=AB+\overline{C}</m>.
+              Show that <m>(A+\mybnot{C})(\mybnot{C}+AB)=AB+\mybnot{C}</m>.
             </statement>
             <answer>
               The left side is more complicated, so let's examine it to see what simplification is possible.
               <tabular>
                 <row>
                   <cell halign="right">
-                    <m>(A+\overline{C})(\overline{C}+AB)</m>
+                    <m>(A+\mybnot{C})(\mybnot{C}+AB)</m>
                   </cell>
                   <cell>
                     <m>=</m>
                   </cell>
                   <cell>
-                    <m>AB+\overline{C}</m>
+                    <m>AB+\mybnot{C}</m>
                   </cell>
                   <cell>
                   </cell>
                 </row>
                 <row>
                   <cell halign="right">
-                    <m>(\overline{C}+A)(\overline{C}+AB)</m>
+                    <m>(\mybnot{C}+A)(\mybnot{C}+AB)</m>
                   </cell>
                   <cell>
                     <m>=</m>
                   </cell>
                   <cell>
-                    <m>AB+\overline{C}</m>
+                    <m>AB+\mybnot{C}</m>
                   </cell>
                   <cell>
                     commutative
@@ -15758,13 +15758,13 @@
                 </row>
                 <row>
                   <cell halign="right">
-                    <m>\overline{C}+A(AB)</m>
+                    <m>\mybnot{C}+A(AB)</m>
                   </cell>
                   <cell>
                     <m>=</m>
                   </cell>
                   <cell>
-                    <m>AB=\overline{C}</m>
+                    <m>AB=\mybnot{C}</m>
                   </cell>
                   <cell>
                     distributive
@@ -15772,12 +15772,13 @@
                 </row>
                 <row>
                   <cell halign="right">
-                    <m>\overline{C}+(AA)B</m>
+                    <m>\mybnot{C}+(AA)B</m>
                   </cell>
                   <cell>
+                    <m>=</m>
                   </cell>
                   <cell>
-                    <m>AB=\overline{C}</m>
+                    <m>AB=\mybnot{C}</m>
                   </cell>
                   <cell>
                     associative
@@ -15785,12 +15786,13 @@
                 </row>
                 <row>
                   <cell halign="right">
-                    <m>\overline{C}+AB</m>
+                    <m>\mybnot{C}+AB</m>
                   </cell>
                   <cell>
+                    <m>=</m>
                   </cell>
                   <cell>
-                    <m>AB+\overline{C}</m>
+                    <m>AB+\mybnot{C}</m>
                   </cell>
                   <cell>
                     idempotent
@@ -15798,12 +15800,13 @@
                 </row>
                 <row>
                   <cell halign="right">
-                    <m>AB+\overline{C}</m>
+                    <m>AB+\mybnot{C}</m>
                   </cell>
                   <cell>
+                    <m>=</m>
                   </cell>
                   <cell>
-                    <m>AB+\overline{C}</m>
+                    <m>AB+\mybnot{C}</m>
                   </cell>
                   <cell>
                     commutative
@@ -15815,8 +15818,540 @@
           </example>
         </subsection>
         <exercises xml:id="exers-sec-more-logic-laws">
-          
+          <exercisegroup>
+            <introduction>
+              Let <m>p</m> be the statement <em>Rich is seven feet tall</em> and <m>q</m> be <em>Susan has brown hair.</em>  Translate the following English sentences into logical notation.  Then, use one of the laws of logic to write an equivalent logical expression.  Finally, translate your new expression back into an English sentence.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\ </m>Rich is seven feet tall or he is seven feet tall.
+              </statement>
+              <solution>
+                <m>p \myor{} p  \myleq{}  p</m>.  Rich is seven feet tall.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Susan has brown hair and she has brown hair.
+              </statement>
+              <solution>
+                <m>q  \myand{}  q  \myleq{}  q</m>.  Susan has brown hair.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Either Rich is not seven feet tall or Susan does not have brown hair.
+              </statement>
+              <solution>
+                <m>\notp{} \myor{} \notq{}  \myleq{}  \mylnot{(p \myand{} q)}</m>.  It is not the case that Rich is seven feet tall and Susan has brown hair.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>It is not true that Rich is seven feet tall and Susan has brown
+              </statement> hair.
+              <solution>
+                <m>\mylnot{(p \myand{} q)} \myleq{} \notp{} \myor{}  \notq{}</m>.  Rich is not seven feet tall or Susan does not have brown hair.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>It is not true that Rich is seven feet tall or Susan has brown hair.
+              </statement>
+              <solution>
+                <m>\mylnot{(p \myor{} q)}  \myleq{}  \notp{} \myand{}  \notq{}</m>.  Rich is not seven feet tall and Susan does not have brown hair.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Rich is not seven feet tall and Susan does not have brown hair.
+              </statement>
+              <solution>
+                <m>\notp{} \myand{}  \notq{}    \myleq{}  \mylnot{(p \myor{} q)}</m>.  It is not the case that Rich is seven feet tall or Susan has brown hair.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Rich is seven feet tall and Susan has brown hair.
+              </statement>
+              <solution>
+                <m>p \myand{} q  \myleq{}  q \myand{} p</m>.  Susan has brown hair and Rich is seven feet tall.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Susan has brown hair or Rich is seven feet tall.
+              </statement>
+              <solution>
+                <m>q \myor{} p  \myleq{}  p \myor{} q</m>.  Rich is seven feet tall or Susan has brown hair.
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Name the law of logic used in the following.  note that the variables have changed, but that the law is still valid.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\ g\mylnot{(q \myor{} r)} \myleq \notq{} \myand{} \notr{}</m>
+              </statement>
+              <solution>
+                De Morgan's
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \notb{} (B + \nota{}) = \notb{}~\nota{} </m>
+              </statement>
+              <solution>
+                absorption
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ (p \myand{} q) \myor{} (p \myand \notq{}) \myleq{} p \myand{} (q \myor{}\notq{})</m>
+              </statement>
+              <solution>
+                distributive
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \mybnot{\nota{} + C} = A\notc{}</m>
+              </statement>
+              <solution>
+                De Morgan's
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ B + A\notc{} =(B+A)(B+\notc{})</m>
+              </statement>
+              <solution>
+                distributive
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \notp{} \myor{} (p \myand{} r) \myleq{} \notp{}\myor{}r</m>
+              </statement>
+              <solution>
+                absorption
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Simplify the given expression, and state the name of the law you used.  You should be able to do these in a single step.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\ \nota{}+ A\notb{}</m>
+              </statement>
+              <solution>
+                <m>\ \nota{}+ \notb{}</m>, absorption
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \mybnot{AB} + \mybnot{AB}</m>
+              </statement>
+              <solution>
+                <m>\ \mybnot{AB}</m>, idempotent
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ (A+B)(B+C)</m>
+              </statement>
+              <solution>
+                <m>\ B+AC </m>, distributive
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ q \myor{}(q \myand{} r)</m>
+              </statement>
+              <solution>
+                <m>\ q</m>, absorption
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \notc{} + C</m>
+              </statement>
+              <solution>
+                <m>\ 1</m>, complement
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \mybnot{\nota{} ~ \notb{}}</m>
+              </statement>
+              <solution>
+                <m>\ A+B</m>, De Morgan's
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              For the following exercises, let <m>p</m> be <em>The moon is made of green cheese</em> and <m>q</m> be <em>The earth is made of green cheese.</em>  Translate the following English sentences into logical notation.  Then, use one of the laws of logic to write an equivalent logical expression.  Finally, translate your new expression back into an English sentence.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\ </m>Either the moon is made of green cheese or both the moon and the earth are made of green cheese.
+              </statement>
+              <solution>
+                <m>\ p \myor{} (p \myand{} q) \myleq{}  p</m>. The moon is made of green cheese.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>The earth is made of green cheese and either the earth or the moon is made of green cheese.
+              </statement>
+              <solution>
+                <m>\ q \myand{} (q \myor{}p) \myleq{}  q</m>. The earth is made of green cheese.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Either the earth is made of green cheese while the moon is not, or the moon is made of green cheese.
+              </statement>
+              <solution>
+                <m>\ (q \myand{} \notp{}) \myor{} p  \myleq{}  p \myor{} (\notp{} \myand{} q) \myleq{} p \myor{} q</m>. (Note:  I'm using the commutative laws to rearrange things)   The moon or the earth is made of green cheese.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>The earth is made of green cheese and either the moon is made of green cheese or the earth is not.
+              </statement>
+              <solution>
+                <m>\ \ q  \myand{}  (p \myor{}  \notq{}  )  \myleq{}  q  \myand{}  p</m>. The earth and the moon are made of green cheese.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Remembering that <m>\myxor{}</m> is <em>exclusive or</em>, show that <m>A\myxor{}B = \nota{}B + A\notb{}</m> by using a truth table.
+              </statement>
+              <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A\oplus B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\overline{A}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\overline{B}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\overline{A}B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A\overline{B}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\overline{A}B+A\overline{B}</m>
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>The <c>NAND</c> gate (not-AND) has the following truth table.  Use DeMorgan's laws to find an equivalent Boolean expression using only OR and NOT, and show that your expression has the same truth table.
+                <tabular halign="center" top="major">
+                  <row>
+                    <cell>
+                      <m>A</m>
+                    </cell>
+                    <cell>
+                      <m>B</m>
+                    </cell>
+                    <cell>
+                      <m>A</m><c>NAND</c><m>B=\overline{AB}</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      0
+                    </cell>
+                    <cell>
+                      0
+                    </cell>
+                    <cell>
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      0
+                    </cell>
+                    <cell>
+                      1
+                    </cell>
+                    <cell>
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell>
+                      1
+                    </cell>
+                    <cell>
+                      0
+                    </cell>
+                    <cell>
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell>
+                      1
+                    </cell>
+                    <cell>
+                      1
+                    </cell>
+                    <cell>
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+              </statement>
+              <solution>
+                By De Morgan's law, <m>\mybnot{AB}=\nota+\notb</m>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      <m>A</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>B</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>A</m><c>NAND</c><m>B=\mybnot{AB}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\nota</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notb</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\nota+\notb</m>
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Simplify the following Boolean expressions using the laws of logic.  If you're stuck, try using a truth table.
+            </introduction>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Prove each of the following using the laws of logic.  If you're stuck, try using a truth table.
+            </introduction>
+          </exercisegroup>
         </exercises>
+        <solutions divisional="solution">
+          <title>
+            Solutions to <xref ref="sec-more-logic-laws"/> Exercises.
+          </title>
+        </solutions>
       </section>
     </chapter>
   </book>
