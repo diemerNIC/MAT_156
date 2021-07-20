@@ -16340,11 +16340,686 @@
             <introduction>
               Simplify the following Boolean expressions using the laws of logic.  If you're stuck, try using a truth table.
             </introduction>
+            <exercise>
+              <statement>
+                <m>\ A + \notc{} + B + \nota{} + \notb{}</m>
+              </statement>
+              <solution>
+                <m>\ 1</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A + \notb{} + A + B + A</m>
+              </statement>
+              <solution>
+                <m>\ 1</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \mybnot{\nota{}\,\notb{}}</m>
+              </statement>
+              <solution>
+                <m>\ A+B</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \mybnot{\nota{} + \notb{}}</m>
+              </statement>
+              <solution>
+                <m>\ AB</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \nota{}  + B + A\notb{}</m>
+              </statement>
+              <solution>
+                <m>\ 1</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A\notb{}~\notc{}  + A\notb{}C</m>
+              </statement>
+              <solution>
+                <m>\ A\notb{}</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \nota{} BC + \nota{}B\notc{}  + \nota{} B\notd{} + \nota{}BD</m>
+              </statement>
+              <solution>
+                <m>\ \nota{}B</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ AB + A + \mybnot{AB}</m>
+              </statement>
+              <solution>
+                <m>\ 1</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A + \notb{}CD + \notb{}</m>
+              </statement>
+              <solution>
+                <m>\ A+\notb{}</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \nota{}~ \notb{} (A + B)</m>
+              </statement>
+              <solution>
+                <m>\ 0</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ (\nota{} + \notb{})(A + B)</m>
+              </statement>
+              <solution>
+                <m>\ A\notb{}+\nota{}B</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A + \nota{} B + \notb{}C </m>
+              </statement>
+              <solution>
+                <m>\ A+B+C</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ B(A + C) + \nota{} B\notc{}</m>
+              </statement>
+              <solution>
+                <m>\ B</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ (A + B + C)(A + B + \notc{})</m>
+              </statement>
+              <solution>
+                <m>\ A+B</m>
+              </solution>
+            </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
               Prove each of the following using the laws of logic.  If you're stuck, try using a truth table.
             </introduction>
+            <exercise>
+              <statement>
+                <m>\ B\notb{} + AA = A</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>B\notb{}+AA</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A</m>
+                    </cell>
+                    <cell>
+                      <m></m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>0+AA</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A</m>
+                    </cell>
+                    <cell>
+                      complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>AA</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A</m>
+                    </cell>
+                    <cell>
+                      identity
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>A</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A</m>
+                    </cell>
+                    <cell>
+                      idempotent
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \nota{} (B + \notb{}) = \nota{}</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>\nota{}(B+\notb{})</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}</m>
+                    </cell>
+                    <cell>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>\nota{}(1)</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}</m>
+                    </cell>
+                    <cell>
+                      complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>\nota{}</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}</m>
+                    </cell>
+                    <cell>
+                      identity
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ ABC + AB\notc{} = AB</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>ABC+AB\notc{}</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>AB</m>
+                    </cell>
+                    <cell>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>AB(C+\notc{})</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>AB</m>
+                    </cell>
+                    <cell>
+                      distributive
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>AB(1)</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>AB</m>
+                    </cell>
+                    <cell>
+                      complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>AB</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>AB</m>
+                    </cell>
+                    <cell>
+                      identity
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ AB + \mybnot{AB}C = AB + C</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>AB+\mybnot{AB}C</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>AB+C</m>
+                    </cell>
+                    <cell>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>(AB)+(\mybnot{AB})C</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>AB+C</m>
+                    </cell>
+                    <cell>
+                      associative (can skip this step)
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>AB+C</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>AB+C</m>
+                    </cell>
+                    <cell>
+                      absorption
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A + AB + ABC = A</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>A+AB+ABC</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A</m>
+                    </cell>
+                    <cell>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>A+ABC</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A</m>
+                    </cell>
+                    <cell>
+                      absorption
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>A+A(BC)</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A</m>
+                    </cell>
+                    <cell>
+                      associative (can skip)
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>A</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A</m>
+                    </cell>
+                    <cell>
+                      absorption
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \nota{} C + A\notb{}C = \nota{} C + \notb{}C</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>\nota{}C+A\notb{}C</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}C+\notb{}C</m>
+                    </cell>
+                    <cell>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>(\nota{}+A\notb{})C</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}C+\notb{}C</m>
+                    </cell>
+                    <cell>
+                      distributive
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>(\nota{}+\notb{})C</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}C+\notb{}C</m>
+                    </cell>
+                    <cell>
+                      absorption
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>\nota{}C+\notb{}C</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}C+\notb{}C</m>
+                    </cell>
+                    <cell>
+                      distributive
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \mybnot{AB}(A + B) = \nota{} B + A\notb{}</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>\mybnot{AB}(A+B)</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}B+A\notb{}</m>
+                    </cell>
+                    <cell>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>(\nota{}+\notb{})(A+B)</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}B+A\notb{}</m>
+                    </cell>
+                    <cell>
+                      De Morgan's
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>\nota{}A+\nota{}B+\notb{}A+\notb{}B</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}B+A\notb{}</m>
+                    </cell>
+                    <cell>
+                      distributive
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>0+\nota{}B+\notb{}A+0</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}B+A\notb{}</m>
+                    </cell>
+                    <cell>
+                      complement
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>\nota{}B+\notb{}A</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}B+A\notb{}</m>
+                    </cell>
+                    <cell>
+                      identity
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \mybnot{\mybnot{\nota{}BC}+D}=\nota{}BC\notd{}</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>\mybnot{\mybnot{\nota{}BC}+D}</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}BC\mybnot{D}</m>
+                    </cell>
+                    <cell>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>\mybnot{\mybnot{\nota{}BC}}\mybnot{D}</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}BC\mybnot{D}</m>
+                    </cell>
+                    <cell>
+                      De Morgan's
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>\nota{}BC\mybnot{D}</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>\nota{}BC\mybnot{D}</m>
+                    </cell>
+                    <cell>
+                      complement
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ A~\notb{}~\mybnot{\nota{}~\notc{}}=A~\notb{}</m>
+              </statement>
+              <solution>
+                <tabular>
+                  <row>
+                    <cell halign="right">
+                      <m>A\notb{}\,\mybnot{\nota{}\,\notc{}}</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A\notb{}</m>
+                    </cell>
+                    <cell>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>A\notb{}(A+C)</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A\notb{}</m>
+                    </cell>
+                    <cell>
+                      De Morgan's
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>A\notb{}A+A\notb{}C</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A\notb{}</m>
+                    </cell>
+                    <cell>
+                      distributive
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>A\notb{}+A\notb{}C</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A\notb{}</m>
+                    </cell>
+                    <cell>
+                      idempotent
+                    </cell>
+                  </row>
+                  <row>
+                    <cell halign="right">
+                      <m>A\notb{}</m>
+                    </cell>
+                    <cell>
+                      <m>=</m>
+                    </cell>
+                    <cell>
+                      <m>A\notb{}</m>
+                    </cell>
+                    <cell>
+                      absorption
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
           </exercisegroup>
         </exercises>
         <solutions divisional="solution">
@@ -16352,6 +17027,110 @@
             Solutions to <xref ref="sec-more-logic-laws"/> Exercises.
           </title>
         </solutions>
+      </section>
+      <section xml:id="sec-conditional">
+        <title>
+          The Conditional
+        </title>
+        <subsection xml:id="ssec-conditional-connective">
+          <title>
+            The Conditional Connective
+          </title>
+          <p>
+            Suppose we have two propositions, <m>p</m> and <m>q</m>.  Remembering that connectives are operations which join two or more porpositions (like <em>and</em> and <em>or</em>), the <term>conditional connective</term> is
+            <blockquote>If <m>p</m>, then <m>q</m>.</blockquote>
+          </p>
+          <p>
+            In symbols, this is written as <m>p\to q</m>, and when red aloud, you say <m>p</m> <em>implies</em> <m>q</m>.  The first proposition in the conditional is called the <term>hypothesis</term>, and the second is called the <term>conclusion</term>.
+          </p>
+          <p>
+            There are other ways to state the conditional.  The following are equivalent statements:
+            <ol>
+              <li>
+                <m>p</m> implies <m>q</m>
+              </li>
+              <li>
+                <m>q</m>, if <m>p</m>
+              </li>
+              <li>
+                <m>p</m> is sufficient for <m>q</m>
+              </li>
+              <li>
+                <m>q</m> is necessary for <m>p</m>
+              </li>
+              <li>
+                <m>p</m> only if <m>q</m>
+              </li>
+            </ol>
+          </p>
+          <p>
+            We'll be using only the forms <em>if</em> <m>p</m> <em>then</em> <m>q</m> and <m>p</m> <em>implies</em> <m>q</m> in this course.
+          </p>
+          <p>
+            Experience has shown that the meaning of the conditional is best understood by means of examples.  Suppose you have an insurance contract<fn>My (PW) thanks go to my colleague Gilles Cazelais for providing the idea for this example.</fn> which reads:
+            <blockquote> If your house burns down, then the insurance company will pay you $1000 000.</blockquote>
+            Let us further suppose your house burns down.  Under the contract, the unsurance company must give you one million dollars.  If it doesn't, then the contract has been violated.  But if your house doesn't burn down and the company doesn't give you any money, the contract has not been violated.  If your house doesn't burn down and out of boundless generosity the company gives you one million dollars anyway, the contract has not been violated.  The only circumstances under which the contract is violated is whn your house does burn down but the company fails to give you one million dollars.  This leads to the following truth table.
+          </p>
+          <p>
+            <tabular halign="center" top="major" left="medium">
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                  House burns down?
+                </cell>
+                <cell right="medium">
+                  Company pays you $1000 000
+                </cell>
+                <cell right="medium">
+                  The contract is honoured.
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  no
+                </cell>
+                <cell right="medium">
+                  no
+                </cell>
+                <cell right="medium">
+                  yes
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  no
+                </cell>
+                <cell right="medium">
+                  yes
+                </cell>
+                <cell right="medium">
+                  yes
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  yes
+                </cell>
+                <cell right="medium">
+                  no
+                </cell>
+                <cell right="medium">
+                  no
+                </cell>
+              </row>
+              <row bottom="major">
+                <cell left="medium" right="medium">
+                  yes
+                </cell>
+                <cell right="medium">
+                  yes
+                </cell>
+                <cell right="medium">
+                  yes
+                </cell>
+              </row>
+            </tabular>
+          </p>
+        </subsection>
       </section>
     </chapter>
   </book>
