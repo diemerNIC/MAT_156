@@ -15014,7 +15014,9 @@
         </solutions>
       </section>
       <section xml:id="sec-more-logic-laws">
-        <title>More Laws of Logic</title>
+        <title>
+          More Laws of Logic
+        </title>
         <subsection xml:id="ssec-demorgans-laws">
           <title>De Morgan's Laws</title>
           <p>
@@ -17130,7 +17132,1391 @@
               </row>
             </tabular>
           </p>
+          <p>
+            To generalize to the symbolic propositions <m>p</m> and <m>q</m>,
+            <tabular halign="center" top="major" left="medium">
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                  <m>p</m>
+                </cell>
+                <cell right="medium">
+                  <m>q</m>
+                </cell>
+                <cell right="medium">
+                  <m>p\myimplies q</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  F
+                </cell>
+                <cell right="medium">
+                  F
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  F
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  T
+                </cell>
+                <cell right="medium">
+                  F
+                </cell>
+                <cell right="medium">
+                  F
+                </cell>
+              </row>
+              <row bottom="major">
+                <cell left="medium" right="medium">
+                  T
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+            What does this mean?  It means that if <m>p</m> is true and <m>q</m> is false, then the implication <m>p \myimplies q</m> cannot also be true.  It also means that if <m>p\myimplies q</m> is true, then you cannot have <m>p</m> true and <m>q</m> false at the same time.
+          </p>
+          <p>
+            Let's look at another example.  Suppose that the following conditional is true: <q>If Barney is a dog, then Barney has four legs.</q>  This means that if the first proposition, <q>Barney is a dog,</q> is true, then only one conclusion may be reached, that the second is true and Barney has four legs.  However, if <m>p</m> is false (that is, Barney is not a dog), then our conditional <em>doesn't have anything to say</em> about the number of legs Barney may have.  If Barney is a snake, octopus, bug, person, or pond, then Barney may not have four legs.  If Barney is cat, giraffe, wooly mammoth, or a table, then Barney may have four legs.  Our coditional does not deal with what you may conclude when <m>p</m> is false (that is, when Barney is not a dog).
+            <example xml:id="exmpl-cond1">
+              <statement>
+                Suppose that the statement <q>If Jason sleeps in, he will be late for class</q> is true.  Answer the following questions.
+                <ol>
+                  <li>
+                    Jason sleeps in.  Is he late for class?
+                  </li>
+                  <li>
+                    Jason does not sleep in.  Is he late for class?
+                  </li>
+                  <li>
+                    Jason is late for class.  Did he sleep in?
+                  </li>
+                  <li>
+                    Jason is not late for class.  Did he sleep in?
+                  </li>
+                </ol>
+              </statement>
+              <answer>
+                <ol>
+                  <li>
+                    Yes.
+                  </li>
+                  <li>
+                    Maybe.  Perhaps he ran into traffic or encountered a bear.  Remember: the conditional has <em>nothing to say</em> when the first proposition is false.
+                  </li>
+                  <li>
+                    Maybe. Again, there may be another reason for his lateness.
+                  </li>
+                  <li>
+                    No.
+                  </li>
+                </ol>
+              </answer>
+            </example>
+          </p>
         </subsection>
+        <subsection xml:id="ssec-converse">
+          <title>
+            The Converse
+          </title>
+          <p>
+            If <m>p\conditional</m> is true, can we conclude that <m>\converse</m> is also true?  The statment <m>\converse</m> is called the <term>converse</term> of the statement <m>\conditional</m>.  Let's use our previous example again:
+            <blockquote>
+              <p>
+                Original statement: If Barney is a dog, then Barney has four legs.
+              </p>
+              <p>
+                Converse: If Barney has four legs, then Barney is a dog.
+              </p>
+            </blockquote>
+          </p>
+          <p>
+            The truth of the original statement does <em>not</em> guarantee that the converse is also true.  Suppose Barney is a cat.  Then the original statement is still true (it has nothing to say about Barney since Barney is a cat), but the converse is not true.  Barney has four legs, but Barney is not a dog.
+          </p>
+          <p>
+            Here is the truth table for the conditional and the converse:
+            <tabular halign="center" top="major" left="medium">
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                  <m>p</m>
+                </cell>
+                <cell right="medium">
+                  <m>q</m>
+                </cell>
+                <cell right="medium">
+                  <m>\conditional</m>
+                </cell>
+                <cell right="medium">
+                  <m>\converse</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  F
+                </cell>
+                <cell right="medium">
+                  F
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  F
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+                <cell right="medium">
+                  F
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  T
+                </cell>
+                <cell right="medium">
+                  F
+                </cell>
+                <cell right="medium">
+                  F
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+              </row>
+              <row bottom="major">
+                <cell left="medium" right="medium">
+                  T
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+                <cell right="medium">
+                  T
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+            Here's how to fill in the columns for any logical expression containing the conditional connective (<m>\myimplies</m>).  Let's call the propositions <em>first</em> and <em>second</em> so we don't get confused with <m>p</m> and <m>q</m>.  For the conditional statement first<m>\myimplies</m> second, it will be be true for all cases <em>except</em> when the first is true and the second is false.  So for <m>\converse</m>, look for the row in which <m>q</m> is true and (rows 2 and 4) <m>p</m> is false (rows 1 and 2).  Then <m>q</m> is true and <m>p</m> is false only for row 2.  Therefore enter <em>F</em> in the second row, and enter <m>T</m> in the remaining rows of the column for <m>\converse</m>.  This table shows that the conditional and the converse are <em>not</em> logically equivalent.
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-contrapositive">
+          <title>
+            The contrapositive
+          </title>
+          <p>
+            The statement <m>\contrapositive</m> is the <term>contrapositive</term> of <m>\conditional</m>. Let's consider our example again:
+            <blockquote>
+              <p>
+                Original statement: If Barney is a dog, then Barney has four legs.
+              </p>
+              <p>
+                Contrapositive: If Barney does not have four legs, then Barney is not a dog.
+              </p>
+            </blockquote>
+            We've kind of been assuming that we we commonly think of as four-legged animals actually have all four legs (i.e. no congenital or accidental losses).  With that in mind, the contrapositive appears to be equivalent to the original statement.  Let's consider the truth table. This time, we'll use 0 instead of F, and 1 instead of T for no other reason than to get used to using both notational systems interchangeably:
+            <tabular halign="center" top="major" left="medium">
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                         <m>p</m>
+                </cell>
+                <cell right="medium">
+                  <m>q</m>
+                </cell>
+                <cell right="medium">
+                  <m>\mylnot{p}</m>
+                </cell>
+                <cell right="medium">
+                  <m>\mylnot{q}</m>
+                </cell>
+                <cell right="medium">
+                  <m>\conditional</m>
+                </cell>
+                <cell right="medium">
+                  <m>\contrapositive</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+              </row>
+              <row bottom="major">
+                <cell left="medium" right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+            Remember, you enter a 1 unless the first statement is true and the second statement is false.  Note that in rows 1 and 3, the first (<m>\mynot{q}</m>) is true.  In rows 3 and 4, the second (<m>\mynot{p}</m>) is false.  So a 0 is entered in the last column in row 3.  We already know that the conditional <m>\conditional</m> is also false under those conditions.  The last two columns of this table are identical, so we see that <em>the conditional and the contrapositive are logically equivalent</em>.
+            <example xml:id="exmpl-contra1">
+              <statement>
+                Write the contrapositive for the statement, "If today is sunny, Jason will work in the garden."
+              </statement>
+              <answer>
+                To get the contrapositive, negate the first and second statements and then reverse the order.  So the contrapositive is "If Jason is not working in the garden today, then it is not sunny."
+              </answer>
+            </example>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-inverse">
+          <title>
+            The inverse
+          </title>
+          <p>
+            Given the conditional statement <m>\conditional</m>, the statement <m>\inverse</m> is called the <term>inverse</term>.  Once again, let's look at our example:
+            <blockquote>
+              <p>
+                Original statement: If Barney is a dog, then Barney has four legs.
+              </p>
+              <p>
+                Inverse: If Barney is not a dog, then Barney does not have four legs.
+              </p>
+            </blockquote>
+            From this example, we see that the original statement and its inverse are <em>not</em> logically equivalent.
+          </p>
+          <p>
+            Here is the truth table for the inverse:
+            <tabular halign="center" top="major" left="medium">
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                         <m>p</m>
+                </cell>
+                <cell right="medium">
+                  <m>q</m>
+                </cell>
+                <cell right="medium">
+                  <m>\mylnot{p}</m>
+                </cell>
+                <cell right="medium">
+                  <m>\mylnot{q}</m>
+                </cell>
+                <cell right="medium">
+                  <m>\conditional</m>
+                </cell>
+                <cell right="medium">
+                  <m>\inverse</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row bottom="major">
+                <cell left="medium" right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+            </tabular>
+            <example xml:id="exmpl-inv1">
+              <statement>
+                Draw the truth tables for the conditional (<m>\conditional</m>), the converse (<m>\converse</m>), the inverse (<m>\inverse</m>), and the contrapositive (<m>\contrapositive</m>).  Identify any logically equivalent statements.
+              </statement>
+              <answer>
+                Here is the truth table:
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                             <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mylnot{p}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mylnot{q}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\conditional</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\converse</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\inverse</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\contrapositive</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                       0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                Since the 5th and 8th columns are identical, <em>the conditional is logically equivalent to the contrapositive</em>.  Since the 6th and 7th columns are identical, <em>the converse is logically equivalent to the inverse.</em>
+              </answer>
+            </example>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-alt-conditional">
+          <title>
+            The <q>or</q> form of the Conditional
+          </title>
+          <p>
+            The conditional <m>\conditional</m> can be rewritten in an alternate form in terms of the basic connectives.  Consider the truth table below:
+            <tabular halign="center" top="major" left="medium">
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                         <m>p</m>
+                </cell>
+                <cell right="medium">
+                  <m>q</m>
+                </cell>
+                <cell right="medium">
+                  <m>\mylnot{p}</m>
+                </cell>
+                <cell right="medium">
+                  <m>\mylnot{p} \myor{} q</m>
+                </cell>
+                <cell right="medium">
+                  <m>\conditional</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+              </row>
+              <row bottom="major">
+                <cell left="medium" right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+            </tabular>
+            This means that <q>If Barney is a dog, then Barney has four legs</q> is logically equivalent to <q>Either Barney is not a dog, or Barney has four legs</q>.
+            <example xml:id="exmpl-altcond1">
+              <statement>
+                Consider the conditional <m>\conditional</m>.  Is the converse (<m>\converse</m>) logically equivelant to <m>\mynot{p}\myor q</m>, <m>\mynot{p}\myand q</m>, <m>p\myand\mynot{q}</m>, or <m>p\myand\mynot{q}</m>?
+              </statement>
+              <answer>
+                Here's the truth table:
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                             <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mylnot{p}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mylnot{q}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\converse{}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mylnot{p} \myor{} q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\mylnot{p} \myand{} q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p \myor{} \mylnot{q}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p \myand{} \mylnot{q}</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
+                As can be seen from the table, the columns for <m>\converse</m> and <m>p\myor\mynot{q}</m> are identical, so these two expressions are logically equivalent.
+              </answer>
+            </example>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-demorgan-and-contrapos">
+          <title>
+            De Morgan's Law and the contrapositive
+          </title>
+          <p>
+            Consider the conditional <m>(p \myand{} q \myimplies{} r</m>.  The contrapositive would be <m>\mylnot{r} \myimplies{} \mylnot{(p \myand{} q)}</m>.  Applying De Morgan's Law gives <m>\mylnot{r} \myimplies{} (\mylnot{p} \myor{} \mylnot{q})</m>.  Notice the change from the <em>and</em> in the conditional to the <em>or</em> in the modified contrapositive.  Forgetting to make that change is an easy trap to fall into.
+            <example xml:id="exmpl-demorgan-contrap1">
+              <statement>
+                Consider the conditional <q>If Jason sleeps in or gets caught in traffic, he will be late for class.</q>  What is the contrapositive?  Use De Morgan's Law to find your answer.
+              </statement>
+              <answer>
+                The conditional here is
+                <me>
+                  (\text{sleep or traffic})\myimplies\text{ late}
+                </me>
+                The contrapositive is then
+
+                <md>
+                  <mrow>
+                    \mynot{\text{late}} \amp \myimplies \mynot{\text{sleep or traffic}}
+                  </mrow>
+                  <mrow>
+                    \amp \mynot{\text{sleep}}\text{ and }\mynot{\text{traffic}}
+                  </mrow>
+                </md>
+                Therefore, the contrapositive is <q>If Jason is not late for class, then he didn't sleep in <em>and</em> he didn't get caught in traffic.</q>  The <em>or</em> changes into <em>and</em>, as indicated by De Morgan's Law.
+              </answer>
+            </example>
+          </p>
+        </subsection>
+        <exercises xml:id="exers-sec-conditional">
+          <exercisegroup>
+            <introduction>
+              In the following exercises, let <m>p</m> denote <em>The movie was popular</em> and <m>q</m> denote <em>The movie will make a lot of money.</em>  Translate the following propositions into English sentences.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\ \conditional</m>
+              </statement>
+              <solution>
+                If the movie was popular, then it will make a lot of money.  (Or:  The movie's popularity implies that it will make a lot of money.)
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \inverse</m>
+              </statement>
+              <solution>
+                If the movie was not popular, then it will not make a lot of money.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \contrapositive</m>
+              </statement>
+              <solution>
+                 If the movie did not make a lot of money, then the movie was not popular.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \converse</m>
+              </statement>
+              <solution>
+                 If the movie makes a lot of money, then it is popular.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ \mynot{p}\myor q</m>
+              </statement>
+              <solution>
+                The movie was not popular or it made a lot of money.
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ p\myand\mynot{q}</m>
+              </statement>
+              <solution>
+                The movie was popular and it did not make a lot of money.
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              In the following exercises, let <m>p</m> denote <em>Jason eats a burger for dinner</em> and <m>q</m> denote <em>Jason is too full for dessert.</em>  Translate the following sentences into logical symbols.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\ </m>If Jason eats a burger for dinner, he will be too full for dessert.
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>If Jason does not eat a burger for dinner, he will not be too full for dessert.
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>If Jason is too full for dessert, then he ate a burger for dinner.
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>If Jason is not too full for dessert, then he did not eat a burger for dinner.
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>If Jason is too full for dessert, then he did not eat a burger for dinner.
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Jason being too full for dessert implies that he ate a burger for dinner.
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Jason not being too full for dessert implies that he did not eat a burger for dinner.
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Jason not eating a berger for dinner implies that he will not be too full for dessert.
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Jason eating a burger for dinner implies that he will be too full for dessert.
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Either Jason does not eat a burger for dinner of he will be too full for dessert.
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Either Jason is not too full for dessert or he ate a burger for dinner.
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>Either Jason is too full for dessert or he did not eat a burger for dinner.
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercise>
+            <statement>
+              <m>\ </m>The following conditional statement is true: If Jason is eaten by nears, he will not finish his marking.  Given that, answer the following questions.
+              <ol>
+                <li>
+                  Jason is eaten by bears.  Did he finish his marking?
+                </li>
+                <li>
+                  Jason is not eaten by bears.  Did he finish his marking?
+                </li>
+                <li>
+                  Jason finished his marking.  Was he eaten by bears?
+                </li>
+                <li>
+                  Jason did not finish his marking.  Was he eaten by bears?
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <m>\ </m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              <m>\ </m>The following conditional statement is true: If Rich is asleep, then he is not playing ping-pong.  Given that, answer the following questions.
+              <ol>
+                <li>
+                  Rich is playing ping-pong.  Is he asleep?
+                </li>
+                <li>
+                  Rich is asleep.  Is he playing ping-pong?
+                </li>
+                <li>
+                  Rich is not asleep.  Is he playing ping-pong?
+                </li>
+                <li>
+                  Rich is not playing ping-pong.  Is he asleep?
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <m>\ </m>
+            </solution>
+          </exercise>
+          <exercisegroup>
+            <introduction>
+              Of course, for the previous questions, I chose situations in which you can use common sense to determine the answer.  However, the true test of whether you understand the concept is to replace the above propositions by complete nonsense.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\ </m>The following conditional statement is true: If ettercaps are green, then toves are slithy.  Given that, answer the following questions.
+                <ol>
+                  <li>
+                    Toves are slithy.  Are ettercaps green?
+                  </li>
+                  <li>
+                    Toves are not slithy.  Are ettercaps green?
+                  </li>
+                  <li>
+                    Ettercaps are green.  Are toves slithy?
+                  </li>
+                  <li>
+                    Ettercaps are red.  Are toves slithy?
+                  </li>
+                </ol>
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>The following conditional statement is true: If the hare reads the Times Colonist, the tortoise will take out the recycling.  Given that, answer the following questions.
+                <ol>
+                  <li>
+                    The hare does not read the Times Colonist.  Will the tortoise take out the recycling?
+                  </li>
+                  <li>
+                    The hare reads the Times Colonist.  Will the tortoise take out the recycling?
+                  </li>
+                  <li>
+                    The tortoise takes out the recycling.  Does the hare read the Times Colonist?
+                  </li>
+                  <li>
+                    The tortoise is not taking out the recycling.  Does the hare read the Times Colonist?
+                  </li>
+                </ol>
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Given the conditional statement <em>If frattling is non-responsive, then the runges must be strunking</em>, write the corresponding English sentences for the following.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\ </m>The contrapositive (<m>\contrapositive</m>)
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>The converse (<m>\converse</m>)
+                <m>\ </m>
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>The inverse (<m>\inverse</m>)
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\ </m>The <q>or</q> form (<m>\mynot{p}\myor q</m>)
+              </statement>
+              <solution>
+                <m>\ </m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercise>
+            <statement>
+              <m>\ </m>Given the conditional statement, <em>If Bossy is mooing, she must be a cow,</em> which of the four following statements is the contrapositive (<m>\contrapositive</m>)?
+              <ol>
+                <li>
+                  If Bossy is not a cow, she is not mooing.
+                </li>
+                <li>
+                  If Bossy is a cow, then she is mooing.
+                </li>
+                <li>
+                  If Bossy is mooing, then she must be a cow.
+                </li>
+                <li>
+                  if Bossy is not mooing, then she must not be a cow.
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <m>\ </m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              <m>\ </m>Given the conditional statement, <em>If Bossy is mooing, she must be a cow,</em> which of the four following statements is the converse (<m>\converse</m>)?
+              <ol>
+                <li>
+                  If Bossy is not a cow, she is not mooing.
+                </li>
+                <li>
+                  If Bossy is a cow, then she is mooing.
+                </li>
+                <li>
+                  If Bossy is mooing, then she must be a cow.
+                </li>
+                <li>
+                  if Bossy is not mooing, then she must not be a cow.
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <m>\ </m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              <m>\ </m>Given the conditional statement, <em>If Bossy is mooing, she must be a cow,</em> which of the four following statements is also true?
+              <ol>
+                <li>
+                  If Bossy is not a cow, she is not mooing.
+                </li>
+                <li>
+                  If Bossy is a cow, then she is mooing.
+                </li>
+                <li>
+                  If Bossy is mooing, then she must be a cow.
+                </li>
+                <li>
+                  if Bossy is not mooing, then she must not be a cow.
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <m>\ </m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              <m>\ </m>Which of the following is the correct <q>or</q> form form the conditional <em>If Bossy is mooing, then she must be a cow</em>?
+              <ol>
+                <li>
+                  Bossy is a cow or she is not mooing.
+                </li>
+                <li>
+                  Bossy is not a cow or she is not mooing.
+                </li>
+                <li>
+                  Bossy is not a cow or she is mooing.
+                </li>
+                <li>
+                  Bossy is a cow or she is mooing.
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <m>\ </m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              <m>\ </m>If the statement <em>If Bossy is mooing, then she must be a cow</em> is a true statement, which of the collowing cannot occur?
+              <ol>
+                <li>
+                  Bossy is mooing and she is a cow.
+                </li>
+                <li>
+                  Bossy is mooing and she is not a cow.
+                </li>
+                <li>
+                  Bossy is not mooing and she is not a cow.
+                </li>
+                <li>
+                  Bossy is not mooing and she is a cow.
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <m>\ </m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              <m>\ </m>Consider the following <q>or</q> formstatement, <em>Either Superman has a cape or he cannot fly.</em>  Which of the following is the correct form of the corresponding conditional?
+              <ol>
+                <li>
+                  If Superman does not have a cape, then he cannot fly.
+                </li>
+                <li>
+                  If Superman has a cape, then he can fly.
+                </li>
+                <li>
+                  If Superman can fly, then he has a cape.
+                </li>
+                <li>
+                  If Superman cannot fly, then he doesn't have a cape.
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <m>\ </m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              <m>\ </m>Consider the conditional <em>If John has the flu or misses the bus, he will be late for work.</em>  Which of the following is the corresponding contrapositive statement (<m>\contrapositive</m>)?
+              <ol>
+                <li>
+                  If John is late for work, then he had the flu or missed the bus.
+                </li>
+                <li>
+                  If John is late for work, then he did not have the flu or did not miss the bus.
+                </li>
+                <li>
+                  If John is not late for work, then he did not have the flu or did not miss the bus.
+                </li>
+                <li>
+                  If John is not late for work, then he did not have the flu and did not miss the bus.
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <m>\ </m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              <m>\ </m>Consider the conditional <em>If Rich doesn't show his work or makes a mistake, then he will not get full credit.</em>  Which of the following is the corresponding contrapositive statement (<m>\contrapositive</m>)?
+              <ol>
+                <li>
+                  If Rich received full credit, then he showed his work and did not make a mistake.
+                </li>
+                <li>
+                  If Rich received full credit, the he showed his work or did not make a mistake.
+                </li>
+                <li>
+                  If Rich did not get full credit, then he didn't show his work and made a mistake.
+                </li>
+                <li>
+                  If Rich did not get full credit, then he didn't show his work or made a mistake.
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <m>\ </m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              <m>\ </m>Consider the conditional <em>If Jason is late and has not called his wife, she will be worried.</em>  Which of the following is the corresponding contrapositive statement (<m>\contrapositive</m>)?
+              <ol>
+                <li>
+                  If Jason's wife is not worried, then he is not late and did call her.
+                </li>
+                <li>
+                  If Jason's wife is not worried, then he is not late or did call her.
+                </li>
+                <li>
+                  If Jason's wife is worried, then he is late and has not called her.
+                </li>
+                <li>
+                  If Jason's wife is not worried, then he is late and did not call her.
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <m>\ </m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              <m>\ </m>Consider the conditional <em>If grunkles are circular, then runges are square and triptrops are blue.</em>  Which of the following is the corresponding contrapositive statement (<m>\contrapositive</m>)?
+              <ol>
+                <li>
+                  If runges are not square and triptrops are not blue, then grunkles are not circular.
+                </li>
+                <li>
+                  If runges are not square or triptrops are not blue, then grunkles are circular.
+                </li>
+                <li>
+                  If runges are not square or triptrops are not blue, then grunkles are not circular.
+                </li>
+                <li>
+                  If runges are not square and triptrops are not blue, then grunkles are circular. 
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <m>\ </m>
+            </solution>
+          </exercise>
+        </exercises>
+        <solutions divisional="solution">
+          <title>
+            Solutions to <xref ref="sec-conditional"/> Exercises.
+          </title>
+        </solutions>
       </section>
     </chapter>
   </book>
