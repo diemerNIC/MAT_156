@@ -18477,7 +18477,7 @@
           </exercise>
           <exercise>
             <statement>
-              <m>\ </m>Consider the conditional <em>If John has the flu or misses the bus, he will be late for work.</em>  Which of the following is the corresponding contrapositive statement (<m>\contrapositive</m>)?
+              <m>\ </m>Consider the conditional <em>If John has the flu or misses the bus, he will be late for work.</em>  Which of the following is the corresponding contrapositive statement <m>(\contrapositive)</m>?
               <ol>
                 <li>
                   If John is late for work, then he had the flu or missed the bus.
@@ -18499,7 +18499,7 @@
           </exercise>
           <exercise>
             <statement>
-              <m>\ </m>Consider the conditional <em>If Rich doesn't show his work or makes a mistake, then he will not get full credit.</em>  Which of the following is the corresponding contrapositive statement (<m>\contrapositive</m>)?
+              <m>\ </m>Consider the conditional <em>If Rich doesn't show his work or makes a mistake, then he will not get full credit.</em>  Which of the following is the corresponding contrapositive statement <m>(\contrapositive)</m>?
               <ol>
                 <li>
                   If Rich received full credit, then he showed his work and did not make a mistake.
@@ -18521,7 +18521,7 @@
           </exercise>
           <exercise>
             <statement>
-              <m>\ </m>Consider the conditional <em>If Jason is late and has not called his wife, she will be worried.</em>  Which of the following is the corresponding contrapositive statement (<m>\contrapositive</m>)?
+              <m>\ </m>Consider the conditional <em>If Jason is late and has not called his wife, she will be worried.</em>  Which of the following is the corresponding contrapositive statement <m>(\contrapositive)</m>?
               <ol>
                 <li>
                   If Jason's wife is not worried, then he is not late and did call her.
@@ -18543,7 +18543,7 @@
           </exercise>
           <exercise>
             <statement>
-              <m>\ </m>Consider the conditional <em>If grunkles are circular, then runges are square and triptrops are blue.</em>  Which of the following is the corresponding contrapositive statement (<m>\contrapositive</m>)?
+              <m>\ </m>Consider the conditional <em>If grunkles are circular, then runges are square and triptrops are blue.</em>  Which of the following is the corresponding contrapositive statement <m>(\contrapositive)</m>?
               <ol>
                 <li>
                   If runges are not square and triptrops are not blue, then grunkles are not circular.
@@ -18569,6 +18569,22 @@
             Solutions to <xref ref="sec-conditional"/> Exercises.
           </title>
         </solutions>
+      </section>
+      <section xml:id="sec-biconditional">
+        <title>
+          The Biconditional
+        </title>
+        <subsection xml:id="ssec-bicond-connective">
+          <title>
+            The Biconditional Connective
+          </title>
+          <p>
+            Consider the conditional <em>If you live in Victoria, then you live in BC.</em>  Remembering that the conditional has nothing to say if the first proposition is false, then it is possible for you to not live in Victoria but to still live in BC.  It is also possible to not live in Vicoria and also not live in BC.
+          </p>
+          <p>
+            Let's now consider the conditional <em>If the temperature outside is below <m>0^{\circ}\text{C}</m></em>
+          </p>
+        </subsection>
       </section>
     </chapter>
   </book>
