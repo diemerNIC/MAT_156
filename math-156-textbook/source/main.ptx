@@ -18069,7 +18069,7 @@
                 <m>\ </m>If Jason eats a burger for dinner, he will be too full for dessert.
               </statement>
               <solution>
-                <m>\ </m>
+                <m>\conditional</m>
               </solution>
             </exercise>
             <exercise>
@@ -18077,7 +18077,7 @@
                 <m>\ </m>If Jason does not eat a burger for dinner, he will not be too full for dessert.
               </statement>
               <solution>
-                <m>\ </m>
+                <m>\inverse</m>
               </solution>
             </exercise>
             <exercise>
@@ -18085,7 +18085,7 @@
                 <m>\ </m>If Jason is too full for dessert, then he ate a burger for dinner.
               </statement>
               <solution>
-                <m>\ </m>
+                <m>\converse </m>
               </solution>
             </exercise>
             <exercise>
@@ -18093,7 +18093,7 @@
                 <m>\ </m>If Jason is not too full for dessert, then he did not eat a burger for dinner.
               </statement>
               <solution>
-                <m>\ </m>
+                <m>\contrapositive</m>
               </solution>
             </exercise>
             <exercise>
@@ -18101,7 +18101,7 @@
                 <m>\ </m>If Jason is too full for dessert, then he did not eat a burger for dinner.
               </statement>
               <solution>
-                <m>\ </m>
+                <m>\q \myimplies{} \notp{}</m>
               </solution>
             </exercise>
             <exercise>
@@ -18109,7 +18109,7 @@
                 <m>\ </m>Jason being too full for dessert implies that he ate a burger for dinner.
               </statement>
               <solution>
-                <m>\ </m>
+                <m>\converse</m>
               </solution>
             </exercise>
             <exercise>
@@ -18117,7 +18117,7 @@
                 <m>\ </m>Jason not being too full for dessert implies that he did not eat a burger for dinner.
               </statement>
               <solution>
-                <m>\ </m>
+                <m>\contrapositive </m>
               </solution>
             </exercise>
             <exercise>
@@ -18125,7 +18125,7 @@
                 <m>\ </m>Jason not eating a berger for dinner implies that he will not be too full for dessert.
               </statement>
               <solution>
-                <m>\ </m>
+                <m>\inverse</m>
               </solution>
             </exercise>
             <exercise>
@@ -18133,7 +18133,7 @@
                 <m>\ </m>Jason eating a burger for dinner implies that he will be too full for dessert.
               </statement>
               <solution>
-                <m>\ </m>
+                <m>\conditional</m>
               </solution>
             </exercise>
             <exercise>
@@ -18141,7 +18141,7 @@
                 <m>\ </m>Either Jason does not eat a burger for dinner of he will be too full for dessert.
               </statement>
               <solution>
-                <m>\ </m>
+                <m>\notp{}\myor q </m>
               </solution>
             </exercise>
             <exercise>
@@ -18149,7 +18149,7 @@
                 <m>\ </m>Either Jason is not too full for dessert or he ate a burger for dinner.
               </statement>
               <solution>
-                <m>\ </m>
+                <m>\notq\myor p</m>
               </solution>
             </exercise>
             <exercise>
@@ -18157,7 +18157,7 @@
                 <m>\ </m>Either Jason is too full for dessert or he did not eat a burger for dinner.
               </statement>
               <solution>
-                <m>\ </m>
+                <m>\q\myor\notp{}</m>
               </solution>
             </exercise>
           </exercisegroup>
@@ -18180,7 +18180,20 @@
               </ol>
             </statement>
             <solution>
-              <m>\ </m>
+              <ol>
+                <li>
+                  No
+                </li>
+                <li>
+                  Maybe
+                </li>
+                <li>
+                  No
+                </li>
+                <li>
+                  Maybe
+                </li>
+              </ol>
             </solution>
           </exercise>
           <exercise>
@@ -18202,7 +18215,20 @@
               </ol>
             </statement>
             <solution>
-              <m>\ </m>
+              <ol>
+                <li>
+                  No
+                </li>
+                <li>
+                  No
+                </li>
+                <li>
+                  Maybe
+                </li>
+                <li>
+                  Maybe
+                </li>
+              </ol>
             </solution>
           </exercise>
           <exercisegroup>
@@ -18228,7 +18254,20 @@
                 </ol>
               </statement>
               <solution>
-                <m>\ </m>
+                <ol>
+                  <li>
+                    Maybe
+                  </li>
+                  <li>
+                    No
+                  </li>
+                  <li>
+                    Yes
+                  </li>
+                  <li>
+                    Maybe
+                  </li>
+                </ol>
               </solution>
             </exercise>
             <exercise>
@@ -18250,28 +18289,41 @@
                 </ol>
               </statement>
               <solution>
-                <m>\ </m>
+                <ol>
+                  <li>
+                    Maybe
+                  </li>
+                  <li>
+                    Yes
+                  </li>
+                  <li>
+                    Maybe
+                  </li>
+                  <li>
+                    No
+                  </li>
+                </ol>
               </solution>
             </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
-              Given the conditional statement <em>If frattling is non-responsive, then the runges must be strunking</em>, write the corresponding English sentences for the following.
+              Given the conditional statement <em>If the frattling is non-responsive, then the runges must be strunking</em>, write the corresponding English sentences for the following.
             </introduction>
             <exercise>
               <statement>
                 <m>\ </m>The contrapositive (<m>\contrapositive</m>)
               </statement>
               <solution>
-                <m>\ </m>
+                If the runges are not strunking, then the frattling must be responsive.
               </solution>
             </exercise>
             <exercise>
-              <statement>The converse (<m>\converse</m>)
-                <m>\ </m>
+              <statement>
+                <m>\ </m>The converse (<m>\converse</m>)
               </statement>
               <solution>
-                <m>\ </m>
+                If the runges are strunking, then the frattling is non-responsive.
               </solution>
             </exercise>
             <exercise>
@@ -18279,7 +18331,7 @@
                 <m>\ </m>The inverse (<m>\inverse</m>)
               </statement>
               <solution>
-                <m>\ </m>
+                If the frattling is responsive, then the runges must not be strunking.
               </solution>
             </exercise>
             <exercise>
@@ -18287,7 +18339,7 @@
                 <m>\ </m>The <q>or</q> form (<m>\mynot{p}\myor q</m>)
               </statement>
               <solution>
-                <m>\ </m>
+                The frattling is responsive or the runges are strunking.
               </solution>
             </exercise>
           </exercisegroup>
@@ -18310,7 +18362,7 @@
               </ol>
             </statement>
             <solution>
-              <m>\ </m>
+              <m>\ </m>(a)
             </solution>
           </exercise>
           <exercise>
@@ -18332,7 +18384,7 @@
               </ol>
             </statement>
             <solution>
-              <m>\ </m>
+              <m>\ </m>(b)
             </solution>
           </exercise>
           <exercise>
@@ -18354,7 +18406,7 @@
               </ol>
             </statement>
             <solution>
-              <m>\ </m>
+              <m>\ </m>(a)
             </solution>
           </exercise>
           <exercise>
@@ -18376,7 +18428,7 @@
               </ol>
             </statement>
             <solution>
-              <m>\ </m>
+              <m>\ </m>(a)
             </solution>
           </exercise>
           <exercise>
@@ -18398,12 +18450,12 @@
               </ol>
             </statement>
             <solution>
-              <m>\ </m>
+              <m>\ </m>(b)
             </solution>
           </exercise>
           <exercise>
             <statement>
-              <m>\ </m>Consider the following <q>or</q> formstatement, <em>Either Superman has a cape or he cannot fly.</em>  Which of the following is the correct form of the corresponding conditional?
+              <m>\ </m>Consider the following <q>or</q> form statement, <em>Either Superman has a cape or he cannot fly.</em>  Which of the following is the correct form of the corresponding conditional?
               <ol>
                 <li>
                   If Superman does not have a cape, then he cannot fly.
@@ -18420,7 +18472,7 @@
               </ol>
             </statement>
             <solution>
-              <m>\ </m>
+              <m>\ </m>If you let <m>p</m> be <em>Superman does not have a cape</em> then (a).  If instead you let <m>p</m> be <em>Superman cannot fly</em> then (c).
             </solution>
           </exercise>
           <exercise>
@@ -18442,7 +18494,7 @@
               </ol>
             </statement>
             <solution>
-              <m>\ </m>
+              <m>\ </m>(d)
             </solution>
           </exercise>
           <exercise>
@@ -18464,7 +18516,7 @@
               </ol>
             </statement>
             <solution>
-              <m>\ </m>
+              <m>\ </m>(a)
             </solution>
           </exercise>
           <exercise>
@@ -18486,7 +18538,7 @@
               </ol>
             </statement>
             <solution>
-              <m>\ </m>
+              <m>\ </m>(b)
             </solution>
           </exercise>
           <exercise>
@@ -18503,12 +18555,12 @@
                   If runges are not square or triptrops are not blue, then grunkles are not circular.
                 </li>
                 <li>
-                  If runges are not square and triptrops are not blue, then grunkles are circular. 
+                  If runges are not square and triptrops are not blue, then grunkles are circular.
                 </li>
               </ol>
             </statement>
             <solution>
-              <m>\ </m>
+              <m>\ </m>(c)
             </solution>
           </exercise>
         </exercises>
