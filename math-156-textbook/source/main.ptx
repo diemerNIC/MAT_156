@@ -5726,7 +5726,7 @@
               Conjunction
             </title>
             <p>
-              If we connect the propositions <m>p</m> and <m>q</m> with <term>and</term>, then the result is called the <term>conjunction</term> of <m>p</m> and <m>q</m>.  The conjunction of <m>p</m> and <m>q</m> is true provided <em>both</em> <m>p</m> and <m>q</m> are true.  Otherwise it is false. Symbolically, we write
+              If we connect the propositions <m>p</m> and <m>q</m> with <em>and</em>, then the result is called the <term>conjunction</term> of <m>p</m> and <m>q</m>.  The conjunction of <m>p</m> and <m>q</m> is true provided <em>both</em> <m>p</m> and <m>q</m> are true.  Otherwise it is false. Symbolically, we write
               <me>
                 p \myand q
               </me>
@@ -5745,7 +5745,7 @@
               Inclusive Disjunction
             </title>
             <p>
-              If we connect propositions <m>p</m> and <m>q</m> with <term>or</term>, then the result is called the <term>inclusive disjunction</term> of <m>p</m> and <m>q</m>.  The inclusive disjunction is true if at least one of <m>p</m> and <m>q</m> is true.  It is false only if both <m>p</m> and <m>q</m> are false.  Symbolically, we write
+              If we connect propositions <m>p</m> and <m>q</m> with <em>or</em>, then the result is called the <term>inclusive disjunction</term> of <m>p</m> and <m>q</m>.  The inclusive disjunction is true if at least one of <m>p</m> and <m>q</m> is true.  It is false only if both <m>p</m> and <m>q</m> are false.  Symbolically, we write
               <me>
                 p \myor q
               </me>
@@ -5788,12 +5788,12 @@
               Or vs. XOR
             </title>
             <p>
-              In ordinary language, the word <term>or</term> can mean either the <term>inclusive or</term> or the <term>exclusive or</term>, and it is usually up to the reader or listener to decide which one is appropriate from the context.
+              In ordinary language, the word <em>or</em> can mean either the <em>inclusive or</em> or the <em>exclusive or</em>, and it is usually up to the reader or listener to decide which one is appropriate from the context.
             </p>
             <example>
               <statement>
                 <p>
-                  Which <term>or</term> is meant in the following sentences or phrases?
+                  Which <em>or<em> is meant in the following sentences or phrases?
                   <ol>
                     <li>
                       Would you like milk or sugar in your tea?
@@ -13657,7 +13657,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Logic</term>
+                        <alert>Logic</alert>
                       </cell>
                     </row>
                     <row>
@@ -13675,7 +13675,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Boolean</term>
+                        <alert>Boolean</alert>
                       </cell>
                     </row>
                     <row>
@@ -13746,7 +13746,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Logic</term>
+                        <alert>Logic</alert>
                       </cell>
                     </row>
                     <row>
@@ -13762,7 +13762,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Boolean</term>
+                        <alert>Boolean</alert>
                       </cell>
                     </row>
                     <row>
@@ -13790,7 +13790,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Logic</term>
+                        <alert>Logic</alert>
                       </cell>
                     </row>
                     <row>
@@ -13807,7 +13807,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Boolean</term>
+                        <alert>Boolean</alert>
                       </cell>
                     </row>
                     <row>
@@ -13836,7 +13836,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Logic</term>
+                        <alert>Logic</alert>
                       </cell>
                     </row>
                     <row>
@@ -13852,7 +13852,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Boolean</term>
+                        <alert>Boolean</alert>
                       </cell>
                     </row>
                     <row>
@@ -13880,7 +13880,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Logic</term>
+                        <alert>Logic</alert>
                       </cell>
                     </row>
                     <row>
@@ -13896,7 +13896,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Boolean</term>
+                        <alert>Boolean</alert>
                       </cell>
                     </row>
                     <row>
@@ -14076,7 +14076,7 @@
             Suppose we wish to simplify <m>(p\myand q)\myor(\notq\,\myand\, 0)\myor(\notr\,\myand\,r)</m>.  Note that this would require a truth table with 8 rows to show all combinations of <m>p</m>, <m>q</m>, and <m>r</m>.  Less work is required to simplify the expression using the laws of logic.  You can think of the laws of logic as summary statements of truth tables.
           </p>
           <p>
-            The procedure for simplifying an expression using the laws of logic is to simplify each piece of the expression using a single law, then write the name of the law you are using to one side. Writing the name of the law is <term>required</term>, and <term>not optional</term>!  If you are using more than one law, then use a separate line for each law/step.
+            The procedure for simplifying an expression using the laws of logic is to simplify each piece of the expression using a single law, then write the name of the law you are using to one side. Writing the name of the law is <alert>required</alert>, and <alert>not optional</alert>!  If you are using more than one law, then use a separate line for each law/step.
           </p>
           <p>
             Let's use the laws of logic to simplify the statement given earlier:
@@ -15154,7 +15154,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Logic</term>
+                        <alert>Logic</alert>
                       </cell>
                     </row>
                     <row>
@@ -15170,7 +15170,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Boolean</term>
+                        <alert>Boolean</alert>
                       </cell>
                     </row>
                     <row>
@@ -15198,7 +15198,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Logic</term>
+                        <alert>Logic</alert>
                       </cell>
                     </row>
                     <row>
@@ -15214,7 +15214,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Boolean</term>
+                        <alert>Boolean</alert>
                       </cell>
                     </row>
                     <row>
@@ -15243,7 +15243,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Logic</term>
+                        <alert>Logic</alert>
                       </cell>
                     </row>
                     <row>
@@ -15261,7 +15261,7 @@
                   <tabular>
                     <row bottom="medium">
                       <cell>
-                        <term>Boolean</term>
+                        <alert>Boolean</alert>
                       </cell>
                     </row>
                     <row>
@@ -15521,7 +15521,7 @@
         <subsection xml:id="ssec-simplifying-logical-expr2">
           <title>Simplifying Logical Expressions</title>
           <p>
-            The clarity of your simplification or of your proof is greatly improved if you use only one law in each line of your work, and also state the law you have used.  To help you build good habits, this is <term>required</term> in your coursework.  It is not merely a suggestion.
+            The clarity of your simplification or of your proof is greatly improved if you use only one law in each line of your work, and also state the law you have used.  To help you build good habits, this is <alert>required</alert> in your coursework.  It is not merely a suggestion.
           </p>
           <example xml:id="exmpl-simpl-dist1">
             <statement>
@@ -18582,7 +18582,333 @@
             Consider the conditional <em>If you live in Victoria, then you live in BC.</em>  Remembering that the conditional has nothing to say if the first proposition is false, then it is possible for you to not live in Victoria but to still live in BC.  It is also possible to not live in Vicoria and also not live in BC.
           </p>
           <p>
-            Let's now consider the conditional <em>If the temperature outside is below <m>0^{\circ}\text{C}</m></em>
+            Let's now consider the conditional <em>If the temperature outside is below <m>0^{\circ}\text{C}</m>, then it is freezing outside.</em>  If I were to use this sentence in everyday English, I probably mean <em>If the temperature outside is below <m>0^{\circ}\text{C}</m>, then it is freezing outide <alert>and</alert> if the temperature outside is <alert>not</alert> below <m>0^{\circ}\text{C}</m>, then it is <alert>not</alert> freezing outside.</em>  So we could probably do with a new kind of connective that means <em>If <m>p</m> then <m>q</m> <alert>and</alert> if <m>\notp{}</m> then <m>\notq{}</m></em>.  The new connective is called the <term>biconditional</term>, and is written <m>\biconditional</m>
+          </p>
+          <p>
+            Here is the truth table for the biconditional:
+            <tabular halign="center" top="major" left="medium">
+              <row bottom="medium">
+                <cell left="medium" right="medium">
+                        <m>p</m>
+                </cell>
+                <cell right="medium">
+                  <m>q</m>
+                </cell>
+                <cell right="medium">
+                  <m>p \myiff{} q</m>
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+              </row>
+              <row>
+                <cell left="medium" right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+                <cell right="medium">
+                  0
+                </cell>
+              </row>
+              <row bottom="major">
+                <cell left="medium" right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+                <cell right="medium">
+                  1
+                </cell>
+              </row>
+            </tabular>
+          </p>
+          <p>
+            So if <m>p</m> and <m>q</m> have the same truth value, then the biconditional is true and otherwise it is false.  (It is the negation of the <em>exclusive or</em>, <m>p\myxor q</m>.)
+          </p>
+          <p>
+            There are a number of ways to specify the biconditional in English:
+            <ol>
+              <li>
+                If and only if <m>p</m>, then <m>q</m>.
+              </li>
+              <li>
+                <m>p</m> if and only if <m>q</m>.
+              </li>
+              <li>
+                If <m>p</m>, then <m>q</m>, and vice versa.
+              </li>
+              <li>
+                If <m>p</m>, then <m>q</m>, and if <m>\notp{}</m> then <m>\notq{}</m>.
+              </li>
+            </ol>
+            We'll mostly be using the first two in this list.
+            <example xml:id="exmpl-bicond1">
+              <statement>
+                Draw the truth tables for <m>\biconditional</m> and <m>(\conditional)\myand(\converse)</m>.  Are they logically equivalent?  Also, are <m>\biconditional</m> and <m>(\conditional)\myand(\inverse)</m> logically equivalent?
+              </statement>
+              <answer>
+                Here's the truth table:
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell left="medium" right="medium">
+                             <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\biconditional</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notp{}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m> \notq{}</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\conditional</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\converse</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\inverse</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>(\conditional)\myand(\converse)</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>(\conditional)\myand(\inverse)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell left="medium" right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+                By looking at the relevant columns (3, 9, and 10), we can see that all three of these logical expressions are equivalent.  (We might have anticipated this, if we noticed earlier that the converse and the inverse are logically equivalent to each other.)
+              </answer>
+            </example>
+            <example xml:id="exmpl-bicond2">
+              <statement>
+                Consider the following conditional statements.
+                <ol>
+                  <li>
+                    If two lines are perpendicular, then the angle between them is <m>90^{\circ}</m>.
+                  </li>
+                  <li>
+                    If a polygon is a right triangle, then it has three sides.
+                  </li>
+                </ol>
+                Which of these sentences would still be true if it were written in the form of the biconditional?
+              </statement>
+              <answer>
+                <ol>
+                  <li>
+                    would still be true since if two lines are not perpendicular, then the angle between them is not <m>90^{\circ}</m>.
+                  </li>
+                  <li>
+                    would not be true since there are many triangles that aren't right triangles.
+                  </li>
+                </ol>
+              </answer>
+            </example>
+            <example xml:id="exmpl-bicond3">
+              <statement>
+                The following biconditional statement is true: <q>If and only if Jason completes his marking, he will not feel guilty.</q>  Given that, answer the following questions:
+                <ol>
+                  <li>
+                    Jason feels guilty.  Did he finish his marking?
+                  </li>
+                  <li>
+                    Jason does not feel guilty.  Did he finish his marking?
+                  </li>
+                  <li>
+                    Jason finished his marking.  Does he feel guilty?
+                  </li>
+                  <li>
+                    Jason did not finish his marking.  Does he feel guilty?
+                  </li>
+                </ol>
+              </statement>
+              <answer>
+                Let <m>p=</m><q>Jason finishes his marking</q> and <m>q=</m><q>Jason does not feel guilty.</q>
+                <ol>
+                  <li>
+                    The statement <m>q</m> is false, so <m>p</m> must also be false (truth of the biconditional requires that both have the same truth value). So Jason did not finish his marking and the answer is <em>no</em>.
+                  </li>
+                  <li>
+                    <m>q</m> is true so <m>p
+
+
+                  </m> is true.  Yes.
+                  </li>
+                  <li>
+                    <m>p</m> is true so <m>q</m> is true.  And since <m>q</m> is <em>not guilty</em> the answer is <em>no</em>.
+                  </li>
+                  <li>
+                    <m>p</m> is false so <m>q</m> is false. And feeling <q>not not guilty</q> is the same as feeling guilty, so the answer is <em>yes.</em>
+                  </li>
+                </ol>
+              </answer>
+            </example>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-programming-apps">
+          <title>
+            Programming Applications
+          </title>
+          <p>
+            The if-then statement is very common in programming.  In pseudocode, it usually takes the form
+            <program>
+              if x > 3 then print ``Hello World''
+            </program>
           </p>
         </subsection>
       </section>
