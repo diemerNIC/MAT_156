@@ -5793,7 +5793,7 @@
             <example>
               <statement>
                 <p>
-                  Which <em>or<em> is meant in the following sentences or phrases?
+                  Which <em>or</em> is meant in the following sentences or phrases?
                   <ol>
                     <li>
                       Would you like milk or sugar in your tea?
@@ -18906,9 +18906,54 @@
           </title>
           <p>
             The if-then statement is very common in programming.  In pseudocode, it usually takes the form
-            <program>
-              if x > 3 then print ``Hello World''
-            </program>
+            <cd>
+              if x > 3 then print "Hello World"
+            </cd>
+          </p>
+          <p>
+            When you are debugging, it is tempting to think that this particular code fragment behaves more like the biconditional: if "Hello World" was output, was <m>x\gt 3</m>?  It's tempting to think so, but what if "Hello World" was printed because of some other command?  What then can we conclude about <m>x</m>?
+          </p>
+          <p>
+            Let's examine this in more detail.  Recall that if <m>\conditional</m> is true and <m>q</m> is true, we cannot conclude anything about <m>p</m>.  Now consider the following piece of pseudocode:
+            <cd>
+              x=4
+              y=0
+              if x &gt; 3 then y = 5
+              print "y = ", y
+            </cd>
+            The output will be "y=5".
+          </p>
+          <p>
+            Will the following pseudocode produce the same output?
+            <cd>
+              x=2
+              y=5
+              if x &gt; 3 then y=5
+              print "y = ",y
+            </cd>
+            It will.  The conditional statement did not change the value of <m>y</m>, but the value was set to 5 initially and so the output will be "y=5".  Once again, knowing that <m>q</m> is true does not allow us to conclude anything about <m>p</m> from the conditional <m>\conditional</m>.  However, if the output was "y=4" or any other value not equal to 5, we can draw the conclusion that <m>x</m> was not greater than 3.  if <m>\conditional</m> is true and <m>q</m> is false, we know with certainty that <m>p</m> is false also.
+          </p>
+          <p>
+            The if-then-else construction behaves in a similar fashion.  Consider the following code fragment:
+            <cd>
+              if x &gt; 3 then
+                y = 5
+              else
+                z = 7
+              print "y = ",y,"z = ",z
+            </cd>
+            Only if the output tells you that <m>y\neq 5</m> or <m>z\neq 7</m> will you know with certainty something about <m>x</m>.
+          </p>
+          <p>
+            For special cases, the if-then-else construction can yield more information.  Consider the following:
+            <cd>
+              if x &gt; 3 then
+                y = 5
+              else
+                y = 7
+              print "y = ",y
+            </cd>
+            Since this piece of pseudocode assigns different values (5 or 7) to the <alert>same</alert> variable <m>y</m>, finding out the resulting value of <m>y</m> will determine whether <m>x</m> was greater than 3.  In this special case, the if-then behaves like the biconditional: if <m>y=5</m> then you know that <m>x \gt 3</m>, and if <m>y\ne 5</m>, then <m>x\leq 3</m>.
           </p>
         </subsection>
       </section>
