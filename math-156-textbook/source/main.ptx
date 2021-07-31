@@ -18956,6 +18956,133 @@
             Since this piece of pseudocode assigns different values (5 or 7) to the <alert>same</alert> variable <m>y</m>, finding out the resulting value of <m>y</m> will determine whether <m>x</m> was greater than 3.  In this special case, the if-then behaves like the biconditional: if <m>y=5</m> then you know that <m>x \gt 3</m>, and if <m>y\ne 5</m>, then <m>x\leq 3</m>.
           </p>
         </subsection>
+        <exercises xml:id="exers-sec-biconditional">
+          <exercisegroup>
+            <introduction>
+              Write out the truth tables for the following logical expressions.  (You might want to do them all in one or two big tables, with columns for each question.)
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\conditional</m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\notp\myimplies\notq</m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\notq\myimplies\notp</m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\converse </m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\notp\myor q </m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>p\myand\notq </m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\biconditional </m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\notp\myiff\notq </m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>p\myxor q </m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>p\myor\notq </m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\notp\myxor\notq </m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>(\conditional)\myand(\converse) </m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>(\conditional)\myor(\converse) </m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>(\conditional)\myand(\inverse) </m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>(\conditional)\myor(\inverse) </m>
+              </statement>
+              <solution>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+
+            </introduction>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+
+            </introduction>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+
+            </introduction>
+          </exercisegroup>
+        </exercises>
       </section>
     </chapter>
   </book>
