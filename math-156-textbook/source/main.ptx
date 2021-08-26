@@ -20535,6 +20535,33 @@
             </me>
           </p>
         </subsection>
+        <subsection xml:id="ssec-seq-notation">
+          <title>
+            Notation for Sequences
+          </title>
+          <p>
+            For each term in a sequence, we will use the notation of a lower-case <m>a</m> followed by a subscript which is called the index.  So, depending on what we want our starting index to be, our sequence can be written as
+            <me>
+              a_0,a_1,a_2,\ldots,a_n
+            </me>
+            or
+            <me>
+              a_1,a_2,a_3,\ldots,a_n
+            </me>
+            or even
+            <me>
+              a_5,a_6,a_7,\ldots,a_n
+            </me>
+            In this textbook, we will use the convention that the starting index is <m>m</m>, so our sequences can be written as
+            <me>
+              a_m, a_{m+1}, a_{m+2}, \ldots, a_n
+            </me>
+          </p>
+          <p>
+            Because we are examining sequences from a computing perspective, we should be aware that computing languages don't use a single convention:  many start counting at <m>m=0</m>, while others start at <m>m=1</m>.<fn>Examples of languages that have a starting index of zero are Python and the C family (C, C++, C#).  Languages which start their index values at one include Fortran, Smalltalk, and Lua.  There are also languages such as Algol which start at a user-defined value.</fn>  In this textbook we will simply specify the start value of our index for each sequence instead of using any one convention.
+          </p>
+
+        </subsection>
       </section>
     </chapter>
   </book>
