@@ -20418,6 +20418,121 @@
           </title>
           <p>
             Let's start out with the definition of a sequence:
+            <definition>
+              <statement>
+                <p>
+                  A <term>sequence</term> is an ordered list of numbers, often with a pattern.
+                </p>
+              </statement>
+            </definition>
+            In a sequence, the number of terms can be finite or infinite.  If a sequence is finite, then either the last term or the total number of terms must be specified so that it's clear where the sequence stops.
+            <example>
+              <statement>
+                Which of the following sequences are infinite?  Which are finite?
+                <ol label="(a)">
+                  <li>
+                    <m>7,11,14,19,\ldots</m>
+                  </li>
+                  <li>
+                    <m>1,4,9,16,25,36,\ldots,100</m>
+                  </li>
+                  <li>
+                    <m>4,2,1,\tfrac{1}{2},\tfrac{1}{4},\tfrac{1}{8},\tfrac{1}{16},\ldots,\tfrac{1}{256}</m>
+                  </li>
+                </ol>
+              </statement>
+              <answer>
+                Sequences (b) and (c) are finite, because their last terms are given.  Sequence (a), however, goes on forever and so is infinite.
+              </answer>
+            </example>
+          </p>
+          <p>
+            To begin with, let's examine some sequences in detail.  We will begin by looking at sequences that <em>do</em> have a pattern.
+            <example>
+              <statement>
+                What is the pattern for the following sequences?  What is the next term for the sequence?
+                <ol label="(a)">
+                  <li>
+                    <m>7,11,15,19,\ldots </m>
+                  </li>
+                  <li>
+                    <m>1, 4, 9, 16, 25, 36, \ldots 100 </m>
+                  </li>
+                  <li>
+                    <m>4,\;2,\;1,\;\frac{1}{2},\;\frac{1}{4},\;\frac{1}{8},\;\frac{1}{{16}},\;...\;\frac{1}{{256}} </m>
+                  </li>
+                  <li>
+                    <m>3, -6, 12, -24, \ldots </m>
+                  </li>
+                  <li>
+                    <m>3, -6, -15, -24, \ldots </m>
+                  </li>
+                </ol>
+              </statement>
+              <answer>
+                <ol label="(a)">
+                  <li>
+                    The pattern is that you add 4 to the previous term to get the next term.  The next term is then 23.
+                  </li>
+                  <li>
+                    The pattern is that if you say that ``1'' is the first term and ``4'' is the second term, then <m>n^2</m> will be the \nth{} term.  So the next term after 36 is 49.
+                  </li>
+                  <li>
+                    The pattern is to divide each term by two (or multiply by one-half) to get the next term.  So the term after $1/16$ will be $1/32$.
+                  </li>
+                  <li>
+                    The pattern is to multiply each term by $-2$ to get the next term.  The next term is then 48.
+                  </li>
+                  <li>
+                    The pattern is to subtract 9 from the previous term, so the next one is <m>-33</m>.
+                  </li>
+                </ol>
+              </answer>
+            </example>
+          </p>
+          <p>
+            Note that in this previous example, the last two sequences looked very similar for three of their first four terms.  However, the third term is different so the pattern for the two sequences is not the same and subsequent terms could look very different.
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-seq-notation">
+          <title>
+            Notation for Sequences
+          </title>
+          <p>
+            For each term in a sequence, we will use the notation of a lower-case <m>a</m> followed by a subscript which is called the index.  So, depending on what we want our starting index to be, our sequence can be written as
+            <me>
+              a_0,a_1,a_2,\ldots,a_n
+            </me>
+            or
+            <me>
+              a_1,a_2,a_3,\ldots,a_n
+            </me>
+            or even
+            <me>
+              a_5,a_6,a_7,\ldots,a_n
+            </me>
+            In this textbook, we will use the convention that the starting index is <m>m</m>, so our sequences can be written as
+            <me>
+              a_m, a_{m+1}, a_{m+2}, \ldots, a_n
+            </me>
+          </p>
+          <p>
+            Because we are examining sequences from a computing perspective, we should be aware that computing languages don't use a single convention:  many start counting at <m>m=0</m>, while others start at <m>m=1</m>.<fn>Examples of languages that have a starting index of zero are Python and the C family (C, C++, C#).  Languages which start their index values at one include Fortran, Smalltalk, and Lua.  There are also languages such as Algol which start at a user-defined value.</fn>  In this textbook we will simply specify the start value of our index for each sequence instead of using any one convention.
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-counting-seq-terms">
+          <title>
+            Counting the Terms in a Sequence
+          </title>
+          <p>
+            Since it's possible to start the index for a sequence at any value, we need to be careful when determining <m>k</m>, the total number of terms in a sequence.  The rule is:
+            <me>
+              \text{#terms}=\text{last}-\text{first}+1
+            </me>
+            and since we are using the convention that <m>m</m> is the first index and <m>n</m> is the final index (or, alternatively, some index of interest), then
+            <me>
+              k=n-m+1
+            </me>
           </p>
         </subsection>
       </section>
