@@ -18966,20 +18966,251 @@
                 <m>\conditional</m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\conditional</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
               <statement>
-                <m>\notp\myimplies\notq</m>
+                <m>\inverse</m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notp</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notq</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\inverse</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
               <statement>
-                <m>\notq\myimplies\notp</m>
+                <m>\contrapositive</m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notp</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notq</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\contrapositive</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
@@ -18987,6 +19218,63 @@
                 <m>\converse </m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\converse</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
@@ -18994,6 +19282,78 @@
                 <m>\notp\myor q </m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notp</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notp\myor q</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
@@ -19001,6 +19361,78 @@
                 <m>p\myand\notq </m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notq</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\myand\notq</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
@@ -19008,6 +19440,63 @@
                 <m>\biconditional </m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\biconditional</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
@@ -19015,6 +19504,93 @@
                 <m>\notp\myiff\notq </m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notp</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notq</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notp\myiff\notq</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
@@ -19022,6 +19598,63 @@
                 <m>p\myxor q </m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\myxor q</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
@@ -19029,6 +19662,78 @@
                 <m>p\myor\notq </m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notq</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>p\myor\notq</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
@@ -19036,6 +19741,93 @@
                 <m>\notp\myxor\notq </m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notp</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notq</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>\notp\myxor\notq</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
@@ -19043,6 +19835,63 @@
                 <m>(\conditional)\myand(\converse) </m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>(\conditional)\myand(\converse)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
@@ -19050,6 +19899,63 @@
                 <m>(\conditional)\myor(\converse) </m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>(\conditional)\myor(\converse)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
@@ -19057,6 +19963,63 @@
                 <m>(\conditional)\myand(\inverse) </m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>(\conditional)\myand(\inverse)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
               </solution>
             </exercise>
             <exercise>
@@ -19064,25 +20027,399 @@
                 <m>(\conditional)\myor(\inverse) </m>
               </statement>
               <solution>
+                <tabular halign="center" top="major" left="medium">
+                  <row bottom="medium">
+                    <cell right="medium">
+                      <m>p</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>q</m>
+                    </cell>
+                    <cell right="medium">
+                      <m>(\conditional)\myor(\inverse)</m>
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      0
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                  <row bottom="major">
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                    <cell right="medium">
+                      1
+                    </cell>
+                  </row>
+                </tabular>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercise>
+            <statement>
+              Looking at your results for questions 1-15, which expressions are logically equivalent to <m>\biconditional</m>?
+            </statement>
+            <solution>
+              By comparing the results of 1-15, we see that the following expressions are logically equivalent to <m>\biconditional</m>:
+              <ol>
+                <li>
+                  <m>\notp\myiff\notq</m>
+                </li>
+                <li>
+                  <m>(\conditional)\myand(\converse)</m>
+                </li>
+                <li>
+                  <m>(\conditional)\myand(\inverse)</m>
+                </li>
+              </ol>
+              (You may or may not have noticed that it is also equivalent to <m>\notp\myxor q</m>.)
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Looking at your results for questions 1-15, which expressions are logically equivalent to <m>\conditional</m>?
+            </statement>
+            <solution>
+              By comparing the results of 1-15, we see that the following expressions are logically equivalent to <m>\conditional</m>:
+              <ol>
+                <li>
+                  <m>\contrapositive</m>
+                </li>
+                <li>
+                  <m>\notp\myor q</m>
+                </li>
+              </ol>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Looking at your results for questions 1-15, which expressions are logically equivalent to <m>\converse</m>?
+            </statement>
+            <solution>
+              By comparing the results of 1-15, we see that the following expressions are logically equivalent to <m>\converse</m>:
+              <ol>
+                <li>
+                  <m>\inverse</m>
+                </li>
+                <li>
+                  <m>p\myor\notq</m>
+                </li>
+              </ol>
+            </solution>
+          </exercise>
+          <exercisegroup>
+            <introduction>
+              Consider the following conditional statements.  Hopefully you agree that each makes a certain amount of sense.  However, if they were rewritten as <em>biconditional</em> statements, would they continue to make sense?  Answer true or false.
+            </introduction>
+            <exercise>
+              <statement>
+                If Barney is a dog, then Barney has four legs.
+              </statement>
+              <solution>
+                False
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                If Rich is asleep, then he is not playing ping-pong.
+              </statement>
+              <solution>
+                False
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                If Alycia gets 90% or better as her final mark, then she will get an A+.
+              </statement>
+              <solution>
+                True
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                If Bossy is mooing, then she is a cow.
+              </statement>
+              <solution>
+                False
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                If Pat sleeps in, then she is late for class.
+              </statement>
+              <solution>
+                False
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                If Jason does not pay his bill on time, then he will be charged a late fee.
+              </statement>
+              <solution>
+                True
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                If Susan bought her computer less than a year ago, her warranty is still in effect.
+              </statement>
+              <solution>
+                True
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                If Raymond eats a burger for dinner, they will be too full for dessert.
+              </statement>
+              <solution>
+                False
               </solution>
             </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
-
+              In the following exercises, let <m>p</m> denote "Jason eats a burger for dinner" and let <m>q</m> denote "Jason is too full for dessert."  Translate the following sentences into symbolic logical statements.
             </introduction>
+            <exercise>
+              <statement>
+                If and only if Jason eats a burger for dinner, he will be too full for dessert.
+              </statement>
+              <solution>
+                <m>\biconditional</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                Jason will not be too full for dessert if and only if he did not eat a burger for dinner.
+              </statement>
+              <solution>
+                <m>\notq\myiff\notp</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                If Jason eats a burger for dinner, then he will be too full for dessert.
+              </statement>
+              <solution>
+                <m>\conditional</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                If Jason is not too full for dessert, then he did not eat a burger for dinner.
+              </statement>
+              <solution>
+                <m>\contrapositive</m>
+              </solution>
+            </exercise>
           </exercisegroup>
           <exercisegroup>
             <introduction>
-
+              Are the following two sentences biconditional statements?  (In other words, could you replace them by an equivalent ``if and only if'' construction?)
             </introduction>
-          </exercisegroup>
-          <exercisegroup>
-            <introduction>
+            <exercise>
+              <statement>
+                If Frank does not pay his bill on time, then he will be charged a late charge, and if he does pay his bill on time, he will not be charged a late charge.
+              </statement>
+              <solution>
+                Yes
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                If Alycia gets 90% or better as her final mark, she will get an A+, and if she gets an A+, then she got 90% or better as her final mark.
+              </statement>
+              <solution>
+                Yes
 
-            </introduction>
+
+
+              </solution>
+            </exercise>
           </exercisegroup>
+          <exercise>
+            <statement>
+              If and only if Jason is eaten by bears, he will not finish his marking.  Given that, answer the following questions.
+              <ol>
+                <li>
+                  Jason is eaten by bears.  Did he finish his marking?
+                </li>
+                <li>
+                  Jason is not eaten by bears.  Did he finish his marking?
+                </li>
+                <li>
+                  Jason finished his marking.  Was he eaten by bears?
+                </li>
+                <li>
+                  Jason did not finish his marking.  Whas he eaten by bears?
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <ol>
+                <li>
+                  No
+                </li>
+                <li>
+                  Yes
+                </li>
+                <li>
+                  No
+                </li>
+                <li>
+                  Yes
+                </li>
+              </ol>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              The following conditional statement is true: If Rich is asleep, then he is not paying ping-pong and vice versa.  Given that, answer the following questions.
+              <ol>
+                <li>
+                  Rich is playing ping-pong.  Is he asleep?
+                </li>
+                <li>
+                  Rich is asleep.  Is he playing ping-pong?
+                </li>
+                <li>
+                  Rich is not asleep.  Is he playing ping-pong?
+                </li>
+                <li>
+                  Rich is not playing ping-pong.  Is he asleep?
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <ol>
+                <li>
+                  No
+                </li>
+                <li>
+                  No
+                </li>
+                <li>
+                  Yes
+                </li>
+                <li>
+                  Yes
+                </li>
+              </ol>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              The following conditional statement is true: Ettercaps are green if and only if toves are slithy.  Given that, answer the following questions.
+              <ol>
+                <li>
+                  Toves are slithy.  Are ettercaps green?
+                </li>
+                <li>
+                  Toves are not slithy.  Are ettercaps green?
+                </li>
+                <li>
+                  Ettercaps are green.  Are toves slithy?
+                </li>
+                <li>
+                  Ettercaps are red.  Are toves slithy?
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              <ol>
+                <li>
+                  Yes
+                </li>
+                <li>
+                  No
+                </li>
+                <li>
+                  Yes
+                </li>
+                <li>
+                  No
+                </li>
+              </ol>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              If the statement "If and only if Superman has a cape, then he can fly" is a true statement, which of the following cannot occur?  (You may choose more than one.)
+              <ol>
+                <li>
+                  Superman has a cape and he can fly.
+                </li>
+                <li>
+                  Superman has a cape and he cannot fly.
+                </li>
+                <li>
+                  Superman does not have a cape and cannot fly.
+                </li>
+                <li>
+                  Superman does not have a cape and can fly.
+                </li>
+              </ol>
+            </statement>
+            <solution>
+              (b) and (d)
+            </solution>
+          </exercise>
         </exercises>
+        <solutions divisional="solution">
+          <title>
+            Solutions to <xref ref="sec-biconditional"/> Exercises.
+          </title>
+        </solutions>
+      </section>
+    </chapter>
+    <chapter xml:id="sequences-and-series">
+      <title>
+        Sequences and Series
+      </title>
+      <section xml:id="sec-intro-to-seq-and-ser">
+        <title>
+          Introduction to Sequences and Series
+        </title>
+        <subsection xml:id="ssec-sequences">
+          <title>
+            Sequences
+          </title>
+          <p>
+            Let's start out with the definition of a sequence:
+          </p>
+        </subsection>
       </section>
     </chapter>
   </book>
