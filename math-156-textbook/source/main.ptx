@@ -22330,6 +22330,83 @@
           </title>
         </solutions>
       </section>
+      <section xml:id="sec-geom-seq-ser">
+        <title>
+          Geometric Sequences and Series
+        </title>
+        <subsection xml:id="ssec-geom-seq">
+          <title>
+            Geometric Sequences
+          </title>
+          <p>
+            Let's start out with a definition:
+            <definition xml:id="defn-geom-seq">
+              A <term>geometric sequence</term> is a sequence in which the next term is found by multiplying the previous term by a constant (the <em>common ratio</em>  <m>\ r</m>)
+            </definition>
+          </p>
+          <p>
+            Here are some examples of geometric sequences:
+            <ol label="(a)">
+              <li>
+                <m>9, 18, 36, 72, \ldots</m>
+              </li>
+              <li>
+                <m>12, 18, 27, \frac{81}{2},\ldots</m>
+              </li>
+              <li>
+                <m>10, -30, 90, -270, \ldots,  -196830</m>
+              </li>
+              <li>
+                <m>-3, -12, -48, -192, \ldots</m>
+              </li>
+              <li>
+                <m>48, -36, 27, \ldots</m>
+              </li>
+            </ol>
+          </p>
+          <p>
+            The common ratios of each of these sequences, in order from a) to e), is <m>2</m>, <m>\frac{3}{2}</m>, <m>-3</m>, <m>4</m>, <m>-\frac{3}{4}</m>, respectively.  Note that in each of them, we can find the common ratio <m>r</m> by taking <m>any</m> term and dividing it by the previous term.
+          </p>
+          <p>
+            Like any other sequences, geometric sequences can be finite or infinite.  Example c) above is finite, as the last term is specified.  The others are infinite sequences.
+            <example>
+              <statement>
+                For each of the following sequences, state whether it is arithmetic, geometric, or neither.
+                <ol label="(a)">
+                  <li>
+                    <m>45, 15, 5, \ldots</m>
+                  </li>
+                  <li>
+                    <m>5, 3, 1, -1, \ldots</m>
+                  </li>
+                  <li>
+                    <m>1, 8, 27, 64, \ldots , 1000</m>
+                  </li>
+                  <li>
+                    <m>-1, 1, -1, 1, -1, 1, \ldots</m>
+                  </li>
+                </ol>
+              </statement>
+              <answer>
+                <ol label="(a)">
+                  <li>
+                    Geometric, because the common ratio <m>r</m> is <m>\frac{1}{3}</m>
+                  </li>
+                  <li>
+                    Arithmetic, because the common difference <m>d</m> is <m>-2</m>.
+                  </li>
+                  <li>
+                    Neither, because there isn't either a common difference or ratio between terms.  (In fact, the pattern is that <m>a_n = n^3</m> for <m>n \ge 1</m>.)
+                  </li>
+                  <li>
+                    Geometric, because the common ratio <m>r</m> is <m>-1</m>.
+                  </li>
+                </ol>
+              </answer>
+            </example>
+          </p>
+        </subsection>
+      </section>
     </chapter>
   </book>
 </pretext>
