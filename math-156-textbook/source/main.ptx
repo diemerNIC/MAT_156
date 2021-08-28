@@ -52,6 +52,45 @@
   <book xml:id="binary-logic-and-more">
     <title>Binary, Logic, and More</title>
     <subtitle>Applied Math for Computing</subtitle>
+    <frontmatter xml:id="frontmatter">
+      <titlepage>
+        <author>
+          <personname>Patricia R. Wrean</personname>
+          <department>Department of Mathematics and Statistics</department>
+          <institution>
+            <line>Camosun College</line>
+          </institution>
+          <email>wrean@camosun.bc.ca</email>
+        </author>
+        <credit>
+          <title>Contributor</title>
+          <author>
+            <personname>
+              Jason J. Diemer
+            </personname>
+            <department>
+              Department of Mathematics and Science
+            </department>
+            <institution>
+              North Island College
+            </institution>
+            <email>jason.diemer@nic.bc.ca
+            </email>
+          </author>
+        </credit>
+      </titlepage>
+      <colophon>
+        <copyright>
+          <year>2016 <ndash/> 2021</year>
+          <holder>Patricia R. Wrean</holder>
+          <minilicense>CC-BY-NC-SA 4.0 License</minilicense>
+          <shortlicense>
+            This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. You can view a copy of the license <url href="http://creativecommons.org/licenses/by-nc-sa/4.0/">here</url>.
+            <image source = "images/by-nc-sa.svg" width="25%"/>
+          </shortlicense>
+        </copyright>
+      </colophon>
+    </frontmatter>
     <chapter xml:id="binary-octal-hex">
       <title>
         Binary, Octal, and Hexadecimal
@@ -20475,7 +20514,7 @@
                     The pattern is that you add 4 to the previous term to get the next term.  The next term is then 23.
                   </li>
                   <li>
-                    The pattern is that if you say that ``1'' is the first term and ``4'' is the second term, then <m>n^2</m> will be the \nth{} term.  So the next term after 36 is 49.
+                    The pattern is that if you say that ``1'' is the first term and ``4'' is the second term, then <m>n^2</m> will be the <m>\nth{}</m> term.  So the next term after 36 is 49.
                   </li>
                   <li>
                     The pattern is to divide each term by two (or multiply by one-half) to get the next term.  So the term after $1/16$ will be $1/32$.
@@ -20524,7 +20563,7 @@
           <title>
             Counting the Terms in a Sequence
           </title>
-          <p>
+          <introduction>
             Since it's possible to start the index for a sequence at any value, we need to be careful when determining <m>k</m>, the total number of terms in a sequence.  The rule is:
             <me>
               \text{#terms}=\text{last}-\text{first}+1
@@ -20533,35 +20572,873 @@
             <me>
               k=n-m+1
             </me>
-          </p>
+          </introduction>
+          <subsubsection xml:id="sssec-index-one">
+            <title>
+              Starting with Index of One
+            </title>
+            <p>
+              Let us consider a sequence that starts with an index of one:
+              <me>
+                a_1, a_2, a_3, \ldots, a_n
+              </me>
+              This convention has the advantage that if you label each term as follows:
+              <me>
+                \overbrace {{a_1}}^{{\rm{first}}},\overbrace {{a_2}}^{{\rm{second}}},\overbrace {{a_3}}^{{\rm{third}}},\overbrace {{a_4}}^{{\rm{fourth}}},\overbrace {{a_5}}^{{\rm{fifth}}}, \ldots ,\overbrace {{a_n}}^{{\rm{final}}}
+              </me>
+              you can see that the term <m>a_5</m> has an index <m>n=5</m> and is also the fifth term, so the number of the term (fifth) and the index (5) are consistent with each other.  This makes it more difficult to make a counting error.  Also, the total number of terms in the sequence <m>a_1, a_2, a_3, \ldots, a_n</m> is given by <m>k = n - 1 + 1</m>, so <m>k = n</m> and is consistent with what we would expect.<fn>In mathematics, it is most common to start counting with <m>a_1</m> being the first term.  Programming languages primarily designed for mathematics, such as Matlab, usually start with an index of one.</fn>
+            </p>
+          </subsubsection>
+          <subsubsection xml:id="sssec-index-zero">
+            <title>
+              Starting with Index of Zero
+            </title>
+            <p>
+              However, let us now consider sequences that start with zero:
+              <me>
+                a_0, a_1, a_2, a_3, \ldots, a_n
+              </me>
+              Numbering the terms, we find that
+              <me>
+                \overbrace {{a_0}}^{{\rm{first}}},\overbrace {{a_1}}^{{\rm{second}}},\overbrace {{a_2}}^{{\rm{third}}},\overbrace {{a_3}}^{{\rm{fourth}}},\overbrace {{a_4}}^{{\rm{fifth}}}, \ldots ,\overbrace {{a_n}}^{{\rm{final}}}
+              </me>
+              and <m>a_5</m> is no longer the fifth term.  In fact, <m>a_5</m> is the <em>sixth</em> term, which is why it is common in programming to separate the <q>count</q> of a term (first, second, third, etc.) from the index value (0 for <m>a_0</m>, etc.).
+            </p>
+            <p>
+              Also, the total number of terms in <m>a_0, a_1, a_2, a_3, \ldots, a_n</m> is given by
+              <md>
+                <mrow>
+                  k \amp = n - m + 1
+                </mrow>
+                <mrow>
+                  \amp = n - 0 + 1
+                </mrow>
+                <mrow>
+                  \amp =n+1
+                </mrow>
+              </md>
+              so <m>k</m>, the <q>count</q> of the term is no longer equal to <m>n</m>, the index of the final term.  So be warned:  if you are not careful with this convention, you are likely to make a type of mistake which programmers commonly call an <q>off-by-one</q> error.
+            </p>
+          </subsubsection>
+          <subsubsection xml:id="sssec-index-two-or-more">
+            <title>
+              Starting with Index of Two or More
+            </title>
+            <p>
+              As we have seen, <m>a_5</m> is only the fifth term in sequences that start with an index of one.  If the sequence starts at some other value, then <m>a_5</m> could even be the first or second term.  This does lead to a small problem in that the term <m>a_n</m> is commonly called the the <m>\nth{}</m> term in a sequence<!--\nomenclature[seq]{$a_n$}{\nth{} term of a sequence}!-->, which is only true for a starting index of one.<fn>This leads to the awkward convention of calling <m>a_0</m> the <em>zeroth</em> term.</fn>
+
+            </p>
+          </subsubsection>
         </subsection>
-        <subsection xml:id="ssec-seq-notation">
+        <subsection xml:id="ssec-defining-a-sequence">
           <title>
-            Notation for Sequences
+            Defining a sequence
           </title>
           <p>
-            For each term in a sequence, we will use the notation of a lower-case <m>a</m> followed by a subscript which is called the index.  So, depending on what we want our starting index to be, our sequence can be written as
-            <me>
-              a_0,a_1,a_2,\ldots,a_n
-            </me>
-            or
-            <me>
-              a_1,a_2,a_3,\ldots,a_n
-            </me>
-            or even
-            <me>
-              a_5,a_6,a_7,\ldots,a_n
-            </me>
-            In this textbook, we will use the convention that the starting index is <m>m</m>, so our sequences can be written as
-            <me>
-              a_m, a_{m+1}, a_{m+2}, \ldots, a_n
-            </me>
+            There are three ways to define a sequence:
+            <ol label="(a)">
+              <li>
+                List all of the terms, or enough terms to set up the pattern.  If the sequence is finite, then either the final term or the total number of terms must be given.
+              </li>
+              <li>
+                Give a general formula for the <m>\nth{}</m> term.
+              </li>
+              <li>
+                Give a recursive formula for the <m>\nth{}</m> term.
+              </li>
+            </ol>
           </p>
           <p>
-            Because we are examining sequences from a computing perspective, we should be aware that computing languages don't use a single convention:  many start counting at <m>m=0</m>, while others start at <m>m=1</m>.<fn>Examples of languages that have a starting index of zero are Python and the C family (C, C++, C#).  Languages which start their index values at one include Fortran, Smalltalk, and Lua.  There are also languages such as Algol which start at a user-defined value.</fn>  In this textbook we will simply specify the start value of our index for each sequence instead of using any one convention.
+            We have already looked at sequences defined using the first method in the examples given earlier.  Let's now examine the two types of formula, general and recursive.
           </p>
-
         </subsection>
+        <subsection xml:id="ssec-general-formula">
+          <title>
+            General Formula
+          </title>
+          <p>
+            A <term>general formula</term><!--\index{sequence!general formula}\index{general formula}!--> is a formula that gives <m>a_n</m> as a function of <m>n</m> only.  What this means is that the only variable on the right-hand-side of the general formula is the variable <m>n</m>, and all other values in the equations are constants.
+          </p>
+          <p>
+            Let's look at the following examples to examine some sequences defined in this way.
+            <example>
+              <statement>
+                Give the first four terms of the sequence given by the general formula <m>a_n = 4n + 7</m> for <m>n \ge 0</m>.
+              </statement>
+              <answer>
+                <md>
+                  <mrow>
+                    a_n \amp = 4n + 7, \text{so}
+                  </mrow>
+                  <mrow>
+                    a_0 \amp = 4\times0 + 7 = 7
+                  </mrow>
+                  <mrow>
+                    a_1 \amp = 4\times1 + 7 = 11
+                  </mrow>
+                  <mrow>
+                    a_2 \amp = 4\times2 + 7 = 15
+                  </mrow>
+                  <mrow>
+                    a_3 \amp = 4\times3 + 7 = 19
+                  </mrow>
+                </md>
+                The first four terms are then 7, 11, 15, and 19.  This is the same sequence that was given as part (a) in the first  example of this section.
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Give all terms of the sequence given by the formula <m>{a_n} = {\left( {\frac{1}{3}} \right)^n}</m> for <m>1 \le n \le 5</m>.
+              </statement>
+              <answer>
+                This is a finite sequence, since restrictions have been placed on the values of <m>n</m>.  The terms are then:
+                <md>
+                  <mrow>
+                    {a_1} \amp = {\left( {\frac{1}{3}} \right)^1} = \frac{1}{3}
+                  </mrow>
+                  <mrow>
+                    {a_2} \amp = {\left( {\frac{1}{3}} \right)^2} = \frac{1}{9}
+                  </mrow>
+                  <mrow>
+                    {a_3} \amp = {\left( {\frac{1}{3}} \right)^3} = \frac{1}{{27}}
+                  </mrow>
+                  <mrow>
+                    {a_4} \amp = {\left( {\frac{1}{3}} \right)^4} = \frac{1}{{81}}
+                  </mrow>
+                  <mrow>
+                    {a_5} \amp = {\left( {\frac{1}{3}} \right)^5} = \frac{1}{{243}}
+                  </mrow>
+                </md>
+              </answer>
+            </example>
+          </p>
+          <p>
+            You can see from the previous examples that the general formula allows you to calculate <m>a_n</m> for any value of <m>n</m>. The very useful thing about the general formula is that you don't need to know the previous term to calculate a particular term.  For instance, if you want to know <m>a_{50}</m> for the sequence  <m>7, 11, 15, 19, \ldots</m>  you can determine that the pattern is to add 4 to the previous term to get the next term.  However, to get <m>a_{50}</m>  you'd have to calculate <m>a_{49}</m> first, but <m>a_{49}</m> requires <m>a_{48}</m>  and so on.  But if you instead use the formula <m>{a_n} = 4n + 7</m> for <m>n \ge 0</m>  which gives the same sequence, then <m>a_{50}</m> is just
+            <md>
+              <mrow>
+                {a_n} \amp = 4n + 7
+              </mrow>
+              <mrow>
+                {a_{50}} \amp = 4 \cdot 50 + 7 = 207
+              </mrow>
+            </md>
+            and there's no need to calculate preceding terms.  Handy!  <fn> It's important to note, however, that <m>a_{50}</m> is <em>not</em> the fiftieth term.  Because we are starting our index from zero, <m>a_{50}</m> is the <em>fifty-first</em> term since <m>k = n - m + 1 = 50 - 0 + 1 = 51</m>.</fn>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-recursive-definition">
+          <title>
+            Recursive Definition
+          </title>
+          <p>
+            A recursive formula<!--\index{recursive formula}\index{sequence!recursive formula}!--> gives a formula for the next term in terms of the previous one.  For example, in our old friend <m>7, 11, 15, 19, \ldots</m> , the next term is found by adding 4 to the previous term:  <m>{a_n} = {a_{n - 1}} + 4</m>.  However, that's not enough information to uniquely define the series because you don't know where to start.  A complete definition must include the first term also.  Therefore, the recursive definition for our old friend <m>7, 11, 15, 19, \ldots</m> would be
+            <md>
+              <mrow>
+                {a_0} \amp = 7
+              </mrow>
+              <mrow>
+                {a_n} \amp = {a_{n - 1}} + 4 \text{ for } n \ge 1
+              </mrow>
+            </md>
+          </p>
+          <p>
+            Recursive definitions, then, must specify the first term (or terms, when necessary) <em>and also</em> the rule which allows you to calculate the next term from the previous term or terms.
+            <example>
+              <statement>
+                Calculate the first four terms of the sequence given by
+                <md>
+                  <mrow>
+                    {a_0} \amp = 3
+                  </mrow>
+                  <mrow>
+                    {a_n} \amp = {\left( {{a_{n - 1}} - 1} \right)^2} + 10 \text{ for } n \ge 1
+                  </mrow>
+                </md>
+              </statement>
+              <answer>
+                The first term is already given, <m>a_0=3</m>.  Then
+                <md>
+                  <mrow>
+                    {a_1} \amp = {\left( {3 - 1} \right)^2} + 10 = {2^2} + 10 = 14
+                  </mrow>
+                  <mrow>
+                    {a_2} \amp = {\left( {14 - 1} \right)^2} + 10 = {13^2} + 10 = 179
+                  </mrow>
+                  <mrow>
+                    {a_3} \amp = {\left( {179 - 1} \right)^2} + 10 = {178^2} + 10 = 31694
+                  </mrow>
+                </md>
+                So the first four terms are 3, 14, 179, 31694.
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Give a recursive formula for the sequence <m>2, 6, 18, 54, \ldots</m>
+              </statement>
+              <answer>
+                The pattern is that the next term equals the previous term times three.  We can start our index at either 0 or 1, so let's choose 1.  Therefore,
+                <md>
+                  <mrow>
+                    {a_1} \amp = 2
+                  </mrow>
+                  <mrow>
+                    {a_n} = 3{a_{n - 1}} \text{ for } n \ge 2
+                  </mrow>
+                </md>
+              </answer>
+            </example>
+          </p>
+          <p>
+            Recursive definitions have the same drawback that we've seen before:  if we want to know the <m>\upth{200}</m> term, we need to calculate the <m>\upth{199}</m> first, and so on.  Only the general formula allows us to calculate each term directly without knowing the previous one.
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-fibonacci">
+          <title>
+            Fibonacci Sequence
+          </title>
+          <p>
+            The Fibonacci sequence is likely the most famous example of a recursive sequence:
+            <me>
+              1, 1, 2, 3, 5, 8, 13, \ldots
+            </me>
+            The pattern can be quite difficult to spot -- you get the next term from the <em>sum</em> of the two previous terms.  The recursive formula for this sequence is therefore
+            <md>
+              <mrow>
+                {a_1} \amp = 1
+              </mrow>
+              <mrow>
+                {a_2} \amp = 1
+              </mrow>
+              <mrow>
+                {a_n} \amp = {a_{n - 1}} + {a_{n - 2}} \text{ for } n \ge 3
+              </mrow>
+            </md>
+            Here, the first <em>two</em> terms must be given to start off with so that you are then able to calculate the third term from the previous two.
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-series">
+          <title>
+            Series
+          </title>
+          <p>
+            A series is the sum of the terms of a finite or infinite sequence.  Here are two examples:
+            <ol label="(a)">
+              <li>
+                <m>16 + 20 + 24 + 28 + \ldots + 64</m>
+              </li>
+              <li>
+                <m>1 + \frac{1}{3} + \frac{1}{9} + \frac{1}{{27}} + ...</m>
+              </li>
+            </ol>
+            The first example is a finite series, while the second one is infinite. The classification as <em>finite</em> or <em>infinite</em> is based on the number of terms being summed.
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-notation-for-series">
+          <title>
+            Notation for Series
+          </title>
+          <p>
+            The sum of the first <m>k</m> terms of a sequence is denoted by <m>S_k</m> (also sometimes called the <m>\kth{}</m> partial sum).  If the series is finite, it could be the sum of <em>all</em> of the terms.  <m>S_\infinity</m> is how we write the sum of an infinite series, like the second example above.
+            <example>
+              <statement>
+                For the series <m>16 + 20 + 24 + 28 + \ldots + 64</m>, calculate <m>S_3</m> and <m>S_4</m>.
+              </statement>
+              <answer>
+                <md>
+                  <mrow>
+                    S_3 \amp = 16 + 20 + 24 = 60
+                  </mrow>
+                  <mrow>
+                    S_4 \amp = 16 + 20 + 24 + 28 = 88
+                  </mrow>
+                </md>
+              </answer>
+            </example>
+          </p>
+          <p>
+            However, it's easy to see that this method becomes very cumbersome for large values of <m>k</m>.  We'll develop some more efficient methods for particular types of series in the next two sections.
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-sigma-notation">
+          <title>
+            Sigma Notation
+          </title>
+          <p>
+            It's easy to take a sequence in list form and transform it into a series by changing all of the commas to plus signs.  However, what if you are given the general formula instead?  For example, let's take <m>7, 11, 15, 19, \ldots</m>   which we know to be <m>{a_n} = 4n + 3</m> for <m>n \ge 1</m>.  Since the general form is so useful for finding <m>a_n</m> when <m>n</m> is large, it would be nice if we could retain that information while writing our sum.
+          </p>
+          <p>
+            To do so, we'll introduce a new notation called <term>sigma notation</term>.  It uses the Greek letter sigma (the uppercase one):  <m>\Sigma</m>, which is commonly used to mean <q>sum of</q>.
+          </p>
+          <p>
+            Let's look at an example of sigma notation and discuss what all of the parts mean.  Consider the following sum:
+            <me>
+              \sum\limits_{i = 1}^5 {(4i + 3} )
+            </me>
+            The letter <m>i</m> is an index here, and it runs from the value given at the bottom of the sigma to the number at the top of the sigma in steps of 1.  Here, <m>i</m> runs from 1 to 5.  We are summing, then, the value of <m>4i + 3</m> for each value of <m>i</m> as it runs from 1 to 5:
+            <md>
+              <mrow>
+                \sum\limits_{i = 1}^5 {(4i + 3)}  \amp = \overbrace {\left( {4 \times 1 + 3} \right)}^{i = 1} + \overbrace {\left( {4 \times 2 + 3} \right)}^{i = 2} + \overbrace {\left( {4 \times 3 + 3} \right)}^{i = 3} + \overbrace {\left( {4 \times 4 + 3} \right)}^{i = 4} + \overbrace {\left( {4 \times 5 + 3} \right)}^{i = 5}
+              </mrow>
+              <mrow>
+                \amp = 7 + 11 + 15 + 19 + 23
+              </mrow>
+              <mrow>
+                \amp = 75
+              </mrow>
+            </md>
+          </p>
+          <p>
+            Let's look at more examples.
+            <example>
+              <statement>
+                Calculate <m>\sum\limits_{i = 0}^2 {(2i - 5)}</m>.
+              </statement>
+              <answer>
+                <md>
+                  <mrow>
+                    \sum\limits_{i = 0}^2 {(2i - 5)} \amp = \overbrace {\left( {2 \times 0 - 5} \right)}^{i = 0} + \overbrace {\left( {2 \times 1 - 5} \right)}^{i = 1} + \overbrace {\left( {2 \times 2 - 5} \right)}^{i = 2}
+                  </mrow>
+                  <mrow>
+                    \amp =  -5 + (- 3) +  (- 1)
+                  </mrow>
+                  <mrow>
+                    \amp = -9
+                  </mrow>
+                </md>
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Calculate <m>\sum\limits_{j = 6}^9 {{{\left( {8 - j} \right)}^2}}</m>
+              </statement>
+              <answer>
+                <md>
+                  <mrow>
+                    \sum\limits_{j = 6}^9 {{{\left( {8 - j} \right)}^2}} \amp =\overbrace {\left( {8 - 6} \right)^2} ^{j = 6} + \overbrace {\left( {8 - 7} \right)^2} ^{j = 7} + \overbrace {\left( {8 - 8} \right)^2} ^{j = 8} + \overbrace {\left( {8 - 9} \right)^2}^{j = 9}
+                  </mrow>
+                  <mrow>
+                    \amp = 4+1+0+1
+                  </mrow>
+                  <mrow>
+                    \amp = 6
+                  </mrow>
+                </md>
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Calculate <m>\sum\limits_{k = 12}^{16} 3</m>.
+              </statement>
+              <answer>
+                <md>
+                  <mrow>
+                    \sum\limits_{j = 12}^{16} 3 \amp = \overbrace{3}^{k=12} + \overbrace{3}^{k=13} + \overbrace{3}^{k=14} + \overbrace{3}^{k=15} + \overbrace{3}^{k=16}
+                  </mrow>
+                  <mrow>
+                    \amp = 15
+                  </mrow>
+                </md>
+              </answer>
+            </example>
+          </p>
+          <p>
+            The tricky thing about the last one is deciding how many terms there are.  Recall that you can either write out all of the possible values of the index, or use the useful rule:
+            <me>
+              k = n - m + 1
+            </me>
+            and as the last example had the index running from 12 to 16, then the number of terms <m>k</m> is
+            <md>
+              <mrow>
+                k \amp = 16 - 12 + 1
+              </mrow>
+              <mrow>
+                \amp = 5
+              </mrow>
+            </md>
+            <example>
+              <statement>
+                Write the following series in sigma notation:
+                <me>
+                  4 + 9 + 16 + 25 +\ldots + 100
+                </me>
+              </statement>
+              <answer>
+                Let's pick our index first.  If we want to be lazy, instead of starting our index at 0 or 1, we could start at 2 and our series would be
+                <me>
+                  \sum\limits_{k = 2}^{10} {{k^2}}
+                </me>
+                Other acceptable answers would involve changing our starting point for the index to give
+                <me>
+                  \sum\limits_{j = 1}^9 {{{\left( {j + 1} \right)}^2}}
+                </me>
+                or
+                <me>
+                  \sum\limits_{i = 0}^8 {{{\left( {i + 2} \right)}^2}}
+                </me>
+                or even
+                <me>
+                  \sum\limits_{l = 157}^{165} {{{\left( {l - 155} \right)}^2}}
+                </me>
+                if 157 happens to be your favourite number.
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Write the following sequence in sigma notation:
+                <me>
+                  \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \frac{1}{6} + \ldots
+                </me>
+              </statement>
+              <answer>
+                <me>
+                  \sum\limits_{j = 3}^\infty  {\frac{1}{j}}
+                </me>
+              </answer>
+            </example>
+          </p>
+          <p>
+            To write an infinite series in sigma notation, you just replace the final value of the index with <m>\infty</m>.
+          </p>
+        </subsection>
+        <exercises>
+          <exercisegroup>
+            <introduction>
+              Predict the next three terms of the following sequnces.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>18, 16, 14\ldots</m>
+              </statement>
+              <solution>
+                <m>12, 10, 8</m> (pattern is to subtract 2)
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>1, 4, 9, 16, \ldots</m>
+              </statement>
+              <solution>
+                <m>25, 36, 49</m> (<m>\nth{}</m> term is equal to <m>n^2</m>)
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>12, 24, 48, 96, \ldots</m>
+              </statement>
+              <solution>
+                <m>192, 384, 768</m> (multiply by 2)
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>144, 36, 9, \ldots</m>
+              </statement>
+              <solution>
+                <m>\frac{9}{4},\frac{9}{{16}},\frac{9}{{64}}</m> (divide by 4)
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>1,\sqrt 2 ,\sqrt 3 ,2,\sqrt 5 ,\sqrt 6 ,\ldots</m>
+              </statement>
+              <solution>
+                <m>\sqrt 7 ,2\sqrt 2 ,3</m> (<m>\nth{}</m> term is <m>\sqrt{n}</m>)
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>5, -10, 20, \ldots</m>
+              </statement>
+              <solution>
+                <m>-40, 80, -160</m> (multiply by <m>-2</m>)
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>13, 25, 37, 49, \ldots</m>
+              </statement>
+              <solution>
+                <m>61, 73, 85</m> (add 12)
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5},\ldots</m>
+              </statement>
+              <solution>
+                <m>\frac{1}{6},\frac{1}{7},\frac{1}{8}</m> (denominator increases by 1)
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Given a formula for the general term (the <m>\nth{}</m> term <m>a_n</m> in terms of <m>n</m>) of the following sequences.  Use <m>n = 1</m> as your starting index.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>1, 4, 9, 16, \ldots</m>
+              </statement>
+              <solution>
+                <m>a_n = n^2</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>1,\sqrt 2 ,\sqrt 3 ,2,\sqrt 5 ,\sqrt 6 ,\ldots</m>
+              </statement>
+              <solution>
+                <m>a_n = \sqrt{n} </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>2, 4, 6, 8, \ldots</m>
+              </statement>
+              <solution>
+                <m>a_n = 2n</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5},...</m>
+              </statement>
+              <solution>
+                <m>a_n = \frac{1}{n + 1}</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Find the first four terms of the following recursively defined sequences.
+            </introduction>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_1 \amp = 2
+                  </mrow>
+                  <mrow>
+                    a_n \amp = a_{n - 1} + 5 \text{   for } n \ge 2
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+                <m>2, 7, 12, 17</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_1 \amp = 10
+                  </mrow>
+                  <mrow>
+                    a_n \amp = 3 a_{n - 1} \text{   for } n \ge 2
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+                <m>10, 30, 90, 270</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_1 \amp = 2
+                  </mrow>
+                  <mrow>
+                    a_2 \amp = 3
+                  </mrow>
+                  <mrow>
+                    a_n \amp = a_{n - 1} \times a_{n - 2} \text{   for } n \ge 3
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+                <m>2, 3, 6, 18</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_1 \amp = 2
+                  </mrow>
+                  <mrow>
+                    a_n \amp =\frac{1}{a_{n - 1}} + 1 \text{   for } n \ge 2
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+                <m>2,\frac{3}{2},\frac{5}{3},\frac{8}{5}</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              In each of the following, the general formula for the <m>\nth{}</m> term of a sequence is given.  Find the first four terms.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>a_n = 3n - 5</m> for <m>n \ge 1</m>
+              </statement>
+              <solution>
+                <m>-2, 1, 4, 7</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>a_n = 3^{n - 2}</m> for <m>n \ge 1</m>
+              </statement>
+              <solution>
+                <m>\frac{1}{3},1,3,9</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>a_n = n!</m> for <m>n \ge 1</m>
+              </statement>
+              <solution>
+                <m>1, 2, 6, 24</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>a_n = \frac{1}{n^2}</m> for <m>n \ge 1</m>
+              </statement>
+              <solution>
+                <m>1,\frac{1}{4},\frac{1}{9},\frac{1}{16}</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              In each of the following, the general formula for the <m>\nth{}</m> term of a sequence is given.  Calculate the specified terms.
+            </introduction>
+            <exercise>
+              <statement>
+                Find <m>a_7</m> for the sequence <m>a_n = 5\left( 2^{n + 1} \right)</m> for <m>n \ge 1</m>
+              </statement>
+              <solution>
+                <m>a_7 = 1280</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                Find <m>a_{100}</m> for the sequence <m>a_n = 4n + 15</m> for <m>n \ge 1</m>
+              </statement>
+              <solution>
+                <m>a_{100} = 415</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                Find <m>a_{2500}</m> for the sequence <m>a_n = \frac{n + 2}{n + 1}</m> for <m>n \ge 1</m>
+              </statement>
+              <solution>
+                <m>a_{2500} = \frac{2502}{2501}</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                Find <m>a_{10}</m> for the sequence <m>a_n = 2n^3</m> for <m>n \ge 1</m>
+              </statement>
+              <solution>
+                <m>a_{10} = 2000</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Calculate <m>S_3</m> and <m>S_6</m> for the following series.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>3 + 6 + 9 + \ldots</m>
+              </statement>
+              <solution>
+                <m>S_3 = 18, S_6 = 63</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>1 + 4 + 9 + 16 + \ldots</m>
+              </statement>
+              <solution>
+                <m>S_3 = 14, S_6 = 91</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>5 -10 + 20 - 40 + \ldots</m>
+              </statement>
+              <solution>
+                <m>S_3 = 15, S_6 = -105</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>5 + 3 + 1 + \ldots</m>
+              </statement>
+              <solution>
+                <m>S_3 = 9, S_6 = 0</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Write out each sum in full and then evaluate.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\sum\limits_{n = 3}^7 n </m>
+              </statement>
+              <solution>
+                <m>\sum\limits_{n = 3}^7 n  = 3 + 4 + 5 + 6 + 7 = 25</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\sum\limits_{j = 4}^{10} {{{\left( { - 1} \right)}^j}}</m>
+              </statement>
+              <solution>
+                <m>\sum\limits_{j = 4}^{10} {{{\left( { - 1} \right)}^j}}  = 1 + \left( { - 1} \right) + 1 + \left( { - 1} \right) + 1 + \left( { - 1} \right) + 1 = 1</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\sum\limits_{i = 0}^4 {{2^i}}</m>
+              </statement>
+              <solution>
+                <m>\sum\limits_{i = 0}^4 {{2^i}}  = {2^0} + {2^1} + {2^2} + {2^3} + {2^4} = 1 + 2 + 4 + 8 + 16 = 31</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\sum\limits_{k = 20}^{25} {\left( {3k - 10} \right)}</m>
+              </statement>
+              <solution>
+                <m>\sum\limits_{k = 20}^{25} {3k - 10}  = 50 + 53 + 56 + 59 + 62 + 65 = 345</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Write each series in sigma notation.  (Answers may vary.)
+            </introduction>
+            <exercise>
+              <statement>
+                <m>1 + 8 + 27 + 64 + \ldots + 1000</m>
+              </statement>
+              <solution>
+                <m>\sum\limits_{i = 1}^{10} i^3 </m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \ldots</m>
+              </statement>
+              <solution>
+                <m>\sum\limits_{j = 2}^{}\infty}  \frac{1}{j}</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>2 + 4 + 6 + 8 + \ldots</m>
+              </statement>
+              <solution>
+                <m>\sum\limits_{k = 1}^{\infty} 2k</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>2 + 4 + 6 + 8</m>
+              </statement>
+              <solution>
+                <m>\sum\limits_{k = 1}^4 2k</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Evil alert!  The following questions are just for those wanting a challenge.  This type of question will not be tested.
+            </introduction>
+            <exercise>
+              <statement>
+                (nasty)  Write the sequence <m>1, 4, 9, 16, \ldots</m> using a <em>recursive</em> definition.
+              </statement>
+              <solution>
+                You could either do
+                <md>
+                  <mrow>
+                    a_1 \amp = 1
+                  </mrow>
+                  <mrow>
+                    a_n \amp = \left( \sqrt{a_{n - 1}}  + 1 \right)^2 \text{   for } n \ge 2
+                  </mrow>
+                </md>
+                or another possibility is
+                <md>
+                  <mrow>
+                    a_1 \amp = 1
+                  </mrow>
+                  <mrow>
+                    a_n \amp = a_{n - 1} + 2n - 1 \text{   for } n \ge 2
+                  </mrow>
+                </md>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                (thorny)  Write the sequence <m>1, 2, 6, 24, \ldots</m> using a <em>general</em> formula.
+              </statement>
+              <solution>
+                <m>{a_n} = n!</m> for <m>n \ge 1</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                (tricksy)  Consider the following sequence:
+                <me>
+                  4, 5, 20, 100, 2000
+                </me>
+                <ol label="(a)">
+                  <li>
+                    What's the next term in this sequence?
+                  </li>
+                  <li>
+                    What's the recursive formula for this sequence?
+                  </li>
+                </ol>
+              </statement>
+              <solution>
+                <ol label="(a)">
+                  <li>
+                    The next term is 200 000.
+                  </li>
+                  <li>
+                    <md>
+                      <mrow>
+                        a_1 \amp = 4
+                      </mrow>
+                      <mrow>
+                        a_2 \amp = 5
+                      </mrow>
+                      <mrow>
+                        a_n \amp = a_{n - 1} \times a_{n - 2}
+                      </mrow>
+                    </md>
+                  </li>
+                </ol>
+              </solution>
+            </exercise>
+          </exercisegroup>
+        </exercises>
+        <solutions divisional="solution">
+          <title>
+            Solutions to <xref ref="sec-intro-to-seq-and-ser"/> Exercises
+          </title>
+        </solutions>
       </section>
     </chapter>
   </book>
