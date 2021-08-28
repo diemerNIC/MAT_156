@@ -63,7 +63,9 @@
           <email>wrean@camosun.bc.ca</email>
         </author>
         <credit>
-          <title>Contributor</title>
+          <title>
+            With contributions from, and conversion to PreTeXt by
+          </title>
           <author>
             <personname>
               Jason J. Diemer
@@ -21437,6 +21439,894 @@
         <solutions divisional="solution">
           <title>
             Solutions to <xref ref="sec-intro-to-seq-and-ser"/> Exercises
+          </title>
+        </solutions>
+      </section>
+      <section xml:id="sec-arith-seq-ser">
+        <title>
+          Arithmetic Sequences and Series
+        </title>
+        <subsection xml:id="ssec-arith-seq">
+          <title>
+            Arithmetic Sequences
+          </title>
+          <p>
+            Let's start out with a definition:
+            <definition xml:id="def-arith-seq">
+              An <term>arithmetic sequence</term> is a sequence in which the next term is found by adding a constant (the <em>common difference</em>  <m>\ d</m>) to the previous term.
+            </definition>
+          </p>
+          <p>
+            Here are some examples of arithmetic sequences:
+            <ol label="(a)">
+              <li>
+                <m>7, 11, 15, 19, \ldots </m>
+              </li>
+              <li>
+                <m>11, 4, -3, -10, \ldots -59</m>
+              </li>
+              <li>
+                <m>12, 12.3, 12.6, 12.9, \ldots</m>
+              </li>
+            </ol>
+            The first one has a common difference of 4, the second <m>-7</m>, and the third 0.3.  Note that in each of them, we can find the common difference <m>d</m> by taking <em>any</em> term and subtracting the previous term from it.
+            <example>
+              <statement>
+                For the following sequences, state whether each of them is arithmetic.
+                <ol label="(a)">
+                  <li>
+                    <m>-3, -10, -17, -24, \ldots</m>
+                  </li>
+                  <li>
+                    <m>4, 5, 7, 10, \ldots</m>
+                  </li>
+                  <li>
+                    <m>2, 4, 8, 16, \ldots</m>
+                  </li>
+                  <li>
+                    <m>\frac{1}{2},\frac{1}{3},\frac{1}{4},\frac{1}{5},\ldots \frac{1}{20}</m>
+                  </li>
+                </ol>
+              </statement>
+              <answer>
+                <ol label="(a)">
+                  <li>
+                    Yes, because the common difference <m>d</m> is <m>-7</m>.
+                  </li>
+                  <li>
+                    No, because you're not adding the same number each time.
+                  </li>
+                  <li>
+                    No, because you're multiplying by 2 to get the next term, not adding.
+                  </li>
+                  <li>
+                    No, because the difference between each pair of terms is different.
+                  </li>
+                </ol>
+              </answer>
+            </example>
+          </p>
+          <p>
+            Again, you can define an arithmetic sequence in one of three ways:  by listing the terms, by giving a recursive definition, or by giving a general definition.
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-recurdef-arith-seq">
+          <title>
+            Recursive Definitions for Arithmetic Sequences
+          </title>
+          <p>
+            Let's first look at an example:
+            <example>
+              <statement>
+                Give a recursive definition for the sequence <m>2, 10, 18, 26, \ldots</m>.
+              </statement>
+              <answer>
+                Recall that a recursive definition has two parts:  listing the first term and giving the pattern.  In this case, the pattern is adding <m>d = 8</m> to the previous term to get the next term.  We can start our index anywhere, so let's choose zero for this example.  The recursive definition is therefore
+                <md>
+                  <mrow>
+                    a_0 \amp =2
+                  </mrow>
+                  <mrow>
+                    a_n \amp = a_{n-1}+8 \text{   for }n\ge 1
+                  </mrow>
+                </md>
+              </answer>
+            </example>
+          </p>
+          <p>
+            To generalize, the recursive formula for <em>any</em> arithmetic sequence is
+            <md>
+              <mrow>
+                a_m\amp = \lt\text{insert value here}\gt
+              </mrow>
+              <mrow>
+                a_n\amp = a_{n-1}+d \text{   for }n\ge m+1
+              </mrow>
+            </md>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-genform-arith-seq">
+          <title>
+            General Formulae for Arithmetic Sequences
+          </title>
+          <p>
+            Let's examine the previous example in more detail to see if we can recognize any patterns and come up with a general formula.  Rewriting each term, we get
+            <me>
+              \begin{array}{*{20}{c}}
+              {2,}\amp{10,}\amp{18,}\amp{26,}\amp{\ldots}\\
+              2\amp{2 + 8,}\amp{2 + 8\times 2,}\amp{2 + 8\times 3,}\amp{\ldots}
+              \end{array}
+            </me>
+          </p>
+          <p>
+            So the <m>\uprd{3}</m> term equals the first plus 8 times 2, the <m>\upth{4}</m> term equals the first plus 8 times 3, and the <m>\nth{}</m> term will equal the first plus 8 times <m>(n - 1)</m>.   In other words,
+            <me>
+              \begin{array}{*{20}{c}}
+              {2,}\amp{10,}\amp{18,}\amp{26,}\amp{\ldots}\amp{a_n}\\
+              2\amp{2 + 8,}\amp{2 + 8 \times 2,}\amp{2 + 8 \times 3,}\amp{\ldots}\amp{2+8 \times (n-1)}
+              \end{array}
+            </me>
+            and so we find for this particular sequence, <m>a_n=2+8 \times (n-1)</m>, which simplifies to <m>a_n=8n-6</m>.
+          </p>
+          <p>
+            We can generalize this formula: the <m>\nth{}</m> term will equal the first plus <m>d</m> times <m>(n - m)</m>, so
+            <me>
+              a_n = a_m + \left( n - m \right)d \text{   where } n \ge m
+            </me>
+            for any <em>arithmetic sequence</em>.
+            <example>
+              <statement>
+                Write a general formula for the sequence <m>3, 8, 13, 18, \ldots</m>.
+              </statement>
+              <answer>
+                This sequence is arithmetic with the first term 3 and common difference 5.  Let's use a starting index of zero.
+                <md>
+                  <mrow>
+                    a_n \amp = a_m + \left( n - m \right)d
+                  </mrow>
+                  <mrow>
+                    \amp = {a_0} + \left( {n - 0} \right)d
+                  </mrow>
+                  <mrow>
+                    \amp = 3 + \left( {n} \right)5
+                  </mrow>
+                  <mrow>
+                    \amp = 3 + 5n
+                  </mrow>
+                  <mrow>
+                    \amp = 5n + 3
+                  </mrow>
+                </md>
+                The general formula is then <m>a_n = 5n + 3</m> for <m>n \ge 0</m>.
+              </answer>
+            </example>
+            <example>
+              <statement>
+                What is the <m>\upth{50}</m> term in the sequence in the sequence <m>3, 8, 13, 18, \ldots</m>?
+              </statement>
+              <answer>
+                This is the same sequence from the previous example.  We may then use the  formula we derived, <m>a_n = 5n + 3</m> for <m>n \ge 0</m>.  But we do have to be careful about our index <m>n</m>.  Recalling that the number of terms <m>k</m> is given by
+                <me>
+                  k=n-m+1
+                </me>
+                where we used <m>m = 0</m> as our starting index, then
+                <md>
+                  <mrow>
+                    50 \amp = n-0=1
+                  </mrow>
+                  <mrow>
+                    n\amp = 49
+                  </mrow>
+                </md>
+                and so the <m>\upth{50}</m> term will be <m>a_{49}</m>.
+                <md>
+                  <mrow>
+                    a_n \amp = 5n + 3
+                  </mrow>
+                  <mrow>
+                    a_{49} \amp = 5 \times 49 + 3
+                  </mrow>
+                  <mrow>
+                    \amp = 245 + 3
+                  </mrow>
+                  <mrow>
+                    \amp =248
+                  </mrow>
+                </md>
+                The <m>\upth{50}</m> term is 248.
+              </answer>
+            </example>
+            <example>
+              <statement>
+                What is the common difference in the arithmetic sequence in which the first term is 18 and the twelfth term is <m>-59</m>?
+              </statement>
+              <answer>
+                The easiest way to count these terms correctly is to have a starting index of one, and then the first term is <m>a_1</m> and the twelfth term is <m>a_{12}</m>.
+                <md>
+                  <mrow>
+                    a_n \amp = a_m + \left( n - m \right)d
+                  </mrow>
+                  <mrow>
+                    a_{12} \amp = a_1 + \left( 12 - 1 \right)d
+                  </mrow>
+                  <mrow>
+                    -59 \amp = 18 + \left( 12 - 1 \right)d
+                  </mrow>
+                  <mrow>
+                    -77 \amp = 11d
+                  </mrow>
+                  <mrow>
+                    d\amp = -7
+                  </mrow>
+                </md>
+                The common difference is <m>-7</m>.
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Which term has a value of 404 in the sequence <m>-37, -28, -19, \ldots</m>?
+              </statement>
+              <answer>
+                Let's use a starting index of one.  So <m>a_1</m> is <m>-37</m> and <m>d</m> is <m>+9</m>.  Then we want to find the value of <m>n</m> for which <m>a_n</m> equals 404.
+                <md>
+                  <mrow>
+                    a_n \amp = a_m + \left( n - m \right)d
+                  </mrow>
+                  <mrow>
+                    \amp = a_1 + \left(n - 1 \right)d
+                  </mrow>
+                  <mrow>
+                    404 \amp =  - 37 + \left( n - 1 \right)9
+                  </mrow>
+                  <mrow>
+                    441 \amp = 9\left( n - 1 \right)
+                  </mrow>
+                  <mrow>
+                    49 \amp = n - 1
+                  </mrow>
+                  <mrow>
+                    n \amp = 50
+                  </mrow>
+                </md>
+                The <em>fiftieth</em> term is 404.
+              </answer>
+            </example>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-arith-ser">
+          <title>
+            Arithmetic Series
+          </title>
+          <p>
+            Recall that <m>S_k</m> is the sum of the first <m>k</m> terms of a series.  Let's look at a couple of examples of arithmetic series to see if we can identify any patterns.
+          </p>
+          <p>
+            Suppose we wish to take some partial sums of the series <m>2 + 10 + 18 + 26 + \ldots</m>.  Let's first calculate <m>S_6</m>.  We could just find the first six terms and add them up, but notice the following:
+            <me>
+              S_6 = 2 + 10 + 18 + 26 + 34 + 42
+            </me>
+            The sum of the first and last numbers is 44.  The sum of the second and second-to-last is also 44.  So is the sum of the third and third-last.  So when you take the terms in pairs, each pair has the same sum, <m>(a_m + a_n)</m>, and there are <m>k/2</m> pairs in total.  Then
+            <me>
+              S_k = \frac{k}{2}\left( a_m + a_n \right)
+            </me>
+            What if, however, there are an odd number of terms?  Let's also calculate <m>S_7</m>:
+            <me>
+              S_7 = 2 + 10 + 18 + 26 + 34 + 42 + 50
+            </me>
+            The sum of the first and last is 52, as is the sum of the each <q>inner pair</q>.  Notice that the middle, unpaired value, is <m>\frac{1}{2}</m> of 52.  So in a sense, the middle term is <m>\frac{1}{2}</m>  of a pair, for a total of <m>3\frac{1}{2}</m>  pairs.  But that's just <m>7/2</m>, which is our <m>k/2</m> in the original formula!  So we're still good.  The relationship
+            <me>
+              S_k = \frac{k}{2}\left( a_m + a_n \right)
+            </me>
+            still works, for both odd and even values of <m>k</m>.
+          </p>
+          <p>
+            Generalizing, we find that
+            <me>
+              S_k = \frac{k}{2}\left(a_m + a_n \right)
+            </me>
+            where <m>k</m> can be even or odd and
+            <me>
+              k = n - m + 1 \text{   for } n \ge m
+            </me>
+            <example>
+              <statement>
+                Find the sum of the first forty terms of the series <m>2 + 10 + 18 + 26 + \ldots</m>.
+              </statement>
+              <answer>
+                This is just the same sequence as before, with first term <m>a_m = 2</m> and common difference <m>d = 8</m>.  In order to use our previous formula, however, we need to calculate the last term <m>a_n</m>.  If we start with an index of one, then the fortieth term will be <m>a_{40}</m>, and we will need that value to calculate <m>S_{40}</m>.
+                <md>
+                  <mrow>
+                    a_n \amp = a_m + \left( n - m \right)d
+                  </mrow>
+                  <mrow>
+                    \amp = a_1 + \left( n - 1 \right)d
+                  </mrow>
+                  <mrow>
+                    a_{40} \amp = 2 + 39 \times 8
+                  </mrow>
+                  <mrow>
+                     \amp = 314
+                   </mrow>
+                 </md>
+                 So,
+                 <md>
+                   <mrow>
+                     S_k \amp = \frac{k}{2}\left( a_m + a_n \right)
+                   </mrow>
+                   <mrow>
+                     S_{40} \amp = \frac{40}{2}\left( 2 + 314 \right)
+                   </mrow>
+                   <mrow>
+                     \amp = 20 \times 316
+                   </mrow>
+                   <mrow>
+                     \amp = 6320
+                   </mrow>
+                 </md>
+                 The sum of the first forty terms is 6320.  (Much easier than writing out the first forty terms and adding them up!)
+              </answer>
+            </example>
+          </p>
+          <p>
+            In the previous example, we used the formula for <m>a_n</m> to calculate the last term and put its value into the formula for <m>S_k</m>.  We could do that in a more general way:
+            <md>
+              <mrow>
+                S_k \amp = \frac{k}{2}\left(a_m + a_n \right)
+              </mrow>
+              <mrow>
+                \amp = \frac{k}{2}\left[ a_m + \left(a_m + \left(n - m \right)d \right) \right]
+              </mrow>
+              <mrow>
+                \amp = \frac{k}{2}\left[ 2a_m + \left( n - m \right)d \right]
+              </mrow>
+            </md>
+            The last expression, which gives <m>S_k</m> as a function of the first term, the number of terms, and the common difference, can also be used to evaluate series.
+            <example>
+              <statement>
+                Find the sum of the first one hundred terms of the sequence <m>5, -6, -17, -26, \ldots</m>.
+              </statement>
+              <answer>
+                This sum will just be <m>5 + -6 + -17 +  -26 + \ldots</m>, with <m>a_m = 5</m>, <m>d = -11</m>, and <m>k = 100</m>.  If we start our index at one, then
+                <md>
+                  <mrow>
+                    k \amp = n - m + 1
+                  </mrow>
+                  <mrow>
+                    100 \amp = n - 1 + 1
+                  </mrow>
+                  <mrow>
+                    n\amp = 100
+                  </mrow>
+                </md>
+                and we can substitute this into the equation for <m>S_k</m>:
+                <md>
+                  <mrow>
+                    S_k \amp = \frac{k}{2}\left[ 2a_m + \left( n - m \right)d \right]
+                  </mrow>
+                  <mrow>
+                    S_{100} \amp = \frac{100}{2}\left[ 2 \times 5 + 99 \times \left(  - 11 \right) \right]
+                  </mrow>
+                  <mrow>
+                    \amp =  - 53950
+                  </mrow>
+                </md>
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Calculate <m>\sum\limits_{j = 3}^{18} {5n + 10}</m>.
+              </statement>
+              <answer>
+                <p>
+                  The first term will be for <m>j=3</m> and will equal <m>5(3)+10=25</m>.  Next is <m>j=4</m> and will equal <m>5(4)+10=30</m>, <m>j=5</m> equaling <m>5(5)=35</m>, and so on.   The last term will be for <m>j=18</m> and will equal <m>5(18)+10=100</m>.
+                </p>
+                <p>
+                  In other words, our series is <m>25+30+35+\ldots 100</m>.  Is it arithmetic?  Yes, with common difference <m>d = 5</m>.
+                </p>
+                <p>
+                  What else do we need for our calculation?  The number of terms is
+                  <md>
+                    <mrow>
+                      k \amp = n-m+1
+                    </mrow>
+                    <mrow>
+                      k \amp = 18-3+1
+                    </mrow>
+                    <mrow>
+                      k\amp = 16
+                    </mrow>
+                  </md>
+                  Then
+                  <md>
+                    <mrow>
+                      S_n \amp = \frac{n}{2}\left(a_m + a_n \right)
+                    </mrow>
+                    <mrow>
+                      S_{16} \amp = \frac{16}{2}\left(25 + 100 \right) = 1000
+                    </mrow>
+                  </md>
+                </p>
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Pat the math instructor asks her students to do five word problems the first week, six the second week, seven the third week, and so on, increasing the number of word problems each week by one.
+                <ol label="(a)">
+                  <li>
+                    How many word problems will diligent students be doing in the last week of classes (the <m>\nth{11}</m> week)?
+                  </li>
+                  <li>
+                    How many word problems will diligent students have completed during the course of the term (11 weeks)?
+                  </li>
+                </ol>
+              </statement>
+              <answer>
+                <ol label="(a)">
+                  <li>
+                    The number of word problems is a sequence:  <m>5, 6, 7, \ldots</m> .  In fact, it's an arithmetic sequence with <m>a_m = 5</m> and <m>d = 1</m>.  If we start our counting from one, then in the eleventh week,
+                    <md>
+                      <mrow>
+                        a_n \amp = a_m + \left(n - m \right)d
+                      </mrow>
+                      <mrow>
+                        a_n \amp = a_1+\left(n-1\right)d
+                      </mrow>
+                      <mrow>
+                        a_{11} \amp = 5+10\times 1
+                      </mrow>
+                      <mrow>
+                        \amp = 15
+                      </mrow>
+                    </md>
+                    Diligent students will solve 15 word problems in the last week of classes.
+                  </li>
+                  <li>
+                    The <em>total</em> number of word problems solved is
+                    <md>
+                      <mrow>
+                        S_k \amp = \frac{k}{2}\left(a_m + a_n \right)
+                      </mrow>
+                      <mrow>
+                        S_{11} \amp = \frac{11}{2}\left(5 + 15\right)
+                      </mrow>
+                      <mrow>
+                        \amp = 110
+                      </mrow>
+                    </md>
+                  </li>
+                </ol>
+                Diligent students will have solved 110 word problems in total.
+              </answer>
+            </example>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-summary-arith-ser">
+          <title>
+            Summary
+          </title>
+          <p>
+            For an <em>arithmetic sequence</em>, the nth term is given by
+            <me>
+              a_n = a_m + \left(n - m \right)d \text{   for } n \ge m
+            </me>
+            For an <em>arithmetic series</em>, the sum of the first <m>k</m> terms (<m>\kth{}</m> partial sum) is
+            <me>
+              S_k = \frac{k}{2}\left(a_m + a_n \right)
+            </me>
+            or
+            <me>
+              S_k = \frac{k}{2}\left[ 2a_m + \left(n - m \right)d \right]
+            </me>
+            where <m>k=n-m+1</m> and <m>n\ge m</m>.
+          </p>
+        </subsection>
+        <exercises>
+          <exercisegroup>
+            <introduction>
+              State whether the following sequences are arithmetic or not.  If they are, state the first term and common difference.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>8, 9, 11, 13, 16, \ldots</m>
+              </statement>
+              <solution>
+                not arithmetic
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>-3, -10, -17, -24, \ldots</m>
+              </statement>
+              <solution>
+                yes, <m>d=-7</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>3, 6, 12, 24, \ldots</m>
+              </statement>
+              <solution>
+                no
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>1, 2, 6, 24, \ldots</m>
+              </statement>
+              <solution>
+                no
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>81, 72, 63, 54, \ldots</m>
+              </statement>
+              <solution>
+                yes, <m>d=-9</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>1,\frac{5}{4},\frac{3}{2},\frac{7}{4},2,\frac{9}{4},\ldots</m>
+              </statement>
+              <solution>
+                yes, <m>d=\frac{1}{4}</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Give both the general formula  and the recursive formula for the <m>\nth{}</m> term <m>a_n</m> of the following arithmetic sequences.  Assume that the first term of the sequence is <m>a_1</m>.  For the general formula, be sure to simplify your answer.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>1, 3, 5, 7, \ldots</m>
+              </statement>
+              <solution>
+                <m>{a_n} = 2n - 1</m> and
+                <m>\left\{ \begin{array}{l}
+                  a_1 = 1\\
+                  a_n = a_{n - 1} + 2
+                  \end{array} \right.</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>5, -6, -17, -28, \ldots</m>
+              </statement>
+              <solution>
+                <m>a_n = 16 - 11n</m>	and
+                <m>\left\{ \begin{array}{l}
+                  a_1 = 5\\
+                  a_n = a_{n - 1} - 11
+                  \end{array} \right.$</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>-40, -37, -34, -31, \ldots</m>
+              </statement>
+              <solution>
+                <m>a_n = 3n - 43</m>	and
+                <m>\left\{ \begin{array}{l}
+                a_1 =  - 40\\
+                a_n = a_{n - 1} + 3
+                \end{array} \right.</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>24, 28, 32, 36, \ldots</m>
+              </statement>
+              <solution>
+                <m>a_n = 4n + 20</m>	and
+                <m>\left\{ \begin{array}{l}
+                a_1 = 24\\
+                a_n = a_{n - 1} + 4
+                \end{array} \right.</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              For the following arithmetic sequences, calculate <m>a_{50}</m> and <m>a_{261}</m>, assuming that the first term is <m>a_1</m>.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>18, 16, 14, 12, \ldots</m>
+              </statement>
+              <solution>
+                <m>{a_n} = 20 - 2n</m>, so <m>a_{50} = -80</m> and <m>a_{261} = -502</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>12, 12.3, 12.6, 12.9, \ldots</m>
+              </statement>
+              <solution>
+                <m>a_n = 11.7 + 0.3n</m>, so <m>a_{50} = 26.7</m> and <m>a_{261} = 90</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              State whether the following recursively defined sequences are arithmetic or not.  (Is there an easy way to tell?)
+            </introduction>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_0 \amp = 5
+                  </mrow>
+                  <mrow>
+                    a_n\amp = a_{n-1}+4 \text{   for }n\ge 1
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+                first four terms are <m>5, 9, 13, 17</m>, so arithmetic with <m>d = 4</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_1\amp = 12
+                  </mrow>
+                  <mrow>
+                    a_n\amp = 2a_{n-1}\text{   for }n\ge 2
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+                first four terms are <m>12, 24, 48, 96</m>, so not arithmetic
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_1\amp = 75
+                  </mrow>
+                  <mrow>
+                    a_n\amp = a_{n-1}-20\text{   for }n\ge 2
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+                first four terms are <m>75, 55, 35, 15</m>, so arithmetic with <m>d = -20</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_0\amp = 6
+                  </mrow>
+                  <mrow>
+                    a_n\amp = a_{n-1}+1\text{   for }n\ge 1
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+                first four terms are <m>6, 7, 8, 9</m>, so arithmetic with <m>d = 1</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_0\amp = 7
+                  </mrow>
+                  <mrow>
+                    a_n\amp = 2-a_{n-1}\text{   for }n\ge 1
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+                first four terms are <m>7, -5, 7, -5</m>, so not arithmetic
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_1 \amp = 3
+                  </mrow>
+                  <mrow>
+                    a_n\amp = \left(a_{n-1}\right)^2\text{   for }n\ge 2
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+                first four terms are <m>3, 9, 81, 6561</m>, so not arithmetic
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercise>
+            <statement>
+              For the following sequence, calculate the <m>\upst{201}</m> term: <m>5, 15, 25, 35, \ldots</m>
+            </statement>
+            <solution>
+              <m>a_n = 10n - 5</m>, so <m>a_{201} = 2005</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              For the following sequence, which term equals 137?     <m>\ 1, 9, 17, 25, \ldots</m>
+            </statement>
+            <solution>
+              <m>a_n = 8n - 7</m>, so <m>n = 18</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              What is the common difference for the arithmetic sequence with <m>a_1 = 200</m> and <m>a_{12} =  - 240</m>
+            </statement>
+            <solution>
+              <m>d=-40</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Calculate the first term for the arithmetic sequence with common difference 7 whose sixteenth term is 102.
+            </statement>
+            <solution>
+              <m>a_1=-3</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Calculate the first four terms of the arithmetic sequence in which the sixth term is 17 and the sixtieth term is 179.
+            </statement>
+            <solution>
+              <m>a_1=2</m> and <m>d=3</m>, so the first four terms are <m>2, 5, 8, 11</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Calculate the first four terms of the arithmetic sequence in which the one hundredth term is 403 and the sixty-fourth term is 259.
+            </statement>
+            <solution>
+              <m>a_1=7</m> and <m>d=4</m>, so the first four terms are <m>7, 11, 15, 19</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Give a general formula for the arithmetic sequence in which the twentieth term is <m>-107</m> and the thirty-fifth term is <m>-152</m>.
+            </statement>
+            <solution>
+              <m>a_n =  - 3n - 47</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Give a recursive formula for the arithmetic sequence in which the eleventh term is 44 and the fifty-second term is 290.
+            </statement>
+            <solution>
+              <md>
+                <mrow>
+                  a_1\amp = -16
+                </mrow>
+                <mrow>
+                  a_n\amp = a_{n-1}+6
+                </mrow>
+              </md>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Calculate <m>S_{20}</m> for the series <m>100 + 97 + 94 + \ldots</m>
+            </statement>
+            <solution>
+              <m>S_{20} = 1430</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Evaluate the series <m>12 + 17 + 22 + \ldots 82</m>.
+            </statement>
+            <solution>
+              <m>S_{15} = 705</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Evaluate the series <m>144 + 138 + 132 + \ldots 78</m>.
+            </statement>
+            <solution>
+              <m>S_{12} = 1332</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Calculate <m>S_{100}</m> for the series <m>-20  - 16  - 12 - \ldots</m>
+            </statement>
+            <solution>
+              <m>S_{100} = 17800</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Calculate the sum of the odd numbers between 100 and 500.
+            </statement>
+            <solution>
+              <m>S_{200} = 60000</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Find the sum of the natural numbers from 50 to 125, inclusive.
+            </statement>
+            <solution>
+              <m>S_{76} = 6650</m>
+            </solution>
+          </exercise>
+          <exercisegroup>
+            <introduction>
+              Calculate the following sums.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\sum\limits_{k = 0}^{53} {(5k - 1)} </m>
+              </statement>
+              <solution>
+                <m>S_{53} = 7101</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\sum\limits_{j = 10}^{92} {6j} </m>
+              </statement>
+              <solution>
+                <m>S_{83} = 25398</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\sum\limits_{i = 30}^{140} {(2i + 7)} </m>
+              </statement>
+              <solution>
+                <m>S_{111} = 19647</m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\sum\limits_{k = 3}^{502} {(17 - 3k)}</m>
+              </statement>
+              <solution>
+                <m>S_{500} = -370,250</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercise>
+            <statement>
+              In a supermarket display, there are 37 cans in the bottom layer, 35 in the next layer up, 33 in the next, and so on.  How many layers are there if there are 7 cans in the top row?
+            </statement>
+            <solution>
+              <m>n=16</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              In the previous problem, how many cans are there altogether?
+            </statement>
+            <solution>
+              <m>S_{16} = 352</m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              In an old-fashioned theatre, there are 25 seats in the first row, 26 in the next, 27 in the one after, and so on.  If there are 20 rows in total, how many seats are there altogether?
+            </statement>
+            <solution>
+              <m>S_{20} = 690</m>
+            </solution>
+          </exercise>
+        </exercises>
+        <solutions divisional="solution">
+          <title>
+            Solutions to <xref ref="sec-arith-seq-ser"/> Exercises
           </title>
         </solutions>
       </section>
