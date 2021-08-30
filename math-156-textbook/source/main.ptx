@@ -22846,6 +22846,349 @@
             provided that  <m>-1 \lt r \lt 1</m> and <m>a_m</m> is the first term.
           </p>
         </subsection>
+        <exercises>
+          <exercisegroup>
+            <introduction>
+              State whether the following sequences are geometric or not.  If they are, state the first term and common ratio.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>8, 9, 11, 13, 16, \ldots</m>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>-3, -10, -17, -24, \ldots</m>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>3, 6, 12, 24, \ldots</m>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>1, 2, 6, 24, \ldots</m>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>81, 72, 63, 54, \ldots</m>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>72, 48, 32,\ldots</m>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Give both the general formula and the recursive formula for the <m>\nth{}</m> term <m>a_n</m> of the following sequences.  Use the convention <m>n \ge 1</m>.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>1, 3, 9, 27, \ldots</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>64, 16, 4, 1, \ldots</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>3, -6, 12, -24, \ldots</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m></m>
+              </statement>
+              <solution>
+                <m>24, 2.4, 0.24, \ldots</m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              For the following sequences, calculate <m>a_{50}</m> and <m>a_{261}</m>, assuming that the first term is <m>a_1</m>.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>12, 18, 27,\ldots</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>12, 8, \frac{{16}}{3}, \ldots</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              State whether the following recursively defined sequences are geometric or not.  (Is there an easy way to tell?)
+            </introduction>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_1\amp = 5
+                  </mrow>
+                  <mrow>
+                    a_n \amp = a_{n - 1} + 4   \text{   for } n \ge 2
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_0 \amp = 12
+                  </mrow>
+                  <mrow>
+                    a_n \amp = 2a_{n-1} \text{   for } n\ge 1
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_0\amp = 75
+                  </mrow>
+                  <mrow>
+                    a_n\amp = 10a_{n-1} \text{   for } n\ge 1
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_1 \amp = 7
+                  </mrow>
+                  <mrow>
+                    a_n\amp = 2-a_{n-1} \text{   for } n\ge 2
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_1 \amp = 8
+                  </mrow>
+                  <mrow>
+                    a_n \amp = -a_{n-1} \text{   for } n\ge 2
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <md>
+                  <mrow>
+                    a_0 \amp = 3
+                  </mrow>
+                  <mrow>
+                    a_n\amp = (a_{n-1})^2 \text{   for } n\ge 1
+                  </mrow>
+                </md>
+              </statement>
+              <solution>
+
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercise>
+            <statement>
+              For the following sequence, calculate the <m>\upst{201}</m> term:  <m>5, 15, 45, \ldots</m>
+            </statement>
+            <solution>
+              <m></m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              For the following sequence, calculate the <m>\upth{20}</m> term:       <m>7, -14, 28, \ldots</m>
+            </statement>
+            <solution>
+              <m></m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Calculate <m>S_{20}</m> for the series <m>100 + 50 + 25 + \ldots</m>
+            </statement>
+            <solution>
+              <m></m>
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              Calculate <m>S_{20}</m> for the series <m>100 + 200 + 400 + \ldots</m>
+            </statement>
+            <solution>
+              <m></m>
+            </solution>
+          </exercise>
+          <exercisegroup>
+            <introduction>
+              Calculate the sum, if it exists, for the following series.
+            </introduction>
+            <exercise>
+              <statement>
+                <m> - 6 + 4 - \frac{8}{3} + \ldots</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>100 + 50 + 25 + \ldots</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>100 + 200 + 400 + \ldots</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>12 + 3 + \frac{3}{4}+ \ldots</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercisegroup>
+            <introduction>
+              Calculate the following sums, if they exist.
+            </introduction>
+            <exercise>
+              <statement>
+                <m>\sum\limits_{k = 0}^{10} {{2^{k + 2}}}</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>{\sum\limits_{j = 1}^\infty  {15\left( {\frac{3}{5}} \right)} ^j}</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\sum\limits_{i = 2}^\infty  {25{{\left( {0.1} \right)}^j}}</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+            <exercise>
+              <statement>
+                <m>\sum\limits_{i = 0}^\infty  {4{{\left( { - 3} \right)}^i}}</m>
+              </statement>
+              <solution>
+                <m></m>
+              </solution>
+            </exercise>
+          </exercisegroup>
+          <exercise>
+            <statement>
+              If the number of vampires in Transylvania doubles every month, then how many vampires will be in Transylvania in 3 years, starting from one individual?  Comment on your result if the total population of Transylvania is 2 million people.
+            </statement>
+            <solution>
+
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              As I was going to St. Ives, I met a man with seven wives.  Each wife had seven sacks.  Each sack had seven cats.  Each cat had seven kits.  Kits, cats, sacks, wives: does this form a geometric sequence?
+            </statement>
+            <solution>
+
+            </solution>
+          </exercise>
+          <exercise>
+            <statement>
+              The paper used in the photocopier by Pat's office is said to be 0.097~mm thick.  If it is folded over repeatedly, doubling its thickness each time, how thick will the paper be if it's folded 7 times?  Bonus:  why, then, were the Mythbusters having so many problems trying to fold the paper this many times? 
+            </statement>
+            <solution>
+
+            </solution>
+          </exercise>
+        </exercises>
+        <solutions divisional="solution">
+          <title>
+            Solutions to <xref ref="sec-geom-seq-ser"/> Exercises
+          </title>
+        </solutions>
       </section>
     </chapter>
   </book>
