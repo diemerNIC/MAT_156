@@ -22405,6 +22405,446 @@
               </answer>
             </example>
           </p>
+          <p>
+            Again, you can define a geometric sequence in one of three ways:  by listing the terms, by giving a recursive definition, or by giving a general definition.
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-recdef-geomseq">
+          <title>
+            Recursive Definitions for Geometric Sequences
+          </title>
+          <p>
+            Let's look at an example.
+            <example>
+              <statement>
+                Give a recursive definition for the sequence <m>2, 10, 50, 250, \ldots</m>
+              </statement>
+              <answer>
+                Recall that a recursive definition has two parts:  listing the first term and giving the pattern.  In this case, the pattern is multiplying the previous term by <m>r = 5</m>  to get the next term.  Let's use 0 as our starting index.  The recursive definition is therefore
+                <md>
+                  <mrow>
+                    a_0 \amp = 2
+                  </mrow>
+                  <mrow>
+                    a_n\amp = 5a_{n - 1} \text{   for } n \ge 1
+                  </mrow>
+                </md>
+              </answer>
+            </example>
+          </p>
+          <p>
+            Generally, the recursive definition for <em>any</em> geometric sequence is
+            <md>
+              <mrow>
+                a_m \amp = \lt\text{ insert value here }\gt
+              </mrow>
+              <mrow>
+                a_n \amp = a_{n-1}\times r \text{   for }n\ge m+1
+              </mrow>
+            </md>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-genform-gemseq">
+          <title>
+            General Formulae for Geometric Sequences
+          </title>
+          <p>
+            Let's examine the previous example in more detail to see if we can recognize any patterns and come up with a general formula.  Rewriting each term, we get
+            <me>
+              \begin{array}{*{20}{c}}
+              2,\amp 10,\amp 50,\amp 250,\amp \ldots\\
+              2,\amp 2 \times 5,\amp 2 \times {5^2},\amp 2 \times {5^3},\amp \ldots\\
+              \end{array}
+            </me>
+            So the <m>\uprd{3}</m> term equals the first times 5 squared, the <m>\upth{4}</m> term equals the first times 5 cubed, and the <m>\nth{}</m> term will equal the first times 5 raised to the <m>(n - 1)</m> power.  In general, for sequences with first term <m>a_m</m>, the <m>nth{}</m> term equals the first term times <m>r</m> raised to the <m>(n - m)</m> power, namely
+            <me>
+              a_n=a_m r^{n-m}
+            </me>
+            for all <em> geometric</em> sequences.
+            <example>
+              <statement>
+                Write a general formula for the sequence <m>3, 6, 12, \ldots</m>
+              </statement>
+              <answer>
+                This sequence is geometric with the first term 3 and common ratio 2.  If we choose <m>n = 1</m> for our first term, then
+                <md>
+                  <mrow>
+                    a_n \amp = a_m r^{n-m}
+                  </mrow>
+                  <mrow>
+                    \amp = a_1 r^{n-1}
+                  </mrow>
+                  <mrow>
+                    \amp = 3\times\left(2^{n-1}\right)
+                  </mrow>
+                </md>
+                The general formula is then <m> a_3\times 2^{n-1}</m> for <m>n\ge 1</m>.
+              </answer>
+            </example>
+            <example>
+              <statement>
+                What is the <m>\upth{20}</m> term in the sequence in the sequence <m>3, 6, 12, \ldots</m>?
+              </statement>
+              <answer>
+                This is the same sequence from the previous example.  We may then use the formula we derived above with <m>n = 20</m>.
+                <md>
+                  <mrow>
+                    a_n\amp = a_m r^{n-m}
+                  </mrow>
+                  <mrow>
+                    \amp = a_1 r^{n-1}
+                  </mrow>
+                  <mrow>
+                    a_{20}\amp = 3\times 2^{20-1}
+                  </mrow>
+                  <mrow>
+                    \amp = 3\times 2^{19}
+                  </mrow>
+                  <mrow>
+                    a_{20}=1,572,864
+                  </mrow>
+                </md>
+                The <m>\upth{20}</m> term is 1,572,864, which provides a nice example for how fast geometric sequences can grow, even for small values of <m>r</m>.
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Write a general formula for the sequence <m>8, 12, 18, 27, \ldots</m>  What is the fifteenth term in this sequence?  The fiftieth?
+              </statement>
+              <answer>
+                If we start our counting at <m>n=1</m>, then the fifteenth term is <m>a_{15}</m> and the fiftieth term is <m>a_{50}</m>.
+                <md>
+                  <mrow>
+                    a_n\amp = a_m r^{n-m}
+                  </mrow>
+                  <mrow>
+                    \amp = a_1 r^{n-1}
+                  </mrow>
+                  <mrow>
+                    a_n \amp = 8\left(\frac{3}{2}\right)^{n-1}
+                  </mrow>
+                  <mrow>
+                    a_{15}\amp = 8\left(\frac{3}{2}\right)^{14}\approx 2335.43
+                  </mrow>
+                  <mrow>
+                    a_{50}\amp = 8\left(\frac{3}{2}\right)^{50}\approx\3.40065\times 10^9
+                  </mrow>
+                </md>
+                So the general formula is <m>a_n = 8\left( \frac{3}{2} \right)^{n - 1}</m> for <m>n \ge 1</m> and the fifteenth and fiftieth terms are approximately 2335.43 and <m>3.4 \times 10^9</m>, respectively.
+              </answer>
+            </example>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-geom-ser">
+          <title>
+            Geometric Series
+          </title>
+          <p>
+            Recall that <m>S_k</m> is the sum of the first <m>k</m> terms of a series.  Let's look at how a formula for <m>S_k</m> is derived, using a series that starts with <m>n=1</m>.
+            <md>
+              <mrow>
+                S_k \amp = \amp{a_1} \amp+ \amp{a_2} \amp+ \amp{a_3} \amp+ \amp{a_4} \amp+ \amp\ldots \amp+ \amp{a_{n - 2}} \amp+ \amp{a_{n - 1}} \amp+ \amp{a_k}
+              </mrow>
+              <mrow>
+                S_k \amp = \amp{a_1} \amp+ \amp{a_1}r \amp+ \amp{a_1}{r^2} \amp+ \amp{a_1}{r^3} \amp+ \amp\ldots \amp+ \amp{a_1}{r^{k - 3}} \amp+ \amp{a_1}{r^{k - 2}} \amp+ \amp{a_1}{r^{k - 1}}
+              </mrow>
+            </md>
+            Let's take that last expression for <m>S_k</m> and multiply it by <m>-r</m> to get
+            <me>
+               - r{S_k} =  - {a_1}r - {a_1}{r^2} - {a_1}{r^3} - {a_1}{r^4} - ... - {a_1}{r^{k - 2}} - {a_1}{r^{k - 1}} - {a_1}{r^k}
+            </me>
+            Then if we add the rows for <m>S_k</m> and <m>-rS_k</m>, we get
+            <md>
+              <mrow>
+                {S_k} \amp= \amp {a_1} \amp+ {a_1}r \amp+ {a_1}{r^2} \amp+ {a_1}{r^3} \amp+ \ldots \amp+ {a_1}{r^{k - 3}} \amp+ {a_1}{r^{k - 2}} \amp+ {a_1}{r^{k - 1}}
+              </mrow>
+              <mrow>
+                 - r{S_k} \amp=\amp\amp  - {a_1}r \amp- {a_1}{r^2} \amp- {a_1}{r^3} \amp- {a_1}{r^4} \amp- \ldots \amp- {a_1}{r^{k - 2}} \amp- {a_1}{r^{k - 1}} \amp- {a_1}{r^k}
+               </mrow>
+               <mrow>
+                 \hline
+               </mrow>
+               <mrow>
+                 {S_k} - r{S_k} \amp=\amp {a_1} \amp\amp\amp\amp\amp\amp\amp\amp- {a_1}{r^k}
+               </mrow>
+             </md>
+             since all of the terms in between these two (<m>a_1</m> and <m>a_1r^k</m>) combine pair-wise to zero by subtraction.  Then
+             <md>
+               <mrow>
+                 {S_k} - r{S_k}\amp = {a_1}\left( {1 - {r^k}} \right)
+               </mrow>
+               <mrow>
+                 {S_k}\left( {1 - r} \right) \amp = {a_1}\left( {1 - {r^k}} \right)
+               </mrow>
+             </md>
+             and so
+             <me>
+               {S_k} = \frac{{{a_1}\left( {1 - {r^k}} \right)}}{{\left( {1 - r} \right)}}
+             </me>
+             To generalize, the formula for the sum of the first <m>n</m> terms for <em>any geometric series</em>  that starts with first term <m>a_m</m> is
+             <me>
+               {S_k} = \frac{{{a_m}\left( {1 - {r^k}} \right)}}{{\left( {1 - r} \right)}}
+             </me>
+             <example>
+               <statement>
+                 Find the sum of the first 20 terms of the series <m>3 + 6 + 12 + \ldots</m>
+               </statement>
+               <answer>
+                 This is a geometric series with <m>a_m = 3</m> and <m>r = 2</m>.  We want to find <m>S_{20}</m>.
+                 <md>
+                   <mrow>
+                     {S_k} \amp = \frac{{{a_m}\left( {1 - {r^k}} \right)}}{{\left( {1 - r} \right)}}
+                   </mrow>
+                   <mrow>
+                     {S_{20}} \amp = \frac{{3\left( {1 - {2^{20}}} \right)}}{{\left( {1 - 2} \right)}} = 3,145,725
+                   </mrow>
+                 </md>
+                 The sum of the first 20 terms is 3,145,725.
+               </answer>
+             </example>
+             <example>
+               <statement>
+                 Find the sum of the first forty terms of the series <m>8 - 12 + 18 - 27 \ldots</m>.
+               </statement>
+               <answer>
+                 This is a geometric series with <m>a_m = 8</m> and <m>r = -\frac{3}{2}</m>.  We want to find <m>S_{40}</m>.
+                 <md>
+                   <mrow>
+                     {S_k} \amp = \frac{{{a_m}\left( {1 - {r^k}} \right)}}{{\left( {1 - r} \right)}}
+                   </mrow>
+                   <mrow>
+                     {S_{20}} \amp = \frac{{8\left( {1 - {{\left( { - 1.5} \right)}^{40}}} \right)}}{{\left( {1 - \left( { - 1.5} \right)} \right)}} =  - 3.53835 \times {10^7}
+                   </mrow>
+                 </md>
+                 The sum of the first forty terms is approximately <m>-3.54 \times{} 10^7</m>.
+               </answer>
+             </example>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-sum-geom-ser">
+          <title>
+            Sum of an Infinite Geometric Series
+          </title>
+          <p>
+            Let's take a look at the infinite series <m>\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{{16}} + \ldots</m>
+            What happens when we try to evaluate this sum using the <m>S_k</m> formula?  We can put <m>a_m = \frac{1}{2}</m>, <m>r = \frac{1}{2}</m>, but can we put <m>n = \infty</m> into the formula?  It is important to note that <m>\infty</m> is <em>not a number</em>.  Instead, it is a symbol that represents the characteristic of being unbounded, or <q>going on forever</q>.
+          </p>
+          <p>
+            Let's take a closer look at the behaviour of <m>(\frac{1}{2})^n</m> for large values of <m>n</m>.  As <m>n</m> gets larger, the fraction <m>{\left( {\frac{1}{2}} \right)^n} = \frac{1}{{{2^n}}}</m> gets ever smaller.  In fact, as <m>n</m> grows without bound (sometimes written <m>n\to\infty</m>), <m>(\frac{1}{2})^n </m> will approach zero.
+          </p>
+          <p>
+            This is true for any <m>r</m> provided that <m>|r| \lt 1</m>.  (If you're not familiar with the absolute value bars, an equivalent expression is that <m>-1 \lt r \lt 1</m>.)
+          </p>
+          <p>
+            Recalling that
+            <me>
+              {S_k} = \frac{{{a_m}\left( {1 - {r^k}} \right)}}{{\left( {1 - r} \right)}}
+            </me>
+            and letting the <m>r^n</m> term go to zero, then
+            <me>
+              {S_\infty } = \frac{{{a_m}}}{{1 - r}} \text{ for } -1 \lt r \lt 1
+            </me>
+            for any <em>infinite geometric series</em> with <m>a_m</m> the first term, provided that <m>r</m> meets the restriction above.
+          </p>
+          <p>
+            Let's now revisit the series that started this discussion and evaluate it in the following example.
+            <example>
+              <statement>
+                Evaluate <m>\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{{16}} +\ldots</m>
+              </statement>
+              <answer>
+                This series is geometric with <m>a_m = \frac{1}{2}</m> and <m>r = \frac{1}{2}</m>.  Then
+                <me>
+                  {S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{1/2}}{{1 - 1/2}} = \frac{{1/2}}{{1/2}} = 1
+                </me>
+                The sum of this series is 1.
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Evaluate <m>24 + 16 + \frac{32}{3}+ \ldots</m>
+              </statement>
+              <answer>
+                This series is geometric with <m>a_m = 24</m> and <m>r = \frac{2}{3}</m>.
+                <me>
+                  {S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{24}}{{1 - \frac{2}{3}}} = \frac{{24}}{{\frac{1}{3}}} = 24 \times \frac{3}{1} = 72
+                </me>
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Evaluate <m>24 - 16 + \frac{32}{3}+ \ldots</m>
+              </statement>
+              <answer>
+                This series is identical to the previous one except that <m>r</m> is now negative:  <m>a_m = 24</m> and <m>r = -\frac{2}{3}</m>.
+                <me>
+                  {S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{24}}{{1 - \left( { - \frac{2}{3}} \right)}} = \frac{{24}}{{1 + \frac{2}{3}}} = \frac{{24}}{{\frac{5}{3}}} = 24 \times \frac{3}{5} = \frac{{72}}{5} = 14.4
+                </me>
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Evaluate <m>12 + 18 + 27 + \ldots</m>.
+              </statement>
+              <answer>
+                This series is geometric with <m>a_m = 12</m> and <m>r = \frac{3}{2}</m>.  You may already realize what's going on, but in case you don't, let's naively put the values into the formula and see what we get:
+                <me>
+                  {S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{12}}{{1 - \frac{3}{2}}} = \frac{{12}}{{ - \frac{1}{2}}} = 12 \times  - \frac{2}{1} =  - 24
+                </me>
+                Wait!  How can the sum of a bunch of positive number be negative?  The answer is that our restriction for <m>r</m> is that it must be between <m>-1</m> and 1, but <m>r = 1.5</m>.  Because <m>r</m> does not satisfy the restriction, <em>we cannot use</em> the above formula for <m>S_\infty</m>.  Indeed, if you add up a bunch of positive numbers that are increasing as you go up, you can see that the sum just keeps getting bigger as we add more terms.  You could then either say that the sum is infinite or <q>does not exist</q>.  These two statements are not <em>quite</em> equivalent.  While it is correct to say that the sum <em>does not exist</em>, it is <em>more descriptive</em> to state that the sum is infinite (or to write <q><m>=+\infty</m></q>).  There could be a sum that grows without bound <q>in the negative direction</q>, in which case it would be more descriptive to write <q><m>=-\infty</m></q> than simply to say that the sum does not exist.
+              </answer>
+            </example>
+          </p>
+          <p>
+            Let's look at three specific cases:
+            <ol label="(a)">
+              <li>
+                <m>12+18+27+\ldots</m>
+              </li>
+              <li>
+                <m>-12-18-27-\ldots</m>
+              </li>
+              <li>
+                <m>12-18+27+\ldots</m>
+              </li>
+            </ol>
+            Each term in (a) is getting more positive, so the sum of that sequence does not exist but writing <q><m>=+\infty</m></q> is more descriptive.  Each term in (b) is getting more and more negative, so the sum of that sequence does not exist, but writing <q><m>=-\infty</m></q> is more descriptive.  But in the last case, the sum oscillates back and forth:  <m>S_1 = 12</m>, <m>S_2 = -6</m>, <m>S_3 = 21</m>, <m>S_4 = -19.5</m>, and so on.  The sign of <m>S_k</m> is either positive or negative depending on whether the number of terms you've added is even or odd.  In this case, all we can say is that the sum does not exist.
+            <example>
+              <statement>
+                Evaluate <m>\sum\limits_{j = 0}^\infty  {27{{\left( {\frac{1}{3}} \right)}^j}}</m>.
+              </statement>
+              <answer>
+                The best place to start is to figure out the first few terms to determine the pattern:
+                <md>
+                  <mrow>
+                    \text{when } j = 0,\quad \amp 27{\left( {\frac{1}{3}} \right)^0} = 27 \times 1 = 27
+                  </mrow>
+                  <mrow>
+                    \text{when } j = 1,\quad \amp 27{\left( {\frac{1}{3}} \right)^1} = 27 \times \frac{1}{3} = 9
+                  </mrow>
+                  <mrow>
+                    \text{when } j = 2,\quad \amp 27{\left( {\frac{1}{3}} \right)^2} = 27 \times \frac{1}{{{3^2}}} = 3
+                  </mrow>
+                </md>
+                so our sequence is <m>27, 9, 3, \ldots</m>  This is geometric with <m>a_m = 27</m> and <m>r = \frac{1}{3}</m>.  Then
+                <me>
+                  {S_\infty } = \frac{{{a_m}}}{{1 - r}}
+                  = \frac{{27}}{{1 - \frac{1}{3}}}
+                  = \frac{{27}}{{\frac{2}{3}}}
+                  = 27 \times \frac{3}{2}
+                  = \frac{{81}}{2}
+                  = 40.5
+                </me>
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Evaluate <m>\sum\limits_{k = 5}^\infty  {\;\frac{1}{2}} k</m>.
+              </statement>
+              <answer>
+                As in the previous example, let's figure out the first few terms to determine the pattern:
+                <md>
+                  <mrow>
+                    \text{when } k = 5,\quad \amp \frac{1}{2}k = \frac{1}{2}5 = 2.5
+                  </mrow>
+                  <mrow>
+                    \text{when } k = 6,\quad \amp \frac{1}{2}k = \frac{1}{2}6 = 3
+                  </mrow>
+                  <mrow>
+                    \text{when } k = 7,\quad \amp \frac{1}{2}k = \frac{1}{2}7 = 3.5
+                  </mrow>
+                </md>
+                so our sequence is <m>2.5, 3, 3.5, \ldots</m>.  Wait!  This sequence is arithmetic!  Not only that, but the numbers are increasing.  So the sum of the <em>series</em> does not exist due to unbounded growth in the positive direction. You can write <q>does not exist</q> or, if you prefer, the more descriptive <q><m>=+\infty</m></q>.
+              </answer>
+            </example>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-rep-decimals">
+          <title>
+            Repeating Decimals
+          </title>
+          <p>
+            Let's examine <m>0.\overline 7</m> in some detail to see what we find:
+            <md>
+              <mrow>
+                0.\overline 7 \amp = 0.777777777...
+              </mrow>
+              <mrow>
+                \amp = 0.7 + 0.07 + 0.007 + 0.0007 + \ldots
+              </mrow>
+            </md>
+            But this is just the sum of an infinite series with <m>a_m = 0.7</m> and <m>r = 0.1</m>.  Rewriting <m>a_1</m> and <m>r</m> in fraction form (you'll see why in a minute) gives <m>a_m = \frac{7}{10}</m> and <m>r =\frac{1}{10}</m>.  Then
+            <me>
+              {S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{\frac{7}{{10}}}}{{1 - \frac{1}{{10}}}} = \frac{{\frac{7}{{10}}}}{{\frac{9}{{10}}}} = \frac{7}{{10}} \times \frac{{10}}{9} = \frac{7}{9}
+            </me>
+            So <m>0.\overline 7 = 7/9</m>.  Interesting!
+            <example>
+              <statement>
+                Find an exact fraction for <m>0.\overline 6 </m>.
+              </statement>
+              <answer>
+                <md>
+                  <mrow>
+                    0.\overline 6  \amp = 0.66666666\ldots
+                  </mrow>
+                  <mrow>
+                    \amp = 0.6 + 0.06 + 0.006 + 0.0006 + \ldots
+                  </mrow>
+                </md>
+                But this is just the sum of an infinite geometric series with <m>a_m = \frac{6}{10}</m> and <m>r = \frac{1}{10}</m>.  Then
+                <me>
+                  {S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{\frac{6}{{10}}}}{{1 - \frac{1}{{10}}}} = \frac{{\frac{6}{{10}}}}{{\frac{9}{{10}}}} = \frac{6}{{10}} \times \frac{{10}}{9} = \frac{6}{9} = \frac{2}{3}
+                </me>
+                So <m>0.\overline 6 = 2/3</m>.
+              </answer>
+            </example>
+            <example>
+              <statement>
+                Find an exact fraction for <m>0.\overline {18}</m>.
+              </statement>
+              <answer>
+                <md>
+                  <mrow>
+                    0.\overline {18}  \amp = 0.1818181818\ldots
+                  </mrow>
+                  <mrow>
+                    \amp  = 0.18 + 0.0018 + 0.000018 + \ldots
+                  </mrow>
+                </md>
+                But this is just the sum of an infinite geometric series with <m>a_m = \frac{18}{100}</m> and <m>r = \frac{1}{100}</m>.  Then
+                <me>
+                  {S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{\frac{{18}}{{100}}}}{{1 - \frac{1}{{100}}}} = \frac{{\frac{{18}}{{100}}}}{{\frac{{99}}{{100}}}} = \frac{{18}}{{100}} \times \frac{{100}}{{99}} = \frac{{18}}{{99}} = \frac{2}{{11}}
+                </me>
+                So <m>0.\overline {18} = 2/11</m>.
+              </answer>
+            </example>
+          </p>
+        </subsection>
+        <subsection xml:id="ssec-summary-gemseqser">
+          <title>
+            Summary
+          </title>
+          <p>
+            For a <em>geometric</em> sequence, the <m>\nth{}</m> term is given by
+            <me>
+              {a_n} = {a_m}{r^{n - m}}
+            </me>
+            for <m>n \ge m</m>
+          </p>
+          <p>
+            For a <em>geometric</em> series, the sum of the first <m>k</m> terms (<m>\kth{}</m> partial sum) is
+            <me>
+              {S_k} = \frac{{{a_m}\left( {1 - {r^k}} \right)}}{{\left( {1 - r} \right)}}
+            </me>
+            where <m>a_m</m> is the first term.
+          </p>
+          <p>
+            For an <em>infinite geometric</em> series, the sum is
+            <me>
+              {S_\infty } = \frac{{{a_m}}}{{1 - r}}
+            </me>
+            provided that  <m>-1 \lt r \lt 1</m> and <m>a_m</m> is the first term.
+          </p>
         </subsection>
       </section>
     </chapter>
