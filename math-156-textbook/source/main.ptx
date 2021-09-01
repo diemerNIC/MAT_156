@@ -20676,7 +20676,9 @@
             Notation for Sequences
           </title>
           <p>
-            For each term in a sequence, we will use the notation of a lower-case <m>a</m> followed by a subscript which is called the index.  So, depending on what we want our starting index to be, our sequence can be written as
+            For each term in a sequence, we will use the notation of a lower-case <m>a</m> followed by a subscript which is called the index.
+            <idx><h>sequence</h><h>notation</h></idx>
+            So, depending on what we want our starting index to be, our sequence can be written as
             <me>
               a_0,a_1,a_2,\ldots,a_n
             </me>
@@ -20774,6 +20776,7 @@
           </title>
           <p>
             There are three ways to define a sequence:
+            <idx><h>sequence</h><h>defining</h></idx>
             <ol label="(a)">
               <li>
                 List all of the terms, or enough terms to set up the pattern.  If the sequence is finite, then either the final term or the total number of terms must be given.
@@ -20795,7 +20798,10 @@
             General Formula
           </title>
           <p>
-            A <term>general formula</term><!--\index{sequence!general formula}\index{general formula}!--> is a formula that gives <m>a_n</m> as a function of <m>n</m> only.  What this means is that the only variable on the right-hand-side of the general formula is the variable <m>n</m>, and all other values in the equations are constants.
+            A <term>general formula</term> is a formula that gives <m>a_n</m> as a function of <m>n</m> only.
+            <idx><h>sequence</h><h>general formula</h></idx>
+            <idx>general formula</idx>
+            What this means is that the only variable on the right-hand-side of the general formula is the variable <m>n</m>, and all other values in the equations are constants.
           </p>
           <p>
             Let's look at the following examples to examine some sequences defined in this way.
@@ -20868,7 +20874,10 @@
             Recursive Definition
           </title>
           <p>
-            A recursive formula<!--\index{recursive formula}\index{sequence!recursive formula}!--> gives a formula for the next term in terms of the previous one.  For example, in our old friend <m>7, 11, 15, 19, \ldots</m> , the next term is found by adding 4 to the previous term:  <m>{a_n} = {a_{n - 1}} + 4</m>.  However, that's not enough information to uniquely define the series because you don't know where to start.  A complete definition must include the first term also.  Therefore, the recursive definition for our old friend <m>7, 11, 15, 19, \ldots</m> would be
+            A recursive formula gives a formula for the next term in terms of the previous one.
+            <idx>recursive formula</idx>
+            <idx><h>sequence</h><h>recursive formula</h></idx>
+            For example, in our old friend <m>7, 11, 15, 19, \ldots</m> , the next term is found by adding 4 to the previous term:  <m>{a_n} = {a_{n - 1}} + 4</m>.  However, that's not enough information to uniquely define the series because you don't know where to start.  A complete definition must include the first term also.  Therefore, the recursive definition for our old friend <m>7, 11, 15, 19, \ldots</m> would be
             <md>
               <mrow>
                 {a_0} \amp = 7
@@ -20935,6 +20944,7 @@
           </title>
           <p>
             The Fibonacci sequence is likely the most famous example of a recursive sequence:
+            <idx><h>sequence</h><h>Fibonacci</h></idx>
             <me>
               1, 1, 2, 3, 5, 8, 13, \ldots
             </me>
