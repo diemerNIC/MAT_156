@@ -13649,6 +13649,7 @@
       </section>
       <section xml:id="sec-logic-laws">
         <title>Laws of Logic</title>
+        <idx>laws of logic</idx>
         <introduction>
           <p>
             You may have noticed some common patterns running through some of the exercises by now.  Let's examine those patterns in more detail.
@@ -13780,6 +13781,8 @@
           </p>
           <p>
             You can replace the logic symbols in this table with the corresponding Boolean algebra notation.  From this, we can deduce the following <term>identity laws</term>:
+            <idx><h>laws of logic</h><h>identity laws</h></idx>
+            <idx>identity laws</idx>
             <assemblage xml:id="assemblage-identity-laws">
               <title>Identity Laws</title>
               <p>
@@ -13829,7 +13832,10 @@
         <subsection xml:id="ssec-idempotent-laws">
           <title>Idempotent Laws</title>
           <p>
-            We deduce the <term>idempotent laws</term> in the same way.  Consider the following table, given using logic notation:
+            We deduce the <term>idempotent laws</term> in the same way.
+            <idx><h>laws of logic</h><h>idempotent laws</h></idx>
+            <idx>idempotent laws</idx>
+            Consider the following table, given using logic notation:
             <tabular halign="center" top="major" left="medium">
               <row bottom="medium">
                 <cell left="medium" right="medium">
@@ -13913,6 +13919,8 @@
           <title>Complement Laws</title>
           <p>
             Similarly, truth tables can be used to deduce the <term>complement laws</term>:
+            <idx><h>laws of logic</h><h>complement laws</h></idx>
+            <idx>complement laws</idx>
             <assemblage xml:id="assemblage-complement-laws">
               <title>Complement Laws</title>
               <p>
@@ -13959,6 +13967,8 @@
           <title>Commutative Laws</title>
           <p>
             The <term>commutative laws</term> state that the ordering of symbols is not significant for the logic operations <em>and</em> and <em>or</em>, and also for the corresponding operations in Boolean algebra.  The commutative law does not apply to all operations.  More on that later.
+            <idx><h>laws of logic</h><h>commutative laws</h></idx>
+            <idx>commutative laws</idx>
             <assemblage xml:id="assemblage-commutative-laws">
               <title>Commutative Laws</title>
               <p>
@@ -14003,6 +14013,8 @@
           <title>Associative Laws</title>
           <p>
             <xref ref="exer-logic-commutative"/> illustrates the <term>associative law</term> for <em>or</em>.  You could construct a similar truth table for <em>and</em>.  The associative laws in Boolean algebra form look just like the associative laws of multiplication and addition of real numbers.  Remember, though, that Boolean algebra is not the same as the algebra of real numbers!
+            <idx><h>laws of logic</h><h>associative laws</h></idx>
+            <idx>associative laws</idx>
             <assemblage xml:id="assemblage-associative-laws">
               <title>Associative Laws</title>
               <p>
@@ -14199,6 +14211,8 @@
         </subsection>
         <subsection xml:id="ssec-simplifying-logical-expr1">
           <title>Simplifying Logical Expressions</title>
+          <idx><h>logical equivalence</h><h>using laws of logic</h></idx>
+          <idx><h>logical proposition</h><h>simplifying with laws of logic</h></idx>
           <p>
             We use the laws of logic to simplify logical expressions or to prove logical equivalence without resorting to truth tables.
           </p>
@@ -15274,7 +15288,10 @@
             <me>\mynot(p\myand q)\Leftrightarrow\notp\,\myor\notq.</me>
             We can construct a similar table to show that
             <me>\mynot(p\myor q)\Leftrightarrow\notp\,\myand\notq.</me>
-            These are called <term>De Morgan's Laws</term>.  Constructing the tables using Boolean algebra notation yields similar statements.
+            These are called <term>De Morgan's Laws</term>.
+            <idx><h>laws of logic</h><h>De Morgan's laws</h></idx>
+            <idx>De Morgan's laws</idx>
+            Constructing the tables using Boolean algebra notation yields similar statements.
           </p>
           <p>
             <assemblage xml:id="assemblage-demorgans-laws">
@@ -15320,7 +15337,10 @@
         <subsection xml:id="ssec-distributive-laws">
           <title>Distributive Laws</title>
           <p>
-            In the same way, we can construct truth tables to prove the <term>distributive laws</term>, in both logic and Boolean algebra notation.  Note carefully the forms of these laws.
+            In the same way, we can construct truth tables to prove the <term>distributive laws</term>, in both logic and Boolean algebra notation.
+            <idx><h>laws of logic</h><h>distributive laws</h></idx>
+            <idx>distributive laws</idx>
+            Note carefully the forms of these laws.
             <assemblage xml:id="assemblage-distributive-laws">
               <title>Distributive Laws</title>
               <p>
@@ -15366,6 +15386,8 @@
           <title>Absorption Laws</title>
           <p>
             The <term>absorption laws</term> can be verified using truth tables, or by use of the laws of logic already stated.
+            <idx><h>laws of logic</h><h>absorption laws</h></idx>
+            <idx>absorption laws</idx>
             <assemblage xml:id="assemblage-absorption-laws">
               <title>Absorption Laws</title>
               <p>
@@ -15414,6 +15436,7 @@
           <title>Summary So Far</title>
           <p>
             Here are all the laws of logic discussed so far:
+            <idx><h>laws of logic</h><h>summary</h></idx>
             <tabular halign="center" top="major" left="medium">
               <row bottom="medium">
                 <cell left="medium" right="medium">
@@ -15650,6 +15673,8 @@
         </subsection>
         <subsection xml:id="ssec-simplifying-logical-expr2">
           <title>Simplifying Logical Expressions</title>
+          <idx><h>logical equivalence</h><h>using laws of logic</h></idx>
+          <idx><h>logical proposition</h><h>simplifying with laws of logic</h></idx>
           <p>
             The clarity of your simplification or of your proof is greatly improved if you use only one law in each line of your work, and also state the law you have used.  To help you build good habits, this is <alert>required</alert> in your coursework.  It is not merely a suggestion.
           </p>
@@ -15783,6 +15808,9 @@
           <title>
             Proofs
           </title>
+          <idx><h>proofs</h><h>using laws of logic</h></idx>
+          <idx><h>laws of logic</h><h>proofs</h></idx>
+          <idx><h>proposition</h><h>proofs</h></idx>
           <p>
             When tasked to prove that two logic statements are equivalent, look to see if one of the statements is simpler than the other.  Try to simplify the more complicated statement until it is identical to the simpler statement.  Sometimes, you will have to simplify both statements into identical forms.
           </p>
@@ -17173,7 +17201,12 @@
             <blockquote>If <m>p</m>, then <m>q</m>.</blockquote>
           </p>
           <p>
-            In symbols, this is written as <m>p\to q</m>, and when red aloud, you say <m>p</m> <em>implies</em> <m>q</m>.  The first proposition in the conditional is called the <term>hypothesis</term>, and the second is called the <term>conclusion</term>.
+            In symbols, this is written as <m>\conditional</m>, and when red aloud, you say <m>p</m> <em>implies</em> <m>q</m>.
+            <idx>conditional</idx>
+            <idx>implies</idx>
+            <idx>hypothesis</idx>
+            <idx>conclusion</idx>
+            The first proposition in the conditional is called the <term>hypothesis</term>, and the second is called the <term>conclusion</term>.
           </p>
           <p>
             There are other ways to state the conditional.  The following are equivalent statements:
@@ -17369,7 +17402,9 @@
             The Converse
           </title>
           <p>
-            If <m>p\conditional</m> is true, can we conclude that <m>\converse</m> is also true?  The statment <m>\converse</m> is called the <term>converse</term> of the statement <m>\conditional</m>.  Let's use our previous example again:
+            If <m>p\conditional</m> is true, can we conclude that <m>\converse</m> is also true?  The statment <m>\converse</m> is called the <term>converse</term> of the statement <m>\conditional</m>.
+            <idx>converse</idx>
+            Let's use our previous example again:
             <blockquote>
               <p>
                 Original statement: If Barney is a dog, then Barney has four legs.
@@ -17466,7 +17501,9 @@
             The contrapositive
           </title>
           <p>
-            The statement <m>\contrapositive</m> is the <term>contrapositive</term> of <m>\conditional</m>. Let's consider our example again:
+            The statement <m>\contrapositive</m> is the <term>contrapositive</term> of <m>\conditional</m>.
+            <idx>contrapositive</idx>
+            Let's consider our example again:
             <blockquote>
               <p>
                 Original statement: If Barney is a dog, then Barney has four legs.
@@ -17596,7 +17633,9 @@
             The inverse
           </title>
           <p>
-            Given the conditional statement <m>\conditional</m>, the statement <m>\inverse</m> is called the <term>inverse</term>.  Once again, let's look at our example:
+            Given the conditional statement <m>\conditional</m>, the statement <m>\inverse</m> is called the <term>inverse</term>.
+            <idx>inverse</idx>
+            Once again, let's look at our example:
             <blockquote>
               <p>
                 Original statement: If Barney is a dog, then Barney has four legs.
@@ -17859,7 +17898,10 @@
             The <q>or</q> form of the Conditional
           </title>
           <p>
-            The conditional <m>\conditional</m> can be rewritten in an alternate form in terms of the basic connectives.  Consider the truth table below:
+            The conditional <m>\conditional</m> can be rewritten in an alternate form in terms of the basic connectives.
+            <idx><h>conditional</h><h><q>or</q> form</h></idx>
+            <idx><em>or</em> form of conditional</idx>
+            Consider the truth table below:
             <tabular halign="center" top="major" left="medium">
               <row bottom="medium">
                 <cell left="medium" right="medium">
@@ -18112,6 +18154,8 @@
           </title>
           <p>
             Consider the conditional <m>(p \myand{} q \myimplies{} r</m>.  The contrapositive would be <m>\mylnot{r} \myimplies{} \mylnot{(p \myand{} q)}</m>.  Applying De Morgan's Law gives <m>\mylnot{r} \myimplies{} (\mylnot{p} \myor{} \mylnot{q})</m>.  Notice the change from the <em>and</em> in the conditional to the <em>or</em> in the modified contrapositive.  Forgetting to make that change is an easy trap to fall into.
+            <idx><h>De Morgan's laws</h><h>and contrapositive</h></idx>
+            <idx><h>contrapositive</h><h>and De Morgan's laws</h></idx>
             <example xml:id="exmpl-demorgan-contrap1">
               <statement>
                 Consider the conditional <q>If Jason sleeps in or gets caught in traffic, he will be late for class.</q>  What is the contrapositive?  Use De Morgan's Law to find your answer.
@@ -18712,7 +18756,9 @@
             Consider the conditional <em>If you live in Victoria, then you live in BC.</em>  Remembering that the conditional has nothing to say if the first proposition is false, then it is possible for you to not live in Victoria but to still live in BC.  It is also possible to not live in Vicoria and also not live in BC.
           </p>
           <p>
-            Let's now consider the conditional <em>If the temperature outside is below <m>0^{\circ}\text{C}</m>, then it is freezing outside.</em>  If I were to use this sentence in everyday English, I probably mean <em>If the temperature outside is below <m>0^{\circ}\text{C}</m>, then it is freezing outide <alert>and</alert> if the temperature outside is <alert>not</alert> below <m>0^{\circ}\text{C}</m>, then it is <alert>not</alert> freezing outside.</em>  So we could probably do with a new kind of connective that means <em>If <m>p</m> then <m>q</m> <alert>and</alert> if <m>\notp{}</m> then <m>\notq{}</m></em>.  The new connective is called the <term>biconditional</term>, and is written <m>\biconditional</m>
+            Let's now consider the conditional <em>If the temperature outside is below <m>0^{\circ}\text{C}</m>, then it is freezing outside.</em>  If I were to use this sentence in everyday English, I probably mean <em>If the temperature outside is below <m>0^{\circ}\text{C}</m>, then it is freezing outide <alert>and</alert> if the temperature outside is <alert>not</alert> below <m>0^{\circ}\text{C}</m>, then it is <alert>not</alert> freezing outside.</em>  So we could probably do with a new kind of connective that means <em>If <m>p</m> then <m>q</m> <alert>and</alert> if <m>\notp{}</m> then <m>\notq{}</m></em>.
+            <idx>biconditional</idx>
+            The new connective is called the <term>biconditional</term>, and is written <m>\biconditional</m>
           </p>
           <p>
             Here is the truth table for the biconditional:
@@ -20549,6 +20595,7 @@
           <p>
             Let's start out with the definition of a sequence:
             <definition>
+              <idx>sequence</idx>
               <statement>
                 <p>
                   A <term>sequence</term> is an ordered list of numbers, often with a pattern.
