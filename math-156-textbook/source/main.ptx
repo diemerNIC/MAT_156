@@ -102,7 +102,10 @@
         <subsection xml:id="decimal-review">
           <title>Review of the Decimal System</title>
           <p>
-            Before we look at the numbering systems commonly used by computers, it will likely be helpful to review the workings of the decimal system, the numbering system commonly used by humans.  The decimal system (base 10) is based on ten digits, starting from zero, and uses a positional notation, so called because the magnitude of the number depends not only on what digits are used, but also <em>where</em> each digit is located within the number.
+            Before we look at the numbering systems commonly used by computers, it will likely be helpful to review the workings of the decimal system, the numbering system commonly used by humans.
+            <idx>decimal system</idx>
+            <idx><h>base</h><h>10</h></idx>
+            The decimal system (base 10) is based on ten digits, starting from zero, and uses a positional notation, so called because the magnitude of the number depends not only on what digits are used, but also <em>where</em> each digit is located within the number.
           </p>
           <p>
             For example, if we start counting from zero upwards, we get
@@ -210,6 +213,7 @@
           </title>
           <p>
             To put a number into a base other than ten, we use the same ideas as before:
+            <idx><h>base</h><h>other than 10</h></idx>
             <ul>
               <li>
                 the number of digits available is equal to the base
@@ -220,10 +224,21 @@
             </ul>
           </p>
           <p>
+            The best way to understand this is to work through an example, so let us first look at numbers written in base 4.<idx><h>base</h><h>4</h></idx>  This base is <em>not</em> commonly used in computing, but it is a useful example nonetheless.  We will use the same ideas as before:
+            <ul>
+              <li>
+                there are four digits in total:  0,1,2,3
+              </li>
+              <li>
+                there is no single digit which represents the base, so when we want to write the number <q>four</q>, set the right column to zero and increment the column to the left by one
+              </li>
+            </ul>
+          </p>
+          <p>
             To make it clear which base we are using, any numbers written in a base other than ten will have the base as a subscript.  So the number three in base 4 is <m>3_4</m>.
           </p>
           <p>
-            Let's contrast counting using base 10 versus base 4 by counting from one to twenty in both bases side-by-side.  Notice that the default base is 10, so numbers in the decimal system are written without a subscript, but numbers in base 4 have the base as a subscript.
+            Let's contrast counting using base 10 versus base 4 by counting from one to twenty in both bases side-by-side. <idx><h>base</h><h>subscript notation</h></idx>  Notice that the default base is 10, so numbers in the decimal system are written without a subscript, but numbers in base 4 have the base as a subscript.
           </p>
           <sidebyside widths="20% 20%" margins="20%">
             <tabular halign="center" top="major">
@@ -428,7 +443,7 @@
             <me>
               179=1\times 10^2+7\times 10^1+9\times 10^0.
             </me>
-            We can expand numbers in base 4 in the same way, using powers of the base 4 instead of powers of 10.  For example, we can show that <m>100_4=16_{10}</m> as follows:
+            We can expand numbers in base 4 in the same way, using powers of the base 4 instead of powers of 10.<idx><h>conversion</h><h>from base 4</h><h>to decimal</h></idx>  For example, we can show that <m>100_4=16_{10}</m> as follows:
             <md>
               <mrow>
                 100_4 \amp =1\times 4^2+0\times 4^1+0\times 4^0
@@ -522,7 +537,7 @@
         <subsection xml:id="octal">
           <title>Octal</title>
           <p>
-            Let us now look at numbers written in base 8, called <term>octal</term>.  Octal is a base commonly used in computing.  We will use the same ideas as before:
+            Let us now look at numbers written in base 8, called <term>octal</term>. <idx><h>base</h><h>8</h></idx><idx>octal</idx>  Octal is a base commonly used in computing.  We will use the same ideas as before:
             <ul>
               <li>
                 there are eight digits in total: 0, 1, 2, 3, 4, 5, 6, 7.
@@ -738,6 +753,7 @@
               179=1\times 10^2+7\times 10^1+9\times 10^0.
             </me>
             We can expand in octal in the same way, using powers of 8 instead of powers of 10:
+            <idx><h>conversion</h><h>from octal</h><h>to decimal</h></idx>
             <md>
               <mrow>
                 263_8 \amp = 2\times 8^2+6\times 8^1+3\times 8^0
@@ -2073,6 +2089,8 @@
           </title>
           <p>
             Let us now look at base 2, called <term>binary</term>:
+            <idx><h>base</h><h>2</h></idx>
+            <idx>binary</idx>
             <ul>
               <li>
                 there are two digits in total: 0 and 1
@@ -2283,7 +2301,9 @@
                 \amp = 6
               </mrow>
             </md>
-            and so the binary number <m>110_2</m> is 6 in base 10.  Similarly, the number <m>10100_2</m> is equivalent to 20:
+            and so the binary number <m>110_2</m> is 6 in base 10.
+            <idx><h>conversion</h><h>from binary</h><h>to decimal</h></idx>
+            Similarly, the number <m>10100_2</m> is equivalent to 20:
             <md>
               <mrow>
                 10100_2 \amp =1\times2^4+0\times2^3+1\times2^2+0\times2^1+0\times2^0
@@ -2419,7 +2439,10 @@
             Hexadecimal
           </title>
           <p>
-            Another base commonly used in computing is base 16, called <term>hexadecimal</term>.  We will use the same ideas as before:
+            Another base commonly used in computing is base 16, called <term>hexadecimal</term>.
+            <idx>hexadecimal</idx>
+            <idx><h>base</h><h>16</h></idx>
+            We will use the same ideas as before:
             <ul>
               <li>
                 there are sixteen digits in total
@@ -2623,6 +2646,7 @@
           </p>
           <p>
             Let's consider the expanded form of <m>14_{16}</m> to see its equivalence to <m>20_{10}</m>:
+            <idx><h>conversion</h><h>from hexadecimal</h><h>to decimal</h></idx>
             <md>
               <mrow>
                 14_{16} \amp = 1\times16^1+4\times16^0
@@ -3091,7 +3115,7 @@
             <me>
               8.76
             </me>
-            The dot is called the decimal point (some cultures use a comma rather than a dot).  The digit to the immediate left (8) is in the "ones" place, the first digit to the right (7) is in the "tenths" place, and the second digit to the right (6) is in the "hundredths" place:
+            The dot is called the decimal point (some cultures use a comma rather than a dot).  The digit to the immediate left (8) is in the <q>ones</q> place, the first digit to the right (7) is in the <q>tenths</q> place, and the second digit to the right (6) is in the <q>hundredths</q> place:
             <me>
               8.76=8+\frac{7}{10}+\frac{6}{100}
             </me>
@@ -3480,6 +3504,8 @@
           </p>
           <p>
             If, for some reason, we wish to stay in the land of integers, we could report the result by saying that 13 divided by 5 equals 2, with 3 left over.  In this example, the 2 is called the <term>quotient</term> and the 3 is called the <term>remainder</term>, and we can write this calculation in the following form:
+            <idx>quotient</idx>
+            <idx>remainder</idx>
             <me>
               13=\underbrace{2}_{\text{quotient}}\times 5 + \underbrace{3}_{\text{remainder}}
             </me>
@@ -3583,6 +3609,7 @@
             Now that we know how to find quotients and remainders, let's look at some examples that convert from a decimal number into octal.  Consider the number <m>316_8</m>.  We earlier found that <m>316_8=206_{10}</m>.  Let's now go back the other way, using repeated division and remainders.
           </p>
           <example>
+            <idx><h>conversion</h><h>from decimal</h><h>to octal</h></idx>
             <statement>
               <p>
                 Convert the decimal number 206 to octal.
@@ -3643,6 +3670,7 @@
             Let's do some more examples using this same procedure.
           </p>
           <example>
+            <idx><h>conversion</h><h>from decimal</h><h>to binary</h></idx>
             <statement>
               Convert the decimal number 41 to binary.
             </statement>
@@ -3728,6 +3756,7 @@
             </solution>
           </example>
           <example>
+            <idx><h>conversion</h><h>from decimal</h><h>to hexadecimal</h></idx>
             <statement>
               Convert the decimal number 24362 to hexadecimal.
             </statement>
@@ -4646,78 +4675,80 @@
           </p>
           <p>
             Let's use this observation to convert from octal to binary.
+            <idx><h>conversion</h><h>from octal</h><h>to binary</h></idx>
+            <example>
+              <statement>
+                Convert the following octal numbers to binary:
+                <ol>
+                  <li>
+                    <m>\ 1110_2</m>
+                  </li>
+                  <li>
+                    <m>\ 1010000100_2</m>
+                  </li>
+                </ol>
+              </statement>
+              <solution>
+                <ol>
+                  <li>
+                    <m>\ </m>For each digit in the octal number, write the corresponding three-digit binary number (includeing any leading zeros as necessary).  Then put the groups of three all together and, optionally, drop any leading zeros.
+                    <md>
+                      <mrow>
+                        23_8 \amp = \overbrace{010}^2\overbrace{011}^3
+                      </mrow>
+                      <mrow>
+                        \amp = 010\ 011
+                      </mrow>
+                      <mrow>
+                        \amp = 10011_2,\text{ dropping the leading zero}
+                      </mrow>
+                    </md>
+                  </li>
+                  <li>
+                    <md>
+                      <mrow>
+                        671_8 \amp = \overbrace{110}^6\overbrace{111}^7\overbrace{001}^1
+                      </mrow>
+                      <mrow>
+                        \amp = 110\ 111\ 001
+                      </mrow>
+                      <mrow>
+                        \amp = 110111001_2
+                      </mrow>
+                    </md>
+                  </li>
+                </ol>
+              </solution>
+            </example>
           </p>
-          <example>
-            <statement>
-              Convert the following octal numbers to binary:
-              <ol>
-                <li>
-                  <m>\ 1110_2</m>
-                </li>
-                <li>
-                  <m>\ 1010000100_2</m>
-                </li>
-              </ol>
-            </statement>
-            <solution>
-              <ol>
-                <li>
-                  <m>\ </m>For each digit in the octal number, write the corresponding three-digit binary number (includeing any leading zeros as necessary).  Then put the groups of three all together and, optionally, drop any leading zeros.
-                  <md>
-                    <mrow>
-                      23_8 \amp = \overbrace{010}^2\overbrace{011}^3
-                    </mrow>
-                    <mrow>
-                      \amp = 010\ 011
-                    </mrow>
-                    <mrow>
-                      \amp = 10011_2,\text{ dropping the leading zero}
-                    </mrow>
-                  </md>
-                </li>
-                <li>
-                  <md>
-                    <mrow>
-                      671_8 \amp = \overbrace{110}^6\overbrace{111}^7\overbrace{001}^1
-                    </mrow>
-                    <mrow>
-                      \amp = 110\ 111\ 001
-                    </mrow>
-                    <mrow>
-                      \amp = 110111001_2
-                    </mrow>
-                  </md>
-                </li>
-              </ol>
-            </solution>
-          </example>
           <p>
             We can use a similar technique to convert from binary to octal.
+            <idx><h>conversion</h><h>from binary</h><h>to octal</h></idx>
+            <example>
+              <statement>
+                Convert the following binary numbers to octal.
+                <ol>
+                  <li>
+                    <m>\ 11110_2</m>
+                  </li>
+                  <li>
+                    <m>\ 1010000100_2</m>
+                  </li>
+                </ol>
+              </statement>
+              <solution>
+                First, group the binary digits into threes, starting from the right-hand side.  The last group might need leading zeros to be added to make a group of three.  Then rewrite each set of three into the corresponding digit in octal.
+                <ol>
+                  <li>
+                    <m>\ 11110_2=011\ 110=\overbrace{011}^3\overbrace{110}^6=36_8</m>
+                  </li>
+                  <li>
+                    <m>\ 1010000100_2=001\ 010\ 000\ 100=\overbrace{001}^1\overbrace{010}^2\overbrace{000}^0\overbrace{100}^4=1204_8</m>
+                  </li>
+                </ol>
+              </solution>
+            </example>
           </p>
-          <example>
-            <statement>
-              Convert the following binary numbers to octal.
-              <ol>
-                <li>
-                  <m>\ 11110_2</m>
-                </li>
-                <li>
-                  <m>\ 1010000100_2</m>
-                </li>
-              </ol>
-            </statement>
-            <solution>
-              First, group the binary digits into threes, starting from the right-hand side.  The last group might need leading zeros to be added to make a group of three.  Then rewrite each set of three into the corresponding digit in octal.
-              <ol>
-                <li>
-                  <m>\ 11110_2=011\ 110=\overbrace{011}^3\overbrace{110}^6=36_8</m>
-                </li>
-                <li>
-                  <m>\ 1010000100_2=001\ 010\ 000\ 100=\overbrace{001}^1\overbrace{010}^2\overbrace{000}^0\overbrace{100}^4=1204_8</m>
-                </li>
-              </ol>
-            </solution>
-          </example>
         </subsection>
         <subsection xml:id="convert-binary-hexadecimal">
           <title>
@@ -4905,6 +4936,7 @@
           <example>
             <statement>
               Convert the following hexadecimal numbers to binary.
+              <idx><h>conversion</h><h>from hexadecimal</h><h>to binary</h></idx>
               <ol>
                 <li>
                   <m>\ 3A_{16}</m>
@@ -4940,6 +4972,7 @@
             </solution>
           </example>
           <example>
+            <idx><h>conversion</h><h>from binary</h><h>to hexadecimal</h></idx>
             <statement>
               Convert the following binary numbers to hexadecimal.
               <ol>
@@ -4978,6 +5011,7 @@
             The fastest way to do this is to convert into binary first, then regroup the binary digits.
           </p>
           <example>
+            <idx><h>conversion</h><h>from octal</h><h>to hexadecimal</h></idx>
             <statement>
               Convert the following octal numbers to hexadecimal.
               <ol>
@@ -5036,6 +5070,7 @@
             </solution>
           </example>
           <example>
+            <idx><h>conversion</h><h>from hexadecimal</h><h>to octal</h></idx>
             <statement>
               Convert the following hexadecimal numbers to octal.
               <ol>
@@ -5174,6 +5209,7 @@
             </solution>
           </example>
           <example>
+            <idx><h>conversion</h><h>from hexadecimal</h><h>to binary</h></idx>
             <statement>
               Convert the following hexadecimal numbers to binary.
               <ol>
@@ -5214,6 +5250,7 @@
             We use the same techniques as before to convert non-integer numbers between octal and hexadecimal: convert to binary as an intermediate step.
           </p>
           <example>
+            <idx><h>conversion</h><h>from hexadecimal</h><h>to octal</h></idx>
             <statement>
               Convert the following hexadecimal numbers to octal.
               <ol>
@@ -5665,7 +5702,10 @@
             Propositions
           </title>
           <p>
-            In logic, a proposition is a statement that is either true or false but both.  The statement must also be unambiguous.
+            In logic, a proposition is a statement that is either true or false but both.
+            <idx>proposition</idx>
+            <idx>logical proposition</idx>
+            The statement must also be unambiguous.
           </p>
           <p>
             Examples of statements that are propositions:
@@ -5717,13 +5757,17 @@
               Negation
             </title>
             <p>
-              The negation of any proposition <m>p</m> is called <em>not p</em> and is written using the tilde symbol, <m>\notp</m>.  The tilde can be found on a standard keyboard as the shifted key to the left of the 1.  You may also see negations in logic written using this symbol, <m>\neg p</m>, or using a bar or overline, <m>\mybnot{p}</m>.  In computing, you will also see <m>!p</m> as the negation.  We will use the <m>\notp</m> because it uses a character on a conventional keyboard, so it is easier to type.
+              The negation of any proposition <m>p</m> is called <em>not p</em> and is written using the tilde symbol, <m>\notp</m>.
+              <idx>negation</idx>
+              <idx>not</idx>
+              <idx>negative</idx>
+              The tilde can be found on a standard keyboard as the shifted key to the left of the 1.  You may also see negations in logic written using this symbol, <m>\neg p</m>, or using a bar or overline, <m>\mybnot{p}</m>.  In computing, you will also see <m>!p</m> as the negation.  We will use the <m>\notp</m> because it uses a character on a conventional keyboard, so it is easier to type.
             </p>
             <p>
-              Note that you should be a little careful when negating sentences.  For example, the negation of "Pat is happy" is <em>not</em> "Pat is unhappy."  There are many other emotions that Pat could have (anger, fear, boredom, etc.).  If the first statement is false, then its negationv must be true, so between the two you need to cover all possible situations that could arise. It would be safe to say that the negation of "Pat is happy" is "Pat is not happy", though.
+              Note that you should be a little careful when negating sentences.  For example, the negation of <q>Pat is happy</q> is <em>not</em> <q>Pat is unhappy.</q>  There are many other emotions that Pat could have (anger, fear, boredom, etc.).  If the first statement is false, then its negationv must be true, so between the two you need to cover all possible situations that could arise. It would be safe to say that the negation of <q>Pat is happy</q> is <q>Pat is not happy</q>, though.
             </p>
             <p>
-              Another situation requiring care involves statements such as "All the students have coding experience."  The negation of this statement is <em>not</em> "None of the students have coding experience."  The original statement is false even if only one of "the students" has no coding experience.  So the negation of "All the students have coding experience" is "At least one of the students does not have coding experience."  Another way to write the negation is "Some of the students don't have coding experience."
+              Another situation requiring care involves statements such as <q>All the students have coding experience.</q>  The negation of this statement is <em>not</em> <q>None of the students have coding experience.</q>  The original statement is false even if only one of <q>the students</q> has no coding experience.  So the negation of <q>All the students have coding experience</q> is <q>At least one of the students does not have coding experience.</q>  Another way to write the negation is <q>Some of the students don't have coding experience.</q>
             </p>
             <example>
               <p>
@@ -5750,7 +5794,9 @@
                     "Pat's Visa account balance is negative."
                   </li>
                 </ul>
-                Answer: No, these two statements are not negations of each other.  There is a third possible case, "Pat's Visa account balance is zero."  Zero is an unsigned number, so the two statements don't account for all possible situations regarding Pat's Visa account balance.  If the second statement was "Pat's Visa account balance is negative or zero," then the second statement would be the negation of the first one (and vice versa).
+                Answer: No, these two statements are not negations of each other.  There is a third possible case, "Pat's Visa account balance is zero."  Zero is an unsigned number, so the two statements don't account for all possible situations regarding Pat's Visa account balance.
+                <idx><h>zero</h><h>as unsigned number</h></idx>
+                If the second statement was "Pat's Visa account balance is negative or zero," then the second statement would be the negation of the first one (and vice versa).
               </p>
             </example>
           </subsubsection>
@@ -5767,7 +5813,10 @@
               Conjunction
             </title>
             <p>
-              If we connect the propositions <m>p</m> and <m>q</m> with <em>and</em>, then the result is called the <term>conjunction</term> of <m>p</m> and <m>q</m>.  The conjunction of <m>p</m> and <m>q</m> is true provided <em>both</em> <m>p</m> and <m>q</m> are true.  Otherwise it is false. Symbolically, we write
+              If we connect the propositions <m>p</m> and <m>q</m> with <em>and</em>, then the result is called the <term>conjunction</term> of <m>p</m> and <m>q</m>.
+              <idx><h>and</h></idx>
+              <idx><h>conjunction</h></idx>
+              The conjunction of <m>p</m> and <m>q</m> is true provided <em>both</em> <m>p</m> and <m>q</m> are true.  Otherwise it is false. Symbolically, we write
               <me>
                 p \myand q
               </me>
@@ -5786,17 +5835,22 @@
               Inclusive Disjunction
             </title>
             <p>
-              If we connect propositions <m>p</m> and <m>q</m> with <em>or</em>, then the result is called the <term>inclusive disjunction</term> of <m>p</m> and <m>q</m>.  The inclusive disjunction is true if at least one of <m>p</m> and <m>q</m> is true.  It is false only if both <m>p</m> and <m>q</m> are false.  Symbolically, we write
+              If we connect propositions <m>p</m> and <m>q</m> with <em>or</em>, then the result is called the <term>inclusive disjunction</term> of <m>p</m> and <m>q</m>.
+              <idx><h>or</h><h>inclusive</h></idx>
+              <idx>inclusive or</idx>
+              <idx><h>disjunction</h><h>inclusive</h></idx>
+              <idx>inclusive disjunction</idx>
+              The inclusive disjunction is true if at least one of <m>p</m> and <m>q</m> is true.  It is false only if both <m>p</m> and <m>q</m> are false.  Symbolically, we write
               <me>
                 p \myor q
               </me>
             </p>
             <example>
               <p>
-                Under what conditions is the statement "Jason does his marking or goes to a movie" true?
+                Under what conditions is the statement <q>Jason does his marking or goes to a movie</q> true?
               </p>
               <p>
-                Answer: "Jason does his marking or goes to a movie" is true provided at least one of the statements "Jason does his marking" or "Jason goes to a movie" is true.  If Jason does his marking, then the compound sentence is true regardless of whether Jason goes to a movie or not.  Similarly, if Jason goes to a movie, then the compound sentence is true whether Jason does his marking or not.  In complete detail, the inclusive disjunction is true if <em>any</em> of the following are true:
+                Answer: <q>Jason does his marking or goes to a movie</q> is true provided at least one of the statements <q>Jason does his marking</q> or <q>Jason goes to a movie</q> is true.  If Jason does his marking, then the compound sentence is true regardless of whether Jason goes to a movie or not.  Similarly, if Jason goes to a movie, then the compound sentence is true whether Jason does his marking or not.  In complete detail, the inclusive disjunction is true if <em>any</em> of the following are true:
                 <ul>
                   <li>
                     Jason does his marking and also goes to a movie.
@@ -5817,7 +5871,13 @@
               Exclusive Disjunction
             </title>
             <p>
-              If we connect the propositions <m>p</m> and <m>q</m> with <term>exclusive or</term> (often written <c>XOR</c>) then the result is called the <term>exclusive disjunction</term> of <m>p</m> and <m>q</m>.  Symbolically, we write
+              If we connect the propositions <m>p</m> and <m>q</m> with <term>exclusive or</term> (often written <c>XOR</c>) then the result is called the <term>exclusive disjunction</term> of <m>p</m> and <m>q</m>.
+              <idx><h>or</h><h>exclusive</h></idx>
+              <idx>exclusive or</idx>
+              <idx><h>disjunction</h><h>exclusive</h></idx>
+              <idx>exclusive disjunction</idx>
+              <idx>XOR</idx>
+              Symbolically, we write
               <me>
                 p\myxor q
               </me>
@@ -5829,7 +5889,10 @@
               Or vs. XOR
             </title>
             <p>
-              In ordinary language, the word <em>or</em> can mean either the <em>inclusive or</em> or the <em>exclusive or</em>, and it is usually up to the reader or listener to decide which one is appropriate from the context.
+              In ordinary language, the word <em>or</em> can mean either the <em>inclusive or</em> or the <em>exclusive or</em>,
+              <idx><h>or</h><h>vs. XOR</h></idx>
+              <idx><h>XOR</h><h>vs. or</h></idx>
+              and it is usually up to the reader or listener to decide which one is appropriate from the context.
             </p>
             <example>
               <statement>
@@ -7085,7 +7148,8 @@
                 </li>
               </ol>
               We can combine these possibilities into a table called a truth table.
-              <!--\index{truth table!for propositions}\index{proposition!truth table for} !-->
+              <idx><h>truth table</h><h>for propositions</h></idx>
+              <idx><h>proposition</h><h>truth table for</h></idx>
               We can add further columns to find out what the value of other compound propositions for each combination of <m>p</m> and <m>q</m> as well.  Suppose we wished to find out what the truth table was for <m>p \myand q</m>.  Then the table would look like the following.
               <tabular halign="center" top="major" left="medium">
                <row bottom="medium">
@@ -7436,7 +7500,9 @@
                   </cell>
                 </row>
               </tabular>
-              Notice that the last column looks like the first, so <m>p\myand 1</m> has the same values as <m>p</m>.  We say, then, that <m>p\myand 1</m> is <term>logically equivalent</term> to <m>p</m>.  The topic of logical equivalence will be examined in more detail later on.
+              Notice that the last column looks like the first, so <m>p\myand 1</m> has the same values as <m>p</m>.  We say, then, that <m>p\myand 1</m> is <term>logically equivalent</term> to <m>p</m>.
+              <idx><h>logical equivalence</h><h>of propositions</h></idx>
+              The topic of logical equivalence will be examined in more detail later on.
             </p>
           </subsubsection>
           <subsubsection xml:id="negation-in-truth-tables">
@@ -7765,7 +7831,10 @@
             Logical Equivalence
           </title>
           <p>
-            Two logical expressions are said to be <term>logically equivalent</term> if they have the same values in their columns in the truth table.  We saw in our examples above that <m>p\,\myor\notp</m> was logically equivalent to 1\, and <m>p\myand 1</m> was logically equivalent to <m>p</m>.  The symbol for <em>logically equivalent to</em> is <m>\Leftrightarrow</m>, so <m>p\,\myor\notp\Leftrightarrow 1</m> and <m>p\myand 1\Leftrightarrow p</m>.
+            Two logical expressions are said to be <term>logically equivalent</term> if they have the same values in their columns in the truth table.
+            <idx><h>logical equivalence</h><h>of propositions</h></idx>
+            <idx><h>equivalence, logical</h><h>of propositions</h></idx>
+            We saw in our examples above that <m>p\,\myor\notp</m> was logically equivalent to 1\, and <m>p\myand 1</m> was logically equivalent to <m>p</m>.  The symbol for <em>logically equivalent to</em> is <m>\Leftrightarrow</m>, so <m>p\,\myor\notp\Leftrightarrow 1</m> and <m>p\myand 1\Leftrightarrow p</m>.
           </p>
           <example>
             <statement>
@@ -10905,7 +10974,12 @@
           <title>Logic Circuits</title>
           <introduction>
             <p>
-              A logic circuit or digital circuit is an electrical circuit based on a discrete number of voltage levels, usually two.  Two-level circuits usually have one voltage set at zero volts, and the circuit then behaves like a switch, being either <em>on</em> or <em>off</em>.  A nice diagram for a switch looks like this:
+              A logic circuit or digital circuit is an electrical circuit based on a discrete number of voltage levels, usually two.
+              <idx>logic circuit</idx>
+              <idx>digital circuit</idx>
+              Two-level circuits usually have one voltage set at zero volts, and the circuit then behaves like a switch, being either <em>on</em> or <em>off</em>.
+              <idx>switch</idx>
+              A nice diagram for a switch looks like this:
               <image width="30%" xml:id="fig-switch">
                 <latex-image>
                   \begin{tikzpicture}
@@ -10916,7 +10990,9 @@
               so that when the switch is open, as in the diagram, no current exists and the switch is <em>off</em>.  When the switch closes and there's a clear path from the left side to the right side, the switch is <em>on</em>.
             </p>
             <p>
-              A digital circuit then makes logical decisions, based on the input to the circuit.  The simplest logic circuits are called <term>gates</term>.  Physically, a gate is a transistor circuit which takes one or more voltage inputs and gives a single voltage output.
+              A digital circuit then makes logical decisions, based on the input to the circuit.  The simplest logic circuits are called <em>gates</em>.
+              <idx>gate</idx>
+              Physically, a <term>gate</term> is a transistor circuit which takes one or more voltage inputs and gives a single voltage output.
             </p>
             <p>
               One way to represent the action of a gate is by using a truth table.  As is usual in a truth table, all possible combinations of the input voltages are given, as well as the output of the gate for each set of inputs.  Each input voltage is given a symbol, such as <m>A</m>.  When the input signal is off, the value of <m>A</m> is given as 0, and when it is on, the value of <m>A</m> is 1.  The associated truth table then looks exactly like those we studied with logical propositions.
@@ -10926,6 +11002,7 @@
             <title><em>and</em> gate</title>
             <p>
               The <term>switch representation</term> of an <em>and</em> gate looks like this:
+              <idx><h>switch representation</h><h>and</h></idx>
               <image width="30%" xml:id="fig-switch-and">
                 <latex-image>
                   \begin{tikzpicture}
@@ -10937,6 +11014,7 @@
             </p>
             <p>
               Another common representation is the <term>gate representation</term>, which looks like this:
+              <idx><h>gate representation</h><h>and</h></idx>
               <image width="30%" xml:id="fig-gate-and">
                 <latex-image>
                   \begin{circuitikz}
@@ -10955,6 +11033,7 @@
             <title><em>or</em> gate</title>
             <p>
               The switch representation of an <em>or</em> gate looks like this:
+              <idx><h>switch representation</h><h>or</h></idx>
               <image width="30%" xml:id="fig-switch-or">
                 <latex-image>
                   \begin{tikzpicture}
@@ -10967,6 +11046,7 @@
             </p>
             <p>
               The gate representation looks like this:
+              <idx><h>gate representation</h><h>or</h></idx>
               <image width="30%" xml:id="fig-gate-or">
                 <latex-image>
                   \begin{circuitikz}
@@ -10984,7 +11064,8 @@
           <subsubsection xml:id="sssec-not-gate">
             <title><em>not</em> gate</title>
             <p>
-              The <em>not</em> gate, or <term>inverter</term>, has the diagram
+              The <em>not</em> gate, or <em>inverter</em>, has the diagram
+              <idx><h>gate representation</h><h>not</h></idx>
               <image width="20%" xml:id="fig-gate-not">
                 <latex-image>
                   \begin{circuitikz}
@@ -11058,10 +11139,15 @@
         <subsection xml:id="ssec-boolean-algebra">
           <title>Boolean Algebra</title>
           <p>
-            The symbols used for circuits, <m>AB</m>, <m>A+B</m>, and <m>\nota</m>, are the same symbols as used in Boolean algebra.  In this type of algebra, each variable (<m>A</m>, <m>B</m>, etc.) can take only the value 0 or 1.
+            The symbols used for circuits, <m>AB</m>, <m>A+B</m>, and <m>\nota</m>, are the same symbols as used in Boolean algebra.
+            <idx>Boolean algebra</idx>
+            In this type of algebra, each variable (<m>A</m>, <m>B</m>, etc.) can take only the value 0 or 1.
           </p>
           <p>
-            Truth tables in Boolean algebra then look very similar to the truth tables that we've studied in logic.  FOr example, the truth table showing <m>AB</m> and <m>A+B</m> is:
+            Truth tables in Boolean algebra then look very similar to the truth tables that we've studied in logic.
+            <idx><h>truth table</h><h>for Boolean algebra</h></idx>
+            <idx><h>Boolean algebra</h><h>truth table for</h></idx>
+            For example, the truth table showing <m>AB</m> and <m>A+B</m> is:
             <tabular halign="center" top="major" left="medium">
               <row bottom="medium">
                 <cell right="medium">
@@ -11136,7 +11222,10 @@
             </tabular>
           </p>
           <p>
-            If you have more than one operation happening in a Boolean expression, the order of operations is very similar to the order of operations in arithmetic.  For example, if you have the locical expression <m>AB+C</m>, in arithmetic you multiply before you add.  In Boolean algebra, you perform the <em>and</em> before the <em>or</em>.  Negation applies to the entire variable or expression.
+            If you have more than one operation happening in a Boolean expression, the order of operations is very similar to the order of operations in arithmetic.
+            <idx><h>order of operations</h><h>Boolean algebra</h></idx>
+            <idx><h>Boolean algebra</h><h>order of operations</h></idx>
+            For example, if you have the locical expression <m>AB+C</m>, in arithmetic you multiply before you add.  In Boolean algebra, you perform the <em>and</em> before the <em>or</em>.  Negation applies to the entire variable or expression.
           </p>
           <p>
             The order of Boolean operations is indicated in the following examples:
@@ -22856,7 +22945,7 @@
                 <m>8, 9, 11, 13, 16, \ldots</m>
               </statement>
               <solution>
-
+                no
               </solution>
             </exercise>
             <exercise>
@@ -22864,7 +22953,7 @@
                 <m>-3, -10, -17, -24, \ldots</m>
               </statement>
               <solution>
-
+                no
               </solution>
             </exercise>
             <exercise>
@@ -22872,7 +22961,7 @@
                 <m>3, 6, 12, 24, \ldots</m>
               </statement>
               <solution>
-
+                yes, <m>r=2</m>
               </solution>
             </exercise>
             <exercise>
@@ -22880,7 +22969,7 @@
                 <m>1, 2, 6, 24, \ldots</m>
               </statement>
               <solution>
-
+                no
               </solution>
             </exercise>
             <exercise>
@@ -22888,7 +22977,7 @@
                 <m>81, 72, 63, 54, \ldots</m>
               </statement>
               <solution>
-
+                no
               </solution>
             </exercise>
             <exercise>
@@ -22896,7 +22985,7 @@
                 <m>72, 48, 32,\ldots</m>
               </statement>
               <solution>
-
+                yes, <m>r=\frac{2}{3}</m>
               </solution>
             </exercise>
           </exercisegroup>
@@ -22909,7 +22998,13 @@
                 <m>1, 3, 9, 27, \ldots</m>
               </statement>
               <solution>
-                <m></m>
+                <m>{a_n} = {\left( 3 \right)^{n - 1}}</m> and
+                <me>
+                  \left\{ \begin{array}{l}
+                  {a_1} = 1\\
+                  {a_n} = 3{a_{n - 1}}
+                  \end{array} \right.
+                </me>
               </solution>
             </exercise>
             <exercise>
@@ -22917,7 +23012,13 @@
                 <m>64, 16, 4, 1, \ldots</m>
               </statement>
               <solution>
-                <m></m>
+                <m>{a_n} = 64{\left( {\frac{1}{4}} \right)^{n - 1}}</m> and
+                <me>
+                  \left\{ \begin{array}{l}
+                  {a_1} = 64\\
+                  {a_n} = \frac{{{a_{n - 1}}}}{4}
+                  \end{array} \right.
+                </me>
               </solution>
             </exercise>
             <exercise>
@@ -22925,15 +23026,27 @@
                 <m>3, -6, 12, -24, \ldots</m>
               </statement>
               <solution>
-                <m></m>
+                <m>{a_n} = 3{\left( { - 2} \right)^{n - 1}}</m> and
+                <me>
+                  \left\{ \begin{array}{l}
+                  {a_1} = 3\\
+                  {a_n} =  - 2{a_{n - 1}}
+                  \end{array} \right.
+                </me>
               </solution>
             </exercise>
             <exercise>
               <statement>
-                <m></m>
+                <m>24, 2.4, 0.24, \ldots</m>
               </statement>
               <solution>
-                <m>24, 2.4, 0.24, \ldots</m>
+                <m>{a_n} = 24{\left( {0.1} \right)^{n - 1}}</m> and
+                <me>
+                  \left\{ \begin{array}{l}
+                  {a_1} = 24\\
+                  {a_n} = 0.1 \times {a_{n - 1}}
+                  \end{array} \right.
+                </me>
               </solution>
             </exercise>
           </exercisegroup>
@@ -22946,7 +23059,7 @@
                 <m>12, 18, 27,\ldots</m>
               </statement>
               <solution>
-                <m></m>
+                <m>{a_n} = 12{\left( {\frac{3}{2}} \right)^{n - 1}}</m>, so <m>a_{50} \approx 5.1\times10^9</m> and <m>a_{261} \approx 7.3\times10^{46}</m>
               </solution>
             </exercise>
             <exercise>
@@ -22954,7 +23067,7 @@
                 <m>12, 8, \frac{{16}}{3}, \ldots</m>
               </statement>
               <solution>
-                <m></m>
+                <m>{a_n} = 12{\left( {\frac{2}{3}} \right)^{n - 1}}</m>, so <m>a_{50} \approx 2.8\times10^{-8}</m> and <m>a_{261} \approx 1.97\times10^{-45}</m>
               </solution>
             </exercise>
           </exercisegroup>
@@ -22974,7 +23087,7 @@
                 </md>
               </statement>
               <solution>
-
+                no
               </solution>
             </exercise>
             <exercise>
@@ -22989,7 +23102,7 @@
                 </md>
               </statement>
               <solution>
-
+                yes, with <m>r=2</m>
               </solution>
             </exercise>
             <exercise>
@@ -23004,7 +23117,7 @@
                 </md>
               </statement>
               <solution>
-
+                yes, with <m>r=10</m>
               </solution>
             </exercise>
             <exercise>
@@ -23019,7 +23132,7 @@
                 </md>
               </statement>
               <solution>
-
+                no
               </solution>
             </exercise>
             <exercise>
@@ -23034,7 +23147,7 @@
                 </md>
               </statement>
               <solution>
-
+                yes, with <m>r=-1</m>
               </solution>
             </exercise>
             <exercise>
@@ -23049,7 +23162,7 @@
                 </md>
               </statement>
               <solution>
-
+                no
               </solution>
             </exercise>
           </exercisegroup>
@@ -23058,15 +23171,15 @@
               For the following sequence, calculate the <m>\upst{201}</m> term:  <m>5, 15, 45, \ldots</m>
             </statement>
             <solution>
-              <m></m>
+              <m>{a_n} = 5{\left( 3 \right)^{n - 1}}</m>, so <m>a_{201} = 5(3)^{200} = 1.33 \times 10^{96}</m>
             </solution>
           </exercise>
           <exercise>
             <statement>
-              For the following sequence, calculate the <m>\upth{20}</m> term:       <m>7, -14, 28, \ldots</m>
+              For the following sequence, calculate the <m>\upth{20}</m> term:  <m>7, -14, 28, \ldots</m>
             </statement>
             <solution>
-              <m></m>
+              <m>{a_n} = 7{\left( { - 2} \right)^{n - 1}}</m>, so <m>a_{20} = 7(-2)^{19} = -3,670,016</m>
             </solution>
           </exercise>
           <exercise>
@@ -23074,7 +23187,7 @@
               Calculate <m>S_{20}</m> for the series <m>100 + 50 + 25 + \ldots</m>
             </statement>
             <solution>
-              <m></m>
+              <m>$S_{20} = 200</m> (the exact answer is <m>\frac{{26214375}}{{131072}}</m> or 199.99980926513671875, but if you round to three decimals, the answer is 200.000)
             </solution>
           </exercise>
           <exercise>
@@ -23082,7 +23195,7 @@
               Calculate <m>S_{20}</m> for the series <m>100 + 200 + 400 + \ldots</m>
             </statement>
             <solution>
-              <m></m>
+              <m>S_{20} = 104,857,500</m>
             </solution>
           </exercise>
           <exercisegroup>
@@ -23094,7 +23207,7 @@
                 <m> - 6 + 4 - \frac{8}{3} + \ldots</m>
               </statement>
               <solution>
-                <m></m>
+                <m>{S_\infty } = \frac{{{a_1}}}{{1 - r}} = \frac{{ - 6}}{{1 - \left( { - 2/3} \right)}} =  - \frac{{18}}{5} =  - 3.6</m>
               </solution>
             </exercise>
             <exercise>
@@ -23102,7 +23215,7 @@
                 <m>100 + 50 + 25 + \ldots</m>
               </statement>
               <solution>
-                <m></m>
+                <m>S_\infinity = 200</m>
               </solution>
             </exercise>
             <exercise>
@@ -23110,7 +23223,7 @@
                 <m>100 + 200 + 400 + \ldots</m>
               </statement>
               <solution>
-                <m></m>
+                <m>S_\infinity</m> does not exist (<m>r \gt 1</m>)
               </solution>
             </exercise>
             <exercise>
@@ -23118,7 +23231,7 @@
                 <m>12 + 3 + \frac{3}{4}+ \ldots</m>
               </statement>
               <solution>
-                <m></m>
+                <m>S_\infinity = 16</m>
               </solution>
             </exercise>
           </exercisegroup>
@@ -23131,7 +23244,7 @@
                 <m>\sum\limits_{k = 0}^{10} {{2^{k + 2}}}</m>
               </statement>
               <solution>
-                <m></m>
+                <m>{S_{11}} = {2^2} + {2^3} + {2^4} + ... + {2^{12}} = \frac{{{a_1}(1 - {r^n})}}{{1 - r}} = \frac{{{2^2}(1 - {2^{11}})}}{{1 - 2}}= 8188</m>
               </solution>
             </exercise>
             <exercise>
@@ -23139,7 +23252,7 @@
                 <m>{\sum\limits_{j = 1}^\infty  {15\left( {\frac{3}{5}} \right)} ^j}</m>
               </statement>
               <solution>
-                <m></m>
+                <m>S_\infinity  = 22.5</m>
               </solution>
             </exercise>
             <exercise>
@@ -23147,7 +23260,7 @@
                 <m>\sum\limits_{i = 2}^\infty  {25{{\left( {0.1} \right)}^j}}</m>
               </statement>
               <solution>
-                <m></m>
+                <m>S_\infinity = \frac{5}{{18}} = 0.2\overline 7</m>
               </solution>
             </exercise>
             <exercise>
@@ -23155,7 +23268,7 @@
                 <m>\sum\limits_{i = 0}^\infty  {4{{\left( { - 3} \right)}^i}}</m>
               </statement>
               <solution>
-                <m></m>
+                <m>S_\infinity</m> does not exist (<m>r \lt -1</m>)
               </solution>
             </exercise>
           </exercisegroup>
@@ -23164,7 +23277,7 @@
               If the number of vampires in Transylvania doubles every month, then how many vampires will be in Transylvania in 3 years, starting from one individual?  Comment on your result if the total population of Transylvania is 2 million people.
             </statement>
             <solution>
-
+              3 years is 36 months, so we have a 36-term sequence starting with <m>1, 2, 4, 8, \ldots</m>  The <m>\nth{}</m> term will be <m>{a_n} = 1{\left( 2 \right)^{n - 1}}</m>, so the <m>\upth{36}</m> term will be <m>{a_{36}} = 1{\left( 2 \right)^{35}} = 34,359,738,368</m>, which is a tad larger than the total population of Transylvania.
             </solution>
           </exercise>
           <exercise>
@@ -23172,15 +23285,22 @@
               As I was going to St. Ives, I met a man with seven wives.  Each wife had seven sacks.  Each sack had seven cats.  Each cat had seven kits.  Kits, cats, sacks, wives: does this form a geometric sequence?
             </statement>
             <solution>
-
+              <p>1 man</p>
+              <p>7 wives</p>
+              <p><m>\# \text{sacks} = \#\text{wives} \times \# \text{sacks/wife} = 7 \times 7 = 49</m></p>
+              <p><m>\# \text{cats} = \#\text{sacks} \times \# \text{cats/sack} = 49 \times 7 = 343</m></p>
+              <p><m>\# \text{kits} = \#\text{cats} \times \# \text{kits/cat} = 343 \times 7 = 2401</m></p>
+              <p>So kits, cats, sacks, and wives is the sequence <m>2401, 373, 49, 7</m>, which is geometric with four terms:  <m>a_1 = 2401</m> and <m>r = \frac{1}{7}</m>.</p>
             </solution>
           </exercise>
           <exercise>
             <statement>
-              The paper used in the photocopier by Pat's office is said to be 0.097~mm thick.  If it is folded over repeatedly, doubling its thickness each time, how thick will the paper be if it's folded 7 times?  Bonus:  why, then, were the Mythbusters having so many problems trying to fold the paper this many times? 
+              The paper used in the photocopier by Pat's office is said to be 0.097~mm thick.  If it is folded over repeatedly, doubling its thickness each time, how thick will the paper be if it's folded 7 times?  Bonus:  why, then, were the Mythbusters having so many problems trying to fold the paper this many times?
             </statement>
             <solution>
-
+              The paper is initially 0.097 mm thick with no folds.  After one fold, the thickness will be <m>0.097\times2</m>, after two folds <m>0.097\times2\times2</m>, etc.  So our starting term (zero folds) will be <m>a_0=0.097</m> and then will double with r = 2 thereafter, where <m>n</m> is not only the index but also the number of folds made.
+              So <m>{a_n} = 0.097{\left( 2 \right)^n}</m>, and the term with seven folds will be <m>{a_7} = 0.097{\left( 2 \right)^7} = 12.416</m>, so we can conclude that the paper thickness will be 12.4 mm, or just over 1 cm thick.
+              (The Mythbusters realized that the problems with paperfolding lie with the fold itself, and making the fold lie as flat as possible.  If I remember correctly, they resorted to C-clamps and hitting the fold with a hammer to flatten it.)
             </solution>
           </exercise>
         </exercises>
@@ -23191,5 +23311,35 @@
         </solutions>
       </section>
     </chapter>
+<!--    <chapter xml:id="BigO">
+      <title>
+        Big O Notation and Algorithmic Complexity
+      </title>
+      <section xml:id="sec-bigO-growth-rates">
+        <title>
+          Big O and Rates of Growth
+        </title>
+        <subsection xml:id="ssec-bigO-basic"
+      </section>
+      <section xml:id="sec-fact-exp-growth">
+        <title>
+          Factorial and Exponential Growth
+        </title>
+      </section>
+      <section xml:id="sec-log-growth">
+        <title>
+          Logarithmic Growth
+        </title>
+      </section>
+    </chapter>
+    !-->
+    <backmatter xml:id="backmatter">
+      <title>
+        Back Matter
+      </title>
+      <index>
+        <index-list />
+      </index>
+    </backmatter>
   </book>
 </pretext>
