@@ -3523,7 +3523,7 @@
             so 54 hours <m>=</m> 2 days plus 6 hours.
           </p>
           <p>
-            But how can we find quotiens and remainders with a standard calculator?  If we take the number 54 and divide it by 24, our calculator will tell us 2.25.  There are two ways to go:
+            But how can we find quotients and remainders with a standard calculator?  If we take the number 54 and divide it by 24, our calculator will tell us 2.25.  There are two ways to go:
             <ol>
               <li>
                 Take the integer part of 2.25, which is 2.  Then perform the following calculation:
