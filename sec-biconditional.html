@@ -1,0 +1,461 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-22T14:02:26-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Biconditional</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Binary, Logic, and More">
+<meta property="book:author" content="Patricia R. Wrean">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\mynot}{\sim\!}
+\newcommand{\myand}{{\wedge}}
+\newcommand{\myor}{{\vee}}
+\newcommand{\myxor}{{\oplus}}
+\newcommand{\ttxor}{\texttt{XOR}}
+\newcommand{\mytt}[1]{\texttt{#1}}
+
+\newcommand{\myleq}{{\Leftrightarrow}}
+\newcommand{\myimplies}{{\rightarrow}}
+\newcommand{\myiff}{{\leftrightarrow}}
+
+\newcommand{\mylnot}[1]{{{\sim}#1}}
+\newcommand{\notp}{\mylnot{p}}
+\newcommand{\notq}{\mylnot{q}}
+\newcommand{\notr}{\mylnot{r}}
+\newcommand{\mybnot}[1]{{\overline{#1}}}
+\newcommand{\nota}{\mybnot{A}}
+\newcommand{\notb}{\mybnot{B}}
+\newcommand{\notc}{\mybnot{C}}
+\newcommand{\notd}{\mybnot{D}}
+
+\newcommand{\conditional}{{p \myimplies q}}
+\newcommand{\inverse}{{\notp{} \myimplies \notq{}}}
+\newcommand{\converse}{{q \myimplies p}}
+\newcommand{\contrapositive}{{\notq{} \myimplies \notp{}}}
+\newcommand{\biconditional}{{p \myiff{} q}}
+
+\newcommand{\intersection}{\cap}
+\newcommand{\intersect}{\cap}
+\newcommand{\union}{\cup}
+
+\newcommand{\nth}{{n^{\text{th}}}}
+\newcommand{\kth}{{k^{\text{th}}}}
+\newcommand{\upth}[1]{{#1^{\text{th}}}}
+\newcommand{\upst}[1]{{#1^{\text{st}}}}
+\newcommand{\upnd}[1]{{#1^{\text{nd}}}}
+\newcommand{\uprd}[1]{{#1^{\text{rd}}}}
+\newcommand{\infinity}{{\infty}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="binary-logic-and-more.html"><span class="title">Binary, Logic, and More:</span> <span class="subtitle">Applied Math for Computing</span></a></h1>
+<p class="byline">Patricia R. Wrean</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-conditional.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sequences-and-series.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-conditional.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sequences-and-series.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li></ul>
+</li>
+<li class="link">
+<a href="binary-octal-hex.html" data-scroll="binary-octal-hex" class="internal"><span class="codenumber">1</span> <span class="title">Binary, Octal, and Hexadecimal</span></a><ul>
+<li><a href="decimal-octal.html" data-scroll="decimal-octal" class="internal">Decimal and Octal</a></li>
+<li><a href="binary-hex.html" data-scroll="binary-hex" class="internal">Binary and Hexadecimal</a></li>
+<li><a href="non-integer-to-decimal.html" data-scroll="non-integer-to-decimal" class="internal">Converting Non-Integer Numbers to Decimal</a></li>
+<li><a href="converting-from-decimal.html" data-scroll="converting-from-decimal" class="internal">Converting from Decimal</a></li>
+<li><a href="convert-bin-oct-hex.html" data-scroll="convert-bin-oct-hex" class="internal">Converting between Binary, Octal, and Hexadecimal</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="logic.html" data-scroll="logic" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="sec-intro-to-logic.html" data-scroll="sec-intro-to-logic" class="internal">Introduction to Logic</a></li>
+<li><a href="sec-venn-diagrams.html" data-scroll="sec-venn-diagrams" class="internal">Venn Diagrams</a></li>
+<li><a href="sec-logical-equivalence.html" data-scroll="sec-logical-equivalence" class="internal">Logical Equivalence</a></li>
+<li><a href="sec-boolean-algebra.html" data-scroll="sec-boolean-algebra" class="internal">Boolean Algebra</a></li>
+<li><a href="sec-logic-laws.html" data-scroll="sec-logic-laws" class="internal">Laws of Logic</a></li>
+<li><a href="sec-more-logic-laws.html" data-scroll="sec-more-logic-laws" class="internal">More Laws of Logic</a></li>
+<li><a href="sec-conditional.html" data-scroll="sec-conditional" class="internal">The Conditional</a></li>
+<li><a href="sec-biconditional.html" data-scroll="sec-biconditional" class="active">The Biconditional</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sequences-and-series.html" data-scroll="sequences-and-series" class="internal"><span class="codenumber">3</span> <span class="title">Sequences and Series</span></a><ul>
+<li><a href="sec-intro-to-seq-and-ser.html" data-scroll="sec-intro-to-seq-and-ser" class="internal">Introduction to Sequences and Series</a></li>
+<li><a href="sec-arith-seq-ser.html" data-scroll="sec-arith-seq-ser" class="internal">Arithmetic Sequences and Series</a></li>
+<li><a href="sec-geom-seq-ser.html" data-scroll="sec-geom-seq-ser" class="internal">Geometric Sequences and Series</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-biconditional"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.8</span> <span class="title">The Biconditional</span>
+</h2>
+<section class="subsection" id="ssec-bicond-connective"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.8.1</span> <span class="title">The Biconditional Connective</span>
+</h3>
+<p id="p-268">Consider the conditional <em class="emphasis">If you live in Victoria, then you live in BC.</em>  Remembering that the conditional has nothing to say if the first proposition is false, then it is possible for you to not live in Victoria but to still live in BC.  It is also possible to not live in Vicoria and also not live in BC.</p>
+<p id="p-269">Let's now consider the conditional <em class="emphasis">If the temperature outside is below <span class="process-math">\(0^{\circ}\text{C}\text{,}\)</span> then it is freezing outside.</em>  If I were to use this sentence in everyday English, I probably mean <em class="emphasis">If the temperature outside is below <span class="process-math">\(0^{\circ}\text{C}\text{,}\)</span> then it is freezing outide <em class="alert">and</em> if the temperature outside is <em class="alert">not</em> below <span class="process-math">\(0^{\circ}\text{C}\text{,}\)</span> then it is <em class="alert">not</em> freezing outside.</em>  So we could probably do with a new kind of connective that means <em class="emphasis">If <span class="process-math">\(p\)</span> then <span class="process-math">\(q\)</span> <em class="alert">and</em> if <span class="process-math">\(\notp{}\)</span> then <span class="process-math">\(\notq{}\)</span></em>.  The new connective is called the <dfn class="terminology">biconditional</dfn>, and is written <span class="process-math">\(\biconditional\)</span></p>
+<p id="p-270">Here is the truth table for the biconditional: <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p \myiff{} q\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+</tr>
+</table></div></p>
+<p id="p-271">So if <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have the same truth value, then the biconditional is true and otherwise it is false.  (It is the negation of the <em class="emphasis">exclusive or</em>, <span class="process-math">\(p\myxor q\text{.}\)</span>)</p>
+<p id="p-272">There are a number of ways to specify the biconditional in English:</p>
+<ol class="decimal">
+<li id="li-310"><p id="p-derived-li-310">If and only if <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(q\text{.}\)</span></p></li>
+<li id="li-311"><p id="p-derived-li-311"><span class="process-math">\(p\)</span> if and only if <span class="process-math">\(q\text{.}\)</span></p></li>
+<li id="li-312"><p id="p-derived-li-312">If <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(q\text{,}\)</span> and vice versa.</p></li>
+<li id="li-313"><p id="p-derived-li-313">If <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(q\text{,}\)</span> and if <span class="process-math">\(\notp{}\)</span> then <span class="process-math">\(\notq{}\text{.}\)</span></p></li>
+</ol>
+<p class="continuation">We'll mostly be using the first two in this list. <article class="example example-like" id="exmpl-bicond1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-bicond1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.8.1</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exmpl-bicond1"><article class="example example-like">Draw the truth tables for <span class="process-math">\(\biconditional\)</span> and <span class="process-math">\((\conditional)\myand(\converse)\text{.}\)</span>  Are they logically equivalent?  Also, are <span class="process-math">\(\biconditional\)</span> and <span class="process-math">\((\conditional)\myand(\inverse)\)</span> logically equivalent?<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-27" id="answer-27"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like">Here's the truth table: <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\biconditional\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notp{}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notq{}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\conditional\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\converse\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\inverse\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\((\conditional)\myand(\converse)\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\((\conditional)\myand(\inverse)\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">0</td>
+<td class="c m b3 r2 l0 t0 lines">0</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+</tr>
+</table></div> By looking at the relevant columns (3, 9, and 10), we can see that all three of these logical expressions are equivalent.  (We might have anticipated this, if we noticed earlier that the converse and the inverse are logically equivalent to each other.)</div></div>
+</div></article></div> <article class="example example-like" id="exmpl-bicond2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-bicond2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.8.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exmpl-bicond2"><article class="example example-like">Consider the following conditional statements. <ol class="decimal">
+<li id="li-314"><p id="p-derived-li-314">If two lines are perpendicular, then the angle between them is <span class="process-math">\(90^{\circ}\text{.}\)</span></p></li>
+<li id="li-315"><p id="p-derived-li-315">If a polygon is a right triangle, then it has three sides.</p></li>
+</ol> Which of these sentences would still be true if it were written in the form of the biconditional?<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><ol class="decimal">
+<li id="li-316"><p id="p-derived-li-316">would still be true since if two lines are not perpendicular, then the angle between them is not <span class="process-math">\(90^{\circ}\text{.}\)</span></p></li>
+<li id="li-317"><p id="p-derived-li-317">would not be true since there are many triangles that aren't right triangles.</p></li>
+</ol></div></div>
+</div></article></div> <article class="example example-like" id="exmpl-bicond3"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-bicond3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.8.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exmpl-bicond3"><article class="example example-like">The following biconditional statement is true: “If and only if Jason completes his marking, he will not feel guilty.”  Given that, answer the following questions: <ol class="decimal">
+<li id="li-318"><p id="p-derived-li-318">Jason feels guilty.  Did he finish his marking?</p></li>
+<li id="li-319"><p id="p-derived-li-319">Jason does not feel guilty.  Did he finish his marking?</p></li>
+<li id="li-320"><p id="p-derived-li-320">Jason finished his marking.  Does he feel guilty?</p></li>
+<li id="li-321"><p id="p-derived-li-321">Jason did not finish his marking.  Does he feel guilty?</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-29" id="answer-29"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-29"><div class="answer solution-like">Let <span class="process-math">\(p=\)</span>“Jason finishes his marking” and <span class="process-math">\(q=\)</span>“Jason does not feel guilty.”<ol class="decimal">
+<li id="li-322"><p id="p-derived-li-322">The statement <span class="process-math">\(q\)</span> is false, so <span class="process-math">\(p\)</span> must also be false (truth of the biconditional requires that both have the same truth value). So Jason did not finish his marking and the answer is <em class="emphasis">no</em>.</p></li>
+<li id="li-323"><p id="p-derived-li-323"><span class="process-math">\(q\)</span> is true so <span class="process-math">\(p\)</span> is true.  Yes.</p></li>
+<li id="li-324"><p id="p-derived-li-324"><span class="process-math">\(p\)</span> is true so <span class="process-math">\(q\)</span> is true.  And since <span class="process-math">\(q\)</span> is <em class="emphasis">not guilty</em> the answer is <em class="emphasis">no</em>.</p></li>
+<li id="li-325"><p id="p-derived-li-325"><span class="process-math">\(p\)</span> is false so <span class="process-math">\(q\)</span> is false. And feeling “not not guilty” is the same as feeling guilty, so the answer is <em class="emphasis">yes.</em></p></li>
+</ol>
+</div></div>
+</div></article></div></p></section><section class="subsection" id="ssec-programming-apps"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.8.2</span> <span class="title">Programming Applications</span>
+</h3>
+<p id="p-273">The if-then statement is very common in programming.  In pseudocode, it usually takes the form</p>
+<pre class="code-display tex2jax_ignore">
+              if x &gt; 3 then print "Hello World"
+            </pre>
+<p id="p-274">When you are debugging, it is tempting to think that this particular code fragment behaves more like the biconditional: if "Hello World" was output, was <span class="process-math">\(x\gt 3\text{?}\)</span>  It's tempting to think so, but what if "Hello World" was printed because of some other command?  What then can we conclude about <span class="process-math">\(x\text{?}\)</span></p>
+<p id="p-275">Let's examine this in more detail.  Recall that if <span class="process-math">\(\conditional\)</span> is true and <span class="process-math">\(q\)</span> is true, we cannot conclude anything about <span class="process-math">\(p\text{.}\)</span>  Now consider the following piece of pseudocode:</p>
+<pre class="code-display tex2jax_ignore">
+              x=4
+              y=0
+              if x &gt; 3 then y = 5
+              print "y = ", y
+            </pre>
+<p class="continuation">The output will be "y=5".</p>
+<p id="p-276">Will the following pseudocode produce the same output?</p>
+<pre class="code-display tex2jax_ignore">
+              x=2
+              y=5
+              if x &gt; 3 then y=5
+              print "y = ",y
+            </pre>
+<p class="continuation">It will.  The conditional statement did not change the value of <span class="process-math">\(y\text{,}\)</span> but the value was set to 5 initially and so the output will be "y=5".  Once again, knowing that <span class="process-math">\(q\)</span> is true does not allow us to conclude anything about <span class="process-math">\(p\)</span> from the conditional <span class="process-math">\(\conditional\text{.}\)</span>  However, if the output was "y=4" or any other value not equal to 5, we can draw the conclusion that <span class="process-math">\(x\)</span> was not greater than 3.  if <span class="process-math">\(\conditional\)</span> is true and <span class="process-math">\(q\)</span> is false, we know with certainty that <span class="process-math">\(p\)</span> is false also.</p>
+<p id="p-277">The if-then-else construction behaves in a similar fashion.  Consider the following code fragment:</p>
+<pre class="code-display tex2jax_ignore">
+              if x &gt; 3 then
+                y = 5
+              else
+                z = 7
+              print "y = ",y,"z = ",z
+            </pre>
+<p class="continuation">Only if the output tells you that <span class="process-math">\(y\neq 5\)</span> or <span class="process-math">\(z\neq 7\)</span> will you know with certainty something about <span class="process-math">\(x\text{.}\)</span></p>
+<p id="p-278">For special cases, the if-then-else construction can yield more information.  Consider the following:</p>
+<pre class="code-display tex2jax_ignore">
+              if x &gt; 3 then
+                y = 5
+              else
+                y = 7
+              print "y = ",y
+            </pre>
+<p class="continuation">Since this piece of pseudocode assigns different values (5 or 7) to the <em class="alert">same</em> variable <span class="process-math">\(y\text{,}\)</span> finding out the resulting value of <span class="process-math">\(y\)</span> will determine whether <span class="process-math">\(x\)</span> was greater than 3.  In this special case, the if-then behaves like the biconditional: if <span class="process-math">\(y=5\)</span> then you know that <span class="process-math">\(x \gt 3\text{,}\)</span> and if <span class="process-math">\(y\ne 5\text{,}\)</span> then <span class="process-math">\(x\leq 3\text{.}\)</span></p></section><section class="exercises" id="exers-sec-biconditional"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.8.3</span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-62">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-66">Write out the truth tables for the following logical expressions.  (You might want to do them all in one or two big tables, with columns for each question.)</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-368"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<span class="process-math">\(\conditional\)</span></article><article class="exercise exercise-like" id="exercise-369"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<span class="process-math">\(\inverse\)</span></article><article class="exercise exercise-like" id="exercise-370"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<span class="process-math">\(\contrapositive\)</span></article><article class="exercise exercise-like" id="exercise-371"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<span class="process-math">\(\converse \)</span></article><article class="exercise exercise-like" id="exercise-372"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<span class="process-math">\(\notp\myor q \)</span></article><article class="exercise exercise-like" id="exercise-373"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<span class="process-math">\(p\myand\notq \)</span></article><article class="exercise exercise-like" id="exercise-374"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<span class="process-math">\(\biconditional \)</span></article><article class="exercise exercise-like" id="exercise-375"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<span class="process-math">\(\notp\myiff\notq \)</span></article><article class="exercise exercise-like" id="exercise-376"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<span class="process-math">\(p\myxor q \)</span></article><article class="exercise exercise-like" id="exercise-377"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<span class="process-math">\(p\myor\notq \)</span></article><article class="exercise exercise-like" id="exercise-378"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<span class="process-math">\(\notp\myxor\notq \)</span></article><article class="exercise exercise-like" id="exercise-379"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<span class="process-math">\((\conditional)\myand(\converse) \)</span></article><article class="exercise exercise-like" id="exercise-380"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<span class="process-math">\((\conditional)\myor(\converse) \)</span></article><article class="exercise exercise-like" id="exercise-381"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<span class="process-math">\((\conditional)\myand(\inverse) \)</span></article><article class="exercise exercise-like" id="exercise-382"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<span class="process-math">\((\conditional)\myor(\inverse) \)</span></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-383"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>Looking at your results for questions 1-15, which expressions are logically equivalent to <span class="process-math">\(\biconditional\text{?}\)</span></article><article class="exercise exercise-like" id="exercise-384"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>Looking at your results for questions 1-15, which expressions are logically equivalent to <span class="process-math">\(\conditional\text{?}\)</span></article><article class="exercise exercise-like" id="exercise-385"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>Looking at your results for questions 1-15, which expressions are logically equivalent to <span class="process-math">\(\converse\text{?}\)</span></article><div class="exercisegroup" id="exercisegroup-63">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-67">Consider the following conditional statements.  Hopefully you agree that each makes a certain amount of sense.  However, if they were rewritten as <em class="emphasis">biconditional</em> statements, would they continue to make sense?  Answer true or false.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-386"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>If Barney is a dog, then Barney has four legs.</article><article class="exercise exercise-like" id="exercise-387"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>If Rich is asleep, then he is not playing ping-pong.</article><article class="exercise exercise-like" id="exercise-388"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>If Alycia gets 90% or better as her final mark, then she will get an A+.</article><article class="exercise exercise-like" id="exercise-389"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>If Bossy is mooing, then she is a cow.</article><article class="exercise exercise-like" id="exercise-390"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>If Pat sleeps in, then she is late for class.</article><article class="exercise exercise-like" id="exercise-391"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>If Jason does not pay his bill on time, then he will be charged a late fee.</article><article class="exercise exercise-like" id="exercise-392"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>If Susan bought her computer less than a year ago, her warranty is still in effect.</article><article class="exercise exercise-like" id="exercise-393"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>If Raymond eats a burger for dinner, they will be too full for dessert.</article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-64">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-68">In the following exercises, let <span class="process-math">\(p\)</span> denote "Jason eats a burger for dinner" and let <span class="process-math">\(q\)</span> denote "Jason is too full for dessert."  Translate the following sentences into symbolic logical statements.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-394"><h5 class="heading"><span class="codenumber">27<span class="period">.</span></span></h5>If and only if Jason eats a burger for dinner, he will be too full for dessert.</article><article class="exercise exercise-like" id="exercise-395"><h5 class="heading"><span class="codenumber">28<span class="period">.</span></span></h5>Jason will not be too full for dessert if and only if he did not eat a burger for dinner.</article><article class="exercise exercise-like" id="exercise-396"><h5 class="heading"><span class="codenumber">29<span class="period">.</span></span></h5>If Jason eats a burger for dinner, then he will be too full for dessert.</article><article class="exercise exercise-like" id="exercise-397"><h5 class="heading"><span class="codenumber">30<span class="period">.</span></span></h5>If Jason is not too full for dessert, then he did not eat a burger for dinner.</article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-65">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-69">Are the following two sentences biconditional statements?  (In other words, could you replace them by an equivalent ``if and only if'' construction?)</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-398"><h5 class="heading"><span class="codenumber">31<span class="period">.</span></span></h5>If Frank does not pay his bill on time, then he will be charged a late charge, and if he does pay his bill on time, he will not be charged a late charge.</article><article class="exercise exercise-like" id="exercise-399"><h5 class="heading"><span class="codenumber">32<span class="period">.</span></span></h5>If Alycia gets 90% or better as her final mark, she will get an A+, and if she gets an A+, then she got 90% or better as her final mark.</article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-400"><h4 class="heading"><span class="codenumber">33<span class="period">.</span></span></h4>If and only if Jason is eaten by bears, he will not finish his marking.  Given that, answer the following questions. <ol class="lower-alpha">
+<li id="li-333"><p id="p-derived-li-333">Jason is eaten by bears.  Did he finish his marking?</p></li>
+<li id="li-334"><p id="p-derived-li-334">Jason is not eaten by bears.  Did he finish his marking?</p></li>
+<li id="li-335"><p id="p-derived-li-335">Jason finished his marking.  Was he eaten by bears?</p></li>
+<li id="li-336"><p id="p-derived-li-336">Jason did not finish his marking.  Whas he eaten by bears?</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-401"><h4 class="heading"><span class="codenumber">34<span class="period">.</span></span></h4>The following conditional statement is true: If Rich is asleep, then he is not paying ping-pong and vice versa.  Given that, answer the following questions. <ol class="lower-alpha">
+<li id="li-341"><p id="p-derived-li-341">Rich is playing ping-pong.  Is he asleep?</p></li>
+<li id="li-342"><p id="p-derived-li-342">Rich is asleep.  Is he playing ping-pong?</p></li>
+<li id="li-343"><p id="p-derived-li-343">Rich is not asleep.  Is he playing ping-pong?</p></li>
+<li id="li-344"><p id="p-derived-li-344">Rich is not playing ping-pong.  Is he asleep?</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-402"><h4 class="heading"><span class="codenumber">35<span class="period">.</span></span></h4>The following conditional statement is true: Ettercaps are green if and only if toves are slithy.  Given that, answer the following questions. <ol class="lower-alpha">
+<li id="li-349"><p id="p-derived-li-349">Toves are slithy.  Are ettercaps green?</p></li>
+<li id="li-350"><p id="p-derived-li-350">Toves are not slithy.  Are ettercaps green?</p></li>
+<li id="li-351"><p id="p-derived-li-351">Ettercaps are green.  Are toves slithy?</p></li>
+<li id="li-352"><p id="p-derived-li-352">Ettercaps are red.  Are toves slithy?</p></li>
+</ol></article><article class="exercise exercise-like" id="exercise-403"><h4 class="heading"><span class="codenumber">36<span class="period">.</span></span></h4>If the statement "If and only if Superman has a cape, then he can fly" is a true statement, which of the following cannot occur?  (You may choose more than one.) <ol class="lower-alpha">
+<li id="li-357"><p id="p-derived-li-357">Superman has a cape and he can fly.</p></li>
+<li id="li-358"><p id="p-derived-li-358">Superman has a cape and he cannot fly.</p></li>
+<li id="li-359"><p id="p-derived-li-359">Superman does not have a cape and cannot fly.</p></li>
+<li id="li-360"><p id="p-derived-li-360">Superman does not have a cape and can fly.</p></li>
+</ol></article></section><section class="solutions" id="solutions-13"><h3 class="heading hide-type">
+<span class="type">Solutions</span> <span class="codenumber">2.8.4</span> <span class="title">Solutions to Section 2.8 Exercises.</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 2.8.3">
+<span class="codenumber">2.8.3</span><span class="space"> </span><span class="title">Exercises</span>
+</h4>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.1<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-391-hidden.html" title="Solution 2.8.3.1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.2<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-392-hidden.html" title="Solution 2.8.3.2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.3<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-393-hidden.html" title="Solution 2.8.3.3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.4<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-394-hidden.html" title="Solution 2.8.3.4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.5<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-395-hidden.html" title="Solution 2.8.3.5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.6<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-396-hidden.html" title="Solution 2.8.3.6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.7<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-397-hidden.html" title="Solution 2.8.3.7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.8<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-398-hidden.html" title="Solution 2.8.3.8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.9<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-399-hidden.html" title="Solution 2.8.3.9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.10<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-400-hidden.html" title="Solution 2.8.3.10.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.11<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-401-hidden.html" title="Solution 2.8.3.11.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.12<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-402-hidden.html" title="Solution 2.8.3.12.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.13<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-403-hidden.html" title="Solution 2.8.3.13.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.14<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-404-hidden.html" title="Solution 2.8.3.14.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.15<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-405-hidden.html" title="Solution 2.8.3.15.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.16<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-406-hidden.html" title="Solution 2.8.3.16.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.17<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-407-hidden.html" title="Solution 2.8.3.17.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.18<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-408-hidden.html" title="Solution 2.8.3.18.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.19<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-409-hidden.html" title="Solution 2.8.3.19.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.20<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-410-hidden.html" title="Solution 2.8.3.20.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.21<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-411-hidden.html" title="Solution 2.8.3.21.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.22<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-412-hidden.html" title="Solution 2.8.3.22.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.23<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-413-hidden.html" title="Solution 2.8.3.23.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.24<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-414-hidden.html" title="Solution 2.8.3.24.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.25<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-415-hidden.html" title="Solution 2.8.3.25.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.26<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-416-hidden.html" title="Solution 2.8.3.26.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.27<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-417-hidden.html" title="Solution 2.8.3.27.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.28<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-418-hidden.html" title="Solution 2.8.3.28.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.29<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-419-hidden.html" title="Solution 2.8.3.29.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.30<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-420-hidden.html" title="Solution 2.8.3.30.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.31<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-421-hidden.html" title="Solution 2.8.3.31.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.32<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-422-hidden.html" title="Solution 2.8.3.32.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.33<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-423-hidden.html" title="Solution 2.8.3.33.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.34<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-424-hidden.html" title="Solution 2.8.3.34.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.35<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-425-hidden.html" title="Solution 2.8.3.35.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.8.3.36<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-426-hidden.html" title="Solution 2.8.3.36.1"><span class="type">Solution</span><span class="period">.</span></a></div></article></section></section></div></main>
+</div>
+</body>
+</html>

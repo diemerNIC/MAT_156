@@ -1,0 +1,371 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-22T14:02:23-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Converting Non-Integer Numbers to Decimal</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Binary, Logic, and More">
+<meta property="book:author" content="Patricia R. Wrean">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\mynot}{\sim\!}
+\newcommand{\myand}{{\wedge}}
+\newcommand{\myor}{{\vee}}
+\newcommand{\myxor}{{\oplus}}
+\newcommand{\ttxor}{\texttt{XOR}}
+\newcommand{\mytt}[1]{\texttt{#1}}
+
+\newcommand{\myleq}{{\Leftrightarrow}}
+\newcommand{\myimplies}{{\rightarrow}}
+\newcommand{\myiff}{{\leftrightarrow}}
+
+\newcommand{\mylnot}[1]{{{\sim}#1}}
+\newcommand{\notp}{\mylnot{p}}
+\newcommand{\notq}{\mylnot{q}}
+\newcommand{\notr}{\mylnot{r}}
+\newcommand{\mybnot}[1]{{\overline{#1}}}
+\newcommand{\nota}{\mybnot{A}}
+\newcommand{\notb}{\mybnot{B}}
+\newcommand{\notc}{\mybnot{C}}
+\newcommand{\notd}{\mybnot{D}}
+
+\newcommand{\conditional}{{p \myimplies q}}
+\newcommand{\inverse}{{\notp{} \myimplies \notq{}}}
+\newcommand{\converse}{{q \myimplies p}}
+\newcommand{\contrapositive}{{\notq{} \myimplies \notp{}}}
+\newcommand{\biconditional}{{p \myiff{} q}}
+
+\newcommand{\intersection}{\cap}
+\newcommand{\intersect}{\cap}
+\newcommand{\union}{\cup}
+
+\newcommand{\nth}{{n^{\text{th}}}}
+\newcommand{\kth}{{k^{\text{th}}}}
+\newcommand{\upth}[1]{{#1^{\text{th}}}}
+\newcommand{\upst}[1]{{#1^{\text{st}}}}
+\newcommand{\upnd}[1]{{#1^{\text{nd}}}}
+\newcommand{\uprd}[1]{{#1^{\text{rd}}}}
+\newcommand{\infinity}{{\infty}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="binary-logic-and-more.html"><span class="title">Binary, Logic, and More:</span> <span class="subtitle">Applied Math for Computing</span></a></h1>
+<p class="byline">Patricia R. Wrean</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="binary-hex.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="binary-octal-hex.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="converting-from-decimal.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="binary-hex.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="binary-octal-hex.html" title="Up">Up</a><a class="next-button button toolbar-item" href="converting-from-decimal.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li></ul>
+</li>
+<li class="link">
+<a href="binary-octal-hex.html" data-scroll="binary-octal-hex" class="internal"><span class="codenumber">1</span> <span class="title">Binary, Octal, and Hexadecimal</span></a><ul>
+<li><a href="decimal-octal.html" data-scroll="decimal-octal" class="internal">Decimal and Octal</a></li>
+<li><a href="binary-hex.html" data-scroll="binary-hex" class="internal">Binary and Hexadecimal</a></li>
+<li><a href="non-integer-to-decimal.html" data-scroll="non-integer-to-decimal" class="active">Converting Non-Integer Numbers to Decimal</a></li>
+<li><a href="converting-from-decimal.html" data-scroll="converting-from-decimal" class="internal">Converting from Decimal</a></li>
+<li><a href="convert-bin-oct-hex.html" data-scroll="convert-bin-oct-hex" class="internal">Converting between Binary, Octal, and Hexadecimal</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="logic.html" data-scroll="logic" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="sec-intro-to-logic.html" data-scroll="sec-intro-to-logic" class="internal">Introduction to Logic</a></li>
+<li><a href="sec-venn-diagrams.html" data-scroll="sec-venn-diagrams" class="internal">Venn Diagrams</a></li>
+<li><a href="sec-logical-equivalence.html" data-scroll="sec-logical-equivalence" class="internal">Logical Equivalence</a></li>
+<li><a href="sec-boolean-algebra.html" data-scroll="sec-boolean-algebra" class="internal">Boolean Algebra</a></li>
+<li><a href="sec-logic-laws.html" data-scroll="sec-logic-laws" class="internal">Laws of Logic</a></li>
+<li><a href="sec-more-logic-laws.html" data-scroll="sec-more-logic-laws" class="internal">More Laws of Logic</a></li>
+<li><a href="sec-conditional.html" data-scroll="sec-conditional" class="internal">The Conditional</a></li>
+<li><a href="sec-biconditional.html" data-scroll="sec-biconditional" class="internal">The Biconditional</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sequences-and-series.html" data-scroll="sequences-and-series" class="internal"><span class="codenumber">3</span> <span class="title">Sequences and Series</span></a><ul>
+<li><a href="sec-intro-to-seq-and-ser.html" data-scroll="sec-intro-to-seq-and-ser" class="internal">Introduction to Sequences and Series</a></li>
+<li><a href="sec-arith-seq-ser.html" data-scroll="sec-arith-seq-ser" class="internal">Arithmetic Sequences and Series</a></li>
+<li><a href="sec-geom-seq-ser.html" data-scroll="sec-geom-seq-ser" class="internal">Geometric Sequences and Series</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="non-integer-to-decimal"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Converting Non-Integer Numbers to Decimal</span>
+</h2>
+<section class="subsection" id="review-non-integer-decimal"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.1</span> <span class="title">Review of the Decimal System for Non-integers</span>
+</h3>
+<p id="p-53">Let's once again review the decimal system, but this time we will consider non-integer numbers.  Recall that integers are numbers that can be written without a fractional part, like 5, -3, and 0.  To write non-integer numbers as a decimal, we again use positional notation, where the fractional part is to the right of the decimal point.</p>
+<p id="p-54">For example, consider the base-10 number</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+8.76
+\end{equation*}
+</div>
+<p class="continuation">The dot is called the decimal point (some cultures use a comma rather than a dot).  The digit to the immediate left (8) is in the “ones” place, the first digit to the right (7) is in the “tenths” place, and the second digit to the right (6) is in the “hundredths” place:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+8.76=8+\frac{7}{10}+\frac{6}{100}
+\end{equation*}
+</div>
+<p id="p-55">Recall that <span class="process-math">\(\tfrac{1}{10}\)</span> can be written as <span class="process-math">\(10^{-1}\text{,}\)</span> we can write</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+8.76=8\times10^0+7\times10^{-1}+6\times10^{-2},
+\end{equation*}
+</div>
+<p class="continuation">or, equivalently,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+8.76=8+0.7+0.06
+\end{equation*}
+</div>
+<p class="continuation">This may seem redundant, but this representation will come in handy when considering bases other than ten.</p>
+<article class="example example-like" id="example-12"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-12"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-12"><article class="example example-like">In the decimal number 38.6, state which digit is in the <ol class="decimal">
+<li id="li-101"><p id="p-derived-li-101"><span class="process-math">\(\ \)</span>tens place</p></li>
+<li id="li-102"><p id="p-derived-li-102"><span class="process-math">\(\ \)</span>ones place</p></li>
+<li id="li-103"><p id="p-derived-li-103"><span class="process-math">\(\ \)</span>tenths place</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-10" id="answer-10"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-10"><div class="answer solution-like"><ol class="decimal">
+<li id="li-104"><p id="p-derived-li-104"><span class="process-math">\(\ \)</span>3</p></li>
+<li id="li-105"><p id="p-derived-li-105"><span class="process-math">\(\ \)</span>8, since it is to the left of the decimal point</p></li>
+<li id="li-106"><p id="p-derived-li-106"><span class="process-math">\(\ \)</span>6</p></li>
+</ol></div></div>
+</div></article></div>
+<article class="example example-like" id="example-13"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-13"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-13"><article class="example example-like">In the decimal number 2.4608, in what place are the following digits? <ol class="decimal">
+<li id="li-107"><p id="p-derived-li-107"><span class="process-math">\(\ \)</span>6</p></li>
+<li id="li-108"><p id="p-derived-li-108"><span class="process-math">\(\ \)</span>2</p></li>
+<li id="li-109"><p id="p-derived-li-109"><span class="process-math">\(\ \)</span>0</p></li>
+<li id="li-110"><p id="p-derived-li-110"><span class="process-math">\(\ \)</span>8</p></li>
+<li id="li-111"><p id="p-derived-li-111"><span class="process-math">\(\ \)</span>4</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-11" id="answer-11"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-11"><div class="answer solution-like"><ol class="decimal">
+<li id="li-112"><p id="p-derived-li-112"><span class="process-math">\(\ \)</span>the hundredths place</p></li>
+<li id="li-113"><p id="p-derived-li-113"><span class="process-math">\(\ \)</span>the ones place</p></li>
+<li id="li-114"><p id="p-derived-li-114"><span class="process-math">\(\ \)</span>the thousandths place</p></li>
+<li id="li-115"><p id="p-derived-li-115"><span class="process-math">\(\ \)</span>the ten thousandths place</p></li>
+<li id="li-116"><p id="p-derived-li-116"><span class="process-math">\(\ \)</span>the tenths place</p></li>
+</ol></div></div>
+</div></article></div></section><section class="subsection" id="non-integers-other-bases"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.3.2</span> <span class="title">Non-Integers in Bases Other Than Ten</span>
+</h3>
+<p id="p-56">When we consider a number such as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+10.011_2
+\end{equation*}
+</div>
+<p class="continuation">we immediately run into a naming problem.  We can no longer call the dot the <dfn class="terminology">decimal point</dfn> as this is not a decimal number.  For this particular example, we can call the dot the <dfn class="terminology">binary point</dfn>, and in general the dot is called the <dfn class="terminology">radix point</dfn>.</p>
+<p id="p-57">Now, the digits to the left of the binary point make up the integer part of the number as before, and the digits to the right make up the fractional part.</p>
+<p id="p-58">Let's look at a number in base 4, so we're not getting confused with all the zeros and ones.  If we consider</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+20.31_4
+\end{equation*}
+</div>
+<p class="continuation">we see that the two digits to the left of the radix point, 2 and 0, make up the <dfn class="terminology">integer part</dfn>, while the 3 and the 1 make up the <dfn class="terminology">fractional part</dfn>.  Using positional notation, the 3 is in the <em class="emphasis">fourths</em> place while the 1 is in the <em class="emphasis">sixteenths</em> place.  we have seen before that <span class="process-math">\(20_4=2\times4^1+4\times4^0\text{,}\)</span> so now</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+20.31_4=2\times4^1+0\times4^0+3\times4^{-1}+1\times4^{-2}
+\end{equation*}
+</div>
+<p class="continuation">or, if you prefer,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+20.31_4=2\times4+0+\frac{3}{4}+\frac{1}{4^2}.
+\end{equation*}
+</div>
+<p id="p-59">Writing these numbers in their decimal equivalents, we see that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-17">
+\begin{align*}
+20.31_4 \amp =8+0+0.75+0.0625\\
+\amp = 8.8125_{10}
+\end{align*}
+</div>
+<p id="p-60">Similarly,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-18">
+\begin{align*}
+F2.B9_{16} \amp =15\times16^1+2\times16^0+11\times16^{-1}+9\times16^{-2}\\
+\amp = 15\times16+2\times1+\frac{11}{16}+\frac{9}{16^2}\\
+\amp = 240+2+0.6875+0.035156\\
+\amp = 242.72265625
+\end{align*}
+</div>
+<p class="continuation">and we can conlude that <span class="process-math">\(F2.B9_{16}=242.72265625_{10}\)</span></p>
+<article class="example example-like" id="example-14"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-14"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-14"><article class="example example-like">In the number <span class="process-math">\(30.1C_{16}\)</span> state which digit is in the <ol class="decimal">
+<li id="li-117"><p id="p-derived-li-117"><span class="process-math">\(\ \)</span>sixteens place</p></li>
+<li id="li-118"><p id="p-derived-li-118"><span class="process-math">\(\ \)</span>sixteenths place</p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-12" id="answer-12"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-12"><div class="answer solution-like"><ol class="decimal">
+<li id="li-119"><p id="p-derived-li-119"><span class="process-math">\(\ \)</span>3</p></li>
+<li id="li-120"><p id="p-derived-li-120"><span class="process-math">\(\ \)</span>1</p></li>
+</ol></div></div>
+</div></article></div>
+<article class="example example-like" id="example-15"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-15"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-15"><article class="example example-like">Write the following numbers in expanded form, and then use the expanded form to determine the decimal form of the number.  If appropriate, round your answer to three decimal places. <ol class="decimal">
+<li id="li-121"><p id="p-derived-li-121"><span class="process-math">\(\displaystyle \ 101.011_2\)</span></p></li>
+<li id="li-122"><p id="p-derived-li-122"><span class="process-math">\(\displaystyle \ 12.17_8\)</span></p></li>
+<li id="li-123"><p id="p-derived-li-123"><span class="process-math">\(\displaystyle \ 0.FE_{16}\)</span></p></li>
+<li id="li-124"><p id="p-derived-li-124"><span class="process-math">\(\displaystyle 2132.43_5\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-13" id="answer-13"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-13"><div class="answer solution-like"><ol class="decimal">
+<li id="li-125"><p id="p-derived-li-125"><span class="process-math">\(\displaystyle \ 101.011_2=1\times2^2+0\times2^1+1\times2^0+0\times2^{-1}+1\times2^{-2}+1\times2^{-3}=5.375\)</span></p></li>
+<li id="li-126"><p id="p-derived-li-126"><span class="process-math">\(\displaystyle \ 12.17_8=1\times8^1+2\times8^0+1\times8^{-1}+7\times8^{-2}=10.234\)</span></p></li>
+<li id="li-127"><p id="p-derived-li-127"><span class="process-math">\(\displaystyle \ 0.FE_{16}=0\times16^0+15\times16^{-1}+14\times16^{-2}=0.992\)</span></p></li>
+<li id="li-128"><p id="p-derived-li-128"><span class="process-math">\(\displaystyle \ 2132.43_5=2\times5^3+1\times5^2+3\times5^1+2\times5^0+4\times5^{-1}+3\times5^{-2}=292.92\)</span></p></li>
+</ol></div></div>
+</div></article></div></section><section class="exercises" id="exercises-3"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.3.3</span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-11">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-11">In the number <span class="process-math">\(123.45678_{10}\text{,}\)</span> in what place are the following digits?</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-51"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>3</article><article class="exercise exercise-like" id="exercise-52"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>6</article><article class="exercise exercise-like" id="exercise-53"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>5</article><article class="exercise exercise-like" id="exercise-54"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>7</article><article class="exercise exercise-like" id="exercise-55"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>2</article><article class="exercise exercise-like" id="exercise-56"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>1</article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-12">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-12">In the number <span class="process-math">\(1234.567_8\text{,}\)</span> which digit is in the</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-57"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>ones place?</article><article class="exercise exercise-like" id="exercise-58"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>eighths place?</article><article class="exercise exercise-like" id="exercise-59"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>eights place?</article><article class="exercise exercise-like" id="exercise-60"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>sixty-fourths place?</article><article class="exercise exercise-like" id="exercise-61"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>sixty-fours place?</article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-13">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-13">Convert the following numbers to base 10.  When appropriate, round to three decimal places.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-62"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 72.31_8\)</span></article><article class="exercise exercise-like" id="exercise-63"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 203.1_4\)</span></article><article class="exercise exercise-like" id="exercise-64"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 100.111_2\)</span></article><article class="exercise exercise-like" id="exercise-65"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 100.5_7\)</span></article><article class="exercise exercise-like" id="exercise-66"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 20C4.B7_{16}\)</span></article>
+</div>
+</div></section><section class="solutions" id="solutions-3"><h3 class="heading hide-type">
+<span class="type">Solutions</span> <span class="codenumber">1.3.4</span> <span class="title">Solutions to Section 1.3 Exercises</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 1.3.3">
+<span class="codenumber">1.3.3</span><span class="space"> </span><span class="title">Exercises</span>
+</h4>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.1<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-53-hidden.html" title="Solution 1.3.3.1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.2<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-54-hidden.html" title="Solution 1.3.3.2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.3<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-55-hidden.html" title="Solution 1.3.3.3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.4<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-56-hidden.html" title="Solution 1.3.3.4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.5<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-57-hidden.html" title="Solution 1.3.3.5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.6<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-58-hidden.html" title="Solution 1.3.3.6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.7<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-59-hidden.html" title="Solution 1.3.3.7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.8<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-60-hidden.html" title="Solution 1.3.3.8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.9<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-61-hidden.html" title="Solution 1.3.3.9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.10<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-62-hidden.html" title="Solution 1.3.3.10.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.11<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-63-hidden.html" title="Solution 1.3.3.11.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.12<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-64-hidden.html" title="Solution 1.3.3.12.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.13<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-65-hidden.html" title="Solution 1.3.3.13.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.14<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-66-hidden.html" title="Solution 1.3.3.14.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.15<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-67-hidden.html" title="Solution 1.3.3.15.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.3.16<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-68-hidden.html" title="Solution 1.3.3.16.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div></section></section></div></main>
+</div>
+</body>
+</html>

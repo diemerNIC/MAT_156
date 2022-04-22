@@ -1,0 +1,656 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-22T14:02:27-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Geometric Sequences and Series</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Binary, Logic, and More">
+<meta property="book:author" content="Patricia R. Wrean">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\mynot}{\sim\!}
+\newcommand{\myand}{{\wedge}}
+\newcommand{\myor}{{\vee}}
+\newcommand{\myxor}{{\oplus}}
+\newcommand{\ttxor}{\texttt{XOR}}
+\newcommand{\mytt}[1]{\texttt{#1}}
+
+\newcommand{\myleq}{{\Leftrightarrow}}
+\newcommand{\myimplies}{{\rightarrow}}
+\newcommand{\myiff}{{\leftrightarrow}}
+
+\newcommand{\mylnot}[1]{{{\sim}#1}}
+\newcommand{\notp}{\mylnot{p}}
+\newcommand{\notq}{\mylnot{q}}
+\newcommand{\notr}{\mylnot{r}}
+\newcommand{\mybnot}[1]{{\overline{#1}}}
+\newcommand{\nota}{\mybnot{A}}
+\newcommand{\notb}{\mybnot{B}}
+\newcommand{\notc}{\mybnot{C}}
+\newcommand{\notd}{\mybnot{D}}
+
+\newcommand{\conditional}{{p \myimplies q}}
+\newcommand{\inverse}{{\notp{} \myimplies \notq{}}}
+\newcommand{\converse}{{q \myimplies p}}
+\newcommand{\contrapositive}{{\notq{} \myimplies \notp{}}}
+\newcommand{\biconditional}{{p \myiff{} q}}
+
+\newcommand{\intersection}{\cap}
+\newcommand{\intersect}{\cap}
+\newcommand{\union}{\cup}
+
+\newcommand{\nth}{{n^{\text{th}}}}
+\newcommand{\kth}{{k^{\text{th}}}}
+\newcommand{\upth}[1]{{#1^{\text{th}}}}
+\newcommand{\upst}[1]{{#1^{\text{st}}}}
+\newcommand{\upnd}[1]{{#1^{\text{nd}}}}
+\newcommand{\uprd}[1]{{#1^{\text{rd}}}}
+\newcommand{\infinity}{{\infty}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="binary-logic-and-more.html"><span class="title">Binary, Logic, and More:</span> <span class="subtitle">Applied Math for Computing</span></a></h1>
+<p class="byline">Patricia R. Wrean</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-arith-seq-ser.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="sequences-and-series.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-arith-seq-ser.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="sequences-and-series.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li></ul>
+</li>
+<li class="link">
+<a href="binary-octal-hex.html" data-scroll="binary-octal-hex" class="internal"><span class="codenumber">1</span> <span class="title">Binary, Octal, and Hexadecimal</span></a><ul>
+<li><a href="decimal-octal.html" data-scroll="decimal-octal" class="internal">Decimal and Octal</a></li>
+<li><a href="binary-hex.html" data-scroll="binary-hex" class="internal">Binary and Hexadecimal</a></li>
+<li><a href="non-integer-to-decimal.html" data-scroll="non-integer-to-decimal" class="internal">Converting Non-Integer Numbers to Decimal</a></li>
+<li><a href="converting-from-decimal.html" data-scroll="converting-from-decimal" class="internal">Converting from Decimal</a></li>
+<li><a href="convert-bin-oct-hex.html" data-scroll="convert-bin-oct-hex" class="internal">Converting between Binary, Octal, and Hexadecimal</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="logic.html" data-scroll="logic" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="sec-intro-to-logic.html" data-scroll="sec-intro-to-logic" class="internal">Introduction to Logic</a></li>
+<li><a href="sec-venn-diagrams.html" data-scroll="sec-venn-diagrams" class="internal">Venn Diagrams</a></li>
+<li><a href="sec-logical-equivalence.html" data-scroll="sec-logical-equivalence" class="internal">Logical Equivalence</a></li>
+<li><a href="sec-boolean-algebra.html" data-scroll="sec-boolean-algebra" class="internal">Boolean Algebra</a></li>
+<li><a href="sec-logic-laws.html" data-scroll="sec-logic-laws" class="internal">Laws of Logic</a></li>
+<li><a href="sec-more-logic-laws.html" data-scroll="sec-more-logic-laws" class="internal">More Laws of Logic</a></li>
+<li><a href="sec-conditional.html" data-scroll="sec-conditional" class="internal">The Conditional</a></li>
+<li><a href="sec-biconditional.html" data-scroll="sec-biconditional" class="internal">The Biconditional</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sequences-and-series.html" data-scroll="sequences-and-series" class="internal"><span class="codenumber">3</span> <span class="title">Sequences and Series</span></a><ul>
+<li><a href="sec-intro-to-seq-and-ser.html" data-scroll="sec-intro-to-seq-and-ser" class="internal">Introduction to Sequences and Series</a></li>
+<li><a href="sec-arith-seq-ser.html" data-scroll="sec-arith-seq-ser" class="internal">Arithmetic Sequences and Series</a></li>
+<li><a href="sec-geom-seq-ser.html" data-scroll="sec-geom-seq-ser" class="active">Geometric Sequences and Series</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-geom-seq-ser"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Geometric Sequences and Series</span>
+</h2>
+<section class="subsection" id="ssec-geom-seq"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.1</span> <span class="title">Geometric Sequences</span>
+</h3>
+<p id="p-323">Let's start out with a definition: <article class="definition definition-like" id="defn-geom-seq"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
+</h4>A <dfn class="terminology">geometric sequence</dfn> is a sequence in which the next term is found by multiplying the previous term by a constant (the <em class="emphasis">common ratio</em><span class="process-math">\(\ r\)</span>)</article></p>
+<p id="p-324">Here are some examples of geometric sequences:</p>
+<ol class="lower-alpha">
+<li id="li-398"><p id="p-derived-li-398"><span class="process-math">\(\displaystyle 9, 18, 36, 72, \ldots\)</span></p></li>
+<li id="li-399"><p id="p-derived-li-399"><span class="process-math">\(\displaystyle 12, 18, 27, \frac{81}{2},\ldots\)</span></p></li>
+<li id="li-400"><p id="p-derived-li-400"><span class="process-math">\(\displaystyle 10, -30, 90, -270, \ldots,  -196830\)</span></p></li>
+<li id="li-401"><p id="p-derived-li-401"><span class="process-math">\(\displaystyle -3, -12, -48, -192, \ldots\)</span></p></li>
+<li id="li-402"><p id="p-derived-li-402"><span class="process-math">\(\displaystyle 48, -36, 27, \ldots\)</span></p></li>
+</ol>
+<p id="p-325">The common ratios of each of these sequences, in order from a) to e), is <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(\frac{3}{2}\text{,}\)</span> <span class="process-math">\(-3\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(-\frac{3}{4}\text{,}\)</span> respectively.  Note that in each of them, we can find the common ratio <span class="process-math">\(r\)</span> by taking <span class="process-math">\(any\)</span> term and dividing it by the previous term.</p>
+<p id="p-326">Like any other sequences, geometric sequences can be finite or infinite.  Example c) above is finite, as the last term is specified.  The others are infinite sequences. <article class="example example-like" id="example-82"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-82"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-82"><article class="example example-like">For each of the following sequences, state whether it is arithmetic, geometric, or neither. <ol class="lower-alpha">
+<li id="li-403"><p id="p-derived-li-403"><span class="process-math">\(\displaystyle 45, 15, 5, \ldots\)</span></p></li>
+<li id="li-404"><p id="p-derived-li-404"><span class="process-math">\(\displaystyle 5, 3, 1, -1, \ldots\)</span></p></li>
+<li id="li-405"><p id="p-derived-li-405"><span class="process-math">\(\displaystyle 1, 8, 27, 64, \ldots , 1000\)</span></p></li>
+<li id="li-406"><p id="p-derived-li-406"><span class="process-math">\(\displaystyle -1, 1, -1, 1, -1, 1, \ldots\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-52" id="answer-52"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-52"><div class="answer solution-like"><ol class="lower-alpha">
+<li id="li-407"><p id="p-derived-li-407">Geometric, because the common ratio <span class="process-math">\(r\)</span> is <span class="process-math">\(\frac{1}{3}\)</span></p></li>
+<li id="li-408"><p id="p-derived-li-408">Arithmetic, because the common difference <span class="process-math">\(d\)</span> is <span class="process-math">\(-2\text{.}\)</span></p></li>
+<li id="li-409"><p id="p-derived-li-409">Neither, because there isn't either a common difference or ratio between terms.  (In fact, the pattern is that <span class="process-math">\(a_n = n^3\)</span> for <span class="process-math">\(n \ge 1\text{.}\)</span>)</p></li>
+<li id="li-410"><p id="p-derived-li-410">Geometric, because the common ratio <span class="process-math">\(r\)</span> is <span class="process-math">\(-1\text{.}\)</span></p></li>
+</ol></div></div>
+</div></article></div></p>
+<p id="p-327">Again, you can define a geometric sequence in one of three ways:  by listing the terms, by giving a recursive definition, or by giving a general definition.</p></section><section class="subsection" id="ssec-recdef-geomseq"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">Recursive Definitions for Geometric Sequences</span>
+</h3>
+<p id="p-328">Let's look at an example. <article class="example example-like" id="example-83"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-83"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-83"><article class="example example-like">Give a recursive definition for the sequence <span class="process-math">\(2, 10, 50, 250, \ldots\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-53" id="answer-53"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-53"><div class="answer solution-like">Recall that a recursive definition has two parts:  listing the first term and giving the pattern.  In this case, the pattern is multiplying the previous term by <span class="process-math">\(r = 5\)</span>  to get the next term.  Let's use 0 as our starting index.  The recursive definition is therefore<div class="displaymath process-math" data-contains-math-knowls="" id="md-105">
+\begin{align*}
+a_0 \amp = 2\\
+a_n\amp = 5a_{n - 1} \text{   for } n \ge 1
+\end{align*}
+</div>
+</div></div>
+</div></article></div></p>
+<p id="p-329">Generally, the recursive definition for <em class="emphasis">any</em> geometric sequence is</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-106">
+\begin{align*}
+a_m \amp = \lt\text{ insert value here }\gt\\
+a_n \amp = a_{n-1}\times r \text{   for }n\ge m+1
+\end{align*}
+</div></section><section class="subsection" id="ssec-genform-gemseq"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.3</span> <span class="title">General Formulae for Geometric Sequences</span>
+</h3>
+<p id="p-330">Let's examine the previous example in more detail to see if we can recognize any patterns and come up with a general formula.  Rewriting each term, we get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\begin{array}{*{20}{c}}
+2,\amp 10,\amp 50,\amp 250,\amp \ldots\\
+2,\amp 2 \times 5,\amp 2 \times {5^2},\amp 2 \times {5^3},\amp \ldots\\
+\end{array}
+\end{equation*}
+</div>
+<p class="continuation">So the <span class="process-math">\(\uprd{3}\)</span> term equals the first times 5 squared, the <span class="process-math">\(\upth{4}\)</span> term equals the first times 5 cubed, and the <span class="process-math">\(\nth{}\)</span> term will equal the first times 5 raised to the <span class="process-math">\((n - 1)\)</span> power.  In general, for sequences with first term <span class="process-math">\(a_m\text{,}\)</span> the <span class="process-math">\(nth{}\)</span> term equals the first term times <span class="process-math">\(r\)</span> raised to the <span class="process-math">\((n - m)\)</span> power, namely</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_n=a_m r^{n-m}
+\end{equation*}
+</div>
+<p class="continuation">for all <em class="emphasis">geometric</em> sequences. <article class="example example-like" id="example-84"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-84"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-84"><article class="example example-like">Write a general formula for the sequence <span class="process-math">\(3, 6, 12, \ldots\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-54" id="answer-54"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-54"><div class="answer solution-like">This sequence is geometric with the first term 3 and common ratio 2.  If we choose <span class="process-math">\(n = 1\)</span> for our first term, then<div class="displaymath process-math" data-contains-math-knowls="" id="md-107">
+\begin{align*}
+a_n \amp = a_m r^{n-m}\\
+\amp = a_1 r^{n-1}\\
+\amp = 3\times\left(2^{n-1}\right)
+\end{align*}
+</div>The general formula is then <span class="process-math">\(a_3\times 2^{n-1}\)</span> for <span class="process-math">\(n\ge 1\text{.}\)</span>
+</div></div>
+</div></article></div> <article class="example example-like" id="example-85"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-85"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-85"><article class="example example-like">What is the <span class="process-math">\(\upth{20}\)</span> term in the sequence in the sequence <span class="process-math">\(3, 6, 12, \ldots\text{?}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-55" id="answer-55"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-55"><div class="answer solution-like">This is the same sequence from the previous example.  We may then use the formula we derived above with <span class="process-math">\(n = 20\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-108">
+\begin{align*}
+a_n\amp = a_m r^{n-m}\\
+\amp = a_1 r^{n-1}\\
+a_{20}\amp = 3\times 2^{20-1}\\
+\amp = 3\times 2^{19}\\
+a_{20}=1,572,864
+\end{align*}
+</div>The <span class="process-math">\(\upth{20}\)</span> term is 1,572,864, which provides a nice example for how fast geometric sequences can grow, even for small values of <span class="process-math">\(r\text{.}\)</span>
+</div></div>
+</div></article></div> <article class="example example-like" id="example-86"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-86"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-86"><article class="example example-like">Write a general formula for the sequence <span class="process-math">\(8, 12, 18, 27, \ldots\)</span>  What is the fifteenth term in this sequence?  The fiftieth?<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-56" id="answer-56"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-56"><div class="answer solution-like">If we start our counting at <span class="process-math">\(n=1\text{,}\)</span> then the fifteenth term is <span class="process-math">\(a_{15}\)</span> and the fiftieth term is <span class="process-math">\(a_{50}\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-109">
+\begin{align*}
+a_n\amp = a_m r^{n-m}\\
+\amp = a_1 r^{n-1}\\
+a_n \amp = 8\left(\frac{3}{2}\right)^{n-1}\\
+a_{15}\amp = 8\left(\frac{3}{2}\right)^{14}\approx 2335.43\\
+a_{50}\amp = 8\left(\frac{3}{2}\right)^{50}\approx\3.40065\times 10^9
+\end{align*}
+</div>So the general formula is <span class="process-math">\(a_n = 8\left( \frac{3}{2} \right)^{n - 1}\)</span> for <span class="process-math">\(n \ge 1\)</span> and the fifteenth and fiftieth terms are approximately 2335.43 and <span class="process-math">\(3.4 \times 10^9\text{,}\)</span> respectively.</div></div>
+</div></article></div></p></section><section class="subsection" id="ssec-geom-ser"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.4</span> <span class="title">Geometric Series</span>
+</h3>
+<p id="p-331">Recall that <span class="process-math">\(S_k\)</span> is the sum of the first <span class="process-math">\(k\)</span> terms of a series.  Let's look at how a formula for <span class="process-math">\(S_k\)</span> is derived, using a series that starts with <span class="process-math">\(n=1\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-110">
+\begin{align*}
+S_k \amp = \amp{a_1} \amp+ \amp{a_2} \amp+ \amp{a_3} \amp+ \amp{a_4} \amp+ \amp\ldots \amp+ \amp{a_{n - 2}} \amp+ \amp{a_{n - 1}} \amp+ \amp{a_k}\\
+S_k \amp = \amp{a_1} \amp+ \amp{a_1}r \amp+ \amp{a_1}{r^2} \amp+ \amp{a_1}{r^3} \amp+ \amp\ldots \amp+ \amp{a_1}{r^{k - 3}} \amp+ \amp{a_1}{r^{k - 2}} \amp+ \amp{a_1}{r^{k - 1}}
+\end{align*}
+</div>
+<p class="continuation">Let's take that last expression for <span class="process-math">\(S_k\)</span> and multiply it by <span class="process-math">\(-r\)</span> to get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+- r{S_k} =  - {a_1}r - {a_1}{r^2} - {a_1}{r^3} - {a_1}{r^4} - ... - {a_1}{r^{k - 2}} - {a_1}{r^{k - 1}} - {a_1}{r^k}
+\end{equation*}
+</div>
+<p class="continuation">Then if we add the rows for <span class="process-math">\(S_k\)</span> and <span class="process-math">\(-rS_k\text{,}\)</span> we get</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-111">
+\begin{align*}
+{S_k} \amp= \amp {a_1} \amp+ {a_1}r \amp+ {a_1}{r^2} \amp+ {a_1}{r^3} \amp+ \ldots \amp+ {a_1}{r^{k - 3}} \amp+ {a_1}{r^{k - 2}} \amp+ {a_1}{r^{k - 1}}\\
+- r{S_k} \amp=\amp\amp  - {a_1}r \amp- {a_1}{r^2} \amp- {a_1}{r^3} \amp- {a_1}{r^4} \amp- \ldots \amp- {a_1}{r^{k - 2}} \amp- {a_1}{r^{k - 1}} \amp- {a_1}{r^k}\\
+\hline\\
+{S_k} - r{S_k} \amp=\amp {a_1} \amp\amp\amp\amp\amp\amp\amp\amp- {a_1}{r^k}
+\end{align*}
+</div>
+<p class="continuation">since all of the terms in between these two (<span class="process-math">\(a_1\)</span> and <span class="process-math">\(a_1r^k\)</span>) combine pair-wise to zero by subtraction.  Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-112">
+\begin{align*}
+{S_k} - r{S_k}\amp = {a_1}\left( {1 - {r^k}} \right)\\
+{S_k}\left( {1 - r} \right) \amp = {a_1}\left( {1 - {r^k}} \right)
+\end{align*}
+</div>
+<p class="continuation">and so</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_k} = \frac{{{a_1}\left( {1 - {r^k}} \right)}}{{\left( {1 - r} \right)}}
+\end{equation*}
+</div>
+<p class="continuation">To generalize, the formula for the sum of the first <span class="process-math">\(n\)</span> terms for <em class="emphasis">any geometric series</em>  that starts with first term <span class="process-math">\(a_m\)</span> is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_k} = \frac{{{a_m}\left( {1 - {r^k}} \right)}}{{\left( {1 - r} \right)}}
+\end{equation*}
+</div>
+<p class="continuation"><article class="example example-like" id="example-87"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-87"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-87"><article class="example example-like">Find the sum of the first 20 terms of the series <span class="process-math">\(3 + 6 + 12 + \ldots\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-57" id="answer-57"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-57"><div class="answer solution-like">This is a geometric series with <span class="process-math">\(a_m = 3\)</span> and <span class="process-math">\(r = 2\text{.}\)</span>  We want to find <span class="process-math">\(S_{20}\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-113">
+\begin{align*}
+{S_k} \amp = \frac{{{a_m}\left( {1 - {r^k}} \right)}}{{\left( {1 - r} \right)}}\\
+{S_{20}} \amp = \frac{{3\left( {1 - {2^{20}}} \right)}}{{\left( {1 - 2} \right)}} = 3,145,725
+\end{align*}
+</div>The sum of the first 20 terms is 3,145,725.</div></div>
+</div></article></div> <article class="example example-like" id="example-88"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-88"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.8</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-88"><article class="example example-like">Find the sum of the first forty terms of the series <span class="process-math">\(8 - 12 + 18 - 27 \ldots\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-58" id="answer-58"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-58"><div class="answer solution-like">This is a geometric series with <span class="process-math">\(a_m = 8\)</span> and <span class="process-math">\(r = -\frac{3}{2}\text{.}\)</span>  We want to find <span class="process-math">\(S_{40}\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="" id="md-114">
+\begin{align*}
+{S_k} \amp = \frac{{{a_m}\left( {1 - {r^k}} \right)}}{{\left( {1 - r} \right)}}\\
+{S_{20}} \amp = \frac{{8\left( {1 - {{\left( { - 1.5} \right)}^{40}}} \right)}}{{\left( {1 - \left( { - 1.5} \right)} \right)}} =  - 3.53835 \times {10^7}
+\end{align*}
+</div>The sum of the first forty terms is approximately <span class="process-math">\(-3.54 \times{} 10^7\text{.}\)</span>
+</div></div>
+</div></article></div></p></section><section class="subsection" id="ssec-sum-geom-ser"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.5</span> <span class="title">Sum of an Infinite Geometric Series</span>
+</h3>
+<p id="p-332">Let's take a look at the infinite series <span class="process-math">\(\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{{16}} + \ldots\)</span> What happens when we try to evaluate this sum using the <span class="process-math">\(S_k\)</span> formula?  We can put <span class="process-math">\(a_m = \frac{1}{2}\text{,}\)</span> <span class="process-math">\(r = \frac{1}{2}\text{,}\)</span> but can we put <span class="process-math">\(n = \infty\)</span> into the formula?  It is important to note that <span class="process-math">\(\infty\)</span> is <em class="emphasis">not a number</em>.  Instead, it is a symbol that represents the characteristic of being unbounded, or “going on forever”.</p>
+<p id="p-333">Let's take a closer look at the behaviour of <span class="process-math">\((\frac{1}{2})^n\)</span> for large values of <span class="process-math">\(n\text{.}\)</span>  As <span class="process-math">\(n\)</span> gets larger, the fraction <span class="process-math">\({\left( {\frac{1}{2}} \right)^n} = \frac{1}{{{2^n}}}\)</span> gets ever smaller.  In fact, as <span class="process-math">\(n\)</span> grows without bound (sometimes written <span class="process-math">\(n\to\infty\)</span>), <span class="process-math">\((\frac{1}{2})^n \)</span> will approach zero.</p>
+<p id="p-334">This is true for any <span class="process-math">\(r\)</span> provided that <span class="process-math">\(|r| \lt 1\text{.}\)</span>  (If you're not familiar with the absolute value bars, an equivalent expression is that <span class="process-math">\(-1 \lt r \lt 1\text{.}\)</span>)</p>
+<p id="p-335">Recalling that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_k} = \frac{{{a_m}\left( {1 - {r^k}} \right)}}{{\left( {1 - r} \right)}}
+\end{equation*}
+</div>
+<p class="continuation">and letting the <span class="process-math">\(r^n\)</span> term go to zero, then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_\infty } = \frac{{{a_m}}}{{1 - r}} \text{ for } -1 \lt r \lt 1
+\end{equation*}
+</div>
+<p class="continuation">for any <em class="emphasis">infinite geometric series</em> with <span class="process-math">\(a_m\)</span> the first term, provided that <span class="process-math">\(r\)</span> meets the restriction above.</p>
+<p id="p-336">Let's now revisit the series that started this discussion and evaluate it in the following example. <article class="example example-like" id="example-89"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-89"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.9</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-89"><article class="example example-like">Evaluate <span class="process-math">\(\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{{16}} +\ldots\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-59" id="answer-59"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-59"><div class="answer solution-like">This series is geometric with <span class="process-math">\(a_m = \frac{1}{2}\)</span> and <span class="process-math">\(r = \frac{1}{2}\text{.}\)</span>  Then<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{1/2}}{{1 - 1/2}} = \frac{{1/2}}{{1/2}} = 1
+\end{equation*}
+</div>The sum of this series is 1.</div></div>
+</div></article></div> <article class="example example-like" id="example-90"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-90"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.10</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-90"><article class="example example-like">Evaluate <span class="process-math">\(24 + 16 + \frac{32}{3}+ \ldots\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-60" id="answer-60"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-60"><div class="answer solution-like">This series is geometric with <span class="process-math">\(a_m = 24\)</span> and <span class="process-math">\(r = \frac{2}{3}\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{24}}{{1 - \frac{2}{3}}} = \frac{{24}}{{\frac{1}{3}}} = 24 \times \frac{3}{1} = 72
+\end{equation*}
+</div>
+</div></div>
+</div></article></div> <article class="example example-like" id="example-91"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-91"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.11</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-91"><article class="example example-like">Evaluate <span class="process-math">\(24 - 16 + \frac{32}{3}+ \ldots\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-61" id="answer-61"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-61"><div class="answer solution-like">This series is identical to the previous one except that <span class="process-math">\(r\)</span> is now negative:  <span class="process-math">\(a_m = 24\)</span> and <span class="process-math">\(r = -\frac{2}{3}\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{24}}{{1 - \left( { - \frac{2}{3}} \right)}} = \frac{{24}}{{1 + \frac{2}{3}}} = \frac{{24}}{{\frac{5}{3}}} = 24 \times \frac{3}{5} = \frac{{72}}{5} = 14.4
+\end{equation*}
+</div>
+</div></div>
+</div></article></div> <article class="example example-like" id="example-92"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-92"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.12</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-92"><article class="example example-like">Evaluate <span class="process-math">\(12 + 18 + 27 + \ldots\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-62" id="answer-62"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-62"><div class="answer solution-like">This series is geometric with <span class="process-math">\(a_m = 12\)</span> and <span class="process-math">\(r = \frac{3}{2}\text{.}\)</span>  You may already realize what's going on, but in case you don't, let's naively put the values into the formula and see what we get:<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{12}}{{1 - \frac{3}{2}}} = \frac{{12}}{{ - \frac{1}{2}}} = 12 \times  - \frac{2}{1} =  - 24
+\end{equation*}
+</div>Wait!  How can the sum of a bunch of positive number be negative?  The answer is that our restriction for <span class="process-math">\(r\)</span> is that it must be between <span class="process-math">\(-1\)</span> and 1, but <span class="process-math">\(r = 1.5\text{.}\)</span>  Because <span class="process-math">\(r\)</span> does not satisfy the restriction, <em class="emphasis">we cannot use</em> the above formula for <span class="process-math">\(S_\infty\text{.}\)</span>  Indeed, if you add up a bunch of positive numbers that are increasing as you go up, you can see that the sum just keeps getting bigger as we add more terms.  You could then either say that the sum is infinite or “does not exist”.  These two statements are not <em class="emphasis">quite</em> equivalent.  While it is correct to say that the sum <em class="emphasis">does not exist</em>, it is <em class="emphasis">more descriptive</em> to state that the sum is infinite (or to write “<span class="process-math">\(=+\infty\)</span>”).  There could be a sum that grows without bound “in the negative direction”, in which case it would be more descriptive to write “<span class="process-math">\(=-\infty\)</span>” than simply to say that the sum does not exist.</div></div>
+</div></article></div></p>
+<p id="p-337">Let's look at three specific cases:</p>
+<ol class="lower-alpha">
+<li id="li-411"><p id="p-derived-li-411"><span class="process-math">\(\displaystyle 12+18+27+\ldots\)</span></p></li>
+<li id="li-412"><p id="p-derived-li-412"><span class="process-math">\(\displaystyle -12-18-27-\ldots\)</span></p></li>
+<li id="li-413"><p id="p-derived-li-413"><span class="process-math">\(\displaystyle 12-18+27+\ldots\)</span></p></li>
+</ol>
+<p class="continuation">Each term in (a) is getting more positive, so the sum of that sequence does not exist but writing “<span class="process-math">\(=+\infty\)</span>” is more descriptive.  Each term in (b) is getting more and more negative, so the sum of that sequence does not exist, but writing “<span class="process-math">\(=-\infty\)</span>” is more descriptive.  But in the last case, the sum oscillates back and forth:  <span class="process-math">\(S_1 = 12\text{,}\)</span> <span class="process-math">\(S_2 = -6\text{,}\)</span> <span class="process-math">\(S_3 = 21\text{,}\)</span> <span class="process-math">\(S_4 = -19.5\text{,}\)</span> and so on.  The sign of <span class="process-math">\(S_k\)</span> is either positive or negative depending on whether the number of terms you've added is even or odd.  In this case, all we can say is that the sum does not exist. <article class="example example-like" id="example-93"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-93"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.13</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-93"><article class="example example-like">Evaluate <span class="process-math">\(\sum\limits_{j = 0}^\infty  {27{{\left( {\frac{1}{3}} \right)}^j}}\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-63" id="answer-63"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-63"><div class="answer solution-like">The best place to start is to figure out the first few terms to determine the pattern:<div class="displaymath process-math" data-contains-math-knowls="" id="md-115">
+\begin{align*}
+\text{when } j = 0,\quad \amp 27{\left( {\frac{1}{3}} \right)^0} = 27 \times 1 = 27\\
+\text{when } j = 1,\quad \amp 27{\left( {\frac{1}{3}} \right)^1} = 27 \times \frac{1}{3} = 9\\
+\text{when } j = 2,\quad \amp 27{\left( {\frac{1}{3}} \right)^2} = 27 \times \frac{1}{{{3^2}}} = 3
+\end{align*}
+</div>so our sequence is <span class="process-math">\(27, 9, 3, \ldots\)</span>  This is geometric with <span class="process-math">\(a_m = 27\)</span> and <span class="process-math">\(r = \frac{1}{3}\text{.}\)</span>  Then<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_\infty } = \frac{{{a_m}}}{{1 - r}}
+= \frac{{27}}{{1 - \frac{1}{3}}}
+= \frac{{27}}{{\frac{2}{3}}}
+= 27 \times \frac{3}{2}
+= \frac{{81}}{2}
+= 40.5
+\end{equation*}
+</div>
+</div></div>
+</div></article></div> <article class="example example-like" id="example-94"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-94"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.14</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-94"><article class="example example-like">Evaluate <span class="process-math">\(\sum\limits_{k = 5}^\infty  {\;\frac{1}{2}} k\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-64" id="answer-64"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-64"><div class="answer solution-like">As in the previous example, let's figure out the first few terms to determine the pattern:<div class="displaymath process-math" data-contains-math-knowls="" id="md-116">
+\begin{align*}
+\text{when } k = 5,\quad \amp \frac{1}{2}k = \frac{1}{2}5 = 2.5\\
+\text{when } k = 6,\quad \amp \frac{1}{2}k = \frac{1}{2}6 = 3\\
+\text{when } k = 7,\quad \amp \frac{1}{2}k = \frac{1}{2}7 = 3.5
+\end{align*}
+</div>so our sequence is <span class="process-math">\(2.5, 3, 3.5, \ldots\text{.}\)</span>  Wait!  This sequence is arithmetic!  Not only that, but the numbers are increasing.  So the sum of the <em class="emphasis">series</em> does not exist due to unbounded growth in the positive direction. You can write “does not exist” or, if you prefer, the more descriptive “<span class="process-math">\(=+\infty\)</span>”.</div></div>
+</div></article></div></p></section><section class="subsection" id="ssec-rep-decimals"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.6</span> <span class="title">Repeating Decimals</span>
+</h3>
+<p id="p-338">Let's examine <span class="process-math">\(0.\overline 7\)</span> in some detail to see what we find:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-117">
+\begin{align*}
+0.\overline 7 \amp = 0.777777777...\\
+\amp = 0.7 + 0.07 + 0.007 + 0.0007 + \ldots
+\end{align*}
+</div>
+<p class="continuation">But this is just the sum of an infinite series with <span class="process-math">\(a_m = 0.7\)</span> and <span class="process-math">\(r = 0.1\text{.}\)</span>  Rewriting <span class="process-math">\(a_1\)</span> and <span class="process-math">\(r\)</span> in fraction form (you'll see why in a minute) gives <span class="process-math">\(a_m = \frac{7}{10}\)</span> and <span class="process-math">\(r =\frac{1}{10}\text{.}\)</span>  Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{\frac{7}{{10}}}}{{1 - \frac{1}{{10}}}} = \frac{{\frac{7}{{10}}}}{{\frac{9}{{10}}}} = \frac{7}{{10}} \times \frac{{10}}{9} = \frac{7}{9}
+\end{equation*}
+</div>
+<p class="continuation">So <span class="process-math">\(0.\overline 7 = 7/9\text{.}\)</span>  Interesting! <article class="example example-like" id="example-95"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-95"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.15</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-95"><article class="example example-like">Find an exact fraction for <span class="process-math">\(0.\overline 6 \text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-65" id="answer-65"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-65"><div class="answer solution-like">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-118">
+\begin{align*}
+0.\overline 6  \amp = 0.66666666\ldots\\
+\amp = 0.6 + 0.06 + 0.006 + 0.0006 + \ldots
+\end{align*}
+</div>But this is just the sum of an infinite geometric series with <span class="process-math">\(a_m = \frac{6}{10}\)</span> and <span class="process-math">\(r = \frac{1}{10}\text{.}\)</span>  Then<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{\frac{6}{{10}}}}{{1 - \frac{1}{{10}}}} = \frac{{\frac{6}{{10}}}}{{\frac{9}{{10}}}} = \frac{6}{{10}} \times \frac{{10}}{9} = \frac{6}{9} = \frac{2}{3}
+\end{equation*}
+</div>So <span class="process-math">\(0.\overline 6 = 2/3\text{.}\)</span>
+</div></div>
+</div></article></div> <article class="example example-like" id="example-96"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-96"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.16</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-96"><article class="example example-like">Find an exact fraction for <span class="process-math">\(0.\overline {18}\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-66" id="answer-66"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-66"><div class="answer solution-like">
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-119">
+\begin{align*}
+0.\overline {18}  \amp = 0.1818181818\ldots\\
+\amp  = 0.18 + 0.0018 + 0.000018 + \ldots
+\end{align*}
+</div>But this is just the sum of an infinite geometric series with <span class="process-math">\(a_m = \frac{18}{100}\)</span> and <span class="process-math">\(r = \frac{1}{100}\text{.}\)</span>  Then<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_\infty } = \frac{{{a_m}}}{{1 - r}} = \frac{{\frac{{18}}{{100}}}}{{1 - \frac{1}{{100}}}} = \frac{{\frac{{18}}{{100}}}}{{\frac{{99}}{{100}}}} = \frac{{18}}{{100}} \times \frac{{100}}{{99}} = \frac{{18}}{{99}} = \frac{2}{{11}}
+\end{equation*}
+</div>So <span class="process-math">\(0.\overline {18} = 2/11\text{.}\)</span>
+</div></div>
+</div></article></div></p></section><section class="subsection" id="ssec-summary-gemseqser"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.7</span> <span class="title">Summary</span>
+</h3>
+<p id="p-339">For a <em class="emphasis">geometric</em> sequence, the <span class="process-math">\(\nth{}\)</span> term is given by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{a_n} = {a_m}{r^{n - m}}
+\end{equation*}
+</div>
+<p class="continuation">for <span class="process-math">\(n \ge m\)</span></p>
+<p id="p-340">For a <em class="emphasis">geometric</em> series, the sum of the first <span class="process-math">\(k\)</span> terms (<span class="process-math">\(\kth{}\)</span> partial sum) is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_k} = \frac{{{a_m}\left( {1 - {r^k}} \right)}}{{\left( {1 - r} \right)}}
+\end{equation*}
+</div>
+<p class="continuation">where <span class="process-math">\(a_m\)</span> is the first term.</p>
+<p id="p-341">For an <em class="emphasis">infinite geometric</em> series, the sum is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+{S_\infty } = \frac{{{a_m}}}{{1 - r}}
+\end{equation*}
+</div>
+<p class="continuation">provided that  <span class="process-math">\(-1 \lt r \lt 1\)</span> and <span class="process-math">\(a_m\)</span> is the first term.</p></section><section class="exercises" id="exercises-16"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">3.3.8</span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-80">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-85">State whether the following sequences are geometric or not.  If they are, state the first term and common ratio.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-482"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<span class="process-math">\(8, 9, 11, 13, 16, \ldots\)</span></article><article class="exercise exercise-like" id="exercise-483"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<span class="process-math">\(-3, -10, -17, -24, \ldots\)</span></article><article class="exercise exercise-like" id="exercise-484"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<span class="process-math">\(3, 6, 12, 24, \ldots\)</span></article><article class="exercise exercise-like" id="exercise-485"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<span class="process-math">\(1, 2, 6, 24, \ldots\)</span></article><article class="exercise exercise-like" id="exercise-486"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<span class="process-math">\(81, 72, 63, 54, \ldots\)</span></article><article class="exercise exercise-like" id="exercise-487"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<span class="process-math">\(72, 48, 32,\ldots\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-81">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-86">Give both the general formula and the recursive formula for the <span class="process-math">\(\nth{}\)</span> term <span class="process-math">\(a_n\)</span> of the following sequences.  Use the convention <span class="process-math">\(n \ge 1\text{.}\)</span>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-488"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<span class="process-math">\(1, 3, 9, 27, \ldots\)</span></article><article class="exercise exercise-like" id="exercise-489"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<span class="process-math">\(64, 16, 4, 1, \ldots\)</span></article><article class="exercise exercise-like" id="exercise-490"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<span class="process-math">\(3, -6, 12, -24, \ldots\)</span></article><article class="exercise exercise-like" id="exercise-491"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<span class="process-math">\(24, 2.4, 0.24, \ldots\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-82">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-87">For the following sequences, calculate <span class="process-math">\(a_{50}\)</span> and <span class="process-math">\(a_{261}\text{,}\)</span> assuming that the first term is <span class="process-math">\(a_1\text{.}\)</span>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-492"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<span class="process-math">\(12, 18, 27,\ldots\)</span></article><article class="exercise exercise-like" id="exercise-493"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<span class="process-math">\(12, 8, \frac{{16}}{3}, \ldots\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-83">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-88">State whether the following recursively defined sequences are geometric or not.  (Is there an easy way to tell?)</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-494"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-120">
+\begin{align*}
+a_1\amp = 5\\
+a_n \amp = a_{n - 1} + 4   \text{   for } n \ge 2
+\end{align*}
+</div></article><article class="exercise exercise-like" id="exercise-495"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-121">
+\begin{align*}
+a_0 \amp = 12\\
+a_n \amp = 2a_{n-1} \text{   for } n\ge 1
+\end{align*}
+</div></article><article class="exercise exercise-like" id="exercise-496"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-122">
+\begin{align*}
+a_0\amp = 75\\
+a_n\amp = 10a_{n-1} \text{   for } n\ge 1
+\end{align*}
+</div></article><article class="exercise exercise-like" id="exercise-497"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-123">
+\begin{align*}
+a_1 \amp = 7\\
+a_n\amp = 2-a_{n-1} \text{   for } n\ge 2
+\end{align*}
+</div></article><article class="exercise exercise-like" id="exercise-498"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-124">
+\begin{align*}
+a_1 \amp = 8\\
+a_n \amp = -a_{n-1} \text{   for } n\ge 2
+\end{align*}
+</div></article><article class="exercise exercise-like" id="exercise-499"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-125">
+\begin{align*}
+a_0 \amp = 3\\
+a_n\amp = (a_{n-1})^2 \text{   for } n\ge 1
+\end{align*}
+</div></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-500"><h4 class="heading"><span class="codenumber">19<span class="period">.</span></span></h4>For the following sequence, calculate the <span class="process-math">\(\upst{201}\)</span> term:  <span class="process-math">\(5, 15, 45, \ldots\)</span></article><article class="exercise exercise-like" id="exercise-501"><h4 class="heading"><span class="codenumber">20<span class="period">.</span></span></h4>For the following sequence, calculate the <span class="process-math">\(\upth{20}\)</span> term:  <span class="process-math">\(7, -14, 28, \ldots\)</span></article><article class="exercise exercise-like" id="exercise-502"><h4 class="heading"><span class="codenumber">21<span class="period">.</span></span></h4>Calculate <span class="process-math">\(S_{20}\)</span> for the series <span class="process-math">\(100 + 50 + 25 + \ldots\)</span></article><article class="exercise exercise-like" id="exercise-503"><h4 class="heading"><span class="codenumber">22<span class="period">.</span></span></h4>Calculate <span class="process-math">\(S_{20}\)</span> for the series <span class="process-math">\(100 + 200 + 400 + \ldots\)</span></article><div class="exercisegroup" id="exercisegroup-84">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-89">Calculate the sum, if it exists, for the following series.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-504"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>
+<span class="process-math">\(- 6 + 4 - \frac{8}{3} + \ldots\)</span></article><article class="exercise exercise-like" id="exercise-505"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
+<span class="process-math">\(100 + 50 + 25 + \ldots\)</span></article><article class="exercise exercise-like" id="exercise-506"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
+<span class="process-math">\(100 + 200 + 400 + \ldots\)</span></article><article class="exercise exercise-like" id="exercise-507"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
+<span class="process-math">\(12 + 3 + \frac{3}{4}+ \ldots\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-85">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-90">Calculate the following sums, if they exist.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-508"><h5 class="heading"><span class="codenumber">27<span class="period">.</span></span></h5>
+<span class="process-math">\(\sum\limits_{k = 0}^{10} {{2^{k + 2}}}\)</span></article><article class="exercise exercise-like" id="exercise-509"><h5 class="heading"><span class="codenumber">28<span class="period">.</span></span></h5>
+<span class="process-math">\({\sum\limits_{j = 1}^\infty  {15\left( {\frac{3}{5}} \right)} ^j}\)</span></article><article class="exercise exercise-like" id="exercise-510"><h5 class="heading"><span class="codenumber">29<span class="period">.</span></span></h5>
+<span class="process-math">\(\sum\limits_{i = 2}^\infty  {25{{\left( {0.1} \right)}^j}}\)</span></article><article class="exercise exercise-like" id="exercise-511"><h5 class="heading"><span class="codenumber">30<span class="period">.</span></span></h5>
+<span class="process-math">\(\sum\limits_{i = 0}^\infty  {4{{\left( { - 3} \right)}^i}}\)</span></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="exercise-512"><h4 class="heading"><span class="codenumber">31<span class="period">.</span></span></h4>If the number of vampires in Transylvania doubles every month, then how many vampires will be in Transylvania in 3 years, starting from one individual?  Comment on your result if the total population of Transylvania is 2 million people.</article><article class="exercise exercise-like" id="exercise-513"><h4 class="heading"><span class="codenumber">32<span class="period">.</span></span></h4>As I was going to St. Ives, I met a man with seven wives.  Each wife had seven sacks.  Each sack had seven cats.  Each cat had seven kits.  Kits, cats, sacks, wives: does this form a geometric sequence?</article><article class="exercise exercise-like" id="exercise-514"><h4 class="heading"><span class="codenumber">33<span class="period">.</span></span></h4>The paper used in the photocopier by Pat's office is said to be 0.097~mm thick.  If it is folded over repeatedly, doubling its thickness each time, how thick will the paper be if it's folded 7 times?  Bonus:  why, then, were the Mythbusters having so many problems trying to fold the paper this many times?</article></section><section class="solutions" id="solutions-16"><h3 class="heading hide-type">
+<span class="type">Solutions</span> <span class="codenumber">3.3.9</span> <span class="title">Solutions to Section 3.3 Exercises</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 3.3.8">
+<span class="codenumber">3.3.8</span><span class="space"> </span><span class="title">Exercises</span>
+</h4>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.1<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-505-hidden.html" title="Solution 3.3.8.1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.2<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-506-hidden.html" title="Solution 3.3.8.2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.3<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-507-hidden.html" title="Solution 3.3.8.3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.4<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-508-hidden.html" title="Solution 3.3.8.4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.5<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-509-hidden.html" title="Solution 3.3.8.5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.6<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-510-hidden.html" title="Solution 3.3.8.6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.7<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-511-hidden.html" title="Solution 3.3.8.7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.8<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-512-hidden.html" title="Solution 3.3.8.8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.9<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-513-hidden.html" title="Solution 3.3.8.9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.10<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-514-hidden.html" title="Solution 3.3.8.10.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.11<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-515-hidden.html" title="Solution 3.3.8.11.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.12<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-516-hidden.html" title="Solution 3.3.8.12.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.13<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-517-hidden.html" title="Solution 3.3.8.13.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.14<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-518-hidden.html" title="Solution 3.3.8.14.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.15<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-519-hidden.html" title="Solution 3.3.8.15.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.16<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-520-hidden.html" title="Solution 3.3.8.16.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.17<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-521-hidden.html" title="Solution 3.3.8.17.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.18<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-522-hidden.html" title="Solution 3.3.8.18.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.19<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-523-hidden.html" title="Solution 3.3.8.19.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.20<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-524-hidden.html" title="Solution 3.3.8.20.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.21<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-525-hidden.html" title="Solution 3.3.8.21.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.22<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-526-hidden.html" title="Solution 3.3.8.22.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.23<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-527-hidden.html" title="Solution 3.3.8.23.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.24<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-528-hidden.html" title="Solution 3.3.8.24.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.25<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-529-hidden.html" title="Solution 3.3.8.25.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.26<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-530-hidden.html" title="Solution 3.3.8.26.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.27<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-531-hidden.html" title="Solution 3.3.8.27.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.28<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-532-hidden.html" title="Solution 3.3.8.28.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.29<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-533-hidden.html" title="Solution 3.3.8.29.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.30<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-534-hidden.html" title="Solution 3.3.8.30.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.31<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-535-hidden.html" title="Solution 3.3.8.31.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.32<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-536-hidden.html" title="Solution 3.3.8.32.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">3.3.8.33<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-537-hidden.html" title="Solution 3.3.8.33.1"><span class="type">Solution</span><span class="period">.</span></a></div></article></section></section></div></main>
+</div>
+</body>
+</html>
