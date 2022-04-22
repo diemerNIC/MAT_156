@@ -1,0 +1,702 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-22T14:02:23-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Converting from Decimal</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Binary, Logic, and More">
+<meta property="book:author" content="Patricia R. Wrean">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\mynot}{\sim\!}
+\newcommand{\myand}{{\wedge}}
+\newcommand{\myor}{{\vee}}
+\newcommand{\myxor}{{\oplus}}
+\newcommand{\ttxor}{\texttt{XOR}}
+\newcommand{\mytt}[1]{\texttt{#1}}
+
+\newcommand{\myleq}{{\Leftrightarrow}}
+\newcommand{\myimplies}{{\rightarrow}}
+\newcommand{\myiff}{{\leftrightarrow}}
+
+\newcommand{\mylnot}[1]{{{\sim}#1}}
+\newcommand{\notp}{\mylnot{p}}
+\newcommand{\notq}{\mylnot{q}}
+\newcommand{\notr}{\mylnot{r}}
+\newcommand{\mybnot}[1]{{\overline{#1}}}
+\newcommand{\nota}{\mybnot{A}}
+\newcommand{\notb}{\mybnot{B}}
+\newcommand{\notc}{\mybnot{C}}
+\newcommand{\notd}{\mybnot{D}}
+
+\newcommand{\conditional}{{p \myimplies q}}
+\newcommand{\inverse}{{\notp{} \myimplies \notq{}}}
+\newcommand{\converse}{{q \myimplies p}}
+\newcommand{\contrapositive}{{\notq{} \myimplies \notp{}}}
+\newcommand{\biconditional}{{p \myiff{} q}}
+
+\newcommand{\intersection}{\cap}
+\newcommand{\intersect}{\cap}
+\newcommand{\union}{\cup}
+
+\newcommand{\nth}{{n^{\text{th}}}}
+\newcommand{\kth}{{k^{\text{th}}}}
+\newcommand{\upth}[1]{{#1^{\text{th}}}}
+\newcommand{\upst}[1]{{#1^{\text{st}}}}
+\newcommand{\upnd}[1]{{#1^{\text{nd}}}}
+\newcommand{\uprd}[1]{{#1^{\text{rd}}}}
+\newcommand{\infinity}{{\infty}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="binary-logic-and-more.html"><span class="title">Binary, Logic, and More:</span> <span class="subtitle">Applied Math for Computing</span></a></h1>
+<p class="byline">Patricia R. Wrean</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="non-integer-to-decimal.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="binary-octal-hex.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="convert-bin-oct-hex.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="non-integer-to-decimal.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="binary-octal-hex.html" title="Up">Up</a><a class="next-button button toolbar-item" href="convert-bin-oct-hex.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li></ul>
+</li>
+<li class="link">
+<a href="binary-octal-hex.html" data-scroll="binary-octal-hex" class="internal"><span class="codenumber">1</span> <span class="title">Binary, Octal, and Hexadecimal</span></a><ul>
+<li><a href="decimal-octal.html" data-scroll="decimal-octal" class="internal">Decimal and Octal</a></li>
+<li><a href="binary-hex.html" data-scroll="binary-hex" class="internal">Binary and Hexadecimal</a></li>
+<li><a href="non-integer-to-decimal.html" data-scroll="non-integer-to-decimal" class="internal">Converting Non-Integer Numbers to Decimal</a></li>
+<li><a href="converting-from-decimal.html" data-scroll="converting-from-decimal" class="active">Converting from Decimal</a></li>
+<li><a href="convert-bin-oct-hex.html" data-scroll="convert-bin-oct-hex" class="internal">Converting between Binary, Octal, and Hexadecimal</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="logic.html" data-scroll="logic" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="sec-intro-to-logic.html" data-scroll="sec-intro-to-logic" class="internal">Introduction to Logic</a></li>
+<li><a href="sec-venn-diagrams.html" data-scroll="sec-venn-diagrams" class="internal">Venn Diagrams</a></li>
+<li><a href="sec-logical-equivalence.html" data-scroll="sec-logical-equivalence" class="internal">Logical Equivalence</a></li>
+<li><a href="sec-boolean-algebra.html" data-scroll="sec-boolean-algebra" class="internal">Boolean Algebra</a></li>
+<li><a href="sec-logic-laws.html" data-scroll="sec-logic-laws" class="internal">Laws of Logic</a></li>
+<li><a href="sec-more-logic-laws.html" data-scroll="sec-more-logic-laws" class="internal">More Laws of Logic</a></li>
+<li><a href="sec-conditional.html" data-scroll="sec-conditional" class="internal">The Conditional</a></li>
+<li><a href="sec-biconditional.html" data-scroll="sec-biconditional" class="internal">The Biconditional</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sequences-and-series.html" data-scroll="sequences-and-series" class="internal"><span class="codenumber">3</span> <span class="title">Sequences and Series</span></a><ul>
+<li><a href="sec-intro-to-seq-and-ser.html" data-scroll="sec-intro-to-seq-and-ser" class="internal">Introduction to Sequences and Series</a></li>
+<li><a href="sec-arith-seq-ser.html" data-scroll="sec-arith-seq-ser" class="internal">Arithmetic Sequences and Series</a></li>
+<li><a href="sec-geom-seq-ser.html" data-scroll="sec-geom-seq-ser" class="internal">Geometric Sequences and Series</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="converting-from-decimal"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Converting from Decimal</span>
+</h2>
+<section class="introduction" id="introduction-14">As we've seen, converting from a different base back to decimal form can be done by expansion:<div class="displaymath process-math" data-contains-math-knowls="" id="md-19">
+\begin{align*}
+316_8 \amp = 3\times8^2+1\times8^1+6\times8^0\\
+\amp = 3\times64+1\times8+6\times1\\
+\amp = 192+8+6\\
+\amp=206
+\end{align*}
+</div>but how do we go back the other way?  In order to do that, we first need to look as some <dfn class="terminology">modular arithmetic</dfn>.</section><section class="subsection" id="modular-arithmetic"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.1</span> <span class="title">Modular Arithmetic: Finding Quotient and Remainder</span>
+</h3>
+<p id="p-61">Suppose we wish to divide one integer by another. If the second integer doesn't divide into the first evenly, the result is a real number which we can report either in fraction or decimal form.  For example, if we divide 13 by 5, we get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+13\div 5=\frac{13}{5}=2+\frac{3}{5}=2.6
+\end{equation*}
+</div>
+<p class="continuation">although the second last expression is usually written as <span class="process-math">\(2\frac{3}{5}\text{,}\)</span> with the <span class="process-math">\(+\)</span> symbol suppressed.</p>
+<p id="p-62">If, for some reason, we wish to stay in the land of integers, we could report the result by saying that 13 divided by 5 equals 2, with 3 left over.  In this example, the 2 is called the <dfn class="terminology">quotient</dfn> and the 3 is called the <dfn class="terminology">remainder</dfn>, and we can write this calculation in the following form: </p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+13=\underbrace{2}_{\text{quotient}}\times 5 + \underbrace{3}_{\text{remainder}}
+\end{equation*}
+</div>
+<p id="p-63">This sort of calculation is very helpful when doing unit conversions.<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 1 </sup></a>  For example, if we know that a certain length of time is 54 hours long and we would prefer to give it in terms of days and hours, then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-20">
+\begin{align*}
+54 \text{ hours} \amp =\underbrace{\text{days}}_{\text{quotient}}\times 24+\underbrace{\text{hours}}_{\text{remainder}}\\
+\amp = 2\times 24+6
+\end{align*}
+</div>
+<p class="continuation">so 54 hours <span class="process-math">\(=\)</span> 2 days plus 6 hours.</p>
+<p id="p-64">But how can we find quotients and remainders with a standard calculator?  If we take the number 54 and divide it by 24, our calculator will tell us 2.25.  There are two ways to go:</p>
+<ol class="decimal">
+<li id="li-129"><p id="p-derived-li-129">Take the integer part of 2.25, which is 2.  Then perform the following calculation:<div class="displaymath process-math" data-contains-math-knowls="" id="md-21">
+\begin{align*}
+\text{remainder} \amp = 54-\underbrace{2}_{\text{integer part}}\times 24\\
+\amp = 54-48\\
+\amp = 6
+\end{align*}
+</div></p></li>
+<li id="li-130"><p id="p-derived-li-130">Alternatively, you can take the decimal part of 2.25, which is 0.25, and multiply it by the divisor, 24:<div class="displaymath process-math" data-contains-math-knowls="" id="md-22">
+\begin{align*}
+\text{remainder} \amp = \underbrace{0.25}_{\text{decimal part}}\times 24\\
+\amp = 6
+\end{align*}
+</div></p></li>
+</ol>
+<article class="example example-like" id="example-16"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-16"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-16"><article class="example example-like">Find the quotient and remainder for the following: <ol class="decimal">
+<li id="li-131"><p id="p-derived-li-131"><span class="process-math">\(\displaystyle \ 25\div 4\)</span></p></li>
+<li id="li-132"><p id="p-derived-li-132"><span class="process-math">\(\displaystyle \ 86\div 3\)</span></p></li>
+<li id="li-133"><p id="p-derived-li-133"><span class="process-math">\(\displaystyle \ 101\div 12\)</span></p></li>
+<li id="li-134"><p id="p-derived-li-134"><span class="process-math">\(\displaystyle \ 91\div 8\)</span></p></li>
+</ol>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-69"><div class="solution solution-like"><ol class="decimal">
+<li id="li-135"><p id="p-derived-li-135"><div class="displaymath process-math" data-contains-math-knowls="" id="md-23">
+\begin{align*}
+\amp 25\div 4=6.25\\
+\amp \text{quotient }=\text{integer part of }6.25=6\\
+\amp \text{remainder }=25-\underbrace{6}_{\text{integer part}} \times 4=1\\
+\amp \text{or remainder }=\underbrace{0.25}_{\text{decimal part}}\times 4=1
+\end{align*}
+</div></p></li>
+<li id="li-136"><p id="p-derived-li-136"><span class="process-math">\(\displaystyle \text{ quotient }=28,\text{ remainder }=2\)</span></p></li>
+<li id="li-137"><p id="p-derived-li-137"><span class="process-math">\(\displaystyle \text{ quotient }=8,\text{ remainder }=5\)</span></p></li>
+<li id="li-138"><p id="p-derived-li-138"><span class="process-math">\(\displaystyle \text{ quotient }=11,\text{ remainder }=3\)</span></p></li>
+</ol></div></div>
+</div></article></div></section><section class="subsection" id="convert-from-decimal-form"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.2</span> <span class="title">Using Quotient and Remainder to Convert from Decimal Form</span>
+</h3>
+<p id="p-65">Now that we know how to find quotients and remainders, let's look at some examples that convert from a decimal number into octal.  Consider the number <span class="process-math">\(316_8\text{.}\)</span>  We earlier found that <span class="process-math">\(316_8=206_{10}\text{.}\)</span>  Let's now go back the other way, using repeated division and remainders.</p>
+<article class="example example-like" id="example-17"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-17"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-17"><article class="example example-like"><p id="p-66">Convert the decimal number 206 to octal.</p>
+<p id="p-67">The procedure is to divide 206 by the base, which in this case is 8, and write down the quotient and the remainder.  Then divide the quotient by the base and write down the new quotient and remainder.  As you can see below, we first divide 206 by 8 to get a quotient of 25 with remainder 6.  If we then divide 25 by 8, we get a quotient of 3 with remainder 1.  we continue doing this until we get a quotient of zero, as in the table below. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t3 lines"></td>
+<td class="c m b2 r0 l0 t3 lines">quotient</td>
+<td class="c m b2 r0 l0 t3 lines">remainder</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(206\div 8=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">25</td>
+<td class="c m b0 r0 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(25\div 8=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="r m b3 r0 l0 t0 lines"><span class="process-math">\(3\div 8 =\)</span></td>
+<td class="c m b3 r0 l0 t0 lines">0</td>
+<td class="c m b3 r0 l0 t0 lines">3</td>
+</tr>
+</table></div></p>
+<p id="p-68">Taken in reverse order, the remainders comprise the digits of the equivalent octal number <span class="process-math">\(316_8\text{.}\)</span></p></article></div>
+<p id="p-69">Let's do some more examples using this same procedure.</p>
+<article class="example example-like" id="example-18"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-18"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-18"><article class="example example-like">Convert the decimal number 41 to binary.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-70"><div class="solution solution-like">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t3 lines"></td>
+<td class="c m b2 r0 l0 t3 lines">quotient</td>
+<td class="c m b2 r0 l0 t3 lines">remainder</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(41\div 2=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">20</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(20\div 2=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">10</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(10\div 2 =\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(5\div 2=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(2\div 2=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="r m b3 r0 l0 t0 lines"><span class="process-math">\(1\div 2=\)</span></td>
+<td class="c m b3 r0 l0 t0 lines">0</td>
+<td class="c m b3 r0 l0 t0 lines">1</td>
+</tr>
+</table></div> Reading the remainders from bottom to top gives <span class="process-math">\(41_{10}=101001_2\)</span>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-19"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-19"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-19"><article class="example example-like">Convert the decimal number 24362 to hexadecimal.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-71" id="solution-71"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-71"><div class="solution solution-like">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t3 lines"></td>
+<td class="c m b2 r0 l0 t3 lines">quotient</td>
+<td class="c m b2 r0 l0 t3 lines">remainder (base 10)</td>
+<td class="c m b2 r0 l0 t3 lines">remainder (base 16)</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(24362\div 16=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">1522</td>
+<td class="c m b0 r0 l0 t0 lines">10</td>
+<td class="c m b0 r0 l0 t0 lines">A</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(1522\div 16=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">95</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(95\div 16=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines">15</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(5\div 16=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines">5</td>
+</tr>
+</table></div> So <span class="process-math">\(24362_{10}=5F2A_{16}\)</span>
+</div></div>
+</div></article></div></section><section class="subsection" id="convert-nonint-from-decimal-form"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.3</span> <span class="title">Converting Non-integer Numbers from Decimal Form</span>
+</h3>
+<p id="p-70">We have just seen that to convert an integer number from decimal form, we divide by the base repeatedly.  To convert the fractional part of a non-integer decimal number to another base, we instead will multiply the base repeatedly.</p>
+<article class="example example-like" id="example-20"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-20"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.5</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-20"><article class="example example-like"><p id="p-71">Convert the decimal number 0.59375 to octal.</p>
+<p id="p-72">The procedure is to multiply the decimal number by the base, and split the result into the integer part and the fractional (decimal) part.  Then take the fractional part and write it on the next line.  Mulitply it by the base (8 in this example) and split as before.  Stop when the fractional part goes to zero.  Finally, write down the integer parts from top to bottom after the radix point and affix the subscript to indicate the base. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t3 lines"></td>
+<td class="c m b2 r0 l0 t3 lines">integer</td>
+<td class="c m b2 r0 l0 t3 lines">fractional</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(0.59375\times 8=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(+0.75\)</span></td>
+</tr>
+<tr>
+<td class="r m b3 r0 l0 t0 lines"><span class="process-math">\(0.75\times 8=\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(+0\)</span></td>
+</tr>
+</table></div> Reading the integer parts from top to bottom gives <span class="process-math">\(0.59375_{10}=0.46_8\text{.}\)</span></p></article></div>
+<article class="example example-like" id="example-21"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-21"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.6</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-21"><article class="example example-like">Convert the decimal number 0.625 to binary.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-72" id="solution-72"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-72"><div class="solution solution-like">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t3 lines"></td>
+<td class="c m b2 r0 l0 t3 lines">integer</td>
+<td class="c m b2 r0 l0 t3 lines">fractional</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(0.625\times 2=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(+0.25\)</span></td>
+</tr>
+<tr>
+<td class="r m b3 r0 l0 t0 lines"><span class="process-math">\(0.25\times 2=\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(+0.5\)</span></td>
+</tr>
+<tr>
+<td class="r m b3 r0 l0 t0 lines"><span class="process-math">\(0.5\times 2=\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(+0\)</span></td>
+</tr>
+</table></div> We have <span class="process-math">\(0.625_{10}=0.101_2\text{.}\)</span>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="example-22"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-22"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.7</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-22"><article class="example example-like">Convert the decimal number 0.6328125 to hexadecimal.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-73" id="solution-73"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-73"><div class="solution solution-like">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t3 lines"></td>
+<td class="c m b2 r0 l0 t3 lines">integer</td>
+<td class="c m b2 r0 l0 t3 lines">fractional</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(0.6328125\times 16=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(10 (A)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(+0.125\)</span></td>
+</tr>
+<tr>
+<td class="r m b3 r0 l0 t0 lines"><span class="process-math">\(0.125\times 16=\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(+0\)</span></td>
+</tr>
+</table></div> Reading the integer parts from top to bottom gives <span class="process-math">\(0.6328125_{10}=0.A2_{16}\)</span>
+</div></div>
+</div></article></div>
+<p id="p-73">Let's do an example with a twist.</p>
+<article class="example example-like" id="example-23"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-23"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.8</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-23"><article class="example example-like">Convert the decimal number 0.3 to octal.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-74" id="solution-74"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-74"><div class="solution solution-like">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t3 lines"></td>
+<td class="c m b2 r0 l0 t3 lines">integer</td>
+<td class="c m b2 r0 l0 t3 lines">fractional</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(0.3\times 8=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(+0.4\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(0.4\times 8=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(+0.2\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(0.2\times 8=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(+0.6\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(0.6\times 8=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(+0.8\)</span></td>
+</tr>
+<tr>
+<td class="r m b3 r0 l0 t0 lines"><span class="process-math">\(0.8\times 8=\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(+0.4\)</span></td>
+</tr>
+</table></div>
+<p id="p-74">You'll notice that we have a bit of a problem:  if we put the fractional/decimal part 0.4 on the next line, then we'll have a repeat of the second line, and then the next three lines will also repeat, and so on.  What this means is that <span class="process-math">\(0.3_{10}\)</span> is a repeating decimal in octal: <span class="process-math">\(0.3_{10}=0.2\mybnot{3146}_8\text{.}\)</span></p>
+</div></div>
+</div></article></div>
+<p id="p-75">Finally, what if we are converting a non-integer number that has both an integer part and a fractional part?  The answer is to do the two parts separately and then put them together.</p>
+<article class="example example-like" id="example-24"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-24"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.9</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-24"><article class="example example-like">Convert the number 17.375 to binary.<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-75" id="solution-75"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-75"><div class="solution solution-like">
+<p id="p-76">First, we'll do the integer part and convert <span class="process-math">\(17_{10}\)</span> to binary. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t3 lines"></td>
+<td class="c m b2 r0 l0 t3 lines">quotient</td>
+<td class="c m b2 r0 l0 t3 lines">remainder</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(17\div 2=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(8\div 2=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(4\div 2=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(2\div 2 = \)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+<tr>
+<td class="r m b3 r0 l0 t0 lines"><span class="process-math">\(1\div 2=\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+</tr>
+</table></div> So <span class="process-math">\(17_{10}=10001_2\)</span></p>
+<p id="p-77">Now, convert <span class="process-math">\(0.375_{10}\)</span> to binary. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t3 lines"></td>
+<td class="c m b2 r0 l0 t3 lines">integer</td>
+<td class="c m b2 r0 l0 t3 lines">fractional</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(0.375\times 2=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(+0.75\)</span></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(0.75\times 2=\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(+0.5\)</span></td>
+</tr>
+<tr>
+<td class="r m b3 r0 l0 t0 lines"><span class="process-math">\(0.5\times 2=\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b3 r0 l0 t0 lines"><span class="process-math">\(+0.0\)</span></td>
+</tr>
+</table></div> So <span class="process-math">\(0.375_{10}=0.011_2\)</span></p>
+<p id="p-78">Putting it all together, we get that <span class="process-math">\(17.375_{10}=10001.011_2\)</span></p>
+</div></div>
+</div></article></div></section><section class="exercises" id="exercises-4"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.4.4</span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-14">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-15">Convert the following decimal numbers to octal.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-67"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 23\)</span></article><article class="exercise exercise-like" id="exercise-68"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 19\)</span></article><article class="exercise exercise-like" id="exercise-69"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 49\)</span></article><article class="exercise exercise-like" id="exercise-70"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 84\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-15">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-16">Convert the following decimal numbers to binary.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-71"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 7\)</span></article><article class="exercise exercise-like" id="exercise-72"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 12\)</span></article><article class="exercise exercise-like" id="exercise-73"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 23\)</span></article><article class="exercise exercise-like" id="exercise-74"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 30\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-16">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-17">Convert the following decimal numbers to hexadecimal.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-75"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 19\)</span></article><article class="exercise exercise-like" id="exercise-76"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 25\)</span></article><article class="exercise exercise-like" id="exercise-77"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 48\)</span></article><article class="exercise exercise-like" id="exercise-78"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 64\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-17">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-18">Convert the decimal number 27 to the following bases.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-79"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>binary</article><article class="exercise exercise-like" id="exercise-80"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>octal</article><article class="exercise exercise-like" id="exercise-81"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>hexadecimal</article><article class="exercise exercise-like" id="exercise-82"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>base 7</article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-18">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-19">Convert the following decimal numbers to octal.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-83"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 203\)</span></article><article class="exercise exercise-like" id="exercise-84"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 1000\)</span></article><article class="exercise exercise-like" id="exercise-85"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 2549\)</span></article><article class="exercise exercise-like" id="exercise-86"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 56742\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-19">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-20">Convert the following decimal numbers to binary.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-87"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 47\)</span></article><article class="exercise exercise-like" id="exercise-88"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 123\)</span></article><article class="exercise exercise-like" id="exercise-89"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 80\)</span></article><article class="exercise exercise-like" id="exercise-90"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 35\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-20">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-21">Convert the following decimal numbers to hexadecimal.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-91"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 189\)</span></article><article class="exercise exercise-like" id="exercise-92"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 3245\)</span></article><article class="exercise exercise-like" id="exercise-93"><h5 class="heading"><span class="codenumber">27<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 11331\)</span></article><article class="exercise exercise-like" id="exercise-94"><h5 class="heading"><span class="codenumber">28<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 100\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-21">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-22">Convert the decimal number 1234 to the following bases.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-95"><h5 class="heading"><span class="codenumber">29<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>binary</article><article class="exercise exercise-like" id="exercise-96"><h5 class="heading"><span class="codenumber">30<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>octal</article><article class="exercise exercise-like" id="exercise-97"><h5 class="heading"><span class="codenumber">31<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>hexadecimal</article><article class="exercise exercise-like" id="exercise-98"><h5 class="heading"><span class="codenumber">32<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>base 7</article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-22">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-23">Perform the following conversions for non-integer numbers.  Give exact answers (do not round off).</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-99"><h5 class="heading"><span class="codenumber">33<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 0.359375\)</span> to octal</article><article class="exercise exercise-like" id="exercise-100"><h5 class="heading"><span class="codenumber">34<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 0.8125\)</span> to binary</article><article class="exercise exercise-like" id="exercise-101"><h5 class="heading"><span class="codenumber">35<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 0.234375\)</span> to hexadecimal</article><article class="exercise exercise-like" id="exercise-102"><h5 class="heading"><span class="codenumber">36<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 0.6\)</span> to octal</article><article class="exercise exercise-like" id="exercise-103"><h5 class="heading"><span class="codenumber">37<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 0.3\)</span> to binary</article><article class="exercise exercise-like" id="exercise-104"><h5 class="heading"><span class="codenumber">38<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 18.125\)</span> to hexadecimal</article><article class="exercise exercise-like" id="exercise-105"><h5 class="heading"><span class="codenumber">39<span class="period">.</span></span></h5>
+<span class="process-math">\(\ 37.875\)</span> to octal</article>
+</div>
+</div></section><section class="solutions" id="solutions-4"><h3 class="heading hide-type">
+<span class="type">Solutions</span> <span class="codenumber">1.4.5</span> <span class="title">Solutions to Section 1.4 Exercises</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 1.4.4">
+<span class="codenumber">1.4.4</span><span class="space"> </span><span class="title">Exercises</span>
+</h4>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.1<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-76-hidden.html" title="Solution 1.4.4.1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.2<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-77-hidden.html" title="Solution 1.4.4.2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.3<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-78-hidden.html" title="Solution 1.4.4.3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.4<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-79-hidden.html" title="Solution 1.4.4.4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.5<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-80-hidden.html" title="Solution 1.4.4.5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.6<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-81-hidden.html" title="Solution 1.4.4.6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.7<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-82-hidden.html" title="Solution 1.4.4.7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.8<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-83-hidden.html" title="Solution 1.4.4.8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.9<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-84-hidden.html" title="Solution 1.4.4.9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.10<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-85-hidden.html" title="Solution 1.4.4.10.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.11<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-86-hidden.html" title="Solution 1.4.4.11.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.12<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-87-hidden.html" title="Solution 1.4.4.12.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.13<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-88-hidden.html" title="Solution 1.4.4.13.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.14<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-89-hidden.html" title="Solution 1.4.4.14.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.15<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-90-hidden.html" title="Solution 1.4.4.15.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.16<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-91-hidden.html" title="Solution 1.4.4.16.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.17<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-92-hidden.html" title="Solution 1.4.4.17.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.18<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-93-hidden.html" title="Solution 1.4.4.18.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.19<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-94-hidden.html" title="Solution 1.4.4.19.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.20<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-95-hidden.html" title="Solution 1.4.4.20.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.21<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-96-hidden.html" title="Solution 1.4.4.21.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.22<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-97-hidden.html" title="Solution 1.4.4.22.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.23<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-98-hidden.html" title="Solution 1.4.4.23.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.24<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-99-hidden.html" title="Solution 1.4.4.24.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.25<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-100-hidden.html" title="Solution 1.4.4.25.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.26<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-101-hidden.html" title="Solution 1.4.4.26.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.27<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-102-hidden.html" title="Solution 1.4.4.27.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.28<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-103-hidden.html" title="Solution 1.4.4.28.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.29<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-104-hidden.html" title="Solution 1.4.4.29.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.30<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-105-hidden.html" title="Solution 1.4.4.30.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.31<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-106-hidden.html" title="Solution 1.4.4.31.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.32<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-107-hidden.html" title="Solution 1.4.4.32.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.33<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-108-hidden.html" title="Solution 1.4.4.33.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.34<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-109-hidden.html" title="Solution 1.4.4.34.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.35<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-110-hidden.html" title="Solution 1.4.4.35.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.36<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-111-hidden.html" title="Solution 1.4.4.36.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.37<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-112-hidden.html" title="Solution 1.4.4.37.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.38<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-113-hidden.html" title="Solution 1.4.4.38.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.4.39<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-114-hidden.html" title="Solution 1.4.4.39.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">The metric system has reduced the need for this type of calculation, but since we are still stuck with practical units that are not multiples of 10 (time given in days, hours, and minutes, for example), doing this type of conversion is still necessary.</div></div>
+</div></main>
+</div>
+</body>
+</html>

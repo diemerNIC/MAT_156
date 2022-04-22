@@ -1,0 +1,348 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-22T14:02:24-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Venn Diagrams</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Binary, Logic, and More">
+<meta property="book:author" content="Patricia R. Wrean">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\mynot}{\sim\!}
+\newcommand{\myand}{{\wedge}}
+\newcommand{\myor}{{\vee}}
+\newcommand{\myxor}{{\oplus}}
+\newcommand{\ttxor}{\texttt{XOR}}
+\newcommand{\mytt}[1]{\texttt{#1}}
+
+\newcommand{\myleq}{{\Leftrightarrow}}
+\newcommand{\myimplies}{{\rightarrow}}
+\newcommand{\myiff}{{\leftrightarrow}}
+
+\newcommand{\mylnot}[1]{{{\sim}#1}}
+\newcommand{\notp}{\mylnot{p}}
+\newcommand{\notq}{\mylnot{q}}
+\newcommand{\notr}{\mylnot{r}}
+\newcommand{\mybnot}[1]{{\overline{#1}}}
+\newcommand{\nota}{\mybnot{A}}
+\newcommand{\notb}{\mybnot{B}}
+\newcommand{\notc}{\mybnot{C}}
+\newcommand{\notd}{\mybnot{D}}
+
+\newcommand{\conditional}{{p \myimplies q}}
+\newcommand{\inverse}{{\notp{} \myimplies \notq{}}}
+\newcommand{\converse}{{q \myimplies p}}
+\newcommand{\contrapositive}{{\notq{} \myimplies \notp{}}}
+\newcommand{\biconditional}{{p \myiff{} q}}
+
+\newcommand{\intersection}{\cap}
+\newcommand{\intersect}{\cap}
+\newcommand{\union}{\cup}
+
+\newcommand{\nth}{{n^{\text{th}}}}
+\newcommand{\kth}{{k^{\text{th}}}}
+\newcommand{\upth}[1]{{#1^{\text{th}}}}
+\newcommand{\upst}[1]{{#1^{\text{st}}}}
+\newcommand{\upnd}[1]{{#1^{\text{nd}}}}
+\newcommand{\uprd}[1]{{#1^{\text{rd}}}}
+\newcommand{\infinity}{{\infty}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="binary-logic-and-more.html"><span class="title">Binary, Logic, and More:</span> <span class="subtitle">Applied Math for Computing</span></a></h1>
+<p class="byline">Patricia R. Wrean</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-intro-to-logic.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-logical-equivalence.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-intro-to-logic.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-logical-equivalence.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li></ul>
+</li>
+<li class="link">
+<a href="binary-octal-hex.html" data-scroll="binary-octal-hex" class="internal"><span class="codenumber">1</span> <span class="title">Binary, Octal, and Hexadecimal</span></a><ul>
+<li><a href="decimal-octal.html" data-scroll="decimal-octal" class="internal">Decimal and Octal</a></li>
+<li><a href="binary-hex.html" data-scroll="binary-hex" class="internal">Binary and Hexadecimal</a></li>
+<li><a href="non-integer-to-decimal.html" data-scroll="non-integer-to-decimal" class="internal">Converting Non-Integer Numbers to Decimal</a></li>
+<li><a href="converting-from-decimal.html" data-scroll="converting-from-decimal" class="internal">Converting from Decimal</a></li>
+<li><a href="convert-bin-oct-hex.html" data-scroll="convert-bin-oct-hex" class="internal">Converting between Binary, Octal, and Hexadecimal</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="logic.html" data-scroll="logic" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="sec-intro-to-logic.html" data-scroll="sec-intro-to-logic" class="internal">Introduction to Logic</a></li>
+<li><a href="sec-venn-diagrams.html" data-scroll="sec-venn-diagrams" class="active">Venn Diagrams</a></li>
+<li><a href="sec-logical-equivalence.html" data-scroll="sec-logical-equivalence" class="internal">Logical Equivalence</a></li>
+<li><a href="sec-boolean-algebra.html" data-scroll="sec-boolean-algebra" class="internal">Boolean Algebra</a></li>
+<li><a href="sec-logic-laws.html" data-scroll="sec-logic-laws" class="internal">Laws of Logic</a></li>
+<li><a href="sec-more-logic-laws.html" data-scroll="sec-more-logic-laws" class="internal">More Laws of Logic</a></li>
+<li><a href="sec-conditional.html" data-scroll="sec-conditional" class="internal">The Conditional</a></li>
+<li><a href="sec-biconditional.html" data-scroll="sec-biconditional" class="internal">The Biconditional</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sequences-and-series.html" data-scroll="sequences-and-series" class="internal"><span class="codenumber">3</span> <span class="title">Sequences and Series</span></a><ul>
+<li><a href="sec-intro-to-seq-and-ser.html" data-scroll="sec-intro-to-seq-and-ser" class="internal">Introduction to Sequences and Series</a></li>
+<li><a href="sec-arith-seq-ser.html" data-scroll="sec-arith-seq-ser" class="internal">Arithmetic Sequences and Series</a></li>
+<li><a href="sec-geom-seq-ser.html" data-scroll="sec-geom-seq-ser" class="internal">Geometric Sequences and Series</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-venn-diagrams"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Venn Diagrams</span>
+</h2>
+<section class="subsection" id="one-proposition-diagrams"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">Venn Diagrams with One Proposition</span>
+</h3>
+<p id="p-119">One way to visualize operations on propositions is to use a Venn diagram.  Although Venn diagrams are more commonly used with sets, there are many commonalities between the operations on sets and on logical propositions.  The Venn diagram for a single logical proposition <span class="process-math">\(p\)</span> is shown below.</p>
+<p id="p-120"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/venn1-example-1.svg" role="img" class="contained"></div></p>
+<p id="p-121">In this diagram, the rectangle stands for the universe, while the circle denotes the logical proposition <span class="process-math">\(p\text{.}\)</span>  We then shade in regions of the diagram to indicate the regions of interest.  For example, when we want to indicate the proposition <span class="process-math">\(p\text{,}\)</span> we shade the inside of the circle, as shown in the left diagram.  If instead we want to show the proposition <span class="process-math">\(\notp\text{,}\)</span> we shade outside of the circle, as in the diagram on the right.</p>
+<p id="p-122"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><figure class="figure figure-like" id="shading-for-p"><img src="images/image-3.svg" role="img" class="contained" alt="Venn diagram showing shading for a single proposition \(p\text{.}\)"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.1<span class="period">.</span></span><span class="space"> </span>Shading for <span class="process-math">\(p\)</span></figcaption></figure></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><figure class="figure figure-like" id="shading-for-not-p"><img src="images/image-4.svg" role="img" class="contained" alt="Venn diagram showing shading for the negation of a single proposition \(p\text{.}\)"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.2<span class="period">.</span></span><span class="space"> </span>Shading for <span class="process-math">\(\notp\)</span></figcaption></figure></div>
+</div></div></p></section><section class="subsection" id="two-proposition-diagrams"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.2</span> <span class="title">Venn Diagrams with Two Propositions</span>
+</h3>
+<p id="p-123">Venn diagrams with only one proposition don't generally contain much information, as it's usually pretty easy to visualize what <span class="process-math">\(p\)</span> and <span class="process-math">\(\notp\)</span> mean when you have only the one proposition.  It gets more interesting when you have propositions <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> in the same diagram, as you can see in the next figure.</p>
+<p id="p-124"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/venn2-example-1.svg" role="img" class="contained" alt="Venn diagram with two propositions."></div></p>
+<p id="p-125">Let's try doing some shading to represent operations on the propositions <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span>  To begin with, let's examine the shading for <span class="process-math">\(p\)</span> as shown in <a href="" class="xref" data-knowl="./knowl/shading-for-p2.html" title="Figure 2.2.3">Figure 2.2.3</a>.  It looks very similar to the shading for the one-proposition diagram, but you should notice that in order to shade in all of <span class="process-math">\(p\text{,}\)</span> <em class="alert">two</em> regions have been shaded in: the crescent-moon shaped part which represent the part of <span class="process-math">\(p\)</span> that <em class="emphasis">does not</em> overlap with <span class="process-math">\(q\)</span> and the lozenge-shaped part which represents the part of <span class="process-math">\(p\)</span> that <em class="emphasis">does</em> overlap with <span class="process-math">\(q\text{.}\)</span>  Similarly, <span class="process-math">\(q\)</span> is shown in <a href="" class="xref" data-knowl="./knowl/shading-for-q2.html" title="Figure 2.2.4">Figure 2.2.4</a>.</p>
+<p id="p-126"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><figure class="figure figure-like" id="shading-for-p2"><img src="images/image-6.svg" role="img" class="contained" alt="Venn diagram for two propositions p and q, with only that for p shaded."><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.3<span class="period">.</span></span><span class="space"> </span>Shading for <span class="process-math">\(p\)</span></figcaption></figure></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><figure class="figure figure-like" id="shading-for-q2"><img src="images/image-7.svg" role="img" class="contained" alt="Venn diagram for two propositions p and q, with only that for q shaded."><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.4<span class="period">.</span></span><span class="space"> </span>Shading for <span class="process-math">\(q\)</span></figcaption></figure></div>
+</div></div></p>
+<p id="p-127">To represent compound propositions using a Venn diagram, it is helpful first to consider the <dfn class="terminology">basic regions</dfn> of the diagram.  In the figure below, the four basic regions are numbered 1 through 4:</p>
+<p id="p-128"><figure class="figure figure-like" id="basic-regions"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-8.svg" role="img" class="contained" alt="Figure showing the basic regions of a two-proposition Venn-diagram."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.5<span class="period">.</span></span><span class="space"> </span>Basic regions of a two-proposition Venn diagram.</figcaption></figure></p>
+<p id="p-129">For example, if you wished to show the Venn diagram for <span class="process-math">\(p\myor q\text{,}\)</span> recall that <em class="emphasis">or</em> means <em class="emphasis">one or the other or both</em>.  Looking at <a href="" class="xref" data-knowl="./knowl/shading-for-p2.html" title="Figure 2.2.3">Figure 2.2.3</a> and <a href="" class="xref" data-knowl="./knowl/shading-for-q2.html" title="Figure 2.2.4">Figure 2.2.4</a>, we see that we should shade regions 1, 2, and 3:</p>
+<p id="p-130"><figure class="figure figure-like" id="p-or-q"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-9.svg" role="img" class="contained" alt="Venn diagram showing the statement p or q."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.6<span class="period">.</span></span><span class="space"> </span>Venn diagram for the compound statement <span class="process-math">\(p\myor q\)</span></figcaption></figure></p>
+<p id="p-131">To show the diagram for <span class="process-math">\(p\myand q\text{,}\)</span> shade the basic regions that are shaded in both of <a href="" class="xref" data-knowl="./knowl/shading-for-p2.html" title="Figure 2.2.3">Figure 2.2.3</a> and <a href="" class="xref" data-knowl="./knowl/shading-for-q2.html" title="Figure 2.2.4">Figure 2.2.4</a>.  This means that you would shade only region 3:</p>
+<p id="p-132"><figure class="figure figure-like" id="p-and-q"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-10.svg" role="img" class="contained" alt="Venn diagram showing the statement p and q."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.7<span class="period">.</span></span><span class="space"> </span>Venn diagram for the compound statement <span class="process-math">\(p\myand q\)</span></figcaption></figure></p></section><section class="subsection" id="more-complications"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.3</span> <span class="title">More Complications</span>
+</h3>
+<p id="p-133">Suppose you wished to create a Venn diagram representing <span class="process-math">\(\notp\,\myand q\text{.}\)</span>  One way to do this is by constructing the diagram for <span class="process-math">\(\notp\)</span> and the diagram for <span class="process-math">\(q\text{,}\)</span> and then consider conjunction.  Let's call this the <em class="emphasis">visual step-by-step</em> method.</p>
+<p id="p-134">Here are the diagrams for <span class="process-math">\(\notp\)</span> and for <span class="process-math">\(q\text{:}\)</span> <div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel top" style="width:44.4444444444444%;"><figure class="figure figure-like" id="not-p"><img src="images/image-11.svg" role="img" class="contained" alt="A Venn diagram containing two statements, p and q, showing the negation of statement p."><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.8<span class="period">.</span></span><span class="space"> </span>Venn diagram for <span class="process-math">\(\notp\)</span></figcaption></figure></div>
+<div class="sbspanel top" style="width:44.4444444444444%;"><figure class="figure figure-like" id="shading-for-q2-again"><img src="images/image-12.svg" role="img" class="contained" alt="Venn diagram for two propositions p and q, with only that for q shaded."><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.9<span class="period">.</span></span><span class="space"> </span>Shading for <span class="process-math">\(q\)</span></figcaption></figure></div>
+</div></div></p>
+<p id="p-135">Now form the conjunction of the two diagrams by shading only the regions that are shaded in <em class="emphasis">both</em> of the figures:</p>
+<p id="p-136"><figure class="figure figure-like" id="not-p-and-q"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-13.svg" role="img" class="contained" alt="A Venn diagram for the compound statement not p and q."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.10<span class="period">.</span></span><span class="space"> </span>Venn diagram for <span class="process-math">\(\notp\myand q\)</span></figcaption></figure></p>
+<p id="p-137">Another way to do this is to list the basic regions associated with each of the statements appearing in the compound statement, and from them determine which basic regions are associated with the compound statement itself.  Referring to <a href="" class="xref" data-knowl="./knowl/basic-regions.html" title="Figure 2.2.5">Figure 2.2.5</a>, we see that</p>
+<ul class="disc">
+<li id="li-199"><p id="p-derived-li-199"><span class="process-math">\(\notp\)</span> is associated with regions 2 and 4</p></li>
+<li id="li-200"><p id="p-derived-li-200"><span class="process-math">\(q\)</span> is associated with regions 2 and 3</p></li>
+</ul>
+<p class="continuation">The conjunction of these two statements involves the basic region(s) that are common to both of the statements.  In this case, only basic region 2 is common.  This leads to <a href="" class="xref" data-knowl="./knowl/not-p-and-q.html" title="Figure 2.2.10">Figure 2.2.10</a>.</p>
+<p id="p-138">To find <span class="process-math">\(\notp\myor q\)</span> using the visual step-by-step method, you'd take the diagrams in <a href="" class="xref" data-knowl="./knowl/not-p.html" title="Figure 2.2.8">Figure 2.2.8</a> and <a href="" class="xref" data-knowl="./knowl/shading-for-q2-again.html" title="Figure 2.2.9">Figure 2.2.9</a> and then shade the regions that are shaded in at least one of those two diagrams.  Alternatively, you can list the basic regions associated with each of the diagrams and then identify the basic regions that appear in at least one of the two lists.  Referring to the enumerations given earlier, we see that regions 2, 3, and 4 appear on those lists (either on one or the other or both).  So those are the regions that are shaded.  Either way, the result is as follows:</p>
+<p id="p-139"><figure class="figure figure-like" id="not-p-or-q"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-14.svg" role="img" class="contained" alt="A Venn diagram showing the shading for the inclusive disjunction of q and the negation of p."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.11<span class="period">.</span></span><span class="space"> </span>Venn diagram for the compound statement <span class="process-math">\(\notp\myor q\)</span></figcaption></figure></p>
+<article class="example example-like" id="example-41"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-41"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-41"><article class="example example-like">Shade a Venn diagram corresponding to <span class="process-math">\(\notp\,\myor\notq\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-200" id="solution-200"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-200"><div class="solution solution-like">
+<p id="p-140">Using the visual step-by-step method, first draw the diagrams for <span class="process-math">\(\notp\)</span> and for <span class="process-math">\(\notq\text{.}\)</span>  The diagram for <span class="process-math">\(\notp\)</span> is in <a href="" class="xref" data-knowl="./knowl/not-p.html" title="Figure 2.2.8">Figure 2.2.8</a>, and here is the diagram for <span class="process-math">\(\notq\text{:}\)</span></p>
+<p id="p-141"><figure class="figure figure-like" id="not-q"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-15.svg" role="img" class="contained" alt="Venn diagram for the negation of q."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.13<span class="period">.</span></span><span class="space"> </span>Venn diagram for <span class="process-math">\(\notq\)</span></figcaption></figure></p>
+<p id="p-142">Now shade the regions that are shaded in at least one of those two diagrams to get the following:</p>
+<p id="p-143"><figure class="figure figure-like" id="not-p-or-not-q"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-16.svg" role="img" class="contained" alt="Venn diagram showing the inclusive disjunction of the negations of p and q."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.14<span class="period">.</span></span><span class="space"> </span>Venn diagram for <span class="process-math">\(\notp\,\myor\notq\)</span></figcaption></figure></p>
+<p id="p-144">Alternatively, we can look at the basic regions:</p>
+<ul class="disc">
+<li id="li-201"><p id="p-derived-li-201"><span class="process-math">\(\notp\text{:}\)</span> regions 2 and 4</p></li>
+<li id="li-202"><p id="p-derived-li-202"><span class="process-math">\(\notq\text{:}\)</span> regions 1 and 4</p></li>
+</ul>
+<p class="continuation">We are interested in the inclusive disjunction, so shade any region that appears at least once in those lists: regions 1, 2, and 4.  This gives the figure above.</p>
+</div></div>
+</div></article></div></section><section class="subsection" id="negation-deMorgan"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.4</span> <span class="title">Negation and De Morgan's Laws</span>
+</h3>
+<p id="p-145">Consider the proposition <span class="process-math">\(\mynot(p \myand q)\text{.}\)</span>  The brackets indicate that we must find <span class="process-math">\(p \myand q\)</span> first, and then form the negation.  The diagram for <span class="process-math">\(p \myand q\)</span> is shown in <a href="" class="xref" data-knowl="./knowl/p-and-q.html" title="Figure 2.2.7">Figure 2.2.7</a>.  The diagram for <span class="process-math">\(\mynot(p \myand q)\)</span> is obtained by "reversing": shade all previously unshaded regions, and unshade the shaded region.  This yields the following:</p>
+<p id="p-146"><figure class="figure figure-like" id="neg-of-p-and-q"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-17.svg" role="img" class="contained" alt="A Venn diagram showing the negation of the conjunction of p with q."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.15<span class="period">.</span></span><span class="space"> </span>Venn diagram for <span class="process-math">\(\mynot(p \myand q)\)</span></figcaption></figure></p>
+<p id="p-147">This is identical to the Venn diagram for <span class="process-math">\(\notp\,\myor \notq\text{,}\)</span> so we can conclude that the compound statement <span class="process-math">\(\notp\,\myor \notq\)</span> is equivalent to the compound statement <span class="process-math">\(\mynot(p \myand q)\text{.}\)</span>  Note that the particular nature of statements <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> do not affect this equivalence.  Similarly, it can be shown that <span class="process-math">\(\notp\,\myand\notq\)</span> is equivalent to <span class="process-math">\(\mynot(p\myor q)\text{.}\)</span>  Together, these two assertions of equivalence are known as <dfn class="terminology">De Morgan's Laws</dfn>: <article class="theorem theorem-like" id="theorem-1"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.16</span><span class="period">.</span><span class="space"> </span><span class="title">De Morgan's Laws.</span>
+</h4>
+<p id="p-148">Let <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> be any propositions.  Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-42">
+\begin{gather*}
+\mynot(p\myand q)\Leftrightarrow\,\notp\,\myor\notq\\
+\mynot(p\myor q)\Leftrightarrow\,\notp\,\myand\notq
+\end{gather*}
+</div>
+<p class="continuation">where the symbol <span class="process-math">\(\Leftrightarrow\)</span> is to be read as "is logically equivalent to".</p></article></p></section><section class="subsection" id="three-proposition-diagrams"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.2.5</span> <span class="title">Venn Diagrams with Three Propositions</span>
+</h3>
+<p id="p-150">We can construct Venn diagrams for compound statements containing three propositions:</p>
+<p id="p-151"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/venn3-example-1.svg" role="img" class="contained" alt="A Venn diagram for a compound statement with three propositions p, q, and r."></div></p>
+<p id="p-152">Notice that there is a circle for each statement, and that there are regions where some or all of the circles overlap.  To find out how to shade the diagram for compound statements such as <span class="process-math">\((p \myor q) \myand r\text{,}\)</span> use either the visual step-by-step method, or the method of enumerating basic regions.</p>
+<p id="p-153">Here are the diagrams for each of <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(q\text{,}\)</span> and <span class="process-math">\(r\text{:}\)</span></p>
+<p id="p-154"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;">
+<div class="sbspanel top" style="width:31.25%;"><img src="images/image-19.svg" role="img" class="contained" alt="A three-proposition Venn diagram with only statement p shaded."></div>
+<div class="sbspanel top" style="width:31.25%;"><img src="images/image-20.svg" role="img" class="contained" alt="A three-proposition Venn diagram with only statement q shaded."></div>
+<div class="sbspanel top" style="width:31.25%;"><img src="images/image-21.svg" role="img" class="contained" alt="A three-proposition Venn diagram with only statement r shaded."></div>
+</div></div></p>
+<p id="p-155">Then <span class="process-math">\(p\myor q\)</span> gives</p>
+<p id="p-156"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-22.svg" role="img" class="contained" alt="A three-proposition Venn diagram showing the inclusive disjunction of p and q."></div></p>
+<p id="p-157">Now form the intersection of this with the diagram for <span class="process-math">\(r\text{:}\)</span></p>
+<p id="p-158"><figure class="figure figure-like" id="r-and-porq"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-23.svg" role="img" class="contained" alt="A Venn diagram for the conjunction of r with the inclusive disjunction of p and q."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.17<span class="period">.</span></span><span class="space"> </span><span class="process-math">\((p\myor q)\myand r\)</span></figcaption></figure></p>
+<p id="p-159">Here is an enumeration of the basic regions.  It doesn't really matter how you assign labels to the regions, as long as you are consistent in the analysis you perform using the enumeration.</p>
+<p id="p-160"><figure class="figure figure-like" id="basic-regions-3"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/image-24.svg" role="img" class="contained" alt="A Venn diagram showing the basic regions in the case of three overlapping propositions."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.2.18<span class="period">.</span></span><span class="space"> </span>Basic regions in a three-proposition Venn diagram</figcaption></figure></p>
+<p id="p-161">Using the enumeration method, we see that</p>
+<ul class="disc">
+<li id="li-203"><p id="p-derived-li-203"><span class="process-math">\(p\)</span> consists of regions 1, 4, 5, and 7</p></li>
+<li id="li-204"><p id="p-derived-li-204"><span class="process-math">\(q\)</span> consists of 2, 4, 6, and 7</p></li>
+<li id="li-205"><p id="p-derived-li-205"><span class="process-math">\(r\)</span> consists of 3, 5, 6, and 7</p></li>
+<li id="li-206"><p id="p-derived-li-206">Therefore, <span class="process-math">\(p\myor q\)</span> consists of regions 1, 2, 4, 5, 6, and 7 since these regions appear in at least one of the two lists of regions for <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span></p></li>
+<li id="li-207"><p id="p-derived-li-207">Therefore, <span class="process-math">\((p\myor q)\myand r\)</span> consists of regions 5, 6, and 7 because those regions appear on the lists for <em class="emphasis">both</em> <span class="process-math">\(r\)</span> and <span class="process-math">\(p\myor q\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">This leads to <a href="" class="xref" data-knowl="./knowl/r-and-porq.html" title="Figure 2.2.17">Figure 2.2.17</a>.</p>
+<p id="p-162">Two other important cases are shown below.  Note that the captions are indicated without brackets because</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(p\myor q)\myor r=p\myor(q\myor r)=p\myor q\myor r
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+(p\myand q)\myand r=p\myand(q\myand r)=p\myand q\myand r
+\end{equation*}
+</div>
+<p id="p-163"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;">
+<div class="sbspanel top" style="width:50%;"><img src="images/p-or-q-or-r.svg" role="img" class="contained" alt="A Venn diagram for the inclusive disjunction of p, q, and r."></div>
+<div class="sbspanel top" style="width:50%;"><img src="images/p-and-q-and-r.svg" role="img" class="contained" alt="A Venn diagram for the conjunction of p, q, and r."></div>
+</div></div></p></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.2.6</span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-37">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-39">Draw Venn diagrams using two propositions <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{,}\)</span> shading in the appropriate regions for the following situations.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-181"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p\myor q\)</span></article><article class="exercise exercise-like" id="exercise-182"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p\myand \notq\)</span></article><article class="exercise exercise-like" id="exercise-183"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \notp\myand \notq\)</span></article><article class="exercise exercise-like" id="exercise-184"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \mynot(p\myand \notq)\)</span> (Compare with #2.)</article><article class="exercise exercise-like" id="exercise-185"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \mynot(p\myor q)\)</span></article><article class="exercise exercise-like" id="exercise-186"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p\myand(\notp\myor q)\)</span></article><article class="exercise exercise-like" id="exercise-187"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p\myor(p\myand q)\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-38">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-40">Draw Venn diagrams using three propositions <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(q\text{,}\)</span> and <span class="process-math">\(r\text{,}\)</span> shading in the appropriate regions for the following situations.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-188"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p\myor q\myor r\)</span></article><article class="exercise exercise-like" id="exercise-189"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (p\myand q)\myor r\)</span></article><article class="exercise exercise-like" id="exercise-190"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p\myand (q\myor r\)</span></article><article class="exercise exercise-like" id="exercise-191"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p\myor\notq\myor r\)</span></article><article class="exercise exercise-like" id="exercise-192"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \notp\myand q\myand\notr\)</span></article><article class="exercise exercise-like" id="exercise-193"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (p\myand q)\myor\notr\)</span></article><article class="exercise exercise-like" id="exercise-194"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \notq\myand(\notp\myor r)\)</span></article>
+</div>
+</div></section><section class="solutions" id="solutions-7"><h3 class="heading hide-type">
+<span class="type">Solutions</span> <span class="codenumber">2.2.7</span> <span class="title">Solutions to Section 2.2 Exercises</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 2.2.6">
+<span class="codenumber">2.2.6</span><span class="space"> </span><span class="title">Exercises</span>
+</h4>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.1<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-201-hidden.html" title="Solution 2.2.6.1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.2<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-202-hidden.html" title="Solution 2.2.6.2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.3<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-203-hidden.html" title="Solution 2.2.6.3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.4<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-204-hidden.html" title="Solution 2.2.6.4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.5<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-205-hidden.html" title="Solution 2.2.6.5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.6<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-206-hidden.html" title="Solution 2.2.6.6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.7<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-207-hidden.html" title="Solution 2.2.6.7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.8<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-208-hidden.html" title="Solution 2.2.6.8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.9<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-209-hidden.html" title="Solution 2.2.6.9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.10<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-210-hidden.html" title="Solution 2.2.6.10.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.11<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-211-hidden.html" title="Solution 2.2.6.11.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.12<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-212-hidden.html" title="Solution 2.2.6.12.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.13<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-213-hidden.html" title="Solution 2.2.6.13.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.2.6.14<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-214-hidden.html" title="Solution 2.2.6.14.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div></section></section></div></main>
+</div>
+</body>
+</html>

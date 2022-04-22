@@ -1,0 +1,755 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-04-22T14:02:25-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>More Laws of Logic</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Binary, Logic, and More">
+<meta property="book:author" content="Patricia R. Wrean">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\mynot}{\sim\!}
+\newcommand{\myand}{{\wedge}}
+\newcommand{\myor}{{\vee}}
+\newcommand{\myxor}{{\oplus}}
+\newcommand{\ttxor}{\texttt{XOR}}
+\newcommand{\mytt}[1]{\texttt{#1}}
+
+\newcommand{\myleq}{{\Leftrightarrow}}
+\newcommand{\myimplies}{{\rightarrow}}
+\newcommand{\myiff}{{\leftrightarrow}}
+
+\newcommand{\mylnot}[1]{{{\sim}#1}}
+\newcommand{\notp}{\mylnot{p}}
+\newcommand{\notq}{\mylnot{q}}
+\newcommand{\notr}{\mylnot{r}}
+\newcommand{\mybnot}[1]{{\overline{#1}}}
+\newcommand{\nota}{\mybnot{A}}
+\newcommand{\notb}{\mybnot{B}}
+\newcommand{\notc}{\mybnot{C}}
+\newcommand{\notd}{\mybnot{D}}
+
+\newcommand{\conditional}{{p \myimplies q}}
+\newcommand{\inverse}{{\notp{} \myimplies \notq{}}}
+\newcommand{\converse}{{q \myimplies p}}
+\newcommand{\contrapositive}{{\notq{} \myimplies \notp{}}}
+\newcommand{\biconditional}{{p \myiff{} q}}
+
+\newcommand{\intersection}{\cap}
+\newcommand{\intersect}{\cap}
+\newcommand{\union}{\cup}
+
+\newcommand{\nth}{{n^{\text{th}}}}
+\newcommand{\kth}{{k^{\text{th}}}}
+\newcommand{\upth}[1]{{#1^{\text{th}}}}
+\newcommand{\upst}[1]{{#1^{\text{st}}}}
+\newcommand{\upnd}[1]{{#1^{\text{nd}}}}
+\newcommand{\uprd}[1]{{#1^{\text{rd}}}}
+\newcommand{\infinity}{{\infty}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="binary-logic-and-more.html"><span class="title">Binary, Logic, and More:</span> <span class="subtitle">Applied Math for Computing</span></a></h1>
+<p class="byline">Patricia R. Wrean</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-logic-laws.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="sec-conditional.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-logic-laws.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="sec-conditional.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li></ul>
+</li>
+<li class="link">
+<a href="binary-octal-hex.html" data-scroll="binary-octal-hex" class="internal"><span class="codenumber">1</span> <span class="title">Binary, Octal, and Hexadecimal</span></a><ul>
+<li><a href="decimal-octal.html" data-scroll="decimal-octal" class="internal">Decimal and Octal</a></li>
+<li><a href="binary-hex.html" data-scroll="binary-hex" class="internal">Binary and Hexadecimal</a></li>
+<li><a href="non-integer-to-decimal.html" data-scroll="non-integer-to-decimal" class="internal">Converting Non-Integer Numbers to Decimal</a></li>
+<li><a href="converting-from-decimal.html" data-scroll="converting-from-decimal" class="internal">Converting from Decimal</a></li>
+<li><a href="convert-bin-oct-hex.html" data-scroll="convert-bin-oct-hex" class="internal">Converting between Binary, Octal, and Hexadecimal</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="logic.html" data-scroll="logic" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
+<li><a href="sec-intro-to-logic.html" data-scroll="sec-intro-to-logic" class="internal">Introduction to Logic</a></li>
+<li><a href="sec-venn-diagrams.html" data-scroll="sec-venn-diagrams" class="internal">Venn Diagrams</a></li>
+<li><a href="sec-logical-equivalence.html" data-scroll="sec-logical-equivalence" class="internal">Logical Equivalence</a></li>
+<li><a href="sec-boolean-algebra.html" data-scroll="sec-boolean-algebra" class="internal">Boolean Algebra</a></li>
+<li><a href="sec-logic-laws.html" data-scroll="sec-logic-laws" class="internal">Laws of Logic</a></li>
+<li><a href="sec-more-logic-laws.html" data-scroll="sec-more-logic-laws" class="active">More Laws of Logic</a></li>
+<li><a href="sec-conditional.html" data-scroll="sec-conditional" class="internal">The Conditional</a></li>
+<li><a href="sec-biconditional.html" data-scroll="sec-biconditional" class="internal">The Biconditional</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sequences-and-series.html" data-scroll="sequences-and-series" class="internal"><span class="codenumber">3</span> <span class="title">Sequences and Series</span></a><ul>
+<li><a href="sec-intro-to-seq-and-ser.html" data-scroll="sec-intro-to-seq-and-ser" class="internal">Introduction to Sequences and Series</a></li>
+<li><a href="sec-arith-seq-ser.html" data-scroll="sec-arith-seq-ser" class="internal">Arithmetic Sequences and Series</a></li>
+<li><a href="sec-geom-seq-ser.html" data-scroll="sec-geom-seq-ser" class="internal">Geometric Sequences and Series</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-more-logic-laws"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.6</span> <span class="title">More Laws of Logic</span>
+</h2>
+<section class="subsection" id="ssec-demorgans-laws"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.6.1</span> <span class="title">De Morgan's Laws</span>
+</h3>
+<p id="p-230">Consider the following truth table: <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myand q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mynot(p\myand q)\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notp\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notq\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notp\,\myor\,\notq\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">0</td>
+<td class="c m b3 r2 l0 t0 lines">0</td>
+<td class="c m b3 r2 l0 t0 lines">0</td>
+<td class="c m b3 r2 l0 t0 lines">0</td>
+</tr>
+</table></div></p>
+<p id="p-231">From this table we can see that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\mynot(p\myand q)\Leftrightarrow\notp\,\myor\notq.
+\end{equation*}
+</div>
+<p class="continuation">We can construct a similar table to show that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\mynot(p\myor q)\Leftrightarrow\notp\,\myand\notq.
+\end{equation*}
+</div>
+<p class="continuation">These are called <dfn class="terminology">De Morgan's Laws</dfn>.  Constructing the tables using Boolean algebra notation yields similar statements.</p>
+<p id="p-232"><article class="assemblage assemblage-like" id="assemblage-demorgans-laws"><h4 class="heading"><span class="title">De Morgan's Laws.</span></h4>
+<p id="p-233"><div class="sidebyside"><div class="sbsrow" style="margin-left:15%;margin-right:15%;">
+<div class="sbspanel fixed-width top" style="width:42.8571428571429%;"><table class="tabular">
+<tr><td class="l m b2 r0 l0 t0 lines"><em class="alert">Logic</em></td></tr>
+<tr><td class="l m b0 r0 l0 t0 lines"><div class="displaymath process-math" data-contains-math-knowls="" id="md-53">
+\begin{align*}
+\mynot(p\myand q)\amp\Leftrightarrow\,\notp\,\myor\notq\\
+\mynot(p\myor q)\amp\Leftrightarrow\,\notp\,\myand\notq.
+\end{align*}
+</div></td></tr>
+</table></div>
+<div class="sbspanel fixed-width top" style="width:42.8571428571429%;"><table class="tabular">
+<tr><td class="l m b2 r0 l0 t0 lines"><em class="alert">Boolean</em></td></tr>
+<tr><td class="l m b0 r0 l0 t0 lines"><div class="displaymath process-math" data-contains-math-knowls="" id="md-54">
+\begin{align*}
+\mybnot{A\cdot B}\amp =\nota+\notb\\
+\mybnot{A+B}\amp =\nota\cdot\notb
+\end{align*}
+</div></td></tr>
+</table></div>
+</div></div></p></article></p></section><section class="subsection" id="ssec-distributive-laws"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.6.2</span> <span class="title">Distributive Laws</span>
+</h3>
+<p id="p-234">In the same way, we can construct truth tables to prove the <dfn class="terminology">distributive laws</dfn>, in both logic and Boolean algebra notation.  Note carefully the forms of these laws. <article class="assemblage assemblage-like" id="assemblage-distributive-laws"><h4 class="heading"><span class="title">Distributive Laws.</span></h4>
+<p id="p-235"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;">
+<div class="sbspanel fixed-width top" style="width:37.5%;"><table class="tabular">
+<tr><td class="l m b2 r0 l0 t0 lines"><em class="alert">Logic</em></td></tr>
+<tr><td class="l m b0 r0 l0 t0 lines"><div class="displaymath process-math" data-contains-math-knowls="" id="md-55">
+\begin{align*}
+p\myand(q\myor r)\amp\Leftrightarrow(p\myand q)\myor(p\myand r)\\
+p\myor(q\myand r)\amp\Leftrightarrow(p\myor q)\myand(p\myor r)
+\end{align*}
+</div></td></tr>
+</table></div>
+<div class="sbspanel fixed-width top" style="width:37.5%;"><table class="tabular">
+<tr><td class="l m b2 r0 l0 t0 lines"><em class="alert">Boolean</em></td></tr>
+<tr><td class="l m b0 r0 l0 t0 lines"><div class="displaymath process-math" data-contains-math-knowls="" id="md-56">
+\begin{align*}
+A(B+C)\amp =AB+AC\\
+A+BC\amp =(A+B)(A+C)
+\end{align*}
+</div></td></tr>
+</table></div>
+</div></div></p></article> The first of the distributive laws in Boolean notation looks like the usual one from arithmetic with real numbers.  The second one, however, looks decidedly <em class="emphasis">unlike</em> any rules from arithmetic.  You must not let the familiar rules of arithmetic distract you from the laws of logic.</p></section><section class="subsection" id="ssec-absorption-laws"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.6.3</span> <span class="title">Absorption Laws</span>
+</h3>
+<p id="p-236">The <dfn class="terminology">absorption laws</dfn> can be verified using truth tables, or by use of the laws of logic already stated.  <article class="assemblage assemblage-like" id="assemblage-absorption-laws"><h4 class="heading"><span class="title">Absorption Laws.</span></h4>
+<p id="p-237"><div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;">
+<div class="sbspanel fixed-width top" style="width:37.5%;"><table class="tabular">
+<tr><td class="l m b2 r0 l0 t0 lines"><em class="alert">Logic</em></td></tr>
+<tr><td class="l m b0 r0 l0 t0 lines"><div class="displaymath process-math" data-contains-math-knowls="" id="md-57">
+\begin{align*}
+p\myand(p\myor q)\amp\Leftrightarrow p\\
+p\myand(\notp\,\myor\,q)\amp\Leftrightarrow\,p\myand q\\
+p\myor(p\myand q)\amp\Leftrightarrow\,p\\
+p\myor(\notp\,\myand\,q)\amp\Leftrightarrow\,p\myor q
+\end{align*}
+</div></td></tr>
+</table></div>
+<div class="sbspanel fixed-width top" style="width:37.5%;"><table class="tabular">
+<tr><td class="l m b2 r0 l0 t0 lines"><em class="alert">Boolean</em></td></tr>
+<tr><td class="l m b0 r0 l0 t0 lines"><div class="displaymath process-math" data-contains-math-knowls="" id="md-58">
+\begin{align*}
+A(A+B)\amp=A\\
+A(\nota+B)\amp=AB\\
+A+AB\amp=A\\
+A+\nota{}B\amp=A+B
+\end{align*}
+</div></td></tr>
+</table></div>
+</div></div></p></article></p></section><section class="subsection" id="ssec-summary-logic-laws"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.6.4</span> <span class="title">Summary So Far</span>
+</h3>
+<p id="p-238">Here are all the laws of logic discussed so far:  <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t3 lines">Law</td>
+<td class="c m b2 r2 l0 t3 lines">Logic</td>
+<td class="c m b2 r2 l0 t3 lines">Boolean Algebra</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">Identity</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p \myand{} 1 \myleq{} p\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A \cdot 1 = A\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p \myor{}1 \myleq{}  1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A+1 = 1\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p \myand{} 0 \myleq{}  0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A \cdot 0 = 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p \myor{}0 \myleq{}  p\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(A+0 = A\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">Idempotent</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p \myand{} p \myleq{}  p\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(AA = A\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p \myor{} p \myleq{}  p\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(A+A = A\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">Complement</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\mylnot{(\mylnot{p})}  \myleq{} p\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\mybnot{\nota{}} = A\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p \myand{} \mylnot{p}  \myleq{}  0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A\nota{} = 0\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p \myor{}\mylnot{p}  \myleq{}  1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(A+ \nota{} = 1\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">Commutative</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p \myand{} q \myleq{}  q \myand{} p\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(AB = BA\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p \myor{}q \myleq{}   q \myor{} p\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(A+ B = B + A\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">Associative</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\((p \myand{} q) \myand{} r \myleq{}  p \myand{} (q \myand{} r) \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\((AB)C = A(BC) \)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\((p \myor{} q) \myor{} r \myleq{}  p \myor{} (q \myor{} r) \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\((A+B)+C = A+(B+C) \)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">De Morgan's</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\mylnot{(p \myand{} q)} \myleq{} \notp{} \myor{} \notq{}\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\mybnot{AB} = \nota{} + \notb{}\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\mylnot{(p \myor{} q)} \myleq{} \notp{} \myand{} \notq{}\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\mybnot{A+B} = \nota{} ~ \notb{}\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">Distributive</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p\myand{}(q\myor{}r) \myleq{} (p\myand{}q)\myor{}(p\myand{}r)\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A(B+C) = AB + AC\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p\myor{}(q\myand{}r) \myleq{} (p\myor{}q)\myand{}(p\myor{}r)\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(A+BC = (A+B)(A+C)\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines">Absorption</td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p\myand{}(p\myor{}q) \myleq{} p\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A(A+B) = A\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p\myand{}(\notp{}\myor{}q) \myleq{}  p\myand{}q\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A(\nota{} + B) = AB\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p\myor{}(p\myand{}q) \myleq{}  p\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A + AB = A\)</span></td>
+</tr>
+<tr>
+<td class="c m b3 r2 l2 t0 lines"></td>
+<td class="c m b3 r2 l0 t0 lines"><span class="process-math">\(p\myor{}(\notp{}\myand{}q) \myleq{}  p\myor{}q\)</span></td>
+<td class="c m b3 r2 l0 t0 lines"><span class="process-math">\(A+ \nota{}B = A+ B \)</span></td>
+</tr>
+</table></div> The next sub-section contains examples of the usage of these laws.</p></section><section class="subsection" id="ssec-simplifying-logical-expr2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.6.5</span> <span class="title">Simplifying Logical Expressions</span>
+</h3>
+<p id="p-239">The clarity of your simplification or of your proof is greatly improved if you use only one law in each line of your work, and also state the law you have used.  To help you build good habits, this is <em class="alert">required</em> in your coursework.  It is not merely a suggestion.</p>
+<article class="example example-like" id="exmpl-simpl-dist1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-simpl-dist1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.1</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exmpl-simpl-dist1"><article class="example example-like">Simplify <span class="process-math">\((p\myand{}q)\myor(p\myand\notq)\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-18" id="answer-18"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\((p\myand{}q) \myor{}(p\myand{}\notq{})\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p\myand{}(q\myor{}\notq{}) \)</span></td>
+<td class="l m b0 r0 l0 t0 lines">distributive</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p\myand{}1 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines">complement</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines">identity</td>
+</tr>
+</table></div></div></div>
+</div></article></div>
+<article class="example example-like" id="exmpl-simpl-dist2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-simpl-dist2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.2</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exmpl-simpl-dist2"><article class="example example-like">Simplify <span class="process-math">\(AB(\nota{} + \notb{} )\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-19" id="answer-19"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(AB(\nota{} +\notb{})\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(AB\nota{}  + AB\notb{}   \)</span></td>
+<td class="l m b0 r0 l0 t0 lines">distributive</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(A\nota{} B + AB\notb{}  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines">commutative</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0 \cdot B      + A\cdot 0  \)</span></td>
+<td class="l m b0 r0 l0 t0 lines">complement</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0        +       0    \)</span></td>
+<td class="l m b0 r0 l0 t0 lines">identity</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0            \)</span></td>
+<td class="l m b0 r0 l0 t0 lines">definition of “or”</td>
+</tr>
+</table></div></div></div>
+</div></article></div>
+<p id="p-240">Note that for many of these exercises, there is more than one way to answer.  Another equally valivd simplification of the statement in the previous example looks like the following: <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(AB(\nota{} +\notb{})\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(AB   \mybnot{AB} \)</span></td>
+<td class="l m b0 r0 l0 t0 lines">De Morgan's</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0 \)</span></td>
+<td class="l m b0 r0 l0 t0 lines">complement</td>
+</tr>
+</table></div> This is a much shorter answer, but does require a flash of insight at the <span class="process-math">\((\nota + \notb)\)</span> pattern.</p></section><section class="subsection" id="ssec-proofs"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.6.6</span> <span class="title">Proofs</span>
+</h3>
+<p id="p-241">When tasked to prove that two logic statements are equivalent, look to see if one of the statements is simpler than the other.  Try to simplify the more complicated statement until it is identical to the simpler statement.  Sometimes, you will have to simplify both statements into identical forms.</p>
+<article class="example example-like" id="exmpl-proof1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-proof1"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.3</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exmpl-proof1"><article class="example example-like">Show that <span class="process-math">\(\mybnot{A+\mybnot{A}\,\mybnot{B}}=\mybnot{A}B\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-20" id="answer-20"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like">Let's examine the left-had side and simplify it. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\mybnot{A+\mybnot{A}\,\mybnot{B}}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\mybnot{A}B\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\mybnot{A+\mybnot{B}}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\mybnot{A}B\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">absorption</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\mybnot{A}\,\mybnot{\mybnot{B}}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\mybnot{A}B\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">De Morgan's</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\mybnot{A}B\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\mybnot{A}B\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">complement</td>
+</tr>
+</table></div>
+<p id="p-242">The left-hand side has been shown to be equivalent to the origintal right-hand side.  This completes the proof.</p>
+</div></div>
+</div></article></div>
+<article class="example example-like" id="exmpl-proof2"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-proof2"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.6.4</span><span class="period">.</span>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exmpl-proof2"><article class="example example-like">Show that <span class="process-math">\((A+\mybnot{C})(\mybnot{C}+AB)=AB+\mybnot{C}\text{.}\)</span><div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-21" id="answer-21"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like">The left side is more complicated, so let's examine it to see what simplification is possible. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\((A+\mybnot{C})(\mybnot{C}+AB)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(AB+\mybnot{C}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\((\mybnot{C}+A)(\mybnot{C}+AB)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(AB+\mybnot{C}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">commutative</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\mybnot{C}+A(AB)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(AB=\mybnot{C}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">distributive</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\mybnot{C}+(AA)B\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(AB=\mybnot{C}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">associative</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(\mybnot{C}+AB\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(AB+\mybnot{C}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">idempotent</td>
+</tr>
+<tr>
+<td class="r m b0 r0 l0 t0 lines"><span class="process-math">\(AB+\mybnot{C}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(=\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(AB+\mybnot{C}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">commutative</td>
+</tr>
+</table></div> QED.  (QED is short for the Latin phrase <em class="emphasis">quod erat demonstrandum</em>, which means <em class="emphasis">it has been demonstrated</em>.)</div></div>
+</div></article></div></section><section class="exercises" id="exers-sec-more-logic-laws"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.6.7</span> <span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="exercisegroup-52">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-56">Let <span class="process-math">\(p\)</span> be the statement <em class="emphasis">Rich is seven feet tall</em> and <span class="process-math">\(q\)</span> be <em class="emphasis">Susan has brown hair.</em>  Translate the following English sentences into logical notation.  Then, use one of the laws of logic to write an equivalent logical expression.  Finally, translate your new expression back into an English sentence.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-283"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>Rich is seven feet tall or he is seven feet tall.</article><article class="exercise exercise-like" id="exercise-284"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>Susan has brown hair and she has brown hair.</article><article class="exercise exercise-like" id="exercise-285"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>Either Rich is not seven feet tall or Susan does not have brown hair.</article><article class="exercise exercise-like" id="exercise-286"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>It is not true that Rich is seven feet tall and Susan has brown</article><article class="exercise exercise-like" id="exercise-287"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>It is not true that Rich is seven feet tall or Susan has brown hair.</article><article class="exercise exercise-like" id="exercise-288"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>Rich is not seven feet tall and Susan does not have brown hair.</article><article class="exercise exercise-like" id="exercise-289"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>Rich is seven feet tall and Susan has brown hair.</article><article class="exercise exercise-like" id="exercise-290"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>Susan has brown hair or Rich is seven feet tall.</article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-53">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-57">Name the law of logic used in the following.  note that the variables have changed, but that the law is still valid.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-291"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<span class="process-math">\(\ g\mylnot{(q \myor{} r)} \myleq \notq{} \myand{} \notr{}\)</span></article><article class="exercise exercise-like" id="exercise-292"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \notb{} (B + \nota{}) = \notb{}~\nota{} \)</span></article><article class="exercise exercise-like" id="exercise-293"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (p \myand{} q) \myor{} (p \myand \notq{}) \myleq{} p \myand{} (q \myor{}\notq{})\)</span></article><article class="exercise exercise-like" id="exercise-294"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \mybnot{\nota{} + C} = A\notc{}\)</span></article><article class="exercise exercise-like" id="exercise-295"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<span class="process-math">\(\ B + A\notc{} =(B+A)(B+\notc{})\)</span></article><article class="exercise exercise-like" id="exercise-296"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \notp{} \myor{} (p \myand{} r) \myleq{} \notp{}\myor{}r\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-54">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-58">Simplify the given expression, and state the name of the law you used.  You should be able to do these in a single step.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-297"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \nota{}+ A\notb{}\)</span></article><article class="exercise exercise-like" id="exercise-298"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \mybnot{AB} + \mybnot{AB}\)</span></article><article class="exercise exercise-like" id="exercise-299"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (A+B)(B+C)\)</span></article><article class="exercise exercise-like" id="exercise-300"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
+<span class="process-math">\(\ q \myor{}(q \myand{} r)\)</span></article><article class="exercise exercise-like" id="exercise-301"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \notc{} + C\)</span></article><article class="exercise exercise-like" id="exercise-302"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \mybnot{\nota{} ~ \notb{}}\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-55">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-59">For the following exercises, let <span class="process-math">\(p\)</span> be <em class="emphasis">The moon is made of green cheese</em> and <span class="process-math">\(q\)</span> be <em class="emphasis">The earth is made of green cheese.</em>  Translate the following English sentences into logical notation.  Then, use one of the laws of logic to write an equivalent logical expression.  Finally, translate your new expression back into an English sentence.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-303"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>Either the moon is made of green cheese or both the moon and the earth are made of green cheese.</article><article class="exercise exercise-like" id="exercise-304"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>The earth is made of green cheese and either the earth or the moon is made of green cheese.</article><article class="exercise exercise-like" id="exercise-305"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>Either the earth is made of green cheese while the moon is not, or the moon is made of green cheese.</article><article class="exercise exercise-like" id="exercise-306"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>The earth is made of green cheese and either the moon is made of green cheese or the earth is not.</article><article class="exercise exercise-like" id="exercise-307"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>Remembering that <span class="process-math">\(\myxor{}\)</span> is <em class="emphasis">exclusive or</em>, show that <span class="process-math">\(A\myxor{}B = \nota{}B + A\notb{}\)</span> by using a truth table.</article><article class="exercise exercise-like" id="exercise-308"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \)</span>The <code class="code-inline tex2jax_ignore">NAND</code> gate (not-AND) has the following truth table.  Use DeMorgan's laws to find an equivalent Boolean expression using only OR and NOT, and show that your expression has the same truth table. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t3 lines"><span class="process-math">\(A\)</span></td>
+<td class="c m b0 r0 l0 t3 lines"><span class="process-math">\(B\)</span></td>
+<td class="c m b0 r0 l0 t3 lines">
+<span class="process-math">\(A\)</span><code class="code-inline tex2jax_ignore">NAND</code><span class="process-math">\(B=\overline{AB}\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b3 r0 l0 t0 lines">1</td>
+<td class="c m b3 r0 l0 t0 lines">1</td>
+<td class="c m b3 r0 l0 t0 lines">0</td>
+</tr>
+</table></div></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-56">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-60">Simplify the following Boolean expressions using the laws of logic.  If you're stuck, try using a truth table.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-309"><h5 class="heading"><span class="codenumber">27<span class="period">.</span></span></h5>
+<span class="process-math">\(\ A + \notc{} + B + \nota{} + \notb{}\)</span></article><article class="exercise exercise-like" id="exercise-310"><h5 class="heading"><span class="codenumber">28<span class="period">.</span></span></h5>
+<span class="process-math">\(\ A + \notb{} + A + B + A\)</span></article><article class="exercise exercise-like" id="exercise-311"><h5 class="heading"><span class="codenumber">29<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \mybnot{\nota{}\,\notb{}}\)</span></article><article class="exercise exercise-like" id="exercise-312"><h5 class="heading"><span class="codenumber">30<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \mybnot{\nota{} + \notb{}}\)</span></article><article class="exercise exercise-like" id="exercise-313"><h5 class="heading"><span class="codenumber">31<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \nota{}  + B + A\notb{}\)</span></article><article class="exercise exercise-like" id="exercise-314"><h5 class="heading"><span class="codenumber">32<span class="period">.</span></span></h5>
+<span class="process-math">\(\ A\notb{}~\notc{}  + A\notb{}C\)</span></article><article class="exercise exercise-like" id="exercise-315"><h5 class="heading"><span class="codenumber">33<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \nota{} BC + \nota{}B\notc{}  + \nota{} B\notd{} + \nota{}BD\)</span></article><article class="exercise exercise-like" id="exercise-316"><h5 class="heading"><span class="codenumber">34<span class="period">.</span></span></h5>
+<span class="process-math">\(\ AB + A + \mybnot{AB}\)</span></article><article class="exercise exercise-like" id="exercise-317"><h5 class="heading"><span class="codenumber">35<span class="period">.</span></span></h5>
+<span class="process-math">\(\ A + \notb{}CD + \notb{}\)</span></article><article class="exercise exercise-like" id="exercise-318"><h5 class="heading"><span class="codenumber">36<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \nota{}~ \notb{} (A + B)\)</span></article><article class="exercise exercise-like" id="exercise-319"><h5 class="heading"><span class="codenumber">37<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (\nota{} + \notb{})(A + B)\)</span></article><article class="exercise exercise-like" id="exercise-320"><h5 class="heading"><span class="codenumber">38<span class="period">.</span></span></h5>
+<span class="process-math">\(\ A + \nota{} B + \notb{}C \)</span></article><article class="exercise exercise-like" id="exercise-321"><h5 class="heading"><span class="codenumber">39<span class="period">.</span></span></h5>
+<span class="process-math">\(\ B(A + C) + \nota{} B\notc{}\)</span></article><article class="exercise exercise-like" id="exercise-322"><h5 class="heading"><span class="codenumber">40<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (A + B + C)(A + B + \notc{})\)</span></article>
+</div>
+</div>
+<div class="exercisegroup" id="exercisegroup-57">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="introduction-61">Prove each of the following using the laws of logic.  If you're stuck, try using a truth table.</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-323"><h5 class="heading"><span class="codenumber">41<span class="period">.</span></span></h5>
+<span class="process-math">\(\ B\notb{} + AA = A\)</span></article><article class="exercise exercise-like" id="exercise-324"><h5 class="heading"><span class="codenumber">42<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \nota{} (B + \notb{}) = \nota{}\)</span></article><article class="exercise exercise-like" id="exercise-325"><h5 class="heading"><span class="codenumber">43<span class="period">.</span></span></h5>
+<span class="process-math">\(\ ABC + AB\notc{} = AB\)</span></article><article class="exercise exercise-like" id="exercise-326"><h5 class="heading"><span class="codenumber">44<span class="period">.</span></span></h5>
+<span class="process-math">\(\ AB + \mybnot{AB}C = AB + C\)</span></article><article class="exercise exercise-like" id="exercise-327"><h5 class="heading"><span class="codenumber">45<span class="period">.</span></span></h5>
+<span class="process-math">\(\ A + AB + ABC = A\)</span></article><article class="exercise exercise-like" id="exercise-328"><h5 class="heading"><span class="codenumber">46<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \nota{} C + A\notb{}C = \nota{} C + \notb{}C\)</span></article><article class="exercise exercise-like" id="exercise-329"><h5 class="heading"><span class="codenumber">47<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \mybnot{AB}(A + B) = \nota{} B + A\notb{}\)</span></article><article class="exercise exercise-like" id="exercise-330"><h5 class="heading"><span class="codenumber">48<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \mybnot{\mybnot{\nota{}BC}+D}=\nota{}BC\notd{}\)</span></article><article class="exercise exercise-like" id="exercise-331"><h5 class="heading"><span class="codenumber">49<span class="period">.</span></span></h5>
+<span class="process-math">\(\ A~\notb{}~\mybnot{\nota{}~\notc{}}=A~\notb{}\)</span></article>
+</div>
+</div></section><section class="solutions" id="solutions-11"><h3 class="heading hide-type">
+<span class="type">Solutions</span> <span class="codenumber">2.6.8</span> <span class="title">Solutions to Section 2.6 Exercises.</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 2.6.7">
+<span class="codenumber">2.6.7</span><span class="space"> </span><span class="title">Exercises</span>
+</h4>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.1<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-306-hidden.html" title="Solution 2.6.7.1.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.2<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-307-hidden.html" title="Solution 2.6.7.2.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.3<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-308-hidden.html" title="Solution 2.6.7.3.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.4<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-309-hidden.html" title="Solution 2.6.7.4.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.5<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-310-hidden.html" title="Solution 2.6.7.5.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.6<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-311-hidden.html" title="Solution 2.6.7.6.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.7<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-312-hidden.html" title="Solution 2.6.7.7.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.8<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-313-hidden.html" title="Solution 2.6.7.8.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.9<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-314-hidden.html" title="Solution 2.6.7.9.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.10<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-315-hidden.html" title="Solution 2.6.7.10.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.11<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-316-hidden.html" title="Solution 2.6.7.11.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.12<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-317-hidden.html" title="Solution 2.6.7.12.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.13<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-318-hidden.html" title="Solution 2.6.7.13.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.14<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-319-hidden.html" title="Solution 2.6.7.14.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.15<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-320-hidden.html" title="Solution 2.6.7.15.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.16<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-321-hidden.html" title="Solution 2.6.7.16.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.17<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-322-hidden.html" title="Solution 2.6.7.17.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.18<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-323-hidden.html" title="Solution 2.6.7.18.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.19<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-324-hidden.html" title="Solution 2.6.7.19.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.20<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-325-hidden.html" title="Solution 2.6.7.20.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.21<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-326-hidden.html" title="Solution 2.6.7.21.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.22<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-327-hidden.html" title="Solution 2.6.7.22.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.23<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-328-hidden.html" title="Solution 2.6.7.23.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.24<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-329-hidden.html" title="Solution 2.6.7.24.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.25<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-330-hidden.html" title="Solution 2.6.7.25.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.26<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-331-hidden.html" title="Solution 2.6.7.26.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.27<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-332-hidden.html" title="Solution 2.6.7.27.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.28<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-333-hidden.html" title="Solution 2.6.7.28.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.29<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-334-hidden.html" title="Solution 2.6.7.29.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.30<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-335-hidden.html" title="Solution 2.6.7.30.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.31<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-336-hidden.html" title="Solution 2.6.7.31.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.32<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-337-hidden.html" title="Solution 2.6.7.32.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.33<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-338-hidden.html" title="Solution 2.6.7.33.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.34<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-339-hidden.html" title="Solution 2.6.7.34.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.35<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-340-hidden.html" title="Solution 2.6.7.35.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.36<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-341-hidden.html" title="Solution 2.6.7.36.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.37<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-342-hidden.html" title="Solution 2.6.7.37.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.38<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-343-hidden.html" title="Solution 2.6.7.38.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.39<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-344-hidden.html" title="Solution 2.6.7.39.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.40<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-345-hidden.html" title="Solution 2.6.7.40.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.41<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-346-hidden.html" title="Solution 2.6.7.41.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.42<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-347-hidden.html" title="Solution 2.6.7.42.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.43<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-348-hidden.html" title="Solution 2.6.7.43.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.44<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-349-hidden.html" title="Solution 2.6.7.44.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.45<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-350-hidden.html" title="Solution 2.6.7.45.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.46<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-351-hidden.html" title="Solution 2.6.7.46.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.47<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-352-hidden.html" title="Solution 2.6.7.47.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.48<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-353-hidden.html" title="Solution 2.6.7.48.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">2.6.7.49<span class="period">.</span></span></h5>
+<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-354-hidden.html" title="Solution 2.6.7.49.1"><span class="type">Solution</span><span class="period">.</span></a></div></article>
+</div></div></section></section></div></main>
+</div>
+</body>
+</html>
