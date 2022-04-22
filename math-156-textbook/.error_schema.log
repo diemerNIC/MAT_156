@@ -1,0 +1,3 @@
+file:/C:/Users/diemer/Documents/Courses/Math/Math%20156/MAT_156/math-156-textbook/source/main.ptx:84:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element biography, got colophon
+file:/C:/Users/diemer/Documents/Courses/Math/Math%20156/MAT_156/math-156-textbook/source/main.ptx:54:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element subtitle there
+file:/C:/Users/diemer/Documents/Courses/Math/Math%20156/MAT_156/math-156-textbook/source/main.ptx:52:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element book failed to validate content

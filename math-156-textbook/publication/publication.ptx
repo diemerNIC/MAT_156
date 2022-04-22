@@ -2,5 +2,9 @@
 <publication>
   <numbering>
       <divisions level="3"/>
-    </numbering>
+  </numbering>
+  <common>
+    <exercise-divisional solution="no">
+    </exercise-divisional>
+  </common>
 </publication>
