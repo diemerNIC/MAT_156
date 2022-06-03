@@ -1,7 +1,7 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-22T14:02:24-07:00       *-->
+<!--*       on 2022-06-03T11:45:41-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -60,37 +60,16 @@
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\mynot}{\sim\!}
-\newcommand{\myand}{{\wedge}}
-\newcommand{\myor}{{\vee}}
-\newcommand{\myxor}{{\oplus}}
-\newcommand{\ttxor}{\texttt{XOR}}
-\newcommand{\mytt}[1]{\texttt{#1}}
-
-\newcommand{\myleq}{{\Leftrightarrow}}
-\newcommand{\myimplies}{{\rightarrow}}
-\newcommand{\myiff}{{\leftrightarrow}}
-
-\newcommand{\mylnot}[1]{{{\sim}#1}}
-\newcommand{\notp}{\mylnot{p}}
-\newcommand{\notq}{\mylnot{q}}
-\newcommand{\notr}{\mylnot{r}}
-\newcommand{\mybnot}[1]{{\overline{#1}}}
-\newcommand{\nota}{\mybnot{A}}
-\newcommand{\notb}{\mybnot{B}}
-\newcommand{\notc}{\mybnot{C}}
-\newcommand{\notd}{\mybnot{D}}
-
-\newcommand{\conditional}{{p \myimplies q}}
-\newcommand{\inverse}{{\notp{} \myimplies \notq{}}}
-\newcommand{\converse}{{q \myimplies p}}
-\newcommand{\contrapositive}{{\notq{} \myimplies \notp{}}}
-\newcommand{\biconditional}{{p \myiff{} q}}
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\conditional}{{p {\rightarrow} q}}
+\newcommand{\inverse}{{\sim\!{p}{} {\rightarrow} \sim\!{q}{}}}
+\newcommand{\converse}{{q {\rightarrow} p}}
+\newcommand{\contrapositive}{{\sim\!{q}{} {\rightarrow} \sim\!{p}{}}}
+\newcommand{\biconditional}{{p {\leftrightarrow}{} q}}
 
 \newcommand{\intersection}{\cap}
 \newcommand{\intersect}{\cap}
@@ -190,9 +169,9 @@
 <span class="type">Subsection</span> <span class="codenumber">2.1.2</span> <span class="title">Operators</span>
 </h3>
 <section class="subsubsection" id="negation"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.1.2.1</span> <span class="title">Negation</span>
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Negation</span>
 </h4>
-<p id="p-97">The negation of any proposition <span class="process-math">\(p\)</span> is called <em class="emphasis">not p</em> and is written using the tilde symbol, <span class="process-math">\(\notp\text{.}\)</span>  The tilde can be found on a standard keyboard as the shifted key to the left of the 1.  You may also see negations in logic written using this symbol, <span class="process-math">\(\neg p\text{,}\)</span> or using a bar or overline, <span class="process-math">\(\mybnot{p}\text{.}\)</span>  In computing, you will also see <span class="process-math">\(!p\)</span> as the negation.  We will use the <span class="process-math">\(\notp\)</span> because it uses a character on a conventional keyboard, so it is easier to type.</p>
+<p id="p-97">The negation of any proposition <span class="process-math">\(p\)</span> is called <em class="emphasis">not p</em> and is written using the tilde symbol, <span class="process-math">\(\sim\!{p}\text{.}\)</span>  The tilde can be found on a standard keyboard as the shifted key to the left of the 1.  You may also see negations in logic written using this symbol, <span class="process-math">\(\neg p\text{,}\)</span> or using a bar or overline, <span class="process-math">\(\overline{p}\text{.}\)</span>  In computing, you will also see <span class="process-math">\(!p\)</span> as the negation.  We will use the <span class="process-math">\(\sim\!{p}\)</span> because it uses a character on a conventional keyboard, so it is easier to type.</p>
 <p id="p-98">Note that you should be a little careful when negating sentences.  For example, the negation of “Pat is happy” is <em class="emphasis">not</em> “Pat is unhappy.”  There are many other emotions that Pat could have (anger, fear, boredom, etc.).  If the first statement is false, then its negationv must be true, so between the two you need to cover all possible situations that could arise. It would be safe to say that the negation of “Pat is happy” is “Pat is not happy”, though.</p>
 <p id="p-99">Another situation requiring care involves statements such as “All the students have coding experience.”  The negation of this statement is <em class="emphasis">not</em> “None of the students have coding experience.”  The original statement is false even if only one of “the students” has no coding experience.  So the negation of “All the students have coding experience” is “At least one of the students does not have coding experience.”  Another way to write the negation is “Some of the students don't have coding experience.”</p>
 <article class="example example-like" id="example-35"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-35"><h5 class="heading">
@@ -214,24 +193,24 @@
 <span class="type">Subsection</span> <span class="codenumber">2.1.3</span> <span class="title">Combining Propositions Using Connectives</span>
 </h3>
 <section class="introduction" id="introduction-31">Propositions may be combined using logical operators called <dfn class="terminology">connectives</dfn>, and the result is called a <dfn class="terminology">compound proposition</dfn>.  There are three basic connectives that we will study: <dfn class="terminology">and</dfn>, <dfn class="terminology">or</dfn>, and <dfn class="terminology">exclusive or</dfn>.  (Oddly, the <dfn class="terminology">not</dfn> operator is also called a connective, even though it acts on only one statement rather than combining two.)</section><section class="subsubsection" id="and"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.1.3.1</span> <span class="title">Conjunction</span>
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Conjunction</span>
 </h4>
 <p id="p-102">If we connect the propositions <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> with <em class="emphasis">and</em>, then the result is called the <dfn class="terminology">conjunction</dfn> of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span>  The conjunction of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> is true provided <em class="emphasis">both</em> <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are true.  Otherwise it is false. Symbolically, we write</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-p \myand q
+p {\wedge} q
 \end{equation*}
 </div>
 <article class="example example-like" id="example-37"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-37"><h5 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span>
 </h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-37"><article class="example example-like"><p id="p-103">Under what conditions is the statement "Jason does his marking and goes to a movie" true?</p>
 <p id="p-104">Answer: "Jason does his marking and goes to a movie" is true provided that Jason does his marking and also goes to a movie. If he does one or the other <em class="emphasis">but not both</em>, then the statement "Jason does his marking and goes to a movie" is false.  It is also false if Jason does neither action.</p></article></div></section><section class="subsubsection" id="inclusive-disjunction"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.1.3.2</span> <span class="title">Inclusive Disjunction</span>
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Inclusive Disjunction</span>
 </h4>
 <p id="p-105">If we connect propositions <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> with <em class="emphasis">or</em>, then the result is called the <dfn class="terminology">inclusive disjunction</dfn> of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span>  The inclusive disjunction is true if at least one of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> is true.  It is false only if both <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are false.  Symbolically, we write</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-p \myor q
+p {\vee} q
 \end{equation*}
 </div>
 <article class="example example-like" id="example-38"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-38"><h5 class="heading">
@@ -244,16 +223,16 @@ p \myor q
 <li id="li-191"><p id="p-derived-li-191">Jason goes to a movie but does not do his marking.</p></li>
 </ul>
 <p class="continuation">The only case in which "Jason does his marking or goes to a movie" is false is if Jason neither goes to a movie nor does his marking.</p></article></div></section><section class="subsubsection" id="exclusive-disjunction"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.1.3.3</span> <span class="title">Exclusive Disjunction</span>
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Exclusive Disjunction</span>
 </h4>
 <p id="p-108">If we connect the propositions <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> with <dfn class="terminology">exclusive or</dfn> (often written <code class="code-inline tex2jax_ignore">XOR</code>) then the result is called the <dfn class="terminology">exclusive disjunction</dfn> of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span>  Symbolically, we write</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-p\myxor q
+p{\oplus} q
 \end{equation*}
 </div>
-<p class="continuation">The exclusive disjunction <span class="process-math">\(p\myxor q\)</span> is true provided <em class="emphasis">exactly one</em> of the statements is true.</p></section><section class="subsubsection" id="inclusive-vs-exclusive-disjunction"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.1.3.4</span> <span class="title">Or vs. XOR</span>
+<p class="continuation">The exclusive disjunction <span class="process-math">\(p{\oplus} q\)</span> is true provided <em class="emphasis">exactly one</em> of the statements is true.</p></section><section class="subsubsection" id="inclusive-vs-exclusive-disjunction"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Or vs. XOR</span>
 </h4>
 <p id="p-109">In ordinary language, the word <em class="emphasis">or</em> can mean either the <em class="emphasis">inclusive or</em> or the <em class="emphasis">exclusive or</em>,  and it is usually up to the reader or listener to decide which one is appropriate from the context.</p>
 <article class="example example-like" id="example-39"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-39"><h5 class="heading">
@@ -275,7 +254,7 @@ p\myxor q
 </h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-40"><article class="example example-like">Under what conditions is the statement "Jason does his marking or goes to a movie but not both" true?<div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-14" id="answer-14"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-14"><div class="answer solution-like">"Jason does his marking or goes to a movie but not both" is true provided exactly one of the two conditions is true.  If he does his marking, then he cannot also go to a movie or else the exclusive disjunction is false.  If he goes to a movie, then he cannot also do his marking or the statement is false.  Truth of the statement means he doesn't do both, and he doesn't do neither.</div></div>
 </div></article></div></section><section class="subsubsection" id="connective-precedence"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.1.3.5</span> <span class="title">Logical Connectives and Precedence</span>
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Logical Connectives and Precedence</span>
 </h4>
 <p id="p-114">When you are doing arithmetic, to evaluate the expression</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
@@ -286,12 +265,12 @@ p\myxor q
 <p class="continuation">you need to know which operation (addition, multiplication, exponentiation) should come first.  In the same way, there is an order of operations, or <em class="emphasis">precedence</em>, in logic:</p>
 <ul class="disc">
 <li id="li-196"><p id="p-derived-li-196">negation, <span class="process-math">\(\sim\text{,}\)</span> is done first</p></li>
-<li id="li-197"><p id="p-derived-li-197">and, <span class="process-math">\(\myand\text{,}\)</span> is done next</p></li>
-<li id="li-198"><p id="p-derived-li-198">or, <span class="process-math">\(\myor\text{,}\)</span> is done last</p></li>
+<li id="li-197"><p id="p-derived-li-197">and, <span class="process-math">\({\wedge}\text{,}\)</span> is done next</p></li>
+<li id="li-198"><p id="p-derived-li-198">or, <span class="process-math">\({\vee}\text{,}\)</span> is done last</p></li>
 </ul>
 <p class="continuation">and brackets () override the default precedence.  If you like, you can think of <em class="emphasis">not</em> like exponents, <em class="emphasis">and</em> like multiplication, and <em class="emphasis">or</em> like addition (more on this later).</p>
-<p id="p-115">To evaluate the proposition <span class="process-math">\(p\myor q\myand r\text{,}\)</span> you would evaluate <span class="process-math">\(q\myand r\)</span> first, and then form the inclusive disjunction with <span class="process-math">\(p\)</span> (informally "'or it' with <span class="process-math">\(p\)</span>").  So <span class="process-math">\(p\myor q\myand r\)</span> is the same as <span class="process-math">\(p\myor(q\myand r)\text{.}\)</span>  The precedence of the connectives makes the brackets redundant, but when you are starting out it might be helpful to include them.</p>
-<p id="p-116">To evaluate the proposition <span class="process-math">\(\notq\myand p\text{,}\)</span> you'd negate <span class="process-math">\(q\)</span> first, and then form the conjunction with <span class="process-math">\(p\text{.}\)</span>  You could write <span class="process-math">\((\notq)\myand p\text{,}\)</span> but the brackets are redundant.  If you want the conjunction to occur before the negation, then you must write <span class="process-math">\(\mynot(q\myand p)\text{.}\)</span>  It is very important that you recognize that <span class="process-math">\(\notq\myand p\)</span> is <em class="alert">not</em> equivalent to <span class="process-math">\(\mynot (q\myand p)\text{.}\)</span></p></section></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
+<p id="p-115">To evaluate the proposition <span class="process-math">\(p{\vee} q{\wedge} r\text{,}\)</span> you would evaluate <span class="process-math">\(q{\wedge} r\)</span> first, and then form the inclusive disjunction with <span class="process-math">\(p\)</span> (informally "'or it' with <span class="process-math">\(p\)</span>").  So <span class="process-math">\(p{\vee} q{\wedge} r\)</span> is the same as <span class="process-math">\(p{\vee}(q{\wedge} r)\text{.}\)</span>  The precedence of the connectives makes the brackets redundant, but when you are starting out it might be helpful to include them.</p>
+<p id="p-116">To evaluate the proposition <span class="process-math">\(\sim\!{q}{\wedge} p\text{,}\)</span> you'd negate <span class="process-math">\(q\)</span> first, and then form the conjunction with <span class="process-math">\(p\text{.}\)</span>  You could write <span class="process-math">\((\sim\!{q}){\wedge} p\text{,}\)</span> but the brackets are redundant.  If you want the conjunction to occur before the negation, then you must write <span class="process-math">\(\sim\!(q{\wedge} p)\text{.}\)</span>  It is very important that you recognize that <span class="process-math">\(\sim\!{q}{\wedge} p\)</span> is <em class="alert">not</em> equivalent to <span class="process-math">\(\sim\! (q{\wedge} p)\text{.}\)</span></p></section></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.1.4</span> <span class="title">Exercises</span>
 </h3>
 <div class="exercisegroup" id="exercisegroup-30">
@@ -346,12 +325,12 @@ p\myxor q
 <div class="introduction" id="introduction-36">Let <span class="process-math">\(p=\,\)</span>"Jane did their homework" and <span class="process-math">\(q=\,\)</span>"Jane went for a jog."  Translate the following logical propositions into English sentences.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-168"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myand q\)</span></article><article class="exercise exercise-like" id="exercise-169"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mynot(p\myand q)\)</span></article><article class="exercise exercise-like" id="exercise-170"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>
-<span class="process-math">\(\ q\,\myand\notp\)</span></article><article class="exercise exercise-like" id="exercise-171"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \notq\,\myor \notp\)</span></article><article class="exercise exercise-like" id="exercise-172"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mynot(\notp)\)</span></article><article class="exercise exercise-like" id="exercise-173"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
-<span class="process-math">\(\ q\,\myxor\notq\)</span></article>
+<span class="process-math">\(\ p{\wedge} q\)</span></article><article class="exercise exercise-like" id="exercise-169"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \sim\!(p{\wedge} q)\)</span></article><article class="exercise exercise-like" id="exercise-170"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>
+<span class="process-math">\(\ q\,{\wedge}\sim\!{p}\)</span></article><article class="exercise exercise-like" id="exercise-171"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \sim\!{q}\,{\vee} \sim\!{p}\)</span></article><article class="exercise exercise-like" id="exercise-172"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \sim\!(\sim\!{p})\)</span></article><article class="exercise exercise-like" id="exercise-173"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
+<span class="process-math">\(\ q\,{\oplus}\sim\!{q}\)</span></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-35">

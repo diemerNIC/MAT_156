@@ -1,7 +1,7 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-22T14:02:25-07:00       *-->
+<!--*       on 2022-06-03T11:45:42-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -60,37 +60,16 @@
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\mynot}{\sim\!}
-\newcommand{\myand}{{\wedge}}
-\newcommand{\myor}{{\vee}}
-\newcommand{\myxor}{{\oplus}}
-\newcommand{\ttxor}{\texttt{XOR}}
-\newcommand{\mytt}[1]{\texttt{#1}}
-
-\newcommand{\myleq}{{\Leftrightarrow}}
-\newcommand{\myimplies}{{\rightarrow}}
-\newcommand{\myiff}{{\leftrightarrow}}
-
-\newcommand{\mylnot}[1]{{{\sim}#1}}
-\newcommand{\notp}{\mylnot{p}}
-\newcommand{\notq}{\mylnot{q}}
-\newcommand{\notr}{\mylnot{r}}
-\newcommand{\mybnot}[1]{{\overline{#1}}}
-\newcommand{\nota}{\mybnot{A}}
-\newcommand{\notb}{\mybnot{B}}
-\newcommand{\notc}{\mybnot{C}}
-\newcommand{\notd}{\mybnot{D}}
-
-\newcommand{\conditional}{{p \myimplies q}}
-\newcommand{\inverse}{{\notp{} \myimplies \notq{}}}
-\newcommand{\converse}{{q \myimplies p}}
-\newcommand{\contrapositive}{{\notq{} \myimplies \notp{}}}
-\newcommand{\biconditional}{{p \myiff{} q}}
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\conditional}{{p {\rightarrow} q}}
+\newcommand{\inverse}{{\sim\!{p}{} {\rightarrow} \sim\!{q}{}}}
+\newcommand{\converse}{{q {\rightarrow} p}}
+\newcommand{\contrapositive}{{\sim\!{q}{} {\rightarrow} \sim\!{p}{}}}
+\newcommand{\biconditional}{{p {\leftrightarrow}{} q}}
 
 \newcommand{\intersection}{\cap}
 \newcommand{\intersect}{\cap}
@@ -211,7 +190,7 @@
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myimplies q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\rightarrow} q\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">F</td>
@@ -234,7 +213,7 @@
 <td class="c m b3 r2 l0 t0 lines">T</td>
 </tr>
 </table></div></p>
-<p id="p-250">What does this mean?  It means that if <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is false, then the implication <span class="process-math">\(p \myimplies q\)</span> cannot also be true.  It also means that if <span class="process-math">\(p\myimplies q\)</span> is true, then you cannot have <span class="process-math">\(p\)</span> true and <span class="process-math">\(q\)</span> false at the same time.</p>
+<p id="p-250">What does this mean?  It means that if <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is false, then the implication <span class="process-math">\(p {\rightarrow} q\)</span> cannot also be true.  It also means that if <span class="process-math">\(p{\rightarrow} q\)</span> is true, then you cannot have <span class="process-math">\(p\)</span> true and <span class="process-math">\(q\)</span> false at the same time.</p>
 <p id="p-251">Let's look at another example.  Suppose that the following conditional is true: “If Barney is a dog, then Barney has four legs.”  This means that if the first proposition, “Barney is a dog,” is true, then only one conclusion may be reached, that the second is true and Barney has four legs.  However, if <span class="process-math">\(p\)</span> is false (that is, Barney is not a dog), then our conditional <em class="emphasis">doesn't have anything to say</em> about the number of legs Barney may have.  If Barney is a snake, octopus, bug, person, or pond, then Barney may not have four legs.  If Barney is cat, giraffe, wooly mammoth, or a table, then Barney may have four legs.  Our coditional does not deal with what you may conclude when <span class="process-math">\(p\)</span> is false (that is, when Barney is not a dog). <article class="example example-like" id="exmpl-cond1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-cond1"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.7.1</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exmpl-cond1"><article class="example example-like">Suppose that the statement “If Jason sleeps in, he will be late for class” is true.  Answer the following questions. <ol class="decimal">
@@ -290,7 +269,7 @@
 <td class="c m b3 r2 l0 t0 lines">T</td>
 </tr>
 </table></div></p>
-<p id="p-257">Here's how to fill in the columns for any logical expression containing the conditional connective (<span class="process-math">\(\myimplies\)</span>).  Let's call the propositions <em class="emphasis">first</em> and <em class="emphasis">second</em> so we don't get confused with <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span>  For the conditional statement first<span class="process-math">\(\myimplies\)</span> second, it will be be true for all cases <em class="emphasis">except</em> when the first is true and the second is false.  So for <span class="process-math">\(\converse\text{,}\)</span> look for the row in which <span class="process-math">\(q\)</span> is true and (rows 2 and 4) <span class="process-math">\(p\)</span> is false (rows 1 and 2).  Then <span class="process-math">\(q\)</span> is true and <span class="process-math">\(p\)</span> is false only for row 2.  Therefore enter <em class="emphasis">F</em> in the second row, and enter <span class="process-math">\(T\)</span> in the remaining rows of the column for <span class="process-math">\(\converse\text{.}\)</span>  This table shows that the conditional and the converse are <em class="emphasis">not</em> logically equivalent.</p></section><section class="subsection" id="ssec-contrapositive"><h3 class="heading hide-type">
+<p id="p-257">Here's how to fill in the columns for any logical expression containing the conditional connective (<span class="process-math">\({\rightarrow}\)</span>).  Let's call the propositions <em class="emphasis">first</em> and <em class="emphasis">second</em> so we don't get confused with <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span>  For the conditional statement first<span class="process-math">\({\rightarrow}\)</span> second, it will be be true for all cases <em class="emphasis">except</em> when the first is true and the second is false.  So for <span class="process-math">\(\converse\text{,}\)</span> look for the row in which <span class="process-math">\(q\)</span> is true and (rows 2 and 4) <span class="process-math">\(p\)</span> is false (rows 1 and 2).  Then <span class="process-math">\(q\)</span> is true and <span class="process-math">\(p\)</span> is false only for row 2.  Therefore enter <em class="emphasis">F</em> in the second row, and enter <span class="process-math">\(T\)</span> in the remaining rows of the column for <span class="process-math">\(\converse\text{.}\)</span>  This table shows that the conditional and the converse are <em class="emphasis">not</em> logically equivalent.</p></section><section class="subsection" id="ssec-contrapositive"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.7.3</span> <span class="title">The contrapositive</span>
 </h3>
 <p id="p-258">The statement <span class="process-math">\(\contrapositive\)</span> is the <dfn class="terminology">contrapositive</dfn> of <span class="process-math">\(\conditional\text{.}\)</span>  Let's consider our example again: <blockquote class="blockquote" id="blockquote-4">
@@ -300,8 +279,8 @@
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mylnot{p}\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mylnot{q}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{q}\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\conditional\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\contrapositive\)</span></td>
 </tr>
@@ -338,7 +317,7 @@
 <td class="c m b3 r2 l0 t0 lines">1</td>
 </tr>
 </table></div></p>
-<p id="p-261">Remember, you enter a 1 unless the first statement is true and the second statement is false.  Note that in rows 1 and 3, the first (<span class="process-math">\(\mynot{q}\)</span>) is true.  In rows 3 and 4, the second (<span class="process-math">\(\mynot{p}\)</span>) is false.  So a 0 is entered in the last column in row 3.  We already know that the conditional <span class="process-math">\(\conditional\)</span> is also false under those conditions.  The last two columns of this table are identical, so we see that <em class="emphasis">the conditional and the contrapositive are logically equivalent</em>. <article class="example example-like" id="exmpl-contra1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-contra1"><h4 class="heading">
+<p id="p-261">Remember, you enter a 1 unless the first statement is true and the second statement is false.  Note that in rows 1 and 3, the first (<span class="process-math">\(\sim\!{q}\)</span>) is true.  In rows 3 and 4, the second (<span class="process-math">\(\sim\!{p}\)</span>) is false.  So a 0 is entered in the last column in row 3.  We already know that the conditional <span class="process-math">\(\conditional\)</span> is also false under those conditions.  The last two columns of this table are identical, so we see that <em class="emphasis">the conditional and the contrapositive are logically equivalent</em>. <article class="example example-like" id="exmpl-contra1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-contra1"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.7.2</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exmpl-contra1"><article class="example example-like">Write the contrapositive for the statement, "If today is sunny, Jason will work in the garden."<div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-23" id="answer-23"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like">To get the contrapositive, negate the first and second statements and then reverse the order.  So the contrapositive is "If Jason is not working in the garden today, then it is not sunny."</div></div>
@@ -353,8 +332,8 @@
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mylnot{p}\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mylnot{q}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{q}\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\conditional\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\inverse\)</span></td>
 </tr>
@@ -397,8 +376,8 @@
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mylnot{p}\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mylnot{q}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{q}\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\conditional\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\converse\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\inverse\)</span></td>
@@ -453,8 +432,8 @@
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mylnot{p}\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mylnot{p} \myor{} q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p} {\vee}{} q\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\conditional\)</span></td>
 </tr>
 <tr>
@@ -487,18 +466,18 @@
 </tr>
 </table></div> This means that “If Barney is a dog, then Barney has four legs” is logically equivalent to “Either Barney is not a dog, or Barney has four legs”. <article class="example example-like" id="exmpl-altcond1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-altcond1"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.7.4</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exmpl-altcond1"><article class="example example-like">Consider the conditional <span class="process-math">\(\conditional\text{.}\)</span>  Is the converse (<span class="process-math">\(\converse\)</span>) logically equivelant to <span class="process-math">\(\mynot{p}\myor q\text{,}\)</span> <span class="process-math">\(\mynot{p}\myand q\text{,}\)</span> <span class="process-math">\(p\myand\mynot{q}\text{,}\)</span> or <span class="process-math">\(p\myand\mynot{q}\text{?}\)</span><div class="solutions">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exmpl-altcond1"><article class="example example-like">Consider the conditional <span class="process-math">\(\conditional\text{.}\)</span>  Is the converse (<span class="process-math">\(\converse\)</span>) logically equivelant to <span class="process-math">\(\sim\!{p}{\vee} q\text{,}\)</span> <span class="process-math">\(\sim\!{p}{\wedge} q\text{,}\)</span> <span class="process-math">\(p{\wedge}\sim\!{q}\text{,}\)</span> or <span class="process-math">\(p{\wedge}\sim\!{q}\text{?}\)</span><div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-25" id="answer-25"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like">Here's the truth table: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mylnot{p}\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mylnot{q}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{q}\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\converse{}\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mylnot{p} \myor{} q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mylnot{p} \myand{} q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p \myor{} \mylnot{q}\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p \myand{} \mylnot{q}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p} {\vee}{} q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p} {\wedge}{} q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p {\vee}{} \sim\!{q}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p {\wedge}{} \sim\!{q}\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">0</td>
@@ -544,21 +523,21 @@
 <td class="c m b3 r2 l0 t0 lines">1</td>
 <td class="c m b3 r2 l0 t0 lines">0</td>
 </tr>
-</table></div> As can be seen from the table, the columns for <span class="process-math">\(\converse\)</span> and <span class="process-math">\(p\myor\mynot{q}\)</span> are identical, so these two expressions are logically equivalent.</div></div>
+</table></div> As can be seen from the table, the columns for <span class="process-math">\(\converse\)</span> and <span class="process-math">\(p{\vee}\sim\!{q}\)</span> are identical, so these two expressions are logically equivalent.</div></div>
 </div></article></div></p></section><section class="subsection" id="ssec-demorgan-and-contrapos"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.7.6</span> <span class="title">De Morgan's Law and the contrapositive</span>
 </h3>
-<p id="p-267">Consider the conditional <span class="process-math">\((p \myand{} q \myimplies{} r\text{.}\)</span>  The contrapositive would be <span class="process-math">\(\mylnot{r} \myimplies{} \mylnot{(p \myand{} q)}\text{.}\)</span>  Applying De Morgan's Law gives <span class="process-math">\(\mylnot{r} \myimplies{} (\mylnot{p} \myor{} \mylnot{q})\text{.}\)</span>  Notice the change from the <em class="emphasis">and</em> in the conditional to the <em class="emphasis">or</em> in the modified contrapositive.  Forgetting to make that change is an easy trap to fall into.  <article class="example example-like" id="exmpl-demorgan-contrap1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-demorgan-contrap1"><h4 class="heading">
+<p id="p-267">Consider the conditional <span class="process-math">\((p {\wedge}{} q {\rightarrow}{} r\text{.}\)</span>  The contrapositive would be <span class="process-math">\(\sim\!{r} {\rightarrow}{} \sim\!{(p {\wedge}{} q)}\text{.}\)</span>  Applying De Morgan's Law gives <span class="process-math">\(\sim\!{r} {\rightarrow}{} (\sim\!{p} {\vee}{} \sim\!{q})\text{.}\)</span>  Notice the change from the <em class="emphasis">and</em> in the conditional to the <em class="emphasis">or</em> in the modified contrapositive.  Forgetting to make that change is an easy trap to fall into.  <article class="example example-like" id="exmpl-demorgan-contrap1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-exmpl-demorgan-contrap1"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.7.5</span><span class="period">.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-exmpl-demorgan-contrap1"><article class="example example-like">Consider the conditional “If Jason sleeps in or gets caught in traffic, he will be late for class.”  What is the contrapositive?  Use De Morgan's Law to find your answer.<div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-26" id="answer-26"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-26"><div class="answer solution-like">The conditional here is<div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
-(\text{sleep or traffic})\myimplies\text{ late}
+(\text{sleep or traffic}){\rightarrow}\text{ late}
 \end{equation*}
 </div>The contrapositive is then<div class="displaymath process-math" data-contains-math-knowls="" id="md-59">
 \begin{align*}
-\mynot{\text{late}} \amp \myimplies \mynot{\text{sleep or traffic}}\\
-\amp \mynot{\text{sleep}}\text{ and }\mynot{\text{traffic}}
+\sim\!{\text{late}} \amp {\rightarrow} \sim\!{\text{sleep or traffic}}\\
+\amp \sim\!{\text{sleep}}\text{ and }\sim\!{\text{traffic}}
 \end{align*}
 </div>Therefore, the contrapositive is “If Jason is not late for class, then he didn't sleep in <em class="emphasis">and</em> he didn't get caught in traffic.”  The <em class="emphasis">or</em> changes into <em class="emphasis">and</em>, as indicated by De Morgan's Law.</div></div>
 </div></article></div></p></section><section class="exercises" id="exers-sec-conditional"><h3 class="heading hide-type">
@@ -573,8 +552,8 @@
 <span class="process-math">\(\ \inverse\)</span></article><article class="exercise exercise-like" id="exercise-334"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <span class="process-math">\(\ \contrapositive\)</span></article><article class="exercise exercise-like" id="exercise-335"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
 <span class="process-math">\(\ \converse\)</span></article><article class="exercise exercise-like" id="exercise-336"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mynot{p}\myor q\)</span></article><article class="exercise exercise-like" id="exercise-337"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myand\mynot{q}\)</span></article>
+<span class="process-math">\(\ \sim\!{p}{\vee} q\)</span></article><article class="exercise exercise-like" id="exercise-337"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p{\wedge}\sim\!{q}\)</span></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-59">
@@ -635,7 +614,7 @@
 <span class="process-math">\(\ \)</span>The contrapositive (<span class="process-math">\(\contrapositive\)</span>)</article><article class="exercise exercise-like" id="exercise-355"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
 <span class="process-math">\(\ \)</span>The converse (<span class="process-math">\(\converse\)</span>)</article><article class="exercise exercise-like" id="exercise-356"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
 <span class="process-math">\(\ \)</span>The inverse (<span class="process-math">\(\inverse\)</span>)</article><article class="exercise exercise-like" id="exercise-357"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \)</span>The “or” form (<span class="process-math">\(\mynot{p}\myor q\)</span>)</article>
+<span class="process-math">\(\ \)</span>The “or” form (<span class="process-math">\(\sim\!{p}{\vee} q\)</span>)</article>
 </div>
 </div>
 <article class="exercise exercise-like" id="exercise-358"><h4 class="heading"><span class="codenumber">27<span class="period">.</span></span></h4>

@@ -1,7 +1,7 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-22T14:02:24-07:00       *-->
+<!--*       on 2022-06-03T11:45:41-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -60,37 +60,16 @@
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\mynot}{\sim\!}
-\newcommand{\myand}{{\wedge}}
-\newcommand{\myor}{{\vee}}
-\newcommand{\myxor}{{\oplus}}
-\newcommand{\ttxor}{\texttt{XOR}}
-\newcommand{\mytt}[1]{\texttt{#1}}
-
-\newcommand{\myleq}{{\Leftrightarrow}}
-\newcommand{\myimplies}{{\rightarrow}}
-\newcommand{\myiff}{{\leftrightarrow}}
-
-\newcommand{\mylnot}[1]{{{\sim}#1}}
-\newcommand{\notp}{\mylnot{p}}
-\newcommand{\notq}{\mylnot{q}}
-\newcommand{\notr}{\mylnot{r}}
-\newcommand{\mybnot}[1]{{\overline{#1}}}
-\newcommand{\nota}{\mybnot{A}}
-\newcommand{\notb}{\mybnot{B}}
-\newcommand{\notc}{\mybnot{C}}
-\newcommand{\notd}{\mybnot{D}}
-
-\newcommand{\conditional}{{p \myimplies q}}
-\newcommand{\inverse}{{\notp{} \myimplies \notq{}}}
-\newcommand{\converse}{{q \myimplies p}}
-\newcommand{\contrapositive}{{\notq{} \myimplies \notp{}}}
-\newcommand{\biconditional}{{p \myiff{} q}}
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\conditional}{{p {\rightarrow} q}}
+\newcommand{\inverse}{{\sim\!{p}{} {\rightarrow} \sim\!{q}{}}}
+\newcommand{\converse}{{q {\rightarrow} p}}
+\newcommand{\contrapositive}{{\sim\!{q}{} {\rightarrow} \sim\!{p}{}}}
+\newcommand{\biconditional}{{p {\leftrightarrow}{} q}}
 
 \newcommand{\intersection}{\cap}
 \newcommand{\intersect}{\cap}
@@ -167,7 +146,7 @@
 <span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Truth Tables</span>
 </h3>
 <section class="subsubsection" id="truth-tables-2vars"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.3.1.1</span> <span class="title">Truth Tables with Two Variables</span>
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Truth Tables with Two Variables</span>
 </h4>
 <p id="p-164">Let us consider the propositions <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span>  Since they are propositions, <span class="process-math">\(p\)</span> is either true or false and <span class="process-math">\(q\)</span> is also either true or false.  This leads us to four possible combinations of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{:}\)</span></p>
 <ol class="decimal">
@@ -176,11 +155,11 @@
 <li id="li-210"><p id="p-derived-li-210"><span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is false</p></li>
 <li id="li-211"><p id="p-derived-li-211"><span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are both true</p></li>
 </ol>
-<p class="continuation">We can combine these possibilities into a table called a truth table.  We can add further columns to find out what the value of other compound propositions for each combination of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> as well.  Suppose we wished to find out what the truth table was for <span class="process-math">\(p \myand q\text{.}\)</span>  Then the table would look like the following. <div class="tabular-box natural-width"><table class="tabular">
+<p class="continuation">We can combine these possibilities into a table called a truth table.  We can add further columns to find out what the value of other compound propositions for each combination of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> as well.  Suppose we wished to find out what the truth table was for <span class="process-math">\(p {\wedge} q\text{.}\)</span>  Then the table would look like the following. <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myand q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\wedge} q\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">F</td>
@@ -202,12 +181,12 @@
 <td class="c m b3 r2 l0 t0 lines">T</td>
 <td class="c m b3 r2 l0 t0 lines">T</td>
 </tr>
-</table></div> For example, when <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is true (the second row, where <span class="process-math">\(p\)</span> = F and <span class="process-math">\(q\)</span> = T), then <span class="process-math">\(p \myand q\)</span> is false because one of them is false (they are not both true).</p>
-<p id="p-165">Similarly, the truth table for <span class="process-math">\(p \myor q\)</span> is <div class="tabular-box natural-width"><table class="tabular">
+</table></div> For example, when <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is true (the second row, where <span class="process-math">\(p\)</span> = F and <span class="process-math">\(q\)</span> = T), then <span class="process-math">\(p {\wedge} q\)</span> is false because one of them is false (they are not both true).</p>
+<p id="p-165">Similarly, the truth table for <span class="process-math">\(p {\vee} q\)</span> is <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myor q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\vee} q\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">F</td>
@@ -234,8 +213,8 @@
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myand q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myor q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\wedge} q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\vee} q\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">F</td>
@@ -266,8 +245,8 @@
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myand q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myor q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\wedge} q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\vee} q\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">0</td>
@@ -294,13 +273,13 @@
 <td class="c m b3 r2 l0 t0 lines">1</td>
 </tr>
 </table></div></p></section><section class="subsubsection" id="truth-tables-one-var"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.3.1.2</span> <span class="title">Truth Tables with One Variable</span>
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Truth Tables with One Variable</span>
 </h4>
-<p id="p-168">What if we were interested in the truth table for <span class="process-math">\(p \myor p\text{?}\)</span>  Since this truth table contains only one variable <span class="process-math">\(p\)</span> rather than two, it will only have two rows since <span class="process-math">\(p\)</span> can either be true or false (and yes, you could omit the second column if you wish). <div class="tabular-box natural-width"><table class="tabular">
+<p id="p-168">What if we were interested in the truth table for <span class="process-math">\(p {\vee} p\text{?}\)</span>  Since this truth table contains only one variable <span class="process-math">\(p\)</span> rather than two, it will only have two rows since <span class="process-math">\(p\)</span> can either be true or false (and yes, you could omit the second column if you wish). <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myor p\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\vee} p\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">0</td>
@@ -313,11 +292,11 @@
 <td class="c m b3 r2 l0 t0 lines">1</td>
 </tr>
 </table></div></p>
-<p id="p-169">Let's now look at how to write the truth table for <span class="process-math">\(p\myand 1\text{,}\)</span> where 1 means a statement that is always true.  (Be careful!  The number 1 is a constant, not a variable.  It never takes the value of zero.)  The table would look like: <div class="tabular-box natural-width"><table class="tabular">
+<p id="p-169">Let's now look at how to write the truth table for <span class="process-math">\(p{\wedge} 1\text{,}\)</span> where 1 means a statement that is always true.  (Be careful!  The number 1 is a constant, not a variable.  It never takes the value of zero.)  The table would look like: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(1\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myand 1\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\wedge} 1\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines"><span class="process-math">\(0\)</span></td>
@@ -329,14 +308,14 @@
 <td class="c m b3 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
 <td class="c m b3 r2 l0 t0 lines"><span class="process-math">\(1\)</span></td>
 </tr>
-</table></div> Notice that the last column looks like the first, so <span class="process-math">\(p\myand 1\)</span> has the same values as <span class="process-math">\(p\text{.}\)</span>  We say, then, that <span class="process-math">\(p\myand 1\)</span> is <dfn class="terminology">logically equivalent</dfn> to <span class="process-math">\(p\text{.}\)</span>  The topic of logical equivalence will be examined in more detail later on.</p></section><section class="subsubsection" id="negation-in-truth-tables"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.3.1.3</span> <span class="title">Negations in Truth Tables</span>
+</table></div> Notice that the last column looks like the first, so <span class="process-math">\(p{\wedge} 1\)</span> has the same values as <span class="process-math">\(p\text{.}\)</span>  We say, then, that <span class="process-math">\(p{\wedge} 1\)</span> is <dfn class="terminology">logically equivalent</dfn> to <span class="process-math">\(p\text{.}\)</span>  The topic of logical equivalence will be examined in more detail later on.</p></section><section class="subsubsection" id="negation-in-truth-tables"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Negations in Truth Tables</span>
 </h4>
-<p id="p-170">To negate a variable, we simply switch the value of each entry in that column from its previous value.  For example, consider the truth table for <span class="process-math">\(p\myor\,\notp\text{.}\)</span>  We start with a column for <span class="process-math">\(p\)</span> and one for <span class="process-math">\(\notp\text{.}\)</span>  To populate the latter, we have to negate <span class="process-math">\(p\text{.}\)</span>  To do this, we take every entry in the <span class="process-math">\(p\)</span> column and switch all the zeros to ones and the ones to zeros.  We'll then form the inclusive disjunction of those two columns. <div class="tabular-box natural-width"><table class="tabular">
+<p id="p-170">To negate a variable, we simply switch the value of each entry in that column from its previous value.  For example, consider the truth table for <span class="process-math">\(p{\vee}\,\sim\!{p}\text{.}\)</span>  We start with a column for <span class="process-math">\(p\)</span> and one for <span class="process-math">\(\sim\!{p}\text{.}\)</span>  To populate the latter, we have to negate <span class="process-math">\(p\text{.}\)</span>  To do this, we take every entry in the <span class="process-math">\(p\)</span> column and switch all the zeros to ones and the ones to zeros.  We'll then form the inclusive disjunction of those two columns. <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notp\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\,\myor\,\notp\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\,{\vee}\,\sim\!{p}\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">0</td>
@@ -349,13 +328,13 @@
 <td class="c m b3 r2 l0 t0 lines">1</td>
 </tr>
 </table></div></p>
-<p id="p-171">Notice that <span class="process-math">\(p\myor\,\notp\)</span> is always true.  A concrete example will hopefully illustrate the reasonableness of this: "Jason's shirt is either plaid or not plaid."  This statement is true regardless of the pattern on Jason's shirt.</p>
-<p id="p-172">To negate an expession, we use the same idea and switch the value of each entry in the column for that expression, whether that expression is simple or compound.  For example, here is the truth table for <span class="process-math">\(\mynot(p\myand 1)\text{:}\)</span> <div class="tabular-box natural-width"><table class="tabular">
+<p id="p-171">Notice that <span class="process-math">\(p{\vee}\,\sim\!{p}\)</span> is always true.  A concrete example will hopefully illustrate the reasonableness of this: "Jason's shirt is either plaid or not plaid."  This statement is true regardless of the pattern on Jason's shirt.</p>
+<p id="p-172">To negate an expession, we use the same idea and switch the value of each entry in the column for that expression, whether that expression is simple or compound.  For example, here is the truth table for <span class="process-math">\(\sim\!(p{\wedge} 1)\text{:}\)</span> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines">1</td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myand 1\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\mynot(p\myand 1)\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\wedge} 1\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!(p{\wedge} 1)\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">0</td>
@@ -370,17 +349,17 @@
 <td class="c m b3 r2 l0 t0 lines">0</td>
 </tr>
 </table></div> The fourth column is the negation of the third column: the values in the fourth column are obtained by applying the switches <span class="process-math">\(0\to 1\)</span> and <span class="process-math">\(1\to 0\)</span> to the values in the third column.</p></section><section class="subsubsection" id="truth-table-3-vars"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.3.1.4</span> <span class="title">Truth Tables with Three Variables</span>
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title">Truth Tables with Three Variables</span>
 </h4>
-<p id="p-173">A truth table with three variables will contain 8 rows in order to display all the possible truth values for the three statements <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(q\text{,}\)</span> and <span class="process-math">\(r\text{.}\)</span>  For example, the truth table for <span class="process-math">\(\notp\,\myand(q\,\myor \notr)\)</span> is <div class="tabular-box natural-width"><table class="tabular">
+<p id="p-173">A truth table with three variables will contain 8 rows in order to display all the possible truth values for the three statements <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(q\text{,}\)</span> and <span class="process-math">\(r\text{.}\)</span>  For example, the truth table for <span class="process-math">\(\sim\!{p}\,{\wedge}(q\,{\vee} \sim\!{r})\)</span> is <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(r\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notr\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\,\myor\notr\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notp\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notp\,\myand(q\,\myor \notr)\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{r}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\,{\vee}\sim\!{r}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p}\,{\wedge}(q\,{\vee} \sim\!{r})\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">0</td>
@@ -457,22 +436,22 @@
 </table></div></p>
 <p id="p-174">It is important to note that the actual order of the rows doesn't matter for the truth table to be complete.  However, if you write out the table with the rows in a random order, it is very easy to duplicate one of the previous rows.  If you continue to fill the table until you have the correct <em class="alert">total</em> number of rows, then the duplication means that one of the combinations of variables is missing.</p>
 <p id="p-175">Therefore, it is a good idea to fill the table in a systematic way.  Look at the <em class="emphasis">column entries</em>, starting with the leftmost column.  Then look at the next column, then the next.  Note the pattern of the entries in each column.  If you mimic that pattern in your own work, you will minimize the chances of missing a combination variables.</p>
-<p id="p-176">Another common mistake is to take a shortcut and start the truth table with one of the columns being, for example, <span class="process-math">\(\notp\text{.}\)</span>  This is not correct.  Truth tables must always start with unnegated variables.</p></section></section><section class="subsection" id="subsec-logical-equivalence"><h3 class="heading hide-type">
+<p id="p-176">Another common mistake is to take a shortcut and start the truth table with one of the columns being, for example, <span class="process-math">\(\sim\!{p}\text{.}\)</span>  This is not correct.  Truth tables must always start with unnegated variables.</p></section></section><section class="subsection" id="subsec-logical-equivalence"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Logical Equivalence</span>
 </h3>
-<p id="p-177">Two logical expressions are said to be <dfn class="terminology">logically equivalent</dfn> if they have the same values in their columns in the truth table.  We saw in our examples above that <span class="process-math">\(p\,\myor\notp\)</span> was logically equivalent to 1\, and <span class="process-math">\(p\myand 1\)</span> was logically equivalent to <span class="process-math">\(p\text{.}\)</span>  The symbol for <em class="emphasis">logically equivalent to</em> is <span class="process-math">\(\Leftrightarrow\text{,}\)</span> so <span class="process-math">\(p\,\myor\notp\Leftrightarrow 1\)</span> and <span class="process-math">\(p\myand 1\Leftrightarrow p\text{.}\)</span></p>
+<p id="p-177">Two logical expressions are said to be <dfn class="terminology">logically equivalent</dfn> if they have the same values in their columns in the truth table.  We saw in our examples above that <span class="process-math">\(p\,{\vee}\sim\!{p}\)</span> was logically equivalent to 1\, and <span class="process-math">\(p{\wedge} 1\)</span> was logically equivalent to <span class="process-math">\(p\text{.}\)</span>  The symbol for <em class="emphasis">logically equivalent to</em> is <span class="process-math">\(\Leftrightarrow\text{,}\)</span> so <span class="process-math">\(p\,{\vee}\sim\!{p}\Leftrightarrow 1\)</span> and <span class="process-math">\(p{\wedge} 1\Leftrightarrow p\text{.}\)</span></p>
 <article class="example example-like" id="example-42"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-42"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-42"><article class="example example-like">Is <span class="process-math">\(p\myand (q\myor r)\)</span> logically equivalent to <span class="process-math">\((p\myand q)\myor r\text{?}\)</span><div class="solutions">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-42"><article class="example example-like">Is <span class="process-math">\(p{\wedge} (q{\vee} r)\)</span> logically equivalent to <span class="process-math">\((p{\wedge} q){\vee} r\text{?}\)</span><div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-215" id="solution-215"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-215"><div class="solution solution-like"><p id="p-178"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(t\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q \myor r\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myand(q \myor r)\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myand q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\((p\myand q)\myor r\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q {\vee} r\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\wedge}(q {\vee} r)\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\wedge} q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\((p{\wedge} q){\vee} r\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">0</td>
@@ -550,15 +529,15 @@
 </div></article></div>
 <article class="example example-like" id="example-43"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-43"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-43"><article class="example example-like">Simplify <span class="process-math">\((p\myand q)\myor(\notp\,\myand q)\text{.}\)</span><div class="solutions">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-43"><article class="example example-like">Simplify <span class="process-math">\((p{\wedge} q){\vee}(\sim\!{p}\,{\wedge} q)\text{.}\)</span><div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-216" id="solution-216"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-216"><div class="solution solution-like"><p id="p-179"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notp\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myand q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notp\,\myand q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\((p\myand q)\myor(\notp\,\myand q)\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\wedge} q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p}\,{\wedge} q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\((p{\wedge} q){\vee}(\sim\!{p}\,{\wedge} q)\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">0</td>
@@ -592,21 +571,21 @@
 <td class="c m b3 r2 l0 t0 lines">0</td>
 <td class="c m b3 r2 l0 t0 lines">1</td>
 </tr>
-</table></div> Notice that the last column is identical to the column for <span class="process-math">\(q\text{.}\)</span>  Therefore, <span class="process-math">\((p\myand q)\myor(\notp\,\myand q)\Leftrightarrow q\text{,}\)</span> and so the simplified expression is <span class="process-math">\(q\)</span></p></div></div>
+</table></div> Notice that the last column is identical to the column for <span class="process-math">\(q\text{.}\)</span>  Therefore, <span class="process-math">\((p{\wedge} q){\vee}(\sim\!{p}\,{\wedge} q)\Leftrightarrow q\text{,}\)</span> and so the simplified expression is <span class="process-math">\(q\)</span></p></div></div>
 </div></article></div>
 <article class="example example-like" id="example-44"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-44"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-44"><article class="example example-like">Is <span class="process-math">\(p \myxor q\)</span> logically equivalent to <span class="process-math">\((p\myand\notq)\myor (\notp\,\myand q)\text{?}\)</span><div class="solutions">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-44"><article class="example example-like">Is <span class="process-math">\(p {\oplus} q\)</span> logically equivalent to <span class="process-math">\((p{\wedge}\sim\!{q}){\vee} (\sim\!{p}\,{\wedge} q)\text{?}\)</span><div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-217" id="solution-217"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-217"><div class="solution solution-like"><p id="p-180"><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p \myxor q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notp\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notq\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\,\myand\notq\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\notp \myand q\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\((p\myand\notq)\myor (\notp\,\myand q)\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p {\oplus} q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{q}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\,{\wedge}\sim\!{q}\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(\sim\!{p} {\wedge} q\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\((p{\wedge}\sim\!{q}){\vee} (\sim\!{p}\,{\wedge} q)\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">0</td>
@@ -657,16 +636,16 @@
 <div class="introduction" id="introduction-41">Give the truth tables for the following logical expressions.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-195"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\,\myand\notp\)</span></article><article class="exercise exercise-like" id="exercise-196"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myor 1\)</span></article><article class="exercise exercise-like" id="exercise-197"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\,\myand\notq\)</span></article><article class="exercise exercise-like" id="exercise-198"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<span class="process-math">\(\mynot(p\myor q)\)</span></article><article class="exercise exercise-like" id="exercise-199"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\,\myxor\notq\)</span></article><article class="exercise exercise-like" id="exercise-200"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myor(\notp\,\myand q)\)</span></article><article class="exercise exercise-like" id="exercise-201"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<span class="process-math">\(\ (p\myor q)\myand r\)</span></article><article class="exercise exercise-like" id="exercise-202"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\,\myor q\,\myor\, \notr\)</span></article><article class="exercise exercise-like" id="exercise-203"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
-<span class="process-math">\(\ (p\myand q)\,\myor\,\mynot(p\,\myor\,\notq)\)</span></article><article class="exercise exercise-like" id="exercise-204"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
-<span class="process-math">\((\notp\,\myor\,\notq)\,\myand\,(\notp\,\myor\,q)\)</span></article>
+<span class="process-math">\(\ p\,{\wedge}\sim\!{p}\)</span></article><article class="exercise exercise-like" id="exercise-196"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p{\vee} 1\)</span></article><article class="exercise exercise-like" id="exercise-197"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p\,{\wedge}\sim\!{q}\)</span></article><article class="exercise exercise-like" id="exercise-198"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<span class="process-math">\(\sim\!(p{\vee} q)\)</span></article><article class="exercise exercise-like" id="exercise-199"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p\,{\oplus}\sim\!{q}\)</span></article><article class="exercise exercise-like" id="exercise-200"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p{\vee}(\sim\!{p}\,{\wedge} q)\)</span></article><article class="exercise exercise-like" id="exercise-201"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (p{\vee} q){\wedge} r\)</span></article><article class="exercise exercise-like" id="exercise-202"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p\,{\vee} q\,{\vee}\, \sim\!{r}\)</span></article><article class="exercise exercise-like" id="exercise-203"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (p{\wedge} q)\,{\vee}\,\sim\!(p\,{\vee}\,\sim\!{q})\)</span></article><article class="exercise exercise-like" id="exercise-204"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<span class="process-math">\((\sim\!{p}\,{\vee}\,\sim\!{q})\,{\wedge}\,(\sim\!{p}\,{\vee}\,q)\)</span></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-40">
@@ -674,13 +653,13 @@
 <div class="introduction" id="introduction-42">Are the two expressions logically equivalent?</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-205"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mynot(p\myand q)\)</span> and <span class="process-math">\(\notp\,\myand\,\notq\)</span></article><article class="exercise exercise-like" id="exercise-206"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mynot(p\myor q)\)</span> and <span class="process-math">\(\notp\,\myand\,\notq\)</span></article><article class="exercise exercise-like" id="exercise-207"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myxor q\)</span> and <span class="process-math">\(\notp\,\myxor\,\notq\)</span></article><article class="exercise exercise-like" id="exercise-208"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myor(q\myand r)\)</span> and <span class="process-math">\((p\myor q)\myand r\)</span></article><article class="exercise exercise-like" id="exercise-209"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myor(p\myand q)\)</span> and <span class="process-math">\(p\)</span></article><article class="exercise exercise-like" id="exer-logic-commutative"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
-<span class="process-math">\(\ (p\myor q)\myor r\)</span> and <span class="process-math">\(p\myor (q\myor r)\)</span></article><article class="exercise exercise-like" id="exercise-211"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myxor q\)</span> and <span class="process-math">\((p\myand q)\myor (\notp\,\myand\,\notq)\)</span></article>
+<span class="process-math">\(\ \sim\!(p{\wedge} q)\)</span> and <span class="process-math">\(\sim\!{p}\,{\wedge}\,\sim\!{q}\)</span></article><article class="exercise exercise-like" id="exercise-206"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \sim\!(p{\vee} q)\)</span> and <span class="process-math">\(\sim\!{p}\,{\wedge}\,\sim\!{q}\)</span></article><article class="exercise exercise-like" id="exercise-207"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p{\oplus} q\)</span> and <span class="process-math">\(\sim\!{p}\,{\oplus}\,\sim\!{q}\)</span></article><article class="exercise exercise-like" id="exercise-208"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p{\vee}(q{\wedge} r)\)</span> and <span class="process-math">\((p{\vee} q){\wedge} r\)</span></article><article class="exercise exercise-like" id="exercise-209"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p{\vee}(p{\wedge} q)\)</span> and <span class="process-math">\(p\)</span></article><article class="exercise exercise-like" id="exer-logic-commutative"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (p{\vee} q){\vee} r\)</span> and <span class="process-math">\(p{\vee} (q{\vee} r)\)</span></article><article class="exercise exercise-like" id="exercise-211"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p{\oplus} q\)</span> and <span class="process-math">\((p{\wedge} q){\vee} (\sim\!{p}\,{\wedge}\,\sim\!{q})\)</span></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-41">
@@ -688,15 +667,15 @@
 <div class="introduction" id="introduction-43">Simplify each statement.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-212"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myand p\)</span></article><article class="exercise exercise-like" id="exercise-213"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\,\myor\notp\)</span></article><article class="exercise exercise-like" id="exercise-214"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myand 0\)</span></article><article class="exercise exercise-like" id="exercise-215"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>
-<span class="process-math">\(\notp\,\myxor\,p\)</span></article><article class="exercise exercise-like" id="exercise-216"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
-<span class="process-math">\(\ (p\myxor q)\myand(p\,\myxor \notq)\)</span></article><article class="exercise exercise-like" id="exercise-217"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myor(p\myand q)\)</span></article><article class="exercise exercise-like" id="exercise-218"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
-<span class="process-math">\(\ q\myand(p\myor q)\)</span></article><article class="exercise exercise-like" id="exercise-219"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myand(\notp\,\myor\,q)\)</span></article><article class="exercise exercise-like" id="exercise-220"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myor(\notp\,\myand\,q)\)</span></article>
+<span class="process-math">\(\ p{\wedge} p\)</span></article><article class="exercise exercise-like" id="exercise-213"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p\,{\vee}\sim\!{p}\)</span></article><article class="exercise exercise-like" id="exercise-214"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p{\wedge} 0\)</span></article><article class="exercise exercise-like" id="exercise-215"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>
+<span class="process-math">\(\sim\!{p}\,{\oplus}\,p\)</span></article><article class="exercise exercise-like" id="exercise-216"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (p{\oplus} q){\wedge}(p\,{\oplus} \sim\!{q})\)</span></article><article class="exercise exercise-like" id="exercise-217"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p{\vee}(p{\wedge} q)\)</span></article><article class="exercise exercise-like" id="exercise-218"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
+<span class="process-math">\(\ q{\wedge}(p{\vee} q)\)</span></article><article class="exercise exercise-like" id="exercise-219"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p{\wedge}(\sim\!{p}\,{\vee}\,q)\)</span></article><article class="exercise exercise-like" id="exercise-220"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p{\vee}(\sim\!{p}\,{\wedge}\,q)\)</span></article>
 </div>
 </div></section><section class="solutions" id="solutions-8"><h3 class="heading hide-type">
 <span class="type">Solutions</span> <span class="codenumber">2.3.4</span> <span class="title">Solutions to Section 2.3 Exercises</span>

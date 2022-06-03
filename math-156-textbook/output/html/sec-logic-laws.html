@@ -1,7 +1,7 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-22T14:02:25-07:00       *-->
+<!--*       on 2022-06-03T11:45:42-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -60,37 +60,16 @@
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\mynot}{\sim\!}
-\newcommand{\myand}{{\wedge}}
-\newcommand{\myor}{{\vee}}
-\newcommand{\myxor}{{\oplus}}
-\newcommand{\ttxor}{\texttt{XOR}}
-\newcommand{\mytt}[1]{\texttt{#1}}
-
-\newcommand{\myleq}{{\Leftrightarrow}}
-\newcommand{\myimplies}{{\rightarrow}}
-\newcommand{\myiff}{{\leftrightarrow}}
-
-\newcommand{\mylnot}[1]{{{\sim}#1}}
-\newcommand{\notp}{\mylnot{p}}
-\newcommand{\notq}{\mylnot{q}}
-\newcommand{\notr}{\mylnot{r}}
-\newcommand{\mybnot}[1]{{\overline{#1}}}
-\newcommand{\nota}{\mybnot{A}}
-\newcommand{\notb}{\mybnot{B}}
-\newcommand{\notc}{\mybnot{C}}
-\newcommand{\notd}{\mybnot{D}}
-
-\newcommand{\conditional}{{p \myimplies q}}
-\newcommand{\inverse}{{\notp{} \myimplies \notq{}}}
-\newcommand{\converse}{{q \myimplies p}}
-\newcommand{\contrapositive}{{\notq{} \myimplies \notp{}}}
-\newcommand{\biconditional}{{p \myiff{} q}}
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\conditional}{{p {\rightarrow} q}}
+\newcommand{\inverse}{{\sim\!{p}{} {\rightarrow} \sim\!{q}{}}}
+\newcommand{\converse}{{q {\rightarrow} p}}
+\newcommand{\contrapositive}{{\sim\!{q}{} {\rightarrow} \sim\!{p}{}}}
+\newcommand{\biconditional}{{p {\leftrightarrow}{} q}}
 
 \newcommand{\intersection}{\cap}
 \newcommand{\intersect}{\cap}
@@ -167,9 +146,9 @@
 <p id="p-208">First, let us look at the connections between the two sets of symbols we've used so far. <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t2 lines">Logic</td>
-<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(p\myand q\)</span></td>
-<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(p\myor q\)</span></td>
-<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(\notp\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(p{\wedge} q\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(p{\vee} q\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(\sim\!{p}\)</span></td>
 <td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(F\)</span></td>
 <td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(T\)</span></td>
 </tr>
@@ -177,7 +156,7 @@
 <td class="c m b2 r2 l2 t0 lines">Boolean Algebra</td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(AB\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(A+B\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\nota\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(\overline{A}\)</span></td>
 <td class="c m b2 r2 l0 t0 lines">0</td>
 <td class="c m b2 r2 l0 t0 lines">1</td>
 </tr>
@@ -190,10 +169,10 @@
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(0\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(1\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myand 0\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myor 0\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myand 1\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myor 1\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\wedge} 0\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\vee} 0\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\wedge} 1\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\vee} 1\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">0</td>
@@ -220,10 +199,10 @@
 <tr><td class="l m b2 r0 l0 t0 lines"><em class="alert">Logic</em></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><div class="displaymath process-math" data-contains-math-knowls="" id="md-43">
 \begin{align*}
-p\myand 0 \amp\Leftrightarrow 0\\
-p\myor 0\amp\Leftrightarrow p\\
-p\myand 1\amp\Leftrightarrow p\\
-p\myor 1\amp\Leftrightarrow 1
+p{\wedge} 0 \amp\Leftrightarrow 0\\
+p{\vee} 0\amp\Leftrightarrow p\\
+p{\wedge} 1\amp\Leftrightarrow p\\
+p{\vee} 1\amp\Leftrightarrow 1
 \end{align*}
 </div></td></tr>
 </table></div>
@@ -244,8 +223,8 @@ A+1\amp = 1
 <p id="p-213">We deduce the <dfn class="terminology">idempotent laws</dfn> in the same way.  Consider the following table, given using logic notation: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myand p\)</span></td>
-<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p\myor p\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\wedge} p\)</span></td>
+<td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(p{\vee} p\)</span></td>
 </tr>
 <tr>
 <td class="c m b2 r2 l2 t0 lines">0</td>
@@ -264,8 +243,8 @@ A+1\amp = 1
 <tr><td class="l m b2 r0 l0 t0 lines"><em class="alert">Logic</em></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><div class="displaymath process-math" data-contains-math-knowls="" id="md-45">
 \begin{align*}
-p\myand p \amp\Leftrightarrow p\\
-p\myor p\amp\Leftrightarrow p
+p{\wedge} p \amp\Leftrightarrow p\\
+p{\vee} p\amp\Leftrightarrow p
 \end{align*}
 </div></td></tr>
 </table></div>
@@ -287,9 +266,9 @@ A+A\amp = A
 <tr><td class="l m b2 r0 l0 t0 lines"><em class="alert">Logic</em></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><div class="displaymath process-math" data-contains-math-knowls="" id="md-47">
 \begin{align*}
-\mynot(\notp) \amp\Leftrightarrow p\\
-p\,\myand\,\notp\amp\Leftrightarrow 0\\
-p\,\myor\,\notp\amp\Leftrightarrow 1
+\sim\!(\sim\!{p}) \amp\Leftrightarrow p\\
+p\,{\wedge}\,\sim\!{p}\amp\Leftrightarrow 0\\
+p\,{\vee}\,\sim\!{p}\amp\Leftrightarrow 1
 \end{align*}
 </div></td></tr>
 </table></div>
@@ -297,9 +276,9 @@ p\,\myor\,\notp\amp\Leftrightarrow 1
 <tr><td class="l m b2 r0 l0 t0 lines"><em class="alert">Boolean</em></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><div class="displaymath process-math" data-contains-math-knowls="" id="md-48">
 \begin{align*}
-\mybnot{\nota}\amp =A\\
-A\cdot\nota\amp = 0\\
-A+\nota\amp = 1
+\overline{\overline{A}}\amp =A\\
+A\cdot\overline{A}\amp = 0\\
+A+\overline{A}\amp = 1
 \end{align*}
 </div></td></tr>
 </table></div>
@@ -312,8 +291,8 @@ A+\nota\amp = 1
 <tr><td class="l m b2 r0 l0 t0 lines"><em class="alert">Logic</em></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><div class="displaymath process-math" data-contains-math-knowls="" id="md-49">
 \begin{align*}
-p\myand q \amp\Leftrightarrow q\myand p\\
-p \myor q\amp\Leftrightarrow q\myor p
+p{\wedge} q \amp\Leftrightarrow q{\wedge} p\\
+p {\vee} q\amp\Leftrightarrow q{\vee} p
 \end{align*}
 </div></td></tr>
 </table></div>
@@ -335,8 +314,8 @@ A+B\amp =B+A
 <tr><td class="l m b2 r0 l0 t0 lines"><em class="alert">Logic</em></td></tr>
 <tr><td class="l m b0 r0 l0 t0 lines"><div class="displaymath process-math" data-contains-math-knowls="" id="md-51">
 \begin{align*}
-(p\myand q)\myand r \amp\Leftrightarrow p\myand(q\myand r)\\
-(p\myor q)\myor r\amp\Leftrightarrow p\myor(q\myor r)
+(p{\wedge} q){\wedge} r \amp\Leftrightarrow p{\wedge}(q{\wedge} r)\\
+(p{\vee} q){\vee} r\amp\Leftrightarrow p{\vee}(q{\vee} r)
 \end{align*}
 </div></td></tr>
 </table></div>
@@ -360,120 +339,120 @@ A+B\amp =B+A
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">Identity</td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p\myand 1\Leftrightarrow p\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p{\wedge} 1\Leftrightarrow p\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A\cdot 1=A\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines"></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p\myor 1\Leftrightarrow 1\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p{\vee} 1\Leftrightarrow 1\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A+1=1\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines"></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p\myand 0\Leftrightarrow 0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p{\wedge} 0\Leftrightarrow 0\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A\cdot 0=0\)</span></td>
 </tr>
 <tr>
 <td class="c m b2 r2 l2 t0 lines"></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p\myor 0\Leftrightarrow p\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p{\vee} 0\Leftrightarrow p\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(A+0=A\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">Idempotent</td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p\myand p\Leftrightarrow p\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p{\wedge} p\Leftrightarrow p\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A\cdot A=A\)</span></td>
 </tr>
 <tr>
 <td class="c m b2 r2 l2 t0 lines"></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p\myor p\Leftrightarrow p\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p{\vee} p\Leftrightarrow p\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(A+A=A\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">Complement</td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\mynot(\notp)\Leftrightarrow p\)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\mybnot{\nota}=A\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\sim\!(\sim\!{p})\Leftrightarrow p\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(\overline{\overline{A}}=A\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines"></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p\,\myand\,\notp\Leftrightarrow 0 \)</span></td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A\cdot\nota=0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p\,{\wedge}\,\sim\!{p}\Leftrightarrow 0 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A\cdot\overline{A}=0\)</span></td>
 </tr>
 <tr>
 <td class="c m b2 r2 l2 t0 lines"></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p\,\myor\,\notp\Leftrightarrow 1\)</span></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(A+\nota=1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p\,{\vee}\,\sim\!{p}\Leftrightarrow 1\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(A+\overline{A}=1\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">Commutative</td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p\myand q\Leftrightarrow q\myand p\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(p{\wedge} q\Leftrightarrow q{\wedge} p\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(A\cdot B=B\cdot A\)</span></td>
 </tr>
 <tr>
 <td class="c m b2 r2 l2 t0 lines"></td>
-<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p\myor q\Leftrightarrow q\myor p\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(p{\vee} q\Leftrightarrow q{\vee} p\)</span></td>
 <td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(A+B=B+A\)</span></td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">Associative</td>
-<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\((p\myand q)\myand r\Leftrightarrow p\myand(q\myand r)\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\((p{\wedge} q){\wedge} r\Leftrightarrow p{\wedge}(q{\wedge} r)\)</span></td>
 <td class="c m b0 r2 l0 t0 lines"><span class="process-math">\((A\cdot B)\cdot C=A\cdot(B\cdot C)\)</span></td>
 </tr>
 <tr>
 <td class="c m b3 r2 l2 t0 lines"></td>
-<td class="c m b3 r2 l0 t0 lines"><span class="process-math">\((p\myor q)\myor r\Leftrightarrow p\myor(q\myor r)\)</span></td>
+<td class="c m b3 r2 l0 t0 lines"><span class="process-math">\((p{\vee} q){\vee} r\Leftrightarrow p{\vee}(q{\vee} r)\)</span></td>
 <td class="c m b3 r2 l0 t0 lines"><span class="process-math">\((A+B)+C=A+(B+C)\)</span></td>
 </tr>
 </table></div></p></section><section class="subsection" id="ssec-simplifying-logical-expr1"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.5.7</span> <span class="title">Simplifying Logical Expressions</span>
 </h3>
 <p id="p-223">We use the laws of logic to simplify logical expressions or to prove logical equivalence without resorting to truth tables.</p>
-<p id="p-224">Suppose we wish to simplify <span class="process-math">\((p\myand q)\myor(\notq\,\myand\, 0)\myor(\notr\,\myand\,r)\text{.}\)</span>  Note that this would require a truth table with 8 rows to show all combinations of <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(q\text{,}\)</span> and <span class="process-math">\(r\text{.}\)</span>  Less work is required to simplify the expression using the laws of logic.  You can think of the laws of logic as summary statements of truth tables.</p>
+<p id="p-224">Suppose we wish to simplify <span class="process-math">\((p{\wedge} q){\vee}(\sim\!{q}\,{\wedge}\, 0){\vee}(\sim\!{r}\,{\wedge}\,r)\text{.}\)</span>  Note that this would require a truth table with 8 rows to show all combinations of <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(q\text{,}\)</span> and <span class="process-math">\(r\text{.}\)</span>  Less work is required to simplify the expression using the laws of logic.  You can think of the laws of logic as summary statements of truth tables.</p>
 <p id="p-225">The procedure for simplifying an expression using the laws of logic is to simplify each piece of the expression using a single law, then write the name of the law you are using to one side. Writing the name of the law is <em class="alert">required</em>, and <em class="alert">not optional</em>!  If you are using more than one law, then use a separate line for each law/step.</p>
 <p id="p-226">Let's use the laws of logic to simplify the statement given earlier: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\((p\myand 1)\myor(\notq\,\myand\, 0)\myor(\notr\,\myand r)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\((p{\wedge} 1){\vee}(\sim\!{q}\,{\wedge}\, 0){\vee}(\sim\!{r}\,{\wedge} r)\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p\myor 0\myor(\notr\,\myand\,r)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p{\vee} 0{\vee}(\sim\!{r}\,{\wedge}\,r)\)</span></td>
 <td class="l m b0 r0 l0 t0 lines">identity</td>
 </tr>
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\((p\myor 0)\myor(\notr\,\myand\,r)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\((p{\vee} 0){\vee}(\sim\!{r}\,{\wedge}\,r)\)</span></td>
 <td class="l m b0 r0 l0 t0 lines">associative</td>
 </tr>
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p\myor(\notr\,\myand\,r)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p{\vee}(\sim\!{r}\,{\wedge}\,r)\)</span></td>
 <td class="l m b0 r0 l0 t0 lines">identity</td>
 </tr>
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p\myor(r\,\myand\,\notr)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p{\vee}(r\,{\wedge}\,\sim\!{r})\)</span></td>
 <td class="l m b0 r0 l0 t0 lines">commutative</td>
 </tr>
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p\myor 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p{\vee} 0\)</span></td>
 <td class="l m b0 r0 l0 t0 lines">complement</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p\)</span></td>
 <td class="l m b0 r0 l0 t0 lines">identity</td>
 </tr>
-</table></div> So we see that <span class="process-math">\((p\myand q)\myor(\notq\,\myand\, 0)\myor(\notr\,\myand\,r)\Leftrightarrow p\text{.}\)</span></p>
+</table></div> So we see that <span class="process-math">\((p{\wedge} q){\vee}(\sim\!{q}\,{\wedge}\, 0){\vee}(\sim\!{r}\,{\wedge}\,r)\Leftrightarrow p\text{.}\)</span></p>
 <p id="p-227">The simplification can be done another way: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\((p\myand 1)\myor(\notq\,\myand \,0)\myor(\notr\,\myand\,r)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\((p{\wedge} 1){\vee}(\sim\!{q}\,{\wedge} \,0){\vee}(\sim\!{r}\,{\wedge}\,r)\)</span></td>
 <td class="c m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p\myor 0\myor(\notr\,\myand\,r)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p{\vee} 0{\vee}(\sim\!{r}\,{\wedge}\,r)\)</span></td>
 <td class="l m b0 r0 l0 t0 lines">identity</td>
 </tr>
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p\myor 0\myor 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p{\vee} 0{\vee} 0\)</span></td>
 <td class="l m b0 r0 l0 t0 lines">complement</td>
 </tr>
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p\myor 0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(p{\vee} 0\)</span></td>
 <td class="l m b0 r0 l0 t0 lines">definition of <em class="emphasis">or</em>
 </td>
 </tr>
@@ -484,23 +463,23 @@ A+B\amp =B+A
 </table></div> The conclusion is the same, as we should expect!</p>
 <article class="example example-like" id="examp-simpl-logic-laws"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-examp-simpl-logic-laws"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-examp-simpl-logic-laws"><article class="example example-like">Simplify <span class="process-math">\((p\,\myor\,\notp)\myand(\notp\,\myor\,\notp)\text{.}\)</span><div class="solutions">
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-examp-simpl-logic-laws"><article class="example example-like">Simplify <span class="process-math">\((p\,{\vee}\,\sim\!{p}){\wedge}(\sim\!{p}\,{\vee}\,\sim\!{p})\text{.}\)</span><div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-17" id="answer-17"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-17"><div class="answer solution-like">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\((p\,\myor\notp)\myand(\notp\,\myor\notp)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\((p\,{\vee}\sim\!{p}){\wedge}(\sim\!{p}\,{\vee}\sim\!{p})\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"></td>
 </tr>
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\myand(\notp\,\myor\,\notp)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1{\wedge}(\sim\!{p}\,{\vee}\,\sim\!{p})\)</span></td>
 <td class="l m b0 r0 l0 t0 lines">complement</td>
 </tr>
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\myand(\notp)\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1{\wedge}(\sim\!{p})\)</span></td>
 <td class="l m b0 r0 l0 t0 lines">idempotent</td>
 </tr>
 <tr>
-<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\notp\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(\sim\!{p}\)</span></td>
 <td class="l m b0 r0 l0 t0 lines">identity</td>
 </tr>
 </table></div> (If you applied the laws correctly but in a different order or combination, you should still come to the same, correct conclusion.)</div></div>
@@ -522,14 +501,14 @@ A+B\amp =B+A
 <div class="introduction" id="introduction-51">Name the law of logic used in the following.  Note that the variable names have been changed, but that the law is still valid.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-259"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \notq\myor 1\Leftrightarrow 1\)</span></article><article class="exercise exercise-like" id="exercise-260"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mybnot{\notb}=B\)</span></article><article class="exercise exercise-like" id="exercise-261"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \notr\myand r\Leftrightarrow 0\)</span></article><article class="exercise exercise-like" id="exercise-262"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \notq\myor 0\Leftrightarrow\notq\)</span></article><article class="exercise exercise-like" id="exercise-263"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \notb\cdot 1=\notb\)</span></article><article class="exercise exercise-like" id="exercise-264"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
-<span class="process-math">\(\ q\myor q\Leftrightarrow q\)</span></article><article class="exercise exercise-like" id="exercise-265"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
-<span class="process-math">\(\ AB+\mybnot{AB}=1\)</span></article><article class="exercise exercise-like" id="exercise-266"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
-<span class="process-math">\(\ (\notp\myand q)\myand\,\notq\Leftrightarrow\notp\myand(q\,\myand\notq)\)</span></article>
+<span class="process-math">\(\ \sim\!{q}{\vee} 1\Leftrightarrow 1\)</span></article><article class="exercise exercise-like" id="exercise-260"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{\overline{B}}=B\)</span></article><article class="exercise exercise-like" id="exercise-261"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \sim\!{r}{\wedge} r\Leftrightarrow 0\)</span></article><article class="exercise exercise-like" id="exercise-262"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \sim\!{q}{\vee} 0\Leftrightarrow\sim\!{q}\)</span></article><article class="exercise exercise-like" id="exercise-263"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{B}\cdot 1=\overline{B}\)</span></article><article class="exercise exercise-like" id="exercise-264"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
+<span class="process-math">\(\ q{\vee} q\Leftrightarrow q\)</span></article><article class="exercise exercise-like" id="exercise-265"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<span class="process-math">\(\ AB+\overline{AB}=1\)</span></article><article class="exercise exercise-like" id="exercise-266"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (\sim\!{p}{\wedge} q){\wedge}\,\sim\!{q}\Leftrightarrow\sim\!{p}{\wedge}(q\,{\wedge}\sim\!{q})\)</span></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-48">
@@ -537,11 +516,11 @@ A+B\amp =B+A
 <div class="introduction" id="introduction-52">Simplify the given expression, and state the name of the law you used.  You should be able to do these in one step.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-267"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
-<span class="process-math">\(\ r\myor 0\)</span></article><article class="exercise exercise-like" id="exercise-268"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
-<span class="process-math">\(\ C+\notc\)</span></article><article class="exercise exercise-like" id="exercise-269"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mynot(\notr)\)</span></article><article class="exercise exercise-like" id="exercise-270"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \nota+\nota\)</span></article><article class="exercise exercise-like" id="exercise-271"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \notb\cdot 1\)</span></article>
+<span class="process-math">\(\ r{\vee} 0\)</span></article><article class="exercise exercise-like" id="exercise-268"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<span class="process-math">\(\ C+\overline{C}\)</span></article><article class="exercise exercise-like" id="exercise-269"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \sim\!(\sim\!{r})\)</span></article><article class="exercise exercise-like" id="exercise-270"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{A}+\overline{A}\)</span></article><article class="exercise exercise-like" id="exercise-271"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{B}\cdot 1\)</span></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-49">
@@ -552,9 +531,9 @@ A+B\amp =B+A
 </div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-272"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
-<span class="process-math">\(\ (p\myand p)\myor(q\,\myand\notq)\)</span></article><article class="exercise exercise-like" id="exercise-273"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
-<span class="process-math">\(\ (p\myor p)\myand (q\myor 0)\)</span></article><article class="exercise exercise-like" id="exercise-274"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>
-<span class="process-math">\(\ p\myor(q\,\myand\notq)\)</span></article>
+<span class="process-math">\(\ (p{\wedge} p){\vee}(q\,{\wedge}\sim\!{q})\)</span></article><article class="exercise exercise-like" id="exercise-273"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (p{\vee} p){\wedge} (q{\vee} 0)\)</span></article><article class="exercise exercise-like" id="exercise-274"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>
+<span class="process-math">\(\ p{\vee}(q\,{\wedge}\sim\!{q})\)</span></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-50">
@@ -562,10 +541,10 @@ A+B\amp =B+A
 <div class="introduction" id="introduction-54">Use the laws of logic to simplify the following Boolean expressions.  If you're completely stuck, try using a truth table instead.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-275"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>
-<span class="process-math">\(\ (A+A)\cdot(B+\notb)\)</span></article><article class="exercise exercise-like" id="exercise-276"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (A+A)\cdot(B+\overline{B})\)</span></article><article class="exercise exercise-like" id="exercise-276"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
 <span class="process-math">\(\ B\cdot 0+A\cdot A\)</span></article><article class="exercise exercise-like" id="exercise-277"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>
-<span class="process-math">\(\ (B+\notb)(A+1)\)</span></article><article class="exercise exercise-like" id="exercise-278"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
-<span class="process-math">\(\ AB\notb\)</span> (Remember, <span class="process-math">\(AB\)</span> and <span class="process-math">\(A\cdot B\)</span> are two different ways to write the same expression.)</article>
+<span class="process-math">\(\ (B+\overline{B})(A+1)\)</span></article><article class="exercise exercise-like" id="exercise-278"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
+<span class="process-math">\(\ AB\overline{B}\)</span> (Remember, <span class="process-math">\(AB\)</span> and <span class="process-math">\(A\cdot B\)</span> are two different ways to write the same expression.)</article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-51">
@@ -573,10 +552,10 @@ A+B\amp =B+A
 <div class="introduction" id="introduction-55">Prove the following Boolean expressions are equivalent using the laws of logic. On each line of your proof, manipulate only one side of the statement unless you are performing the same manipulation on both sides. If you're completely stuck, try using a truth table.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-279"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
-<span class="process-math">\(\ (A\nota)\notb=A(B\notb)\)</span></article><article class="exercise exercise-like" id="exercise-280"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
-<span class="process-math">\(\ B\cdot 1+A\nota=\mybnot{\notb\cdot 1}\)</span></article><article class="exercise exercise-like" id="exercise-281"><h5 class="heading"><span class="codenumber">27<span class="period">.</span></span></h5>
-<span class="process-math">\(\ (A+0)(B+\notb)=A\)</span></article><article class="exercise exercise-like" id="exercise-282"><h5 class="heading"><span class="codenumber">28<span class="period">.</span></span></h5>
-<span class="process-math">\(\ AA+\notb\,\notb=A+\notb\)</span></article>
+<span class="process-math">\(\ (A\overline{A})\overline{B}=A(B\overline{B})\)</span></article><article class="exercise exercise-like" id="exercise-280"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
+<span class="process-math">\(\ B\cdot 1+A\overline{A}=\overline{\overline{B}\cdot 1}\)</span></article><article class="exercise exercise-like" id="exercise-281"><h5 class="heading"><span class="codenumber">27<span class="period">.</span></span></h5>
+<span class="process-math">\(\ (A+0)(B+\overline{B})=A\)</span></article><article class="exercise exercise-like" id="exercise-282"><h5 class="heading"><span class="codenumber">28<span class="period">.</span></span></h5>
+<span class="process-math">\(\ AA+\overline{B}\,\overline{B}=A+\overline{B}\)</span></article>
 </div>
 </div></section><section class="solutions" id="solutions-10"><h3 class="heading hide-type">
 <span class="type">Solutions</span> <span class="codenumber">2.5.9</span> <span class="title">Solutions to Section 2.5 Exercises.</span>

@@ -1,7 +1,7 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-04-22T14:02:24-07:00       *-->
+<!--*       on 2022-06-03T11:45:41-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -72,37 +72,16 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-python',
 <link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\mynot}{\sim\!}
-\newcommand{\myand}{{\wedge}}
-\newcommand{\myor}{{\vee}}
-\newcommand{\myxor}{{\oplus}}
-\newcommand{\ttxor}{\texttt{XOR}}
-\newcommand{\mytt}[1]{\texttt{#1}}
-
-\newcommand{\myleq}{{\Leftrightarrow}}
-\newcommand{\myimplies}{{\rightarrow}}
-\newcommand{\myiff}{{\leftrightarrow}}
-
-\newcommand{\mylnot}[1]{{{\sim}#1}}
-\newcommand{\notp}{\mylnot{p}}
-\newcommand{\notq}{\mylnot{q}}
-\newcommand{\notr}{\mylnot{r}}
-\newcommand{\mybnot}[1]{{\overline{#1}}}
-\newcommand{\nota}{\mybnot{A}}
-\newcommand{\notb}{\mybnot{B}}
-\newcommand{\notc}{\mybnot{C}}
-\newcommand{\notd}{\mybnot{D}}
-
-\newcommand{\conditional}{{p \myimplies q}}
-\newcommand{\inverse}{{\notp{} \myimplies \notq{}}}
-\newcommand{\converse}{{q \myimplies p}}
-\newcommand{\contrapositive}{{\notq{} \myimplies \notp{}}}
-\newcommand{\biconditional}{{p \myiff{} q}}
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\conditional}{{p {\rightarrow} q}}
+\newcommand{\inverse}{{\sim\!{p}{} {\rightarrow} \sim\!{q}{}}}
+\newcommand{\converse}{{q {\rightarrow} p}}
+\newcommand{\contrapositive}{{\sim\!{q}{} {\rightarrow} \sim\!{p}{}}}
+\newcommand{\biconditional}{{p {\leftrightarrow}{} q}}
 
 \newcommand{\intersection}{\cap}
 \newcommand{\intersect}{\cap}
@@ -178,33 +157,33 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-python',
 <section class="subsection" id="ssec-logic-circuits"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.4.1</span> <span class="title">Logic Circuits</span>
 </h3>
-<section class="introduction" id="introduction-44"><p id="p-181">A logic circuit or digital circuit is an electrical circuit based on a discrete number of voltage levels, usually two.  Two-level circuits usually have one voltage set at zero volts, and the circuit then behaves like a switch, being either <em class="emphasis">on</em> or <em class="emphasis">off</em>.  A nice diagram for a switch looks like this: <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/fig-switch.svg" role="img" class="contained"></div> so that when the switch is open, as in the diagram, no current exists and the switch is <em class="emphasis">off</em>.  When the switch closes and there's a clear path from the left side to the right side, the switch is <em class="emphasis">on</em>.</p>
+<section class="introduction" id="introduction-44"><p id="p-181">A logic circuit or digital circuit is an electrical circuit based on a discrete number of voltage levels, usually two.  Two-level circuits usually have one voltage set at zero volts, and the circuit then behaves like a switch, being either <em class="emphasis">on</em> or <em class="emphasis">off</em>.  A nice diagram for a switch looks like this: <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-switch.svg" role="img" class="contained"></div> so that when the switch is open, as in the diagram, no current exists and the switch is <em class="emphasis">off</em>.  When the switch closes and there's a clear path from the left side to the right side, the switch is <em class="emphasis">on</em>.</p>
 <p id="p-182">A digital circuit then makes logical decisions, based on the input to the circuit.  The simplest logic circuits are called <em class="emphasis">gates</em>.  Physically, a <dfn class="terminology">gate</dfn> is a transistor circuit which takes one or more voltage inputs and gives a single voltage output.</p>
 <p id="p-183">One way to represent the action of a gate is by using a truth table.  As is usual in a truth table, all possible combinations of the input voltages are given, as well as the output of the gate for each set of inputs.  Each input voltage is given a symbol, such as <span class="process-math">\(A\text{.}\)</span>  When the input signal is off, the value of <span class="process-math">\(A\)</span> is given as 0, and when it is on, the value of <span class="process-math">\(A\)</span> is 1.  The associated truth table then looks exactly like those we studied with logical propositions.</p></section><section class="subsubsection" id="sssec-and-gate"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.4.1.1</span> <span class="title"><em class="emphasis">and</em> gate</span>
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title"><em class="emphasis">and</em> gate</span>
 </h4>
-<p id="p-184">The <dfn class="terminology">switch representation</dfn> of an <em class="emphasis">and</em> gate looks like this:  <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/fig-switch-and.svg" role="img" class="contained"></div> It is a series circuit, and both switches must be closed (switched <em class="emphasis">on</em>) for the circuit to carry current.  You can see, then, that this is the same as <span class="process-math">\(A\)</span> <em class="emphasis">and</em> <span class="process-math">\(B\text{,}\)</span> since <span class="process-math">\(A\)</span> <em class="emphasis">and</em> <span class="process-math">\(B\)</span> is true only when both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are true.</p>
-<p id="p-185">Another common representation is the <dfn class="terminology">gate representation</dfn>, which looks like this:  <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/fig-gate-and.svg" role="img" class="contained"></div> In symbols, we write <span class="process-math">\(A\)</span> <em class="emphasis">and</em> <span class="process-math">\(B\)</span> as <span class="process-math">\(A\cdot B\)</span> or just <span class="process-math">\(AB\text{.}\)</span></p></section><section class="subsubsection" id="sssec-or-gate"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.4.1.2</span> <span class="title"><em class="emphasis">or</em> gate</span>
+<p id="p-184">The <dfn class="terminology">switch representation</dfn> of an <em class="emphasis">and</em> gate looks like this:  <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-switch-and.svg" role="img" class="contained"></div> It is a series circuit, and both switches must be closed (switched <em class="emphasis">on</em>) for the circuit to carry current.  You can see, then, that this is the same as <span class="process-math">\(A\)</span> <em class="emphasis">and</em> <span class="process-math">\(B\text{,}\)</span> since <span class="process-math">\(A\)</span> <em class="emphasis">and</em> <span class="process-math">\(B\)</span> is true only when both <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are true.</p>
+<p id="p-185">Another common representation is the <dfn class="terminology">gate representation</dfn>, which looks like this:  <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-gate-and.svg" role="img" class="contained"></div> In symbols, we write <span class="process-math">\(A\)</span> <em class="emphasis">and</em> <span class="process-math">\(B\)</span> as <span class="process-math">\(A\cdot B\)</span> or just <span class="process-math">\(AB\text{.}\)</span></p></section><section class="subsubsection" id="sssec-or-gate"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title"><em class="emphasis">or</em> gate</span>
 </h4>
-<p id="p-186">The switch representation of an <em class="emphasis">or</em> gate looks like this:  <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/fig-switch-or.svg" role="img" class="contained"></div> It is a parallel circuit, and at least one switch must be closed (on) for the circuit to carry current (say from left to right).  You can see, then, that this is the same as <span class="process-math">\(A\)</span> <em class="emphasis">or</em> <span class="process-math">\(B\text{,}\)</span> since <span class="process-math">\(A\)</span> <em class="emphasis">or</em> <span class="process-math">\(B\)</span> is true when either <span class="process-math">\(A\)</span> is true or <span class="process-math">\(B\)</span> is true, or both.</p>
-<p id="p-187">The gate representation looks like this:  <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/fig-gate-or.svg" role="img" class="contained"></div> In symbols we write <span class="process-math">\(A\)</span> <em class="emphasis">or</em> <span class="process-math">\(B\)</span> as <span class="process-math">\(A+B\text{.}\)</span></p></section><section class="subsubsection" id="sssec-not-gate"><h4 class="heading hide-type">
-<span class="type">Subsubsection</span> <span class="codenumber">2.4.1.3</span> <span class="title"><em class="emphasis">not</em> gate</span>
+<p id="p-186">The switch representation of an <em class="emphasis">or</em> gate looks like this:  <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-switch-or.svg" role="img" class="contained"></div> It is a parallel circuit, and at least one switch must be closed (on) for the circuit to carry current (say from left to right).  You can see, then, that this is the same as <span class="process-math">\(A\)</span> <em class="emphasis">or</em> <span class="process-math">\(B\text{,}\)</span> since <span class="process-math">\(A\)</span> <em class="emphasis">or</em> <span class="process-math">\(B\)</span> is true when either <span class="process-math">\(A\)</span> is true or <span class="process-math">\(B\)</span> is true, or both.</p>
+<p id="p-187">The gate representation looks like this:  <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-gate-or.svg" role="img" class="contained"></div> In symbols we write <span class="process-math">\(A\)</span> <em class="emphasis">or</em> <span class="process-math">\(B\)</span> as <span class="process-math">\(A+B\text{.}\)</span></p></section><section class="subsubsection" id="sssec-not-gate"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span> <span class="codenumber"></span> <span class="title"><em class="emphasis">not</em> gate</span>
 </h4>
-<p id="p-188">The <em class="emphasis">not</em> gate, or <em class="emphasis">inverter</em>, has the diagram  <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="images/fig-gate-not.svg" role="img" class="contained"></div> and we write <em class="emphasis">not</em> <span class="process-math">\(A\)</span> as <span class="process-math">\(\nota\text{,}\)</span> just as in set notation.  If the negation happens in combination with another gate, we usually omit the triangle and just have a little circle to show the negation, as in the next subsection.</p></section></section><section class="subsection" id="ssec-gatereps-logicircs"><h3 class="heading hide-type">
+<p id="p-188">The <em class="emphasis">not</em> gate, or <em class="emphasis">inverter</em>, has the diagram  <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/fig-gate-not.svg" role="img" class="contained"></div> and we write <em class="emphasis">not</em> <span class="process-math">\(A\)</span> as <span class="process-math">\(\overline{A}\text{,}\)</span> just as in set notation.  If the negation happens in combination with another gate, we usually omit the triangle and just have a little circle to show the negation, as in the next subsection.</p></section></section><section class="subsection" id="ssec-gatereps-logicircs"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.4.2</span> <span class="title">Gate Representations of Logic Circuits</span>
 </h3>
-<p id="p-189">The gate representation of the logic circuit for <span class="process-math">\(A\notb\)</span> is then <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/fig-AandnotB.svg" role="img" class="contained"></div> with the round circle on the input <span class="process-math">\(B\)</span> negating it, so that the two inputs to the <em class="emphasis">and</em> gate are then <span class="process-math">\(A\)</span> and <span class="process-math">\(\notb\text{.}\)</span></p>
-<p id="p-190">The gate representation for <span class="process-math">\(\mybnot{A+B}\)</span> is <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/fig-notAorB.svg" role="img" class="contained"></div> The <em class="emphasis">or</em> gate gives <span class="process-math">\(A+B\text{,}\)</span> and the little round circle on the output indicates the negation.</p>
+<p id="p-189">The gate representation of the logic circuit for <span class="process-math">\(A\overline{B}\)</span> is then <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-AandnotB.svg" role="img" class="contained"></div> with the round circle on the input <span class="process-math">\(B\)</span> negating it, so that the two inputs to the <em class="emphasis">and</em> gate are then <span class="process-math">\(A\)</span> and <span class="process-math">\(\overline{B}\text{.}\)</span></p>
+<p id="p-190">The gate representation for <span class="process-math">\(\overline{A+B}\)</span> is <div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/fig-notAorB.svg" role="img" class="contained"></div> The <em class="emphasis">or</em> gate gives <span class="process-math">\(A+B\text{,}\)</span> and the little round circle on the output indicates the negation.</p>
 <article class="example example-like" id="ex-not-notAandB"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-ex-not-notAandB"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-not-notAandB"><article class="example example-like">What is the logic circuit expression for the following gate diagram? <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="images/fig-not-notAandB.svg" role="img" class="contained"></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-ex-not-notAandB"><article class="example example-like">What is the logic circuit expression for the following gate diagram? <div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/fig-not-notAandB.svg" role="img" class="contained"></div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><span class="process-math">\(\mybnot{\nota{}B}\)</span></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-15" id="answer-15"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-15"><div class="answer solution-like"><span class="process-math">\(\overline{\overline{A}{}B}\)</span></div></div>
 </div></article></div></section><section class="subsection" id="ssec-boolean-algebra"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.4.3</span> <span class="title">Boolean Algebra</span>
 </h3>
-<p id="p-191">The symbols used for circuits, <span class="process-math">\(AB\text{,}\)</span> <span class="process-math">\(A+B\text{,}\)</span> and <span class="process-math">\(\nota\text{,}\)</span> are the same symbols as used in Boolean algebra.  In this type of algebra, each variable (<span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> etc.) can take only the value 0 or 1.</p>
+<p id="p-191">The symbols used for circuits, <span class="process-math">\(AB\text{,}\)</span> <span class="process-math">\(A+B\text{,}\)</span> and <span class="process-math">\(\overline{A}\text{,}\)</span> are the same symbols as used in Boolean algebra.  In this type of algebra, each variable (<span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> etc.) can take only the value 0 or 1.</p>
 <p id="p-192">Truth tables in Boolean algebra then look very similar to the truth tables that we've studied in logic.  For example, the truth table showing <span class="process-math">\(AB\)</span> and <span class="process-math">\(A+B\)</span> is: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(A\)</span></td>
@@ -242,8 +221,8 @@ sagecell.makeSagecell({inputLocation: 'pre.sagecell-python',
 <ul class="disc">
 <li id="li-212"><p id="p-derived-li-212"><span class="process-math">\(AB+C\qquad\)</span> First evaluate <span class="process-math">\(AB\text{,}\)</span> then use the result as the first variable in the <em class="emphasis">or</em> operation with <span class="process-math">\(C\)</span></p></li>
 <li id="li-213"><p id="p-derived-li-213"><span class="process-math">\(A+BC\qquad\)</span> First evaluate <span class="process-math">\(BC\text{,}\)</span> then use that result as the second variable in the <em class="emphasis">or</em> operation with <span class="process-math">\(A\text{.}\)</span></p></li>
-<li id="li-214"><p id="p-derived-li-214"><span class="process-math">\(\nota{}B\qquad\)</span> First evaluate the negation of <span class="process-math">\(A\text{,}\)</span> then use that result in the <em class="emphasis">and</em> operation with <span class="process-math">\(B\text{.}\)</span></p></li>
-<li id="li-215"><p id="p-derived-li-215"><span class="process-math">\(\mybnot{A+B}\qquad\)</span> First evaluate <span class="process-math">\(A+B\text{,}\)</span> then negate the result.  Note the implied grouping of <span class="process-math">\(A+B\text{.}\)</span></p></li>
+<li id="li-214"><p id="p-derived-li-214"><span class="process-math">\(\overline{A}{}B\qquad\)</span> First evaluate the negation of <span class="process-math">\(A\text{,}\)</span> then use that result in the <em class="emphasis">and</em> operation with <span class="process-math">\(B\text{.}\)</span></p></li>
+<li id="li-215"><p id="p-derived-li-215"><span class="process-math">\(\overline{A+B}\qquad\)</span> First evaluate <span class="process-math">\(A+B\text{,}\)</span> then negate the result.  Note the implied grouping of <span class="process-math">\(A+B\text{.}\)</span></p></li>
 <li id="li-216"><p id="p-derived-li-216"><span class="process-math">\(A(B+C)\qquad\)</span> First evaluate the grouped expression, then use the result in the <em class="emphasis">and</em> operation with <span class="process-math">\(A\text{.}\)</span></p></li>
 </ul>
 <p id="p-195">Truth tables can be used to demonstrate logical equivalence between Boolean expressions.</p>
@@ -352,15 +331,15 @@ print(1 or 0)
 <div class="introduction" id="introduction-45">Draw the gate representation for the following logical expressions.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-221"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<span class="process-math">\(\ A+\notb\)</span></article><article class="exercise exercise-like" id="exercise-222"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mybnot{A+B}\)</span></article><article class="exercise exercise-like" id="exercise-223"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \nota{}B\)</span></article><article class="exercise exercise-like" id="exercise-224"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \nota\,\notb\)</span></article><article class="exercise exercise-like" id="exercise-225"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mybnot{A\notb}\)</span></article><article class="exercise exercise-like" id="exercise-226"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<span class="process-math">\(\ A\notb+C\)</span></article><article class="exercise exercise-like" id="exercise-227"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<span class="process-math">\(\ A(B+\notc)\)</span></article><article class="exercise exercise-like" id="exercise-228"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mybnot{AB}C\)</span></article><article class="exercise exercise-like" id="exercise-229"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mybnot{\mybnot{\nota\,\notb}+\notc}\)</span></article>
+<span class="process-math">\(\ A+\overline{B}\)</span></article><article class="exercise exercise-like" id="exercise-222"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{A+B}\)</span></article><article class="exercise exercise-like" id="exercise-223"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{A}{}B\)</span></article><article class="exercise exercise-like" id="exercise-224"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{A}\,\overline{B}\)</span></article><article class="exercise exercise-like" id="exercise-225"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{A\overline{B}}\)</span></article><article class="exercise exercise-like" id="exercise-226"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<span class="process-math">\(\ A\overline{B}+C\)</span></article><article class="exercise exercise-like" id="exercise-227"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<span class="process-math">\(\ A(B+\overline{C})\)</span></article><article class="exercise exercise-like" id="exercise-228"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{AB}C\)</span></article><article class="exercise exercise-like" id="exercise-229"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{\overline{\overline{A}\,\overline{B}}+\overline{C}}\)</span></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-43">
@@ -368,14 +347,14 @@ print(1 or 0)
 <div class="introduction" id="introduction-46">Write the Boolean expression which corresponds to the following gates.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-230"><h5 class="heading"><span class="codenumber">10<span class="period">.</span></span></h5>
-<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="images/fig-exer-gate-q-notA-and-notB.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-231"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
-<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="images/fig-exer-gate-q-not-notAorB.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-232"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
-<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="images/fig-exer-gate-q-not-notAornotB.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-233"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
-<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="images/fig-exer-gate-q-not-AandB.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-234"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/fig-exer-gate-q-AorB-and-C.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-235"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/fig-exer-gate-q-Aor-not-notBandC.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-236"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/fig-exer-gate-q-not--Aor-not-BorC.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-237"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
-<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/fig-exer-gate-q-not-notAandnotB--and-notC.svg" role="img" class="contained"></div></article>
+<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/fig-exer-gate-q-notA-and-notB.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-231"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/fig-exer-gate-q-not-notAorB.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-232"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/fig-exer-gate-q-not-notAornotB.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-233"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="generated/latex-image/fig-exer-gate-q-not-AandB.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-234"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-exer-gate-q-AorB-and-C.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-235"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-exer-gate-q-Aor-not-notBandC.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-236"><h5 class="heading"><span class="codenumber">16<span class="period">.</span></span></h5>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-exer-gate-q-not--Aor-not-BorC.svg" role="img" class="contained"></div></article><article class="exercise exercise-like" id="exercise-237"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
+<div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/fig-exer-gate-q-not-notAandnotB--and-notC.svg" role="img" class="contained"></div></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-44">
@@ -383,13 +362,13 @@ print(1 or 0)
 <div class="introduction" id="introduction-47">Give the truth tables for the following expressions.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-238"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
-<span class="process-math">\(\ A\nota\)</span></article><article class="exercise exercise-like" id="exercise-239"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
+<span class="process-math">\(\ A\overline{A}\)</span></article><article class="exercise exercise-like" id="exercise-239"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
 <span class="process-math">\(\ A+1\)</span></article><article class="exercise exercise-like" id="exercise-240"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>
-<span class="process-math">\(\ A\notb\)</span></article><article class="exercise exercise-like" id="exercise-241"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mybnot{A+B}\)</span></article><article class="exercise exercise-like" id="exercise-242"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
-<span class="process-math">\(\ A+\nota{}B\)</span></article><article class="exercise exercise-like" id="exercise-243"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>
+<span class="process-math">\(\ A\overline{B}\)</span></article><article class="exercise exercise-like" id="exercise-241"><h5 class="heading"><span class="codenumber">21<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{A+B}\)</span></article><article class="exercise exercise-like" id="exercise-242"><h5 class="heading"><span class="codenumber">22<span class="period">.</span></span></h5>
+<span class="process-math">\(\ A+\overline{A}{}B\)</span></article><article class="exercise exercise-like" id="exercise-243"><h5 class="heading"><span class="codenumber">23<span class="period">.</span></span></h5>
 <span class="process-math">\(\ (A+B)C\)</span></article><article class="exercise exercise-like" id="exercise-244"><h5 class="heading"><span class="codenumber">24<span class="period">.</span></span></h5>
-<span class="process-math">\(\ A+B+\notc\)</span></article>
+<span class="process-math">\(\ A+B+\overline{C}\)</span></article>
 </div>
 </div>
 <div class="exercisegroup" id="exercisegroup-45">
@@ -397,8 +376,8 @@ print(1 or 0)
 <div class="introduction" id="introduction-48">Are the two expressions logically equivalent?  Justify your answer by giving a truth table.</div>
 <div class="exercisegroup-exercises">
 <article class="exercise exercise-like" id="exercise-245"><h5 class="heading"><span class="codenumber">25<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mybnot{AB}\)</span> and <span class="process-math">\(\nota\,\notb\)</span></article><article class="exercise exercise-like" id="exercise-246"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
-<span class="process-math">\(\ \mybnot{A+B}\)</span> and <span class="process-math">\(\nota\,\notb\)</span></article><article class="exercise exercise-like" id="exercise-247"><h5 class="heading"><span class="codenumber">27<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{AB}\)</span> and <span class="process-math">\(\overline{A}\,\overline{B}\)</span></article><article class="exercise exercise-like" id="exercise-246"><h5 class="heading"><span class="codenumber">26<span class="period">.</span></span></h5>
+<span class="process-math">\(\ \overline{A+B}\)</span> and <span class="process-math">\(\overline{A}\,\overline{B}\)</span></article><article class="exercise exercise-like" id="exercise-247"><h5 class="heading"><span class="codenumber">27<span class="period">.</span></span></h5>
 <span class="process-math">\(\ A+BC\)</span> and <span class="process-math">\((A+B)C\)</span></article><article class="exercise exercise-like" id="exercise-248"><h5 class="heading"><span class="codenumber">28<span class="period">.</span></span></h5>
 <span class="process-math">\(\ A+AB\)</span> and <span class="process-math">\(A\)</span></article><article class="exercise exercise-like" id="exercise-249"><h5 class="heading"><span class="codenumber">29<span class="period">.</span></span></h5>
 <span class="process-math">\(\ (A+B)+C\)</span> and <span class="process-math">\(A+(B+C)\)</span></article>
@@ -413,7 +392,7 @@ print(1 or 0)
 <span class="process-math">\(\ A+A\)</span></article><article class="exercise exercise-like" id="exercise-252"><h5 class="heading"><span class="codenumber">32<span class="period">.</span></span></h5>
 <span class="process-math">\(\ A+0\)</span></article><article class="exercise exercise-like" id="exercise-253"><h5 class="heading"><span class="codenumber">33<span class="period">.</span></span></h5>
 <span class="process-math">\(\ A+AB\)</span></article><article class="exercise exercise-like" id="exercise-254"><h5 class="heading"><span class="codenumber">34<span class="period">.</span></span></h5>
-<span class="process-math">\(\ A(\nota+B)\)</span> - this one is a bit trickier.  If you are stuck, try writing the truth tables for combinations of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> like <span class="process-math">\((A+B)\)</span> for example, to find one that fits.</article>
+<span class="process-math">\(\ A(\overline{A}+B)\)</span> - this one is a bit trickier.  If you are stuck, try writing the truth tables for combinations of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{,}\)</span> like <span class="process-math">\((A+B)\)</span> for example, to find one that fits.</article>
 </div>
 </div></section><section class="solutions" id="solutions-9"><h3 class="heading hide-type">
 <span class="type">Solutions</span> <span class="codenumber">2.4.6</span> <span class="title">Solutions to Section 2.4 Exercises</span>
