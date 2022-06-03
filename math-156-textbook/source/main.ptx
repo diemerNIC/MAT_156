@@ -22572,7 +22572,7 @@
                     a_0 \amp = 2
                   </mrow>
                   <mrow>
-                    a_n\amp = 5a_{n - 1} \text{   for } n \ge 1
+                    a_n \amp = 5a_{n - 1} \text{   for } n \ge 1
                   </mrow>
                 </md>
               </answer>
@@ -22582,10 +22582,10 @@
             Generally, the recursive definition for <em>any</em> geometric sequence is
             <md>
               <mrow>
-                a_m \amp = \lt\text{ insert value here }\gt
+                a_m \amp = \lt \text{ insert value here } \gt
               </mrow>
               <mrow>
-                a_n \amp = a_{n-1}\times r \text{   for }n\ge m+1
+                a_n \amp = r\times a_{n-1},\, n \ge m+1
               </mrow>
             </md>
           </p>
