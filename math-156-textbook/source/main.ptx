@@ -18275,7 +18275,7 @@
                 <m>\ </m>If Jason is too full for dessert, then he did not eat a burger for dinner.
               </statement>
               <solution>
-                <m>\ q {\rightarrow}{} \sim\!{p}{}</m>
+                <m>\, q {\rightarrow}{} \sim\!{p}{}</m>
               </solution>
             </exercise>
             <exercise>
@@ -18331,7 +18331,7 @@
                 <m>\ </m>Either Jason is too full for dessert or he did not eat a burger for dinner.
               </statement>
               <solution>
-                <m>\ q{\vee}\sim\!{p}{}</m>
+                <m>\, q{\vee}\sim\!{p}{}</m>
               </solution>
             </exercise>
           </exercisegroup>
