@@ -136,7 +136,7 @@
   *{file}   {mt-msa.cfg}  {2006/02/04 v1.1}
   *{file}   {mt-msb.cfg}  {2005/06/01 v1.0}
   *{file}   {mt-cmr.cfg}  {2013/05/19 v2.2}
-  *{file}   {external/images/by-nc-sa.png}{0000/00/00 v0.0}
+  *{file}   {./external/images/by-nc-sa.png}{0000/00/00 v0.0}
   *{package}{lstlang1}    {2020/03/24 v1.8d}
   *{file}   {main.listing}{0000/00/00 v0.0}
   *{file}   {main.listing}{0000/00/00 v0.0}

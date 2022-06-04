@@ -17380,7 +17380,7 @@
             The Converse
           </title>
           <p>
-            If <m>p\conditional</m> is true, can we conclude that <m>\converse</m> is also true?  The statment <m>\converse</m> is called the <term>converse</term> of the statement <m>\conditional</m>.
+            If <m>\conditional</m> is true, can we conclude that <m>\converse</m> is also true?  The statment <m>\converse</m> is called the <term>converse</term> of the statement <m>\conditional</m>.
             <idx>converse</idx>
             Let's use our previous example again:
             <blockquote>
