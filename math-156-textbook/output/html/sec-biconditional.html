@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-03T12:35:53-07:00       *-->
+<!--*       on 2022-06-03T17:10:49-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -145,9 +145,9 @@
 <section class="subsection" id="ssec-bicond-connective"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.8.1</span> <span class="title">The Biconditional Connective</span>
 </h3>
-<p id="p-268">Consider the conditional <em class="emphasis">If you live in Victoria, then you live in BC.</em>  Remembering that the conditional has nothing to say if the first proposition is false, then it is possible for you to not live in Victoria but to still live in BC.  It is also possible to not live in Vicoria and also not live in BC.</p>
-<p id="p-269">Let's now consider the conditional <em class="emphasis">If the temperature outside is below <span class="process-math">\(0^{\circ}\text{C}\text{,}\)</span> then it is freezing outside.</em>  If I were to use this sentence in everyday English, I probably mean <em class="emphasis">If the temperature outside is below <span class="process-math">\(0^{\circ}\text{C}\text{,}\)</span> then it is freezing outide <em class="alert">and</em> if the temperature outside is <em class="alert">not</em> below <span class="process-math">\(0^{\circ}\text{C}\text{,}\)</span> then it is <em class="alert">not</em> freezing outside.</em>  So we could probably do with a new kind of connective that means <em class="emphasis">If <span class="process-math">\(p\)</span> then <span class="process-math">\(q\)</span> <em class="alert">and</em> if <span class="process-math">\(\sim\!{p}{}\)</span> then <span class="process-math">\(\sim\!{q}{}\)</span></em>.  The new connective is called the <dfn class="terminology">biconditional</dfn>, and is written <span class="process-math">\(\biconditional\)</span></p>
-<p id="p-270">Here is the truth table for the biconditional: <div class="tabular-box natural-width"><table class="tabular">
+<p id="p-284">Consider the conditional <em class="emphasis">If you live in Victoria, then you live in BC.</em>  Remembering that the conditional has nothing to say if the first proposition is false, then it is possible for you to not live in Victoria but to still live in BC.  It is also possible to not live in Vicoria and also not live in BC.</p>
+<p id="p-285">Let's now consider the conditional <em class="emphasis">If the temperature outside is below <span class="process-math">\(0^{\circ}\text{C}\text{,}\)</span> then it is freezing outside.</em>  If I were to use this sentence in everyday English, I probably mean <em class="emphasis">If the temperature outside is below <span class="process-math">\(0^{\circ}\text{C}\text{,}\)</span> then it is freezing outide <em class="alert">and</em> if the temperature outside is <em class="alert">not</em> below <span class="process-math">\(0^{\circ}\text{C}\text{,}\)</span> then it is <em class="alert">not</em> freezing outside.</em>  So we could probably do with a new kind of connective that means <em class="emphasis">If <span class="process-math">\(p\)</span> then <span class="process-math">\(q\)</span> <em class="alert">and</em> if <span class="process-math">\(\sim\!{p}{}\)</span> then <span class="process-math">\(\sim\!{q}{}\)</span></em>.  The new connective is called the <dfn class="terminology">biconditional</dfn>, and is written <span class="process-math">\(\biconditional\)</span></p>
+<p id="p-286">Here is the truth table for the biconditional: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l2 t3 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t3 lines"><span class="process-math">\(q\)</span></td>
@@ -174,8 +174,8 @@
 <td class="c m b3 r2 l0 t0 lines">1</td>
 </tr>
 </table></div></p>
-<p id="p-271">So if <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have the same truth value, then the biconditional is true and otherwise it is false.  (It is the negation of the <em class="emphasis">exclusive or</em>, <span class="process-math">\(p{\oplus} q\text{.}\)</span>)</p>
-<p id="p-272">There are a number of ways to specify the biconditional in English:</p>
+<p id="p-287">So if <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have the same truth value, then the biconditional is true and otherwise it is false.  (It is the negation of the <em class="emphasis">exclusive or</em>, <span class="process-math">\(p{\oplus} q\text{.}\)</span>)</p>
+<p id="p-288">There are a number of ways to specify the biconditional in English:</p>
 <ol class="decimal">
 <li id="li-310"><p id="p-derived-li-310">If and only if <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(q\text{.}\)</span></p></li>
 <li id="li-311"><p id="p-derived-li-311"><span class="process-math">\(p\)</span> if and only if <span class="process-math">\(q\text{.}\)</span></p></li>
@@ -276,12 +276,12 @@
 </div></article></div></p></section><section class="subsection" id="ssec-programming-apps"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.8.2</span> <span class="title">Programming Applications</span>
 </h3>
-<p id="p-273">The if-then statement is very common in programming.  In pseudocode, it usually takes the form</p>
+<p id="p-289">The if-then statement is very common in programming.  In pseudocode, it usually takes the form</p>
 <pre class="code-display tex2jax_ignore">
               if x &gt; 3 then print "Hello World"
             </pre>
-<p id="p-274">When you are debugging, it is tempting to think that this particular code fragment behaves more like the biconditional: if "Hello World" was output, was <span class="process-math">\(x\gt 3\text{?}\)</span>  It's tempting to think so, but what if "Hello World" was printed because of some other command?  What then can we conclude about <span class="process-math">\(x\text{?}\)</span></p>
-<p id="p-275">Let's examine this in more detail.  Recall that if <span class="process-math">\(\conditional\)</span> is true and <span class="process-math">\(q\)</span> is true, we cannot conclude anything about <span class="process-math">\(p\text{.}\)</span>  Now consider the following piece of pseudocode:</p>
+<p id="p-290">When you are debugging, it is tempting to think that this particular code fragment behaves more like the biconditional: if "Hello World" was output, was <span class="process-math">\(x\gt 3\text{?}\)</span>  It's tempting to think so, but what if "Hello World" was printed because of some other command?  What then can we conclude about <span class="process-math">\(x\text{?}\)</span></p>
+<p id="p-291">Let's examine this in more detail.  Recall that if <span class="process-math">\(\conditional\)</span> is true and <span class="process-math">\(q\)</span> is true, we cannot conclude anything about <span class="process-math">\(p\text{.}\)</span>  Now consider the following piece of pseudocode:</p>
 <pre class="code-display tex2jax_ignore">
               x=4
               y=0
@@ -289,7 +289,7 @@
               print "y = ", y
             </pre>
 <p class="continuation">The output will be "y=5".</p>
-<p id="p-276">Will the following pseudocode produce the same output?</p>
+<p id="p-292">Will the following pseudocode produce the same output?</p>
 <pre class="code-display tex2jax_ignore">
               x=2
               y=5
@@ -297,7 +297,7 @@
               print "y = ",y
             </pre>
 <p class="continuation">It will.  The conditional statement did not change the value of <span class="process-math">\(y\text{,}\)</span> but the value was set to 5 initially and so the output will be "y=5".  Once again, knowing that <span class="process-math">\(q\)</span> is true does not allow us to conclude anything about <span class="process-math">\(p\)</span> from the conditional <span class="process-math">\(\conditional\text{.}\)</span>  However, if the output was "y=4" or any other value not equal to 5, we can draw the conclusion that <span class="process-math">\(x\)</span> was not greater than 3.  if <span class="process-math">\(\conditional\)</span> is true and <span class="process-math">\(q\)</span> is false, we know with certainty that <span class="process-math">\(p\)</span> is false also.</p>
-<p id="p-277">The if-then-else construction behaves in a similar fashion.  Consider the following code fragment:</p>
+<p id="p-293">The if-then-else construction behaves in a similar fashion.  Consider the following code fragment:</p>
 <pre class="code-display tex2jax_ignore">
               if x &gt; 3 then
                 y = 5
@@ -306,7 +306,7 @@
               print "y = ",y,"z = ",z
             </pre>
 <p class="continuation">Only if the output tells you that <span class="process-math">\(y\neq 5\)</span> or <span class="process-math">\(z\neq 7\)</span> will you know with certainty something about <span class="process-math">\(x\text{.}\)</span></p>
-<p id="p-278">For special cases, the if-then-else construction can yield more information.  Consider the following:</p>
+<p id="p-294">For special cases, the if-then-else construction can yield more information.  Consider the following:</p>
 <pre class="code-display tex2jax_ignore">
               if x &gt; 3 then
                 y = 5

@@ -1,0 +1,30 @@
+################################################################
+PTX:ADVICE: /pretext[1]/book[1]/chapter[2]/section[2]/subsection[3]/p[2]/sidebyside[1]/figure[1]/image[1]
+You have an image description that is more than 125 characters long.
+Some screen readers will cut off reading alt text after the 125th character.
+Rewrite the description to be 125 characters or fewer.
+################################################################
+PTX:ADVICE: /pretext[1]/book[1]/chapter[2]/section[2]/subsection[3]/p[7]/figure[1]/image[1]
+You have an image description that is more than 125 characters long.
+Some screen readers will cut off reading alt text after the 125th character.
+Rewrite the description to be 125 characters or fewer.
+################################################################
+PTX:ADVICE: /pretext[1]/book[1]/chapter[2]/section[2]/exercises[1]/exercisegroup[1]/exercise[6]/solution[1]/image[1]
+You have an image description that is more than 125 characters long.
+Some screen readers will cut off reading alt text after the 125th character.
+Rewrite the description to be 125 characters or fewer.
+################################################################
+PTX:ADVICE: /pretext[1]/book[1]/chapter[2]/section[2]/exercises[1]/exercisegroup[2]/exercise[5]/solution[1]/image[1]
+You have an image description that is more than 125 characters long.
+Some screen readers will cut off reading alt text after the 125th character.
+Rewrite the description to be 125 characters or fewer.
+################################################################
+PTX:ADVICE: /pretext[1]/book[1]/chapter[2]/section[2]/exercises[1]/exercisegroup[2]/exercise[6]/solution[1]/image[1]
+You have an image description that is more than 125 characters long.
+Some screen readers will cut off reading alt text after the 125th character.
+Rewrite the description to be 125 characters or fewer.
+################################################################
+PTX:ADVICE: /pretext[1]/book[1]/chapter[2]/section[2]/exercises[1]/exercisegroup[2]/exercise[7]/solution[1]/image[1]
+You have an image description that is more than 125 characters long.
+Some screen readers will cut off reading alt text after the 125th character.
+Rewrite the description to be 125 characters or fewer.

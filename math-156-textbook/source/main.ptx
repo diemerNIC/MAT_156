@@ -13787,41 +13787,47 @@
               <title>Identity Laws</title>
               <p>
                 <sidebyside width="20%" margins="20%">
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Logic</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>p{\wedge} 0 \amp\Leftrightarrow 0</mrow>
-                          <mrow>p{\vee} 0\amp\Leftrightarrow p</mrow>
-                          <mrow>p{\wedge} 1\amp\Leftrightarrow p</mrow>
-                          <mrow>p{\vee} 1\amp\Leftrightarrow 1</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Logic  </alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>
+                        p{\wedge} 0 \amp\Leftrightarrow 0
+                      </mrow>
+                      <mrow>
+                        p{\vee} 0\amp\Leftrightarrow p
+                      </mrow>
+                      <mrow>
+                        p{\wedge} 1\amp\Leftrightarrow p
+                      </mrow>
+                      <mrow>
+                        p{\vee} 1\amp\Leftrightarrow 1
+                      </mrow>
+                    </md>
+                  </p>
 
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Boolean</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>A\cdot 0\amp = 0</mrow>
-                          <mrow>A+0\amp = A</mrow>
-                          <mrow>A\cdot 1\amp = A</mrow>
-                          <mrow>A+1\amp = 1</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Boolean  </alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>A\cdot 0\amp = 0</mrow>
+                      <mrow>A+0\amp = A</mrow>
+                      <mrow>A\cdot 1\amp = A</mrow>
+                      <mrow>A+1\amp = 1</mrow>
+                    </md>
+
+                  </p>
+
                 </sidebyside>
 
               </p>
@@ -13879,37 +13885,33 @@
               <title>Idempotent Laws</title>
               <p>
                 <sidebyside width="20%" margins="20%">
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Logic</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>p{\wedge} p \amp\Leftrightarrow p</mrow>
-                          <mrow>p{\vee} p\amp\Leftrightarrow p</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Logic</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>p{\wedge} p \amp\Leftrightarrow p</mrow>
+                      <mrow>p{\vee} p\amp\Leftrightarrow p</mrow>
+                    </md>
+                  </p>
 
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Boolean</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>A\cdot A\amp = A</mrow>
-                          <mrow>A+A\amp = A</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Boolean</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>A\cdot A\amp = A</mrow>
+                      <mrow>A+A\amp = A</mrow>
+                    </md>
+                  </p>
                 </sidebyside>
               </p>
             </assemblage>
@@ -13925,39 +13927,35 @@
               <title>Complement Laws</title>
               <p>
                 <sidebyside width="20%" margins="20%">
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Logic</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>\sim\!(\sim\!{p}) \amp\Leftrightarrow p</mrow>
-                          <mrow>p\,{\wedge}\,\sim\!{p}\amp\Leftrightarrow 0</mrow>
-                          <mrow>p\,{\vee}\,\sim\!{p}\amp\Leftrightarrow 1</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Logic</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>\sim\!(\sim\!{p}) \amp\Leftrightarrow p</mrow>
+                      <mrow>p\,{\wedge}\,\sim\!{p}\amp\Leftrightarrow 0</mrow>
+                      <mrow>p\,{\vee}\,\sim\!{p}\amp\Leftrightarrow 1</mrow>
+                    </md>
+                  </p>
 
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Boolean</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>\overline{\overline{A}}\amp =A</mrow>
-                          <mrow>A\cdot\overline{A}\amp = 0</mrow>
-                          <mrow>A+\overline{A}\amp = 1</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Boolean</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>\overline{\overline{A}}\amp =A</mrow>
+                      <mrow>A\cdot\overline{A}\amp = 0</mrow>
+                      <mrow>A+\overline{A}\amp = 1</mrow>
+                    </md>
+                  </p>
                 </sidebyside>
               </p>
             </assemblage>
@@ -13973,37 +13971,33 @@
               <title>Commutative Laws</title>
               <p>
                 <sidebyside width="20%" margins="20%">
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Logic</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>p{\wedge} q \amp\Leftrightarrow q{\wedge} p</mrow>
-                          <mrow>p {\vee} q\amp\Leftrightarrow q{\vee} p</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Logic</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>p{\wedge} q \amp\Leftrightarrow q{\wedge} p</mrow>
+                      <mrow>p {\vee} q\amp\Leftrightarrow q{\vee} p</mrow>
+                    </md>
+                  </p>
 
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Boolean</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>A\cdot B\amp =B\cdot A</mrow>
-                          <mrow>A+B\amp =B+A</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Boolean</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>A\cdot B\amp =B\cdot A</mrow>
+                      <mrow>A+B\amp =B+A</mrow>
+                    </md>
+                  </p>
                 </sidebyside>
               </p>
             </assemblage>
@@ -14019,37 +14013,33 @@
               <title>Associative Laws</title>
               <p>
                 <sidebyside width="30%" margins="auto">
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Logic</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>(p{\wedge} q){\wedge} r \amp\Leftrightarrow p{\wedge}(q{\wedge} r)</mrow>
-                          <mrow>(p{\vee} q){\vee} r\amp\Leftrightarrow p{\vee}(q{\vee} r)</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Logic</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>(p{\wedge} q){\wedge} r \amp\Leftrightarrow p{\wedge}(q{\wedge} r)</mrow>
+                      <mrow>(p{\vee} q){\vee} r\amp\Leftrightarrow p{\vee}(q{\vee} r)</mrow>
+                    </md>
+                  </p>
 
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Boolean</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>(A\cdot B)\cdot C\amp = A\cdot(B\cdot C)</mrow>
-                          <mrow>(A+B)+C\amp =A+(B+C)</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Boolean</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>(A\cdot B)\cdot C\amp = A\cdot(B\cdot C)</mrow>
+                      <mrow>(A+B)+C\amp =A+(B+C)</mrow>
+                    </md>
+                  </p>
                 </sidebyside>
               </p>
             </assemblage>
@@ -15298,37 +15288,33 @@
               <title>De Morgan's Laws</title>
               <p>
                 <sidebyside width="30%" margins="15%">
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Logic</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>\sim\!(p{\wedge} q)\amp\Leftrightarrow\,\sim\!{p}\,{\vee}\sim\!{q}</mrow>
-                          <mrow>\sim\!(p{\vee} q)\amp\Leftrightarrow\,\sim\!{p}\,{\wedge}\sim\!{q}.</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Logic</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>\sim\!(p{\wedge} q)\amp\Leftrightarrow\,\sim\!{p}\,{\vee}\sim\!{q}</mrow>
+                      <mrow>\sim\!(p{\vee} q)\amp\Leftrightarrow\,\sim\!{p}\,{\wedge}\sim\!{q}.</mrow>
+                    </md>
+                  </p>
 
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Boolean</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>\overline{A\cdot B}\amp =\overline{A}+\overline{B}</mrow>
-                          <mrow>\overline{A+B}\amp =\overline{A}\cdot\overline{B}</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Boolean</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>\overline{A\cdot B}\amp =\overline{A}+\overline{B}</mrow>
+                      <mrow>\overline{A+B}\amp =\overline{A}\cdot\overline{B}</mrow>
+                    </md>
+                  </p>
                 </sidebyside>
               </p>
             </assemblage>
@@ -15345,37 +15331,33 @@
               <title>Distributive Laws</title>
               <p>
                 <sidebyside width="30%" margins="auto">
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Logic</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>p{\wedge}(q{\vee} r)\amp\Leftrightarrow(p{\wedge} q){\vee}(p{\wedge} r)</mrow>
-                          <mrow>p{\vee}(q{\wedge} r)\amp\Leftrightarrow(p{\vee} q){\wedge}(p{\vee} r)</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Logic</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>p{\wedge}(q{\vee} r)\amp\Leftrightarrow(p{\wedge} q){\vee}(p{\wedge} r)</mrow>
+                      <mrow>p{\vee}(q{\wedge} r)\amp\Leftrightarrow(p{\vee} q){\wedge}(p{\vee} r)</mrow>
+                    </md>
+                  </p>
 
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Boolean</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>A(B+C)\amp =AB+AC</mrow>
-                          <mrow>A+BC\amp =(A+B)(A+C)</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Boolean</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>A(B+C)\amp =AB+AC</mrow>
+                      <mrow>A+BC\amp =(A+B)(A+C)</mrow>
+                    </md>
+                  </p>
                 </sidebyside>
               </p>
             </assemblage>
@@ -15392,41 +15374,37 @@
               <title>Absorption Laws</title>
               <p>
                 <sidebyside width="30%" margins="auto">
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Logic</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>p{\wedge}(p{\vee} q)\amp\Leftrightarrow p</mrow>
-                          <mrow>p{\wedge}(\sim\!{p}\,{\vee}\,q)\amp\Leftrightarrow\,p{\wedge} q</mrow>
-                          <mrow>p{\vee}(p{\wedge} q)\amp\Leftrightarrow\,p</mrow>
-                          <mrow>p{\vee}(\sim\!{p}\,{\wedge}\,q)\amp\Leftrightarrow\,p{\vee} q</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Logic</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>p{\wedge}(p{\vee} q)\amp\Leftrightarrow p</mrow>
+                      <mrow>p{\wedge}(\sim\!{p}\,{\vee}\,q)\amp\Leftrightarrow\,p{\wedge} q</mrow>
+                      <mrow>p{\vee}(p{\wedge} q)\amp\Leftrightarrow\,p</mrow>
+                      <mrow>p{\vee}(\sim\!{p}\,{\wedge}\,q)\amp\Leftrightarrow\,p{\vee} q</mrow>
+                    </md>
+                  </p>
 
-                  <tabular>
-                    <row bottom="medium">
-                      <cell>
-                        <alert>Boolean</alert>
-                      </cell>
-                    </row>
-                    <row>
-                      <cell>
-                        <md>
-                          <mrow>A(A+B)\amp=A</mrow>
-                          <mrow>A(\overline{A}+B)\amp=AB</mrow>
-                          <mrow>A+AB\amp=A</mrow>
-                          <mrow>A+\overline{A}{}B\amp=A+B</mrow>
-                        </md>
-                      </cell>
-                    </row>
-                  </tabular>
+                  <p>
+                    <tabular>
+                      <row bottom="medium">
+                        <cell>
+                          <alert>Boolean</alert>
+                        </cell>
+                      </row>
+                    </tabular>
+                    <md>
+                      <mrow>A(A+B)\amp=A</mrow>
+                      <mrow>A(\overline{A}+B)\amp=AB</mrow>
+                      <mrow>A+AB\amp=A</mrow>
+                      <mrow>A+\overline{A}{}B\amp=A+B</mrow>
+                    </md>
+                  </p>
                 </sidebyside>
               </p>
             </assemblage>
@@ -15768,7 +15746,7 @@
                     <m>       0            </m>
                   </cell>
                   <cell halign="left">
-                    definition of “or”
+                    definition of <lq/>or<rq/>
                   </cell>
                 </row>
               </tabular>
@@ -20706,7 +20684,7 @@
           <introduction>
             Since it's possible to start the index for a sequence at any value, we need to be careful when determining <m>k</m>, the total number of terms in a sequence.  The rule is:
             <me>
-              \text{#terms}=\text{last}-\text{first}+1
+              \text{\#terms}=\text{last}-\text{first}+1
             </me>
             and since we are using the convention that <m>m</m> is the first index and <m>n</m> is the final index (or, alternatively, some index of interest), then
             <me>
@@ -21487,7 +21465,7 @@
                 <m>\frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \ldots</m>
               </statement>
               <solution>
-                <m>\sum\limits_{j = 2}^{}\infty}  \frac{1}{j}</m>
+                <m>\sum\limits_{j = 2}^{\infty}  \frac{1}{j}</m>
               </solution>
             </exercise>
             <exercise>
@@ -22145,7 +22123,7 @@
                 <m>\left\{ \begin{array}{l}
                   a_1 = 5\\
                   a_n = a_{n - 1} - 11
-                  \end{array} \right.$</m>
+                  \end{array} \right.</m>
               </solution>
             </exercise>
             <exercise>
@@ -23244,7 +23222,7 @@
               Calculate <m>S_{20}</m> for the series <m>100 + 50 + 25 + \ldots</m>
             </statement>
             <solution>
-              <m>$S_{20} = 200</m> (the exact answer is <m>\frac{{26214375}}{{131072}}</m> or 199.99980926513671875, but if you round to three decimals, the answer is 200.000)
+              <m>S_{20} = 200</m> (the exact answer is <m>\frac{{26214375}}{{131072}}</m> or 199.99980926513671875, but if you round to three decimals, the answer is 200.000)
             </solution>
           </exercise>
           <exercise>

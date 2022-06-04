@@ -1,0 +1,143 @@
+\selectlanguage *[variant=usmax]{english}
+\label {x:book:binary-logic-and-more}\hypertarget {x:book:binary-logic-and-more}{}
+\contentsline {chapter}{\numberline {1}Binary, Octal, and Hexadecimal}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Decimal and Octal}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Review of the Decimal System}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Bases Other Than Ten - How They work}{2}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Octal}{4}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Exercises}{6}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:decimal-octal}} Exercises}{7}{subsection.1.1.5}%
+\contentsline {section}{\numberline {1.2}Binary and Hexadecimal}{9}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Binary}{9}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Hexadecimal}{11}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Exercises}{12}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:binary-hex}} Exercises}{13}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Converting Non-Integer Numbers to Decimal}{15}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Review of the Decimal System for Non-integers}{15}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Non-Integers in Bases Other Than Ten}{17}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Exercises}{18}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:non-integer-to-decimal}} Exercises}{18}{subsection.1.3.4}%
+\contentsline {section}{\numberline {1.4}Converting from Decimal}{19}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Modular Arithmetic: Finding Quotient and Remainder}{20}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Using Quotient and Remainder to Convert from Decimal Form}{21}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Converting Non-integer Numbers from Decimal Form}{22}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Exercises}{23}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:converting-from-decimal}} Exercises}{25}{subsection.1.4.5}%
+\contentsline {section}{\numberline {1.5}Converting between Binary, Octal, and Hexadecimal}{27}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Converting Between Binary and Octal}{27}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Converting Between Binary and Hexadecimal}{28}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Converting Between Octal and Hexadecimal}{29}{subsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}Converting Non-integer Numbers}{31}{subsection.1.5.4}%
+\contentsline {subsection}{\numberline {1.5.5}Exercises}{32}{subsection.1.5.5}%
+\contentsline {subsection}{\numberline {1.5.6}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:convert-bin-oct-hex}} Exercises}{34}{subsection.1.5.6}%
+\contentsline {chapter}{\numberline {2}Logic}{37}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction to Logic}{37}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Propositions}{37}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Operators}{38}{subsection.2.1.2}%
+\contentsline {subsubsection}{Negation}{38}{subsubsection*.36}%
+\contentsline {subsection}{\numberline {2.1.3}Combining Propositions Using Connectives}{39}{subsection.2.1.3}%
+\contentsline {subsubsection}{Conjunction}{39}{subsubsection*.39}%
+\contentsline {subsubsection}{Inclusive Disjunction}{39}{subsubsection*.41}%
+\contentsline {subsubsection}{Exclusive Disjunction}{39}{subsubsection*.43}%
+\contentsline {subsubsection}{Or vs. XOR}{40}{subsubsection*.44}%
+\contentsline {subsubsection}{Logical Connectives and Precedence}{40}{subsubsection*.47}%
+\contentsline {subsection}{\numberline {2.1.4}Exercises}{41}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:sec-intro-to-logic}} Exercises}{42}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Venn Diagrams}{44}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Venn Diagrams with One Proposition}{44}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Venn Diagrams with Two Propositions}{45}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}More Complications}{46}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Negation and De Morgan's Laws}{48}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Venn Diagrams with Three Propositions}{48}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Exercises}{50}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:sec-venn-diagrams}} Exercises}{51}{subsection.2.2.7}%
+\contentsline {section}{\numberline {2.3}Logical Equivalence}{54}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Truth Tables}{54}{subsection.2.3.1}%
+\contentsline {subsubsection}{Truth Tables with Two Variables}{54}{subsubsection*.66}%
+\contentsline {subsubsection}{Truth Tables with One Variable}{55}{subsubsection*.67}%
+\contentsline {subsubsection}{Negations in Truth Tables}{56}{subsubsection*.68}%
+\contentsline {subsubsection}{Truth Tables with Three Variables}{56}{subsubsection*.69}%
+\contentsline {subsection}{\numberline {2.3.2}Logical Equivalence}{57}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Exercises}{58}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:sec-logical-equivalence}} Exercises}{59}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Boolean Algebra}{64}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Logic Circuits}{64}{subsection.2.4.1}%
+\contentsline {subsubsection}{\emph {and} gate}{64}{subsubsection*.73}%
+\contentsline {subsubsection}{\emph {or} gate}{64}{subsubsection*.74}%
+\contentsline {subsubsection}{\emph {not} gate}{65}{subsubsection*.75}%
+\contentsline {subsection}{\numberline {2.4.2}Gate Representations of Logic Circuits}{65}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Boolean Algebra}{65}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Boolean Syntax in Python}{66}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Exercises}{67}{subsection.2.4.5}%
+\contentsline {subsection}{\numberline {2.4.6}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:sec-boolean-algebra}} Exercises}{68}{subsection.2.4.6}%
+\contentsline {section}{\numberline {2.5}Laws of Logic}{73}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Identity Laws}{73}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Idempotent Laws}{74}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Complement Laws}{74}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Commutative Laws}{75}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Associative Laws}{75}{subsection.2.5.5}%
+\contentsline {subsection}{\numberline {2.5.6}Summary So Far}{75}{subsection.2.5.6}%
+\contentsline {subsection}{\numberline {2.5.7}Simplifying Logical Expressions}{76}{subsection.2.5.7}%
+\contentsline {subsection}{\numberline {2.5.8}Exercises}{76}{subsection.2.5.8}%
+\contentsline {subsection}{\numberline {2.5.9}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:sec-logic-laws}} Exercises.}{78}{subsection.2.5.9}%
+\contentsline {section}{\numberline {2.6}More Laws of Logic}{80}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}De Morgan's Laws}{80}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Distributive Laws}{81}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Absorption Laws}{81}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Summary So Far}{82}{subsection.2.6.4}%
+\contentsline {subsection}{\numberline {2.6.5}Simplifying Logical Expressions}{82}{subsection.2.6.5}%
+\contentsline {subsection}{\numberline {2.6.6}Proofs}{83}{subsection.2.6.6}%
+\contentsline {subsection}{\numberline {2.6.7}Exercises}{84}{subsection.2.6.7}%
+\contentsline {subsection}{\numberline {2.6.8}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:sec-more-logic-laws}} Exercises.}{85}{subsection.2.6.8}%
+\contentsline {section}{\numberline {2.7}The Conditional}{89}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}The Conditional Connective}{89}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}The Converse}{91}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}The contrapositive}{91}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}The inverse}{92}{subsection.2.7.4}%
+\contentsline {subsection}{\numberline {2.7.5}The ``or'' form of the Conditional}{93}{subsection.2.7.5}%
+\contentsline {subsection}{\numberline {2.7.6}De Morgan's Law and the contrapositive}{93}{subsection.2.7.6}%
+\contentsline {subsection}{\numberline {2.7.7}Exercises}{93}{subsection.2.7.7}%
+\contentsline {subsection}{\numberline {2.7.8}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:sec-conditional}} Exercises.}{97}{subsection.2.7.8}%
+\contentsline {section}{\numberline {2.8}The Biconditional}{99}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}The Biconditional Connective}{99}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Programming Applications}{101}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Exercises}{102}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.4}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:sec-biconditional}} Exercises.}{104}{subsection.2.8.4}%
+\contentsline {chapter}{\numberline {3}Sequences and Series}{109}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction to Sequences and Series}{109}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Sequences}{109}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Notation for Sequences}{110}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Counting the Terms in a Sequence}{110}{subsection.3.1.3}%
+\contentsline {subsubsection}{Starting with Index of One}{111}{subsubsection*.102}%
+\contentsline {subsubsection}{Starting with Index of Zero}{111}{subsubsection*.103}%
+\contentsline {subsubsection}{Starting with Index of Two or More}{111}{subsubsection*.104}%
+\contentsline {subsection}{\numberline {3.1.4}Defining a sequence}{112}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}General Formula}{112}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Recursive Definition}{113}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Fibonacci Sequence}{114}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.8}Series}{114}{subsection.3.1.8}%
+\contentsline {subsection}{\numberline {3.1.9}Notation for Series}{114}{subsection.3.1.9}%
+\contentsline {subsection}{\numberline {3.1.10}Sigma Notation}{114}{subsection.3.1.10}%
+\contentsline {subsection}{\numberline {3.1.11}Exercises}{116}{subsection.3.1.11}%
+\contentsline {subsection}{\numberline {3.1.12}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:sec-intro-to-seq-and-ser}} Exercises}{118}{subsection.3.1.12}%
+\contentsline {section}{\numberline {3.2}Arithmetic Sequences and Series}{121}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Arithmetic Sequences}{121}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Recursive Definitions for Arithmetic Sequences}{122}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}General Formulae for Arithmetic Sequences}{122}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Arithmetic Series}{124}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Summary}{126}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Exercises}{126}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:sec-arith-seq-ser}} Exercises}{128}{subsection.3.2.7}%
+\contentsline {section}{\numberline {3.3}Geometric Sequences and Series}{130}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Geometric Sequences}{130}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Recursive Definitions for Geometric Sequences}{131}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}General Formulae for Geometric Sequences}{132}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Geometric Series}{133}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Sum of an Infinite Geometric Series}{134}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Repeating Decimals}{136}{subsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.3.7}Summary}{137}{subsection.3.3.7}%
+\contentsline {subsection}{\numberline {3.3.8}Exercises}{137}{subsection.3.3.8}%
+\contentsline {subsection}{\numberline {3.3.9}Solutions to Section\nobreakspace {}{\relax \ref *{x:section:sec-geom-seq-ser}} Exercises}{139}{subsection.3.3.9}%
+\contentsline {part}{Back Matter}{143}{section*.142}%
+\contentsline {chapter}{Index}{143}{section*.143}%
+\contentsfinish 
