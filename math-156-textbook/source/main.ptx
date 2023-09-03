@@ -23346,7 +23346,7 @@
         </solutions>
       </section>
     </chapter>
-<!--    <chapter xml:id="BigO">
+    <chapter xml:id="BigO">
       <title>
         Big O Notation and Algorithmic Complexity
       </title>
@@ -23354,7 +23354,32 @@
         <title>
           Big O and Rates of Growth
         </title>
-        <subsection xml:id="ssec-bigO-basic"
+        <subsection xml:id="ssec-bigO-basic">
+          <title>Basic Concepts</title>
+          <p>
+            Before we get to definitions, let's start off with a conceptual example.  Suppose you are moving and you want to rent a truck for a day.  You have looked up the rental rates and your optsions are:
+            <ul>
+              <li>
+                <p>
+                  A flat rate of $80 per day.
+                </p>
+              </li>
+              <li>
+                <p>
+                  A rate of $2 per kilometre.
+                </p>
+              </li>
+            </ul>
+            Which rate is better?
+          </p>
+          <p>
+            Hopefully it's clear that the best rate must depend on how many kilometres you will be driving. If you know that you will only be making one trip with a total distance of 10 km, then you would have to pay only $20.  However, if you will be driving for more than 40 km, then the flat rate of $80 per day would cost less than the rate per kilometre.
+          </p>
+          <p>
+            The big idea is that if, when you are first renting the truck, you are unsure about how far you will be driving, then the safest bet is to go for the flat rate.  If you end up driving a short distance, then you could possibly have saved money on the other rate, but if you end up driving a long distance, then you could possibly pay a lot more than $80.
+          </p>
+          
+          
       </section>
       <section xml:id="sec-fact-exp-growth">
         <title>
@@ -23367,7 +23392,6 @@
         </title>
       </section>
     </chapter>
-    !-->
     <backmatter xml:id="backmatter">
       <title>
         Back Matter
