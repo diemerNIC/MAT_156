@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-03T17:33:45-07:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Front Matter</title>
@@ -17,19 +14,38 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Binary, Logic, and More">
 <meta property="book:author" content="Patricia R. Wrean">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
-    renderActions: {
-        findScript: [10, function (doc) {
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
             document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
                 var display = !!node.type.match(/; *mode=display/);
                 var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
@@ -39,33 +55,175 @@
                 math.end = {node: text, delim: '', n: 0};
                 doc.math.push(math);
             });
-        }, '']
-    },
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.88,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.8/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="https://pretextbook.org/css/0.8/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.8/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\conditional}{{p {\rightarrow} q}}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="binary-logic-and-more.html"><span class="title">Binary, Logic, and More:</span> <span class="subtitle">Applied Math for Computing</span></a></h1>
+<p class="byline">Patricia R. Wrean</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="binary-logic-and-more.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="binary-logic-and-more.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="colophon-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button>
+</div></div>
+<span class="nav-runestone-controls"><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\conditional}{{p {\rightarrow} q}}
 \newcommand{\inverse}{{\sim\!{p}{} {\rightarrow} \sim\!{q}{}}}
 \newcommand{\converse}{{q {\rightarrow} p}}
 \newcommand{\contrapositive}{{\sim\!{q}{} {\rightarrow} \sim\!{p}{}}}
@@ -85,61 +243,261 @@
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="binary-logic-and-more.html"><span class="title">Binary, Logic, and More:</span> <span class="subtitle">Applied Math for Computing</span></a></h1>
-<p class="byline">Patricia R. Wrean</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="binary-logic-and-more.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="binary-logic-and-more.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="colophon-1.html" title="Next">Next</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="binary-logic-and-more.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="binary-logic-and-more.html" title="Up">Up</a><a class="next-button button toolbar-item" href="colophon-1.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter active">
-<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul><li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li></ul>
-</li>
-<li class="link">
-<a href="binary-octal-hex.html" data-scroll="binary-octal-hex" class="internal"><span class="codenumber">1</span> <span class="title">Binary, Octal, and Hexadecimal</span></a><ul>
-<li><a href="decimal-octal.html" data-scroll="decimal-octal" class="internal">Decimal and Octal</a></li>
-<li><a href="binary-hex.html" data-scroll="binary-hex" class="internal">Binary and Hexadecimal</a></li>
-<li><a href="non-integer-to-decimal.html" data-scroll="non-integer-to-decimal" class="internal">Converting Non-Integer Numbers to Decimal</a></li>
-<li><a href="converting-from-decimal.html" data-scroll="converting-from-decimal" class="internal">Converting from Decimal</a></li>
-<li><a href="convert-bin-oct-hex.html" data-scroll="convert-bin-oct-hex" class="internal">Converting between Binary, Octal, and Hexadecimal</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li class="active"><div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li>
+<div class="toc-item"><a href="binary-octal-hex.html" class="internal"><span class="codenumber">1</span> <span class="title">Binary, Octal, and Hexadecimal</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="decimal-octal.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Decimal and Octal</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="decimal-octal.html#decimal-review" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Review of the Decimal System</span></a></div></li>
+<li><div class="toc-item"><a href="decimal-octal.html#other-bases" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Bases Other Than Ten - How They work</span></a></div></li>
+<li><div class="toc-item"><a href="decimal-octal.html#octal" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Octal</span></a></div></li>
+<li><div class="toc-item"><a href="decimal-octal.html#exercises-1" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="decimal-octal.html#solutions-1" class="internal"><span class="codenumber">1.1.5</span> <span class="title">Solutions to Section 1.1 Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="logic.html" data-scroll="logic" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a><ul>
-<li><a href="sec-intro-to-logic.html" data-scroll="sec-intro-to-logic" class="internal">Introduction to Logic</a></li>
-<li><a href="sec-venn-diagrams.html" data-scroll="sec-venn-diagrams" class="internal">Venn Diagrams</a></li>
-<li><a href="sec-logical-equivalence.html" data-scroll="sec-logical-equivalence" class="internal">Logical Equivalence</a></li>
-<li><a href="sec-boolean-algebra.html" data-scroll="sec-boolean-algebra" class="internal">Boolean Algebra</a></li>
-<li><a href="sec-logic-laws.html" data-scroll="sec-logic-laws" class="internal">Laws of Logic</a></li>
-<li><a href="sec-more-logic-laws.html" data-scroll="sec-more-logic-laws" class="internal">More Laws of Logic</a></li>
-<li><a href="sec-conditional.html" data-scroll="sec-conditional" class="internal">The Conditional</a></li>
-<li><a href="sec-biconditional.html" data-scroll="sec-biconditional" class="internal">The Biconditional</a></li>
+<li>
+<div class="toc-item"><a href="binary-hex.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Binary and Hexadecimal</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="binary-hex.html#binary" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Binary</span></a></div></li>
+<li><div class="toc-item"><a href="binary-hex.html#hexadecimal" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Hexadecimal</span></a></div></li>
+<li><div class="toc-item"><a href="binary-hex.html#exercises-2" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="binary-hex.html#solutions-2" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Solutions to Section 1.2 Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="sequences-and-series.html" data-scroll="sequences-and-series" class="internal"><span class="codenumber">3</span> <span class="title">Sequences and Series</span></a><ul>
-<li><a href="sec-intro-to-seq-and-ser.html" data-scroll="sec-intro-to-seq-and-ser" class="internal">Introduction to Sequences and Series</a></li>
-<li><a href="sec-arith-seq-ser.html" data-scroll="sec-arith-seq-ser" class="internal">Arithmetic Sequences and Series</a></li>
-<li><a href="sec-geom-seq-ser.html" data-scroll="sec-geom-seq-ser" class="internal">Geometric Sequences and Series</a></li>
+<li>
+<div class="toc-item"><a href="non-integer-to-decimal.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Converting Non-Integer Numbers to Decimal</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="non-integer-to-decimal.html#review-non-integer-decimal" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Review of the Decimal System for Non-integers</span></a></div></li>
+<li><div class="toc-item"><a href="non-integer-to-decimal.html#non-integers-other-bases" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Non-Integers in Bases Other Than Ten</span></a></div></li>
+<li><div class="toc-item"><a href="non-integer-to-decimal.html#exercises-3" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="non-integer-to-decimal.html#solutions-3" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Solutions to Section 1.3 Exercises</span></a></div></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="frontmatter" id="frontmatter"><h2 class="heading">
+<li>
+<div class="toc-item"><a href="converting-from-decimal.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Converting from Decimal</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="converting-from-decimal.html#modular-arithmetic" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Modular Arithmetic: Finding Quotient and Remainder</span></a></div></li>
+<li><div class="toc-item"><a href="converting-from-decimal.html#convert-from-decimal-form" class="internal"><span class="codenumber">1.4.2</span> <span class="title">Using Quotient and Remainder to Convert from Decimal Form</span></a></div></li>
+<li><div class="toc-item"><a href="converting-from-decimal.html#convert-nonint-from-decimal-form" class="internal"><span class="codenumber">1.4.3</span> <span class="title">Converting Non-integer Numbers from Decimal Form</span></a></div></li>
+<li><div class="toc-item"><a href="converting-from-decimal.html#exercises-4" class="internal"><span class="codenumber">1.4.4</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="converting-from-decimal.html#solutions-4" class="internal"><span class="codenumber">1.4.5</span> <span class="title">Solutions to Section 1.4 Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="convert-bin-oct-hex.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Converting between Binary, Octal, and Hexadecimal</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="convert-bin-oct-hex.html#convert-binary-octal" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Converting Between Binary and Octal</span></a></div></li>
+<li><div class="toc-item"><a href="convert-bin-oct-hex.html#convert-binary-hexadecimal" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Converting Between Binary and Hexadecimal</span></a></div></li>
+<li><div class="toc-item"><a href="convert-bin-oct-hex.html#convert-octal-hexadecimal" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Converting Between Octal and Hexadecimal</span></a></div></li>
+<li><div class="toc-item"><a href="convert-bin-oct-hex.html#converting-non-integers" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Converting Non-integer Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="convert-bin-oct-hex.html#exercises-5" class="internal"><span class="codenumber">1.5.5</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="convert-bin-oct-hex.html#solutions-5" class="internal"><span class="codenumber">1.5.6</span> <span class="title">Solutions to Section 1.5 Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="logic.html" class="internal"><span class="codenumber">2</span> <span class="title">Logic</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-intro-to-logic.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-intro-to-logic.html#propositions" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Propositions</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-intro-to-logic.html#operators" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Operators</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-intro-to-logic.html#negation" class="internal"><span class="title">Negation</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-intro-to-logic.html#connectives" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Combining Propositions Using Connectives</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-intro-to-logic.html#and" class="internal"><span class="title">Conjunction</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-logic.html#inclusive-disjunction" class="internal"><span class="title">Inclusive Disjunction</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-logic.html#exclusive-disjunction" class="internal"><span class="title">Exclusive Disjunction</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-logic.html#inclusive-vs-exclusive-disjunction" class="internal"><span class="title">Or vs. XOR</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-logic.html#connective-precedence" class="internal"><span class="title">Logical Connectives and Precedence</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec-intro-to-logic.html#exercises-6" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-logic.html#solutions-6" class="internal"><span class="codenumber">2.1.5</span> <span class="title">Solutions to Section 2.1 Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-venn-diagrams.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Venn Diagrams</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-venn-diagrams.html#one-proposition-diagrams" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Venn Diagrams with One Proposition</span></a></div></li>
+<li><div class="toc-item"><a href="sec-venn-diagrams.html#two-proposition-diagrams" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Venn Diagrams with Two Propositions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-venn-diagrams.html#more-complications" class="internal"><span class="codenumber">2.2.3</span> <span class="title">More Complications</span></a></div></li>
+<li><div class="toc-item"><a href="sec-venn-diagrams.html#negation-deMorgan" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Negation and De Morgan’s Laws</span></a></div></li>
+<li><div class="toc-item"><a href="sec-venn-diagrams.html#three-proposition-diagrams" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Venn Diagrams with Three Propositions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-venn-diagrams.html#exercises-7" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-venn-diagrams.html#solutions-7" class="internal"><span class="codenumber">2.2.7</span> <span class="title">Solutions to Section 2.2 Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-logical-equivalence.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Logical Equivalence</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-logical-equivalence.html#truth-tables" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Truth Tables</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-logical-equivalence.html#truth-tables-2vars" class="internal"><span class="title">Truth Tables with Two Variables</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logical-equivalence.html#truth-tables-one-var" class="internal"><span class="title">Truth Tables with One Variable</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logical-equivalence.html#negation-in-truth-tables" class="internal"><span class="title">Negations in Truth Tables</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logical-equivalence.html#truth-table-3-vars" class="internal"><span class="title">Truth Tables with Three Variables</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec-logical-equivalence.html#subsec-logical-equivalence" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Logical Equivalence</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logical-equivalence.html#exercises-8" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logical-equivalence.html#solutions-8" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Solutions to Section 2.3 Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-boolean-algebra.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Boolean Algebra</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-boolean-algebra.html#ssec-logic-circuits" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Logic Circuits</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-boolean-algebra.html#sssec-and-gate" class="internal"><span class="title"><em class="emphasis">and</em> gate</span></a></div></li>
+<li><div class="toc-item"><a href="sec-boolean-algebra.html#sssec-or-gate" class="internal"><span class="title"><em class="emphasis">or</em> gate</span></a></div></li>
+<li><div class="toc-item"><a href="sec-boolean-algebra.html#sssec-not-gate" class="internal"><span class="title"><em class="emphasis">not</em> gate</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec-boolean-algebra.html#ssec-gatereps-logicircs" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Gate Representations of Logic Circuits</span></a></div></li>
+<li><div class="toc-item"><a href="sec-boolean-algebra.html#ssec-boolean-algebra" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Boolean Algebra</span></a></div></li>
+<li><div class="toc-item"><a href="sec-boolean-algebra.html#ssec-boolean-syntax-python" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Boolean Syntax in Python</span></a></div></li>
+<li><div class="toc-item"><a href="sec-boolean-algebra.html#exers-sec-boolean-algebra" class="internal"><span class="codenumber">2.4.5</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-boolean-algebra.html#solutions-9" class="internal"><span class="codenumber">2.4.6</span> <span class="title">Solutions to Section 2.4 Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-logic-laws.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Laws of Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-logic-laws.html#ssec-identity-laws" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Identity Laws</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logic-laws.html#ssec-idempotent-laws" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Idempotent Laws</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logic-laws.html#ssec-complement-laws" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Complement Laws</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logic-laws.html#ssec-commutative-laws" class="internal"><span class="codenumber">2.5.4</span> <span class="title">Commutative Laws</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logic-laws.html#ssec-associative-laws" class="internal"><span class="codenumber">2.5.5</span> <span class="title">Associative Laws</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logic-laws.html#ssec-basic-logic-laws" class="internal"><span class="codenumber">2.5.6</span> <span class="title">Summary So Far</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logic-laws.html#ssec-simplifying-logical-expr1" class="internal"><span class="codenumber">2.5.7</span> <span class="title">Simplifying Logical Expressions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logic-laws.html#exers-sec-logic-laws" class="internal"><span class="codenumber">2.5.8</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-logic-laws.html#solutions-10" class="internal"><span class="codenumber">2.5.9</span> <span class="title">Solutions to Section 2.5 Exercises.</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-more-logic-laws.html" class="internal"><span class="codenumber">2.6</span> <span class="title">More Laws of Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-more-logic-laws.html#ssec-demorgans-laws" class="internal"><span class="codenumber">2.6.1</span> <span class="title">De Morgan’s Laws</span></a></div></li>
+<li><div class="toc-item"><a href="sec-more-logic-laws.html#ssec-distributive-laws" class="internal"><span class="codenumber">2.6.2</span> <span class="title">Distributive Laws</span></a></div></li>
+<li><div class="toc-item"><a href="sec-more-logic-laws.html#ssec-absorption-laws" class="internal"><span class="codenumber">2.6.3</span> <span class="title">Absorption Laws</span></a></div></li>
+<li><div class="toc-item"><a href="sec-more-logic-laws.html#ssec-summary-logic-laws" class="internal"><span class="codenumber">2.6.4</span> <span class="title">Summary So Far</span></a></div></li>
+<li><div class="toc-item"><a href="sec-more-logic-laws.html#ssec-simplifying-logical-expr2" class="internal"><span class="codenumber">2.6.5</span> <span class="title">Simplifying Logical Expressions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-more-logic-laws.html#ssec-proofs" class="internal"><span class="codenumber">2.6.6</span> <span class="title">Proofs</span></a></div></li>
+<li><div class="toc-item"><a href="sec-more-logic-laws.html#exers-sec-more-logic-laws" class="internal"><span class="codenumber">2.6.7</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-more-logic-laws.html#solutions-11" class="internal"><span class="codenumber">2.6.8</span> <span class="title">Solutions to Section 2.6 Exercises.</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-conditional.html" class="internal"><span class="codenumber">2.7</span> <span class="title">The Conditional</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-conditional.html#ssec-conditional-connective" class="internal"><span class="codenumber">2.7.1</span> <span class="title">The Conditional Connective</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conditional.html#ssec-converse" class="internal"><span class="codenumber">2.7.2</span> <span class="title">The Converse</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conditional.html#ssec-contrapositive" class="internal"><span class="codenumber">2.7.3</span> <span class="title">The contrapositive</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conditional.html#ssec-inverse" class="internal"><span class="codenumber">2.7.4</span> <span class="title">The inverse</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conditional.html#ssec-alt-conditional" class="internal"><span class="codenumber">2.7.5</span> <span class="title">The “or” form of the Conditional</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conditional.html#ssec-demorgan-and-contrapos" class="internal"><span class="codenumber">2.7.6</span> <span class="title">De Morgan’s Law and the contrapositive</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conditional.html#exers-sec-conditional" class="internal"><span class="codenumber">2.7.7</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-conditional.html#solutions-12" class="internal"><span class="codenumber">2.7.8</span> <span class="title">Solutions to Section 2.7 Exercises.</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-biconditional.html" class="internal"><span class="codenumber">2.8</span> <span class="title">The Biconditional</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-biconditional.html#ssec-bicond-connective" class="internal"><span class="codenumber">2.8.1</span> <span class="title">The Biconditional Connective</span></a></div></li>
+<li><div class="toc-item"><a href="sec-biconditional.html#ssec-programming-apps" class="internal"><span class="codenumber">2.8.2</span> <span class="title">Programming Applications</span></a></div></li>
+<li><div class="toc-item"><a href="sec-biconditional.html#exers-sec-biconditional" class="internal"><span class="codenumber">2.8.3</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-biconditional.html#solutions-13" class="internal"><span class="codenumber">2.8.4</span> <span class="title">Solutions to Section 2.8 Exercises.</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sequences-and-series.html" class="internal"><span class="codenumber">3</span> <span class="title">Sequences and Series</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-intro-to-seq-and-ser.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to Sequences and Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#ssec-sequences" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Sequences</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#ssec-seq-notation" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Notation for Sequences</span></a></div></li>
+<li>
+<div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#ssec-counting-seq-terms" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Counting the Terms in a Sequence</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#sssec-index-one" class="internal"><span class="title">Starting with Index of One</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#sssec-index-zero" class="internal"><span class="title">Starting with Index of Zero</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#sssec-index-two-or-more" class="internal"><span class="title">Starting with Index of Two or More</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#ssec-defining-a-sequence" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Defining a sequence</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#ssec-general-formula" class="internal"><span class="codenumber">3.1.5</span> <span class="title">General Formula</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#ssec-recursive-definition" class="internal"><span class="codenumber">3.1.6</span> <span class="title">Recursive Definition</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#ssec-fibonacci" class="internal"><span class="codenumber">3.1.7</span> <span class="title">Fibonacci Sequence</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#ssec-series" class="internal"><span class="codenumber">3.1.8</span> <span class="title">Series</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#ssec-notation-for-series" class="internal"><span class="codenumber">3.1.9</span> <span class="title">Notation for Series</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#ssec-sigma-notation" class="internal"><span class="codenumber">3.1.10</span> <span class="title">Sigma Notation</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#exercises-14" class="internal"><span class="codenumber">3.1.11</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-intro-to-seq-and-ser.html#solutions-14" class="internal"><span class="codenumber">3.1.12</span> <span class="title">Solutions to Section 3.1 Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-arith-seq-ser.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Arithmetic Sequences and Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-arith-seq-ser.html#ssec-arith-seq" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Arithmetic Sequences</span></a></div></li>
+<li><div class="toc-item"><a href="sec-arith-seq-ser.html#ssec-recurdef-arith-seq" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Recursive Definitions for Arithmetic Sequences</span></a></div></li>
+<li><div class="toc-item"><a href="sec-arith-seq-ser.html#ssec-genform-arith-seq" class="internal"><span class="codenumber">3.2.3</span> <span class="title">General Formulae for Arithmetic Sequences</span></a></div></li>
+<li><div class="toc-item"><a href="sec-arith-seq-ser.html#ssec-arith-ser" class="internal"><span class="codenumber">3.2.4</span> <span class="title">Arithmetic Series</span></a></div></li>
+<li><div class="toc-item"><a href="sec-arith-seq-ser.html#ssec-summary-arith-ser" class="internal"><span class="codenumber">3.2.5</span> <span class="title">Summary</span></a></div></li>
+<li><div class="toc-item"><a href="sec-arith-seq-ser.html#exercises-15" class="internal"><span class="codenumber">3.2.6</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-arith-seq-ser.html#solutions-15" class="internal"><span class="codenumber">3.2.7</span> <span class="title">Solutions to Section 3.2 Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="sec-geom-seq-ser.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Geometric Sequences and Series</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-geom-seq-ser.html#ssec-geom-seq" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Geometric Sequences</span></a></div></li>
+<li><div class="toc-item"><a href="sec-geom-seq-ser.html#ssec-recdef-geomseq" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Recursive Definitions for Geometric Sequences</span></a></div></li>
+<li><div class="toc-item"><a href="sec-geom-seq-ser.html#ssec-genform-gemseq" class="internal"><span class="codenumber">3.3.3</span> <span class="title">General Formulae for Geometric Sequences</span></a></div></li>
+<li><div class="toc-item"><a href="sec-geom-seq-ser.html#ssec-geom-ser" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Geometric Series</span></a></div></li>
+<li><div class="toc-item"><a href="sec-geom-seq-ser.html#ssec-sum-geom-ser" class="internal"><span class="codenumber">3.3.5</span> <span class="title">Sum of an Infinite Geometric Series</span></a></div></li>
+<li><div class="toc-item"><a href="sec-geom-seq-ser.html#ssec-rep-decimals" class="internal"><span class="codenumber">3.3.6</span> <span class="title">Repeating Decimals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-geom-seq-ser.html#ssec-summary-gemseqser" class="internal"><span class="codenumber">3.3.7</span> <span class="title">Summary</span></a></div></li>
+<li><div class="toc-item"><a href="sec-geom-seq-ser.html#exercises-16" class="internal"><span class="codenumber">3.3.8</span> <span class="title">Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="sec-geom-seq-ser.html#solutions-16" class="internal"><span class="codenumber">3.3.9</span> <span class="title">Solutions to Section 3.3 Exercises</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="BigO.html" class="internal"><span class="codenumber">4</span> <span class="title">Big O Notation and Algorithmic Complexity</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="sec-bigO-growth-rates.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Big O and Rates of Growth</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="sec-bigO-growth-rates.html#ssec-bigO-basic" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Basic Concepts</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="sec-fact-exp-growth.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Factorial and Exponential Growth</span></a></div></li>
+<li><div class="toc-item"><a href="sec-log-growth.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Logarithmic Growth</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="frontmatter" id="frontmatter"><h2 class="heading">
 <span class="title">Binary, Logic, and More:</span> <span class="subtitle">Applied Math for Computing</span>
 </h2>
 <div class="author">
@@ -156,7 +514,13 @@
 </div>
 </div>
 </div>
-<nav class="summary-links"><ul><li><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></li></ul></nav></section></div></main>
+<nav class="summary-links"><ul><li><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></li></ul></nav></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="binary-logic-and-more.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="colophon-1.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>
